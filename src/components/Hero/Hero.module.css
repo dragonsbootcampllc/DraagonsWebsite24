@@ -1,0 +1,35 @@
+.Drag3DBoubce {
+  animation: bounce 4s infinite alternate;
+  -webkit-animation: bounce 4s infinite alternate;
+  -moz-animation: bounce 4s infinite alternate;
+  -o-animation: bounce 4s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -5px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.Drag3DRotate:hover {
+  animation: rotate 4s infinite alternate;
+  -webkit-animation: rotate 4s infinite alternate;
+  -moz-animation: rotate 4s infinite alternate;
+  -o-animation: rotate 4s infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
+}

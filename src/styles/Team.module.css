@@ -1,0 +1,10 @@
+.pHeaderTeam {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  padding: 1.5em 0em;
+}
+
+.TogglerDisplay {
+  display: none;
+}

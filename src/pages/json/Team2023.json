@@ -1,0 +1,799 @@
+[
+  {
+    "Name": "Ahmed Mohamed Awwad",
+    "personal_photo": "/images/Team2023/Ahmed_Mohamed_Awwad.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Qalyubia",
+        "Food": "\uD83E\uDD6A",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ahmed-awwad-8283521a4/",
+    "Link_profile_Github": "https://github.com/Ahmed-Awwad99",
+    "Link_profile_Discord": "awwad99",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Samar Samir Nasreldin",
+    "personal_photo": "/images/talant/Samar_Samier.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Cairo",
+        "Food": "\uD83C\uDF54",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/samar-samir-071927289/",
+    "Link_profile_Github": "https://github.com/SAMarSAMir2",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Mohamed Sherif AbdElmoneim",
+    "personal_photo": "/images/talant/Mohamed_Sherif.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Cairo",
+        "Food": "\uD83C\uDF54",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/mohamed-sherif-salem-a85097234/",
+    "Link_profile_Github": "https://github.com/Mohamed2Sherif",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Yasmen Ahmed Ali",
+    "personal_photo": "/images/talant/Yasmen_Ahmed.jpg",
+    "tags": [
+      {
+        "position": "Frontend",
+        "city": "Minya",
+        "Food": "\uD83C\uDF55",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/yasmen-ahmed-046807286/",
+    "Link_profile_Github": "https://github.com/yasmen310",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Ziad Esam Ezat",
+    "personal_photo": "/images/talant/Ziad_Essam_Ezat.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Cairo",
+        "Food": "\uD83E\uDD6D",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ziad-esam-ezat/",
+    "Link_profile_Github": "https://github.com/ziadezat",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Eslam Sayed Gouda",
+    "personal_photo": "/images/talant/Eslam_Sayed.png",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Cairo",
+        "Food": "\uD83E\uDD6D",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/eslam-sayed-475687238/",
+    "Link_profile_Github": "https://github.com/Eslam030",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Menna Soliman Ali",
+    "personal_photo": "/images/talant/Menna_Suliman.png",
+    "tags": [
+      {
+        "position": "Frontend",
+        "city": "Gharbia",
+        "Food": "☕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/menna-soliman-7a6124251/",
+    "Link_profile_Github": "https://github.com/MennaSoliman2",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Amal Mohamed Mouawad",
+    "personal_photo": "/images/talant/Amal_Mohamed.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Giza",
+        "Food": "\uD83C\uDF55",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/amal-mohamed-705227251/",
+    "Link_profile_Github": "https://github.com/Amalmohamed77",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Ziad Emad Elsayed",
+    "personal_photo": "/images/talant/Ziad_Etman.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Giza",
+        "Food": "☕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ziad-etman-621b2a252/",
+    "Link_profile_Github": "https://github.com/1Ziad-Etman1",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Ahmad Reda Bayoumy",
+    "personal_photo": "/images/talant/Ahmad_Reda.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Cairo",
+        "Food": "☕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ahmad-reda-b04250292/",
+    "Link_profile_Github": "https://github.com/Ahmedreda122",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Abdallah Hussein Ibrahim",
+    "personal_photo": "/images/talant/Abdallah_Hussein.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Cairo",
+        "Food": "☕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/abdallah-hussein-280992193/",
+    "Link_profile_Github": "https://github.com/Abdallah0Hussein",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "youssef ahmed ezz",
+    "personal_photo": "/images/talant/Youssef_Ahmed.jpeg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Cairo",
+        "Food": "☕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/youssef-ahmed-67b126254/",
+    "Link_profile_Github": "https://github.com/yossefezz2",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Rahma Khaled Kamal",
+    "personal_photo": "/images/talant/rahma_khaled.jpeg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Cairo",
+        "Food": "\uD83C\uDF57",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "",
+    "Link_profile_Github": "https://github.com/rahmakhaled25",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Farha Khaled Mohamed  ",
+    "personal_photo": "/images/talant/farha_khaled.jpg",
+    "tags": [
+      {
+        "position": "Frontend",
+        "city": "Gharbia",
+        "Food": "\uD83C\uDF54",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/farha-khaled-691a8b215/",
+    "Link_profile_Github": "",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Abanoub Emad Felix",
+    "personal_photo": "/images/Team2023/Abanoub_Emad_Felix.jpg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Asyut",
+        "Food": "",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "www.linkedin.com/in/abanoub-emad-felix-41a734285",
+    "Link_profile_Github": "https://github.com/empeo",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Rahma Mohamed",
+    "personal_photo": "/images/Team2023/Rahma_Mohamed_Hammad.jpg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Cairo",
+        "Food": "",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/rahma-mohamad-7a805827b/",
+    "Link_profile_Github": "https://github.com/rahma-mohamed",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Adham Hosny Ahmed",
+    "personal_photo": "/images/Team2023/AdhamHosnyAhmed.jpg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Alex",
+        "Food": "🍕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/adham-hosny-a7683a24b/",
+    "Link_profile_Github": "https://github.com/AdhamMhran",
+    "Link_profile_Discord": "adhamcod50#2101",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Heba mohamed abdou",
+    "personal_photo": "/images/Team2023/heba-mohamed.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Ismailia",
+        "Food": "\uD83C\uDF2F",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/heba-mohamed-399b91277/",
+    "Link_profile_Github": "https://github.com/heba-2023",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Paula Essam Fathy",
+    "personal_photo": "/images/Team2023/Paula_Essam.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Fayoum",
+        "Food": "🐥",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/paula-essam-9a327122b",
+    "Link_profile_Github": "https://github.com/PaulaEssam",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Ahmed Ebrahem",
+    "personal_photo": "/images/Team2023/Ahmed_Ebrahem_AbdElazem.jpg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Qalyubiyya",
+        "Food": "🍕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "",
+    "Link_profile_Github": "https://github.com/ahmedebrahem0",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Mohamed Nour Mohamed",
+    "personal_photo": "/images/Team2023/Ahmed_Ebrahem_AbdElazem.jpg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Qalyubiyya",
+        "Food": "🍕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "",
+    "Link_profile_Github": "https://github.com/ahmedebrahem0",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+
+  {
+    "Name": "Antonius Fekry Abdo",
+    "personal_photo": "/images/Team2023/Antonius_Fekry_Abdo.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Asyut",
+        "Food": "🍕",
+        "joinDate": "1/7/2022",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://linkedin.com/in/antonius-fekry-6698b1237",
+    "Link_profile_Github": "https://github.com/AntoniusFekryAbdo",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Sondos Mohamed Saad",
+    "personal_photo": "/images/Team2023/Sondos_mohamed_saad.jpeg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Qena",
+        "Food": "\uD83C\uDF54",
+        "joinDate": "27/07/2023",
+        "JoinYear": 1
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/sondos-saad-a6b5b0174/",
+    "Link_profile_Github": "https://github.com/sondos-saad?tab=repositories",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Zakaria Eysa Zakaria",
+    "personal_photo": "/images/Team2023/Zakaria_Eysa_Zakaria.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Fayoum",
+        "Food": "\uD83C\uDF55",
+        "joinDate": "1/7/2023",
+        "JoinYear": 1
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/zakaria-eysa-b6b430264/",
+    "Link_profile_Github": "https://github.com/ZakariaEysa",
+    "Link_profile_Discord": "zakaria_z",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Ahmed Shrief Ramadan",
+    "personal_photo": "/images/Team2023/Ahmed_Shrief_Ramadan.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Qalyubia",
+        "Food": "\uD83C\uDF55",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://linkedin.com/in/ahmed-shrief-95b54b222",
+    "Link_profile_Github": "https://github.com/AhmedShriefRamadan",
+    "Link_profile_Discord": "Ahmed_Shrief_Ramadan#6393",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Abdelrahman Ahmed Rabi",
+    "personal_photo": "/images/Team2023/Abdo_Ahmed.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Fayoum",
+        "Food": "\uD83E\uDD6A",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/abdo-ahmed-255b45242",
+    "Link_profile_Github": "https://github.com/abdoahmed258",
+    "Link_profile_Discord": "abdo25825",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Ziad Saied Abdelkhalek",
+    "personal_photo": "/images/Team2023/ziad_saied.jpg",
+    "tags": [
+      {
+        "position": "frontend",
+        "city": "Behira",
+        "food": "\uD83E\uDD57",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ziad-saied",
+    "Link_profile_Github": "https://github.com/ZiadSaied321",
+    "Link_profile_Discord": ""
+  },
+  {
+    "Name": "Mohamed Magdy Mohamed",
+    "personal_photo": "/images/Team2023/mohamed_magdy_mohamed.jpg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Giza",
+        "food": "\uD83C\uDF54",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/mohamed-magdy-82133215a/",
+    "Link_profile_Github": "https://github.com/moamed018",
+    "Link_profile_Discord": "mohamed_magdy01612"
+  },
+  {
+    "Name": "yara omar fawzy",
+    "personal_photo": "/images/Team2023/yara_omar_fawzy.jpeg",
+    "tags": [
+      {
+        "position": "FrontEnd",
+        "city": "Minya",
+        "food": "☕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/yara-omar-72b6a9240",
+    "Link_profile_Github": "https://github.com/Yaraomarfawzy",
+    "Link_profile_Discord": ""
+  },
+
+  {
+    "Name": "Mohamed Ahmed Osman",
+    "personal_photo": "/images/Team2023/Mohamed_Ahmed_Osman.jpeg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "fayoum",
+        "food": "🍤",
+        "joinDate": "7/7/2023",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/mohamed-ahmed-osman-2b8609245/",
+    "Link_profile_Github": "https://github.com/MohamedOsman30",
+    "Link_profile_Discord": "M.Osman#3131",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Esraa Ahmed AbdElsamad ",
+    "personal_photo": "/images/Team2023/Esraa_Ahmed.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Giza",
+        "food": "🍫",
+        "joinDate": "7/7/2023",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/esraa-alramlawy-6860a5182",
+    "Link_profile_Github": "https://github.com/EsraaAhmedAbdElsamad",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Nourhan AL Sayed ",
+    "personal_photo": "/images/Team2023/Nourhan_Al_Sayed_Salama.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Giza",
+        "food": "🍕",
+        "joinDate": "7/7/2023",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/nor-sayed-409462224",
+    "Link_profile_Github": "https://github.com/Nourhan-Ziada",
+    "Link_profile_Discord": "Nour#1335",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Ahmed Badawi Hosny",
+    "personal_photo": "/images/Team2023/Ahmed_Badawi_Hosny.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Sohag",
+        "food": "🍔",
+        "joinDate": "2023/07/27",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ahmed-badawi-hosny/",
+    "Link_profile_Github": "https://github.com/ahmedbadawihosny",
+    "Link_profile_Discord": "Ahmed Badawi#3787",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Moaz Ahmed El sabagh",
+    "personal_photo": "/images/Team2023/Moaz_Ahmed.jpg",
+    "tags": [
+      {
+        "position": "BackEnd",
+        "city": "Benisuef",
+        "food": "🍕",
+        "joinDate": "2023/07/27",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/moaz-el-sabagh-33683b268",
+    "Link_profile_Github": "https://github.com/moazahmed3",
+    "Link_profile_Discord": "moaz#4544",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Nourhan Hesham",
+    "personal_photo": "/images/Team2023/nourhan_hesham.jpg",
+    "tags": [
+      {
+        "position": "frontend",
+        "city": "zagazig",
+        "food": "🍕",
+        "joinDate": "2023/07/27",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/nourhan-hesham-216863252/",
+    "Link_profile_Github": "https://github.com/nourhanHesham77",
+    "Link_profile_Discord": "nourhanhesham",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Noha Ahmed Mohamed",
+    "personal_photo": "/images/Team2023/Noha_Ahmad.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Ash Sharqia",
+        "food": "☕",
+        "joinDate": "2023/07/27",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/noha-ahmad-3935b3225",
+    "Link_profile_Github": "https://github.com/NohaAhmedk",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Yassa Adli Fawzy",
+    "personal_photo": "/images/Team2023/Yassa_Adli_Fawzy.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Asyut",
+        "food": "☕",
+        "joinDate": "2023/07/27",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/yassa-adli-0893921bb",
+    "Link_profile_Github": "https://github.com/YoYoAdli",
+    "Link_profile_Discord": ".yoyoad",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Ammar Yasser Ahmed",
+    "personal_photo": "/images/Team2023/Amar_Agiza.jpg",
+    "tags": [
+      {
+        "position": "backend",
+        "city": "Benisuef",
+        "food": "🍔",
+        "joinDate": "2023/07/27",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/amar-agiza-5a5188232",
+    "Link_profile_Github": "https://github.com/AGIZA-eg",
+    "Link_profile_Discord": "3giiza",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Kerolos Emad Saad",
+    "personal_photo": "/images/Team2023/kerolos_emad_saad.jpg",
+    "tags": [
+      {
+        "position": "Backend",
+        "city": "Assiut",
+        "food": "🍕",
+        "joinDate": "2023/07/27",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/kerolos-emad-a63954285",
+    "Link_profile_Github": "https://github.com/kero-emad",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Ahmed Hussein Alm Eldin",
+    "personal_photo": "/images/Team2023/ahmed_hussein.jpg",
+    "tags": [
+      {
+        "position": "Frontend",
+        "city": "EL Menoufia",
+        "food": "☕",
+        "joinDate": "2023/07/28",
+        "joinYear": 2023
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ahmed-hussein-5a6425285/",
+    "Link_profile_Github": "https://github.com/AhmedhusseinENG",
+    "Link_profile_Discord": "",
+    "isBoard": false,
+    "isRecommended": false,
+    "isMaintainer": false
+  },
+  {
+    "Name": "Yousef Mohamed Nasr",
+
+    "personal_photo": "/images/Team2023/Yousef_Mohamed_Nasr.jpg",
+
+    "tags": [
+      {
+        "position": "Backend",
+
+        "city": "Cairo",
+
+        "food": "🐑",
+
+        "joinDate": "2023/07/28",
+
+        "joinYear": 2023
+      }
+    ],
+
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/joo-7673421a5/",
+
+    "Link_profile_Github": "https://github.com/Yosofn",
+
+    "Link_profile_Discord": "",
+
+    "isBoard": false,
+
+    "isRecommended": false,
+
+    "isMaintainer": false
+  }
+]

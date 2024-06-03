@@ -1,0 +1,32 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate_spin_cus {
+  animation: spin 5s linear infinite;
+}
+.hover\:animate_spin_cus:hover {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate_spin_cus2 {
+  animation: spin 20s linear infinite;
+}
+.hover\:animate_spin_cus2:hover {
+  animation: spin 1s linear infinite;
+}
+
+.gg {
+  background-image: url(/images/bgcracked.png);
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+
+  box-shadow: inset 0 0 0 700px rgb(17 24 39 / 0.8);
+  background-filter: blur(100px);
+}

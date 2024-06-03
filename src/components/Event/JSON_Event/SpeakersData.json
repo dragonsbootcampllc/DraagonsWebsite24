@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Kareem Nour",
+    "image": "/images/EVENT/KareemNour.png",
+    "talk": "React Rewind: Tracing the Historical Journey of a Revolutionary Framework",
+    "ticket": "",
+    "Parts_of_the_talk": "",
+    "description": "     A results-driven professional with experience in website development, front-end development, cross-platform developing, and teaching web technology (instructor)\n\nI have been enrolled in many projects that allow me to interact with different groups of professionals from different cultures and different countries (Egypt, Qatar, Oman, Sri Lanka, China, Filipino, UAE, and Lebanon).\n       ",
+    "date": "2023-8-24",
+    "hour": "6:00 PM",
+    "tags": ["React", "beginners", "online"],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/kareem-nour-emam/",
+      "github": "https://github.com/KimzCodes",
+      "youtube": "https://www.youtube.com/@kimzcodes"
+    }
+  },
+  {
+    "name": "Dario Lencina",
+    "image": "/images/EVENT/2.png",
+    "talk": " Mastering MVPs: Unveiling Strategies for Effective Project Evaluation\n",
+    "ticket": "https://docs.google.com/forms/d/e/1FAIpQLScfGgUvU9YGGzw0H2NbRvrDF82xLQCRFTYV-yXo2SkizdVhDQ/viewform?usp=sf_link",
+    "Parts_of_the_talk": "",
+    "description": "Dario Lencina is Currently serving as a Staff Software Engineer at May Mobility in Ann Arbor, MI, United States, Dario brings valuable expertise to the company. His journey with May Mobility began in December 2020, and he continues to contribute his skills and knowledge to the organization.",
+    "date": "2023-09-14",
+    "hour": "3:00 PM",
+    "tags": ["Principles", "advanced", "online"],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/darioalessandro/",
+      "github": "https://github.com/darioalessandro",
+      "youtube": "https://www.youtube.com/c/SecurityUnion"
+    }
+  },
+
+  {
+    "name": "Griffin Obeid",
+    "image": "/images/EVENT/griffn.png",
+    "talk": "VideoCall-rs: Unlocking Real-Time Possibilities with Rust",
+    "ticket": "https://docs.google.com/forms/d/e/1FAIpQLScfGgUvU9YGGzw0H2NbRvrDF82xLQCRFTYV-yXo2SkizdVhDQ/viewform?usp=sf_link",
+    "Parts_of_the_talk": "",
+    "description": "Experienced Software Engineer with a strong knowledge of backend development. I'm passionate about building highly performant applications using Rust. I also believe in delivering an incredible user experience. \n\nSkills: Rust, Python, Dart, JavaScript, TypeScript, Bash, Jenkins, Docker, and Git.",
+    "date": "2023-09-14",
+    "hour": "3:00 PM",
+    "tags": ["Rust", "advanced", "online"],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/griffinobeid/",
+      "github": "https://github.com/griffobeid",
+      "youtube": "https://www.youtube.com/c/SecurityUnion"
+    }
+  },
+
+  {
+    "name": "David Griffiths",
+    "image": "/images/EVENT/david.png",
+    "talk": "From Local State to Global Control: A Journey through React State Management",
+    "ticket": "https://docs.google.com/forms/d/1KeNxECFhxg3T6b1ifa47r8UAENFICYzNhWAUU8EnY8g",
+    "Parts_of_the_talk": "",
+    "description": "He has been writing software since he was about 12 years old, and although some of his early code wasn't top-notch, it's safe to assume you've never come across it.\n\nSince then, he has gone through the ups and downs of puberty, an experience he prefers not to delve into. He pursued higher education and took on various jobs that primarily involved typing and coding.\n\nHe has authored several books, including notable works on Android development In addition to his writing accomplishments, he offers courses on the reputable O'Reilly Media learning platform  One of his noteworthy courses is \"The Agile Sketchpad,\" an illustrated resource that provides valuable insights into the world of agile software development projects. If you're interested, Apart from his literary and educational pursuits, he is the founder of a company specializing in a cloud-based version of traditional clocking-in and clocking-out machines streamlines attendance management and offers development consultancy services for Android and front-end web development.",
+    "date": "2023-09-20",
+    "hour": "4:00 PM",
+    "tags": ["React", "beginners", "online"],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/darioalessandro/",
+      "github": "https://github.com/darioalessandro",
+      "youtube": "https://www.youtube.com/c/SecurityUnion"
+    }
+  },
+  {
+    "name": "Antonio Melé",
+    "image": "/images/EVENT/Antonio_Melé.png",
+    "talk": "Practical Django: Building a developer stats app using Django and the Github API",
+    "ticket": "https://docs.google.com/forms/d/1i5L6eENZQMSQcXd4cIBcsjrEKzz0IzFL9ym29e8vW-Q",
+    "Parts_of_the_talk": "",
+    "description": "Author of Django by Example, a Python web development book with 4 editions published in 8 languages, including a Simplified Chinese edition published by Tsinghua University Press, and other editions published in English, Spanish, Brazilian Portuguese, Korean, Russian, Polish and Serbo-Croatian. \n CTO and Co-Founder of Nucoro, the wealtech platform for financial institutions (Acquired by Backbase). Former CTO of Exo Investing, the digital wealth management using Artificial Intelligence. \n Passionate about improving people’s lives through technology. Focused on building and scaling digital financial products and technical teams.",
+    "date": "2023-09-26",
+    "hour": "6:00 PM",
+    "tags": ["Django", "intermediate", "online"],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/darioalessandro/",
+      "github": "https://github.com/darioalessandro",
+      "youtube": "https://www.youtube.com/c/SecurityUnion"
+    }
+  }
+]
