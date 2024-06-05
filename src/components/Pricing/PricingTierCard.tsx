@@ -35,7 +35,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({ tier, frequency }) =>
         <div className={`${styles.fancyGlass} rounded-2xl py-10 text-center ring-1 ring-inset ring-gray-300/50 dark:ring-gray-800/50 xl:flex xl:flex-col xl:justify-center xl:py-16`}>
           <div className="mx-auto max-w-xs px-8">
             <p className="mt-6 flex items-baseline justify-center gap-x-2">
-              <span className={`text-black dark:text-white text-5xl font-bold tracking-tight ${discountPrice ? 'line-through' : ''}`}>{price}</span>
+              <span className={`text-black dark:text-white text-5xl font-bold tracking-tight ${discountPrice ? ' line-through  ' : ''}`}>{price}</span>
               <span className="text-black dark:text-white">{discountPrice}</span>
               <span className="text-sm font-semibold leading-6 tracking-wide text-gray-700 dark:text-gray-400">{frequency.priceSuffix}</span>
             </p>

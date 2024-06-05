@@ -30,7 +30,7 @@ const PricingPage: React.FC = () => {
 
           {bannerText && (
             <div className="flex justify-center my-4">
-              <p className="px-4 py-3 text-xs bg-slate-100 text-black dark:bg-slate-300/30 dark:text-white/80 rounded-xl">{bannerText}</p>
+              <p className="px-4 py-3 text-sm font-medium bg-yellow-400/40 text-black  text-white/80 rounded-xl">{bannerText}</p>
             </div>
           )}
 

@@ -20,7 +20,7 @@ export interface PricingTierFrequency {
   }
   
   export const frequencies: PricingTierFrequency[] = [
-    { id: '1', value: '1', label: 'Pay Cash', priceSuffix: '/One time Payment' },
+    { id: '1', value: '1', label: 'Pay Cash', priceSuffix: '/One time' },
     { id: '2', value: '2', label: '6 m installment', priceSuffix: '/month' },
     { id: '3', value: '3', label: '12 m installment', priceSuffix: '/month' },
     { id: '4', value: '4', label: '18 m installment', priceSuffix: '/month' },
@@ -30,7 +30,7 @@ export interface PricingTierFrequency {
     {
       name: 'Dragons Bootcamp Program',
       id: '0',
-      href: '/subscribe',
+      href: '/apply',
       price: { 1: '$499', 2: '$499', 3: '$699', 4: '$799' },
       discountPrice: { 1: '$399', 2: '$399', 3: '$559', 4: '$639' },
       description: `Our 6-month Bootcamp is tailored to make you job-ready.`,
@@ -44,7 +44,7 @@ export interface PricingTierFrequency {
       featured: false,
       highlighted: false,
       soldOut: false,
-      cta: `Sign up`,
+      cta: `Apply Now`,
     },
   ];
   
