@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { frequencies, tiers } from '../../DATA/Pricing/Pricing';
+import { frequencies, tiers,PricingTierFrequency } from '../../DATA/Pricing/Pricing';
 import PricingOption from '../Pricing/PricingOption';
 import PricingTierCard from '../Pricing/PricingTierCard';
 import styles from '../../styles/pricing.module.css';
@@ -45,6 +45,7 @@ const PricingPage: React.FC = () => {
               </div>
             </div>
           )}
+
 
           <PricingTierCard tier={tiers[0]} frequency={frequency} />
         </div>

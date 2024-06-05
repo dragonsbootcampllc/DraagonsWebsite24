@@ -1,11 +1,12 @@
 import React from 'react';
-import { PricingTier } from '../../DATA/Pricing/Pricing';
+import { PricingTier, PricingTierFrequency } from '../../DATA/Pricing/Pricing';
 import CheckIcon from '../CheckIcon';
 import styles from '../../styles/pricing.module.css';
 
+
 interface PricingTierCardProps {
   tier: PricingTier;
-  frequency: string;
+  frequency: PricingTierFrequency;
 }
 
 const PricingTierCard: React.FC<PricingTierCardProps> = ({ tier, frequency }) => {

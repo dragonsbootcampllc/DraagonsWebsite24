@@ -32,7 +32,7 @@ export interface PricingTierFrequency {
       id: '0',
       href: '/subscribe',
       price: { '1': '$499', '2': '$499', '3': '$699', '4': '$799' },
-      discountPrice: { '1': '', '2': '', '3': '', '4': '' },
+      discountPrice: { '1': '$399', '2': '$399', '3': '$559', '4': '$639' },
       description: `Our 6-month Bootcamp is tailored to make you job-ready.`,
       features: [
         `Learn what companies are looking for`,
