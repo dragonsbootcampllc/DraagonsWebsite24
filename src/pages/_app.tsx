@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
     {
       id: 3,
       name: "Gallery",
-      link: "/Gallary",
+      link: "/Gallery",
     },
     {
       id: 4,

@@ -42,8 +42,7 @@ const ImageGallery = ({ images }) => {
               alt={img.alt}
               width={400}
               height={300}
-              // className="cursor-pointer rounded-lg transition-all hover:scale-105 active:scale-95"
-              className="cursor-pointer rounded-lg  opacity-90 hover:opacity-100 transition-transform duration-100 ease-in-out transform hover:scale-105"
+              className="cursor-pointer rounded-lg opacity-85 hover:opacity-100 transition-transform duration-100 ease-in-out transform hover:scale-105"
               onClick={() => handleImageClick(index)}
             />
           </div>

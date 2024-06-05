@@ -17,10 +17,10 @@ const Trusted = () => {
   return (
     <div className="absolute h-[300px] flex flex-col items-center box-border pt-5 bottom-0 z-30 w-full bg-gray-700/90 md:bg-gray-50/0">
       <Link
-        href="/Gallary"
+        href="/Gallery"
         className="text-xl border-2 px-3 py-1 rounded-full font-semibold !opacity-50 hover:!opacity-100 transition-all"
       >
-        Go To Gallary
+        Go To Gallery
       </Link>
 
       <section className={`${styles.sec3} backdrop-blur-sm`}>
