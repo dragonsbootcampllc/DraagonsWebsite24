@@ -21,7 +21,7 @@ const ImageGallery = ({ images }) => {
 
   const showPrevImage = () => {
     setSelectedIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
 
@@ -36,13 +36,14 @@ const ImageGallery = ({ images }) => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-4 px-6">
         {images.slice(0, visibleCount).map((img, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="relative  overflow-hidden rounded-lg">
             <Image
               src={img.src}
               alt={img.alt}
               width={400}
               height={300}
-              className="cursor-pointer rounded-lg transition-all hover:scale-105 active:scale-95"
+              // className="cursor-pointer rounded-lg transition-all hover:scale-105 active:scale-95"
+              className="cursor-pointer rounded-lg  opacity-90 hover:opacity-100 transition-transform duration-100 ease-in-out transform hover:scale-105"
               onClick={() => handleImageClick(index)}
             />
           </div>
@@ -86,13 +87,14 @@ const ImageGallery = ({ images }) => {
             >
               <FaArrowLeft />
             </button>
+        
             <div className="relative w-full h-full max-w-[80%] max-h-[80%] flex items-center justify-center overflow-hidden">
               <div className="relative w-full h-full">
                 <Image
                   src={images[selectedIndex].src}
                   alt={images[selectedIndex].alt}
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain" 
                   className="rounded-lg"
                 />
               </div>
