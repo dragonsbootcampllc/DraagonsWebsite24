@@ -1,12 +1,20 @@
 'use client';
 import React, { useState } from 'react';
-import { frequencies, tiers,PricingTierFrequency } from '../../DATA/Pricing/Pricing';
-import PricingOption from '../Pricing/PricingOption';
-import PricingTierCard from '../Pricing/PricingTierCard';
+import { frequencies, tiers } from '../../DATA/Pricing/Pricing';
+import PricingOption from './PricingOption';
+import PricingTierCard from './PricingTierCard';
 import styles from '../../styles/pricing.module.css';
 
 const PricingPage: React.FC = () => {
   const [frequency, setFrequency] = useState(frequencies[0]);
+
+  const handleFrequencyChange = (value: string) => {
+    const selectedFrequency = frequencies.find(f => f.value === value);
+    if (selectedFrequency) {
+      setFrequency(selectedFrequency);
+    }
+  };
+
   const bannerText = "Get 25% off now for a limited time!";
 
   return (
@@ -39,13 +47,12 @@ const PricingPage: React.FC = () => {
                     key={option.value}
                     option={option}
                     selected={frequency.value === option.value}
-                    onSelect={(value) => setFrequency(frequencies.find(f => f.value === value) as PricingTierFrequency)}
+                    onSelect={handleFrequencyChange}
                   />
                 ))}
               </div>
             </div>
           )}
-
 
           <PricingTierCard tier={tiers[0]} frequency={frequency} />
         </div>

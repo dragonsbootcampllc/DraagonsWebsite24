@@ -9,8 +9,8 @@ export interface PricingTierFrequency {
     name: string;
     id: string;
     href: string;
-    discountPrice: string | Record<string, string>;
-    price: string | Record<string, string>;
+    discountPrice: string | Record<string, number>;
+    price: string | Record<string, number>;
     description: string | React.ReactNode;
     features: string[];
     featured?: boolean;
@@ -31,8 +31,8 @@ export interface PricingTierFrequency {
       name: 'Dragons Bootcamp Program',
       id: '0',
       href: '/subscribe',
-      price: { '1': '$499', '2': '$499', '3': '$699', '4': '$799' },
-      discountPrice: { '1': '$399', '2': '$399', '3': '$559', '4': '$639' },
+      price: { 1: '$499', 2: '$499', 3: '$699', 4: '$799' },
+      discountPrice: { 1: '$399', 2: '$399', 3: '$559', 4: '$639' },
       description: `Our 6-month Bootcamp is tailored to make you job-ready.`,
       features: [
         `Learn what companies are looking for`,
