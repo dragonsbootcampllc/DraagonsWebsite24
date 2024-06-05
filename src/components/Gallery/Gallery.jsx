@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoOpenOutline, IoDownloadOutline } from "react-icons/io5";
 
 const ImageGallery = ({ images }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -29,6 +29,19 @@ const ImageGallery = ({ images }) => {
     setVisibleCount((prevCount) => prevCount + 9);
   };
 
+  const openInNewTab = (url) => {
+    window.open(url, "_blank").focus();
+  };
+
+  const downloadImage = (url) => {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = url.split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center">
       <h1 className="text-3xl font-semibold text-center mt-32 mb-8 px-6">
@@ -36,15 +49,39 @@ const ImageGallery = ({ images }) => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-4 px-6">
         {images.slice(0, visibleCount).map((img, index) => (
-          <div key={index} className="relative  overflow-hidden rounded-lg">
+          <div
+            key={index}
+            className="relative overflow-hidden rounded-lg group"
+          >
             <Image
               src={img.src}
               alt={img.alt}
               width={400}
               height={300}
-              className="cursor-pointer rounded-lg opacity-85 hover:opacity-100 transition-transform duration-100 ease-in-out transform hover:scale-105"
+              className="cursor-pointer rounded-lg opacity-85 group-hover:opacity-100 transition-transform duration-100 ease-in-out transform  group-hover:scale-105"
               onClick={() => handleImageClick(index)}
             />
+
+            <div className="absolute top-2 right-2 flex space-x-2 group-hover:opacity-100 transition-opacity duration-300">
+              <button
+                className=" bg-slate-800 p-2 rounded-full shadow-md hover:bg-slate-900"
+                onClick={() => openInNewTab(img.src)}
+              >
+                <IoOpenOutline
+                  className=" hover:text-white text-slate-300"
+                  size={20}
+                />
+              </button>
+              <button
+                className=" bg-slate-800 p-2 rounded-full shadow-md hover:bg-slate-900"
+                onClick={() => downloadImage(img.src)}
+              >
+                <IoDownloadOutline
+                  className=" hover:text-white text-slate-300"
+                  size={20}
+                />
+              </button>
+            </div>
           </div>
         ))}
       </div>
@@ -75,34 +112,53 @@ const ImageGallery = ({ images }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 bg-opacity-75">
           <div className="relative w-11/12 h-full flex items-center justify-center">
             <button
-              className="absolute z-50 top-4 right-4 text-white text-5xl cursor-pointer p-2 hover:bg-gray-600 rounded-full"
+              className="absolute z-50 top-4 right-4  text-white text-3xl cursor-pointer  bg-slate-800 p-3 shadow-md hover:bg-slate-900 rounded-full"
               onClick={closeModal}
             >
-              <IoClose />
+              <IoClose className=" p-1 hover:text-white text-slate-300" />{" "}
             </button>
             <button
-              className="absolute z-50 left-4 transition-all text-white text-3xl cursor-pointer p-8 hover:bg-gray-600 rounded-full"
+              className="absolute z-50 left-4 text-white text-3xl cursor-pointer  bg-slate-800 p-3 shadow-md hover:bg-slate-900 rounded-full"
               onClick={showPrevImage}
             >
-              <FaArrowLeft />
+              <FaArrowLeft className=" p-2  hover:text-white text-slate-300" />{" "}
             </button>
-        
+
             <div className="relative w-full h-full max-w-[80%] max-h-[80%] flex items-center justify-center overflow-hidden">
               <div className="relative w-full h-full">
                 <Image
                   src={images[selectedIndex].src}
                   alt={images[selectedIndex].alt}
                   layout="fill"
-                  objectFit="contain" 
-                  className="rounded-lg"
+                  className="rounded-lg aspect-auto"
                 />
+                <div className="absolute top-2 right-2 flex space-x-2 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    className=" bg-slate-800 p-2 rounded-full shadow-md hover:bg-slate-900"
+                    onClick={() => openInNewTab(images[selectedIndex].src)}
+                  >
+                    <IoOpenOutline
+                      className=" hover:text-white text-slate-300"
+                      size={20}
+                    />
+                  </button>
+                  <button
+                    className=" bg-slate-800 p-2 rounded-full shadow-md hover:bg-slate-900"
+                    onClick={() => downloadImage(images[selectedIndex].src)}
+                  >
+                    <IoDownloadOutline
+                      className=" hover:text-white text-slate-300"
+                      size={20}
+                    />
+                  </button>
+                </div>
               </div>
             </div>
             <button
-              className="absolute right-4 transition-all text-white text-3xl cursor-pointer p-8 hover:bg-gray-600 rounded-full"
+              className="absolute right-4 text-white text-3xl cursor-pointer  rounded-full bg-slate-800 p-3 shadow-md hover:bg-slate-900"
               onClick={showNextImage}
             >
-              <FaArrowRight />
+              <FaArrowRight className=" p-2  hover:text-white text-slate-300" />{" "}
             </button>
           </div>
         </div>
