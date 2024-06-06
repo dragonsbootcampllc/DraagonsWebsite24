@@ -125,8 +125,8 @@ const ImageGallery = ({ images }) => {
             </button>
 
             <div className="relative w-full h-full max-w-[80%] max-h-[80%] flex items-center justify-center overflow-hidden">
-              <div className="relative w-full    h-full">
-              <div className="absolute z-20 top-2 right-2 flex space-x-2 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="relative backdrop-blur-md rounded-lg w-full    h-full">
+                <div className="absolute  z-20 top-2 right-2 flex space-x-2 group-hover:opacity-100 transition-opacity duration-300">
                   <button
                     className=" bg-slate-800 p-2 rounded-full shadow-md hover:bg-slate-900"
                     onClick={() => openInNewTab(images[selectedIndex].src)}
@@ -146,15 +146,13 @@ const ImageGallery = ({ images }) => {
                     />
                   </button>
                 </div>
-                
-               <Image
+
+                <Image
                   src={images[selectedIndex].src}
                   alt={images[selectedIndex].alt}
                   layout="fill"
-                  className="aspect-auto object-contain cursor-pointer"
+                  className="aspect-auto object-contain cursor-pointer rounded-lg"
                 />
-             
-               
               </div>
             </div>
             <button
