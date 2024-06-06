@@ -1,4 +1,4 @@
-import Gallary from "../components/Gallary/Gallary.jsx";
+import Gallery from "../components/Gallery/Gallery.jsx";
 
 const images = [
   { src: "/images/Gallery/1.png", alt: "Season 1" },
@@ -30,10 +30,10 @@ const images = [
   { src: "/images/Gallery/27.png", alt: "Season 2" },
 ];
 
-export default function GallaryPage() {
+export default function GalleryPage() {
   return (
     <div>
-      <Gallary images={images} />
+      <Gallery images={images} />
     </div>
   );
 }
