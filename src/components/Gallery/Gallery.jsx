@@ -45,7 +45,7 @@ const ImageGallery = ({ images }) => {
   return (
     <div className="min-h-screen flex flex-col items-center">
       <h1 className="text-3xl font-semibold text-center mt-32 mb-8 px-6">
-        Dragons Boot Camp Gallery
+        Dragons Bootcamp Gallery
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-4 px-6">
         {images.slice(0, visibleCount).map((img, index) => (
@@ -125,14 +125,8 @@ const ImageGallery = ({ images }) => {
             </button>
 
             <div className="relative w-full h-full max-w-[80%] max-h-[80%] flex items-center justify-center overflow-hidden">
-              <div className="relative w-full h-full">
-                <Image
-                  src={images[selectedIndex].src}
-                  alt={images[selectedIndex].alt}
-                  layout="fill"
-                  className="rounded-lg aspect-auto"
-                />
-                <div className="absolute top-2 right-2 flex space-x-2 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="relative w-full    h-full">
+              <div className="absolute z-20 top-2 right-2 flex space-x-2 group-hover:opacity-100 transition-opacity duration-300">
                   <button
                     className=" bg-slate-800 p-2 rounded-full shadow-md hover:bg-slate-900"
                     onClick={() => openInNewTab(images[selectedIndex].src)}
@@ -152,6 +146,15 @@ const ImageGallery = ({ images }) => {
                     />
                   </button>
                 </div>
+                
+               <Image
+                  src={images[selectedIndex].src}
+                  alt={images[selectedIndex].alt}
+                  layout="fill"
+                  className="aspect-auto object-contain cursor-pointer"
+                />
+             
+               
               </div>
             </div>
             <button
