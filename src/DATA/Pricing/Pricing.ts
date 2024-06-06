@@ -9,8 +9,8 @@ export interface PricingTierFrequency {
     name: string;
     id: string;
     href: string;
-    discountPrice: string | Record<string, number>;
-    price: string | Record<string, number>;
+    discountPrice:Record<number,string >;
+    price:  Record<number,string >;
     description: string | React.ReactNode;
     features: string[];
     featured?: boolean;
