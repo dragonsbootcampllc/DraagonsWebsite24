@@ -1,17 +1,17 @@
 import React from 'react';
-import { PricingTier } from '../../DATA/Pricing/Pricing';
+import { PricingTier,PricingTierFrequency } from '../../DATA/Pricing/Pricing';
 import CheckIcon from '../CheckIcon';
 import styles from '../../styles/pricing.module.css';
 
 interface PricingTierCardProps {
   tier: PricingTier;
-  frequency: string;
+  frequency: PricingTierFrequency;
 }
 
 const PricingTierCard: React.FC<PricingTierCardProps> = ({ tier, frequency }) => {
   const frequencyValue = frequency.value; // Accessing the frequency value
-  const discountPrice = typeof tier.discountPrice === 'string' ? tier.discountPrice : tier.discountPrice[frequencyValue];
-  const price = typeof tier.price === 'string' ? tier.price : tier.price[frequencyValue];
+  const discountPrice = typeof tier.discountPrice === 'string' ? tier.discountPrice : tier.discountPrice[frequencyValue as unknown as number] ?? '';
+  const price = typeof tier.price === 'string' ? tier.price : tier.price[frequencyValue as unknown as number] ?? '';
 
   return (
     <div className="flex flex-wrap xl:flex-nowrap items-center bg-white dark:bg-gray-900/80 backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-3xl ring-1 ring-gray-300/70 dark:ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
