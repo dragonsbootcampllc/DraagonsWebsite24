@@ -4,6 +4,8 @@ import React from "react";
 import Footer from "../components/Footer";
 import HeaderComp from "../components/HeaderComp/Header";
 import Head from "next/head";
+import {NextUIProvider} from "@nextui-org/react";
+
 export default function App({ Component, pageProps }: AppProps) {
   //TODO: Change and add (Tracks Page(Instade of home), Blog)
   let nav_links = [
@@ -62,7 +64,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <HeaderComp nav_links={nav_links} Join={Join} />
 
         <div className={"w-full"}>
+        <NextUIProvider>
           <Component {...pageProps} />
+          </NextUIProvider>
         </div>
 
         <Footer />
