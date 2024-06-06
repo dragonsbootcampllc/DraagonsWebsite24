@@ -1,94 +1,435 @@
-import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
-function Header(props) {
+export default function Header() {
+  const [solutionDropdownOpen, setSolutionDropdownOpen] = useState(false);
+  const [studentsDropdownOpen, setStudentsDropdownOpen] = useState(false);
+  const [partnersDropdownOpen, setPartnersDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleSolutionDropdown = () => {
+    setSolutionDropdownOpen(!solutionDropdownOpen);
+    setStudentsDropdownOpen(false);
+    setPartnersDropdownOpen(false);
+  };
+
+  const toggleStudentsDropdown = () => {
+    setStudentsDropdownOpen(!studentsDropdownOpen);
+    setPartnersDropdownOpen(false);
+  };
+
+  const togglePartnersDropdown = () => {
+    setPartnersDropdownOpen(!partnersDropdownOpen);
+    setStudentsDropdownOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    setSolutionDropdownOpen(false);
+  };
+
   return (
-    <div
-      style={{
-        border: "1px solid rgb(255,255,255,0.05)",
-      }}
-      className={`${"text-amber-50  h-[88px] z-50   bg-[#030014]/40  grid-cols-1  md:grid-cols-3 place-items-center grid fixed w-[100%] backdrop-blur-3xl"} ${"select-none"}`}
-    >
-      <div className={`${"Mobol_Logo "} ${"  md:hidden block py-2 "}`}>
-        <div className={"flex gap-1"}>
-          <Link className={`${"flex relative"}`} href="/" passHref>
-            <Image
-              src="Identity/Images/2023/SVG/test.svg"
-              alt="logo"
-              className={`${" h-[20px] "}`}
-              priority={true}
-              width={100}
-              height={20}
-            />{" "}
-          </Link>
-
-          <div
-            className={
-              "border-2 p-2 text-xs select-none hover:bg-fuchsia-800 duration-300 cursor-pointer  justify-center text-center grid place-items-center m-auto h-6 w-12 relative rounded-full"
-            }
-          >
-            <span className={"absolute"}>DEMO</span>
-          </div>
-        </div>
-      </div>
-      <div className={` ${"hidden md:flex gap-1  "}`}>
-        <Link className={`${"flex relative"}`} href="/" passHref>
-          <span className={`${"text-amber-50 uppercase "}`}>
-            <Image
-              src="Identity/Images/2023/SVG/test.svg"
-              alt="logo"
-              className={`${" h-[60px] "}`}
-              width={150}
-              height={20}
-            />
-          </span>
+    <nav className="bg-gray-800 p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link href="/" className="text-white text-lg font-bold">
+          Logo
         </Link>
-        <div
-          className={
-            "border-2 p-2 text-xs select-none hover:bg-fuchsia-800 duration-300 cursor-pointer  justify-center text-center grid place-items-center m-auto h-6 w-12 relative rounded-full"
-          }
-        >
-          <span className={"absolute"}>DEMO</span>
+        <ul className="hidden md:flex space-x-4">
+          <li className="relative">
+            <button
+              onClick={toggleSolutionDropdown}
+              className="flex items-center text-white hover:text-gray-300 focus:outline-none"
+            >
+              Solution
+              <svg
+                className={`w-4 h-4 ml-1 transition-transform ${
+                  solutionDropdownOpen ? "transform rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            {solutionDropdownOpen && (
+              <ul className="absolute top-full left-0 bg-gray-800 mt-2 py-2 w-56 rounded shadow-lg z-10">
+                <li className="relative">
+                  <button
+                    onClick={toggleStudentsDropdown}
+                    className="flex items-center w-full text-left px-4 py-2 text-white hover:bg-gray-600 focus:outline-none"
+                  >
+                    For Students
+                    <svg
+                      className={`w-4 h-4 ml-1 transition-transform ${
+                        studentsDropdownOpen ? "transform rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  {studentsDropdownOpen && (
+                    <ul className="bg-gray-800 pl-4">
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/students/mentorship"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Mentorship
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/students/job-ready"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Job Ready
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/students/leaders"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Thought Leader
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/dsa"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Students Activity
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li className="relative">
+                  <button
+                    onClick={togglePartnersDropdown}
+                    className="flex items-center w-full text-left px-4 py-2 text-white hover:bg-gray-600 focus:outline-none"
+                  >
+                    For Partners
+                    <svg
+                      className={`w-4 h-4 ml-1 transition-transform ${
+                        partnersDropdownOpen ? "transform rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  {partnersDropdownOpen && (
+                    <ul className="bg-gray-800 pl-4">
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/partners/event-sponsor"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Events Sponsor
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/partners/get-talent"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Get Talents
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/partners/outsourcing"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Software Outsourcing
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
+            )}
+          </li>
+          <li>
+            <Link
+              href="https://dragons.divzoon.com/talents"
+              className="text-white hover:text-gray-300"
+            >
+              Talents
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://dragons.divzoon.com/event"
+              className="text-white hover:text-gray-300"
+            >
+              Events
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://dragons.divzoon.com/about"
+              className="text-white hover:text-gray-300"
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://dragons.divzoon.com/pricing"
+              className="text-white hover:text-gray-300"
+            >
+              Pricing
+            </Link>
+          </li>
+        </ul>
+        <div className="hidden md:flex space-x-4">
+          <Link
+            href="https://dragons.divzoon.com/demo"
+            className="text-white hover:text-gray-300"
+          >
+            Book a Demo
+          </Link>
+          <Link
+            href="https://dragons.divzoon.com/apply"
+            className="text-white hover:text-gray-300"
+          >
+            Apply Now
+          </Link>
+        </div>
+        <div className="md:hidden flex items-center">
+          <button
+            className="text-white hover:text-gray-300 focus:outline-none"
+            onClick={toggleMobileMenu}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
-      <div
-        className={`${"max-w-[400px] min-w-[350px]   grid   h-[44px] rounded-full bg-gray-400/5 border-[0.01rem] border-gray-200/10 "} ${"select-none"}`}
-      >
-        <ul
-          className={`${"flex justify-around place-items-center gap-5 px-3 "}${" font-light text-gray-200 hover:text-white"}${" select-none cursor-pointer"}`}
-        >
-          {props.nav_links.map((nav_link) => (
-            <li key={nav_link.id}>
-              <Link href={nav_link.link} passHref>
-                <span
-                  style={{ fontFamily: "interV" }}
-                  className={`${"text-amber-50 text-sm md:text-lg capitalize "}`}
-                >
-                  {nav_link.name}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <button
-          className={`${"w-[100px] md:grid hidden place-items-center  h-[44px] "}${" shadow-inner shadow-3xl shadow-purple-700 hover:shadow-purple-400 duration-500 rounded-full bg-purple-900/5 "}${"select-none"}`}
-        >
-          {props.Join.map((Join) => (
-            <Link key={Join.id} href={Join.link} passHref>
-              <span
-                style={{ fontFamily: "interV" }}
-                className={`${" text-amber-50 capitalize "}`}
+      {mobileMenuOpen && (
+        <div className="md:hidden mt-2 space-y-2 bg-gray-700 p-4">
+          <Link
+            href="/use-cases"
+            className="block text-white hover:text-gray-300"
+          >
+            Use Cases
+          </Link>
+          <div className="relative">
+            <button
+              onClick={toggleSolutionDropdown}
+              className="flex w-full items-center text-left text-white hover:text-gray-300 focus:outline-none"
+            >
+              Solution
+              <svg
+                className={`w-4 h-4 ml-1 transition-transform ${
+                  solutionDropdownOpen ? "transform rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                {Join.name}
-              </span>
-            </Link>
-          ))}
-        </button>
-      </div>
-    </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            {solutionDropdownOpen && (
+              <div className="mt-2 bg-gray-800 py-2 rounded shadow-lg">
+                <div className="relative">
+                  <button
+                    onClick={toggleStudentsDropdown}
+                    className="flex items-center w-full text-left px-4 py-2 text-white hover:bg-gray-600 focus:outline-none"
+                  >
+                    For Students
+                    <svg
+                      className={`w-4 h-4 ml-1 transition-transform ${
+                        studentsDropdownOpen ? "transform rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  {studentsDropdownOpen && (
+                    <ul className="bg-gray-800 pl-4">
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/students/mentorship"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Mentorship
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/students/job-ready"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Job Ready
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/students/leaders"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Thought Leader
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/dsa"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Students Activity
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+                <div className="relative">
+                  <button
+                    onClick={togglePartnersDropdown}
+                    className="flex items-center w-full text-left px-4 py-2 text-white hover:bg-gray-600 focus:outline-none"
+                  >
+                    For Partners
+                    <svg
+                      className={`w-4 h-4 ml-1 transition-transform ${
+                        partnersDropdownOpen ? "transform rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  {partnersDropdownOpen && (
+                    <ul className="bg-gray-800 pl-4">
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/partners/event-sponsor"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Events Sponsor
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/partners/get-talent"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Get Talents
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://dragons.divzoon.com/solutions/partners/outsourcing"
+                          className="block px-4 py-2 text-white hover:bg-gray-600"
+                        >
+                          Software Outsourcing
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+          <Link
+            href="https://dragons.divzoon.com/talents"
+            className="block text-white hover:text-gray-300"
+          >
+            Talents
+          </Link>
+          <Link
+            href="https://dragons.divzoon.com/event"
+            className="block text-white hover:text-gray-300"
+          >
+            Events
+          </Link>
+          <Link
+            href="https://dragons.divzoon.com/about"
+            className="block text-white hover:text-gray-300"
+          >
+            About Us
+          </Link>
+          <Link
+            href="https://dragons.divzoon.com/pricing"
+            className="block text-white hover:text-gray-300"
+          >
+            Pricing
+          </Link>
+          <Link
+            href="https://dragons.divzoon.com/demo"
+            className="block text-white hover:text-gray-300"
+          >
+            Book a Demo
+          </Link>
+          <Link
+            href="https://dragons.divzoon.com/apply"
+            className="block text-white hover:text-gray-300"
+          >
+            Apply Now
+          </Link>
+        </div>
+      )}
+    </nav>
   );
 }
-
-export default Header;

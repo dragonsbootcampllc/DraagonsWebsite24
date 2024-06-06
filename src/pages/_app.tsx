@@ -2,38 +2,10 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import React from "react";
 import Footer from "../components/Footer";
-import HeaderComp from "../components/HeaderComp/Header";
+import Header from "../components/HeaderComp/Header";
 import Head from "next/head";
 export default function App({ Component, pageProps }: AppProps) {
   //TODO: Change and add (Tracks Page(Instade of home), Blog)
-  let nav_links = [
-    {
-      id: 1,
-      name: "Talents",
-      link: "/Talents",
-    },
-    {
-      id: 2,
-      name: "Team",
-      link: "/Team",
-    },
-    {
-      id: 3,
-      name: "Gallery",
-      link: "/Gallary",
-    },
-    {
-      id: 4,
-      name: "DSA",
-      link: "/DSA",
-    },
-    {
-      id: 5,
-      name: "Bootcamp",
-      link: "/Bootcamp",
-    },
-  ];
-
   let Join = [
     {
       id: 1,
@@ -59,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
           />
         </Head>
 
-        <HeaderComp nav_links={nav_links} Join={Join} />
+        <Header/>
 
         <div className={"w-full"}>
           <Component {...pageProps} />
