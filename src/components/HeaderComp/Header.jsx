@@ -52,7 +52,7 @@ function Header(props) {
         </div>
       </div>
       <div
-        className={`${"max-w-[400px] min-w-[350px]   grid   h-[44px] rounded-full bg-gray-400/5 border-[0.01rem] border-gray-200/10 "} ${"select-none"}`}
+        className={`${"max-w-[500px] min-w-[350px]   grid   h-[44px] rounded-full bg-gray-400/5 border-[0.01rem] border-gray-200/10 "} ${"select-none"}`}
       >
         <ul
           className={`${"flex justify-around place-items-center gap-5 px-3 "}${" font-light text-gray-200 hover:text-white"}${" select-none cursor-pointer"}`}
