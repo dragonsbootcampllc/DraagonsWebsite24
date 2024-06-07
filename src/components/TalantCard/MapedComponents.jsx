@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import useSWRInfinite from "swr/infinite";
-
+import ContactForm from './ContactForm';
 const Talantcard = dynamic(() => import("./Talantcard"));
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -104,6 +104,8 @@ function MapedComponents(props) {
           <h1 className={"-mt-14 text-xl font-bold text-yellow-400/40"}>
             No more talents to load
           </h1>
+          <p className={" mt-5 text-xl font-bold text-yellow-400/40"}>You can contact us to get access to all talents.</p>
+          < ContactForm />
         </div>
       )}
     </div>
