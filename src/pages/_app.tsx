@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <div>
+      <div className="flex flex-col h-screen">
         <Head>
           <title>Dragons</title>
           <meta
@@ -61,11 +61,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <HeaderComp nav_links={nav_links} Join={Join} />
 
-        <div className={"w-full"}>
+        <div className={"w-full flex-1"}>
           <Component {...pageProps} />
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
