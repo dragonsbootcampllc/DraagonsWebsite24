@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import styles from "../styles/Home.module.css";
-import React from "react";
+import React, { ReactElement, ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 const Hero = dynamic(() => import("../components/Hero/Hero"), { ssr: false });
@@ -12,6 +12,7 @@ const TechStack = dynamic(() => import("../components/TechStack/TechStack"), {
 import { Numbers } from "../components/Numbers/Numbers";
 import { TrustedSection } from "../components/Trusted/TrustedSection";
 import { VideoSection } from "../components/VideoSection/VideoSection";
+import WebinarsSection from "@/components/WebinarsSection/WebinarsSection";
 const TestmonialSection = dynamic(
   () => import("../components/TestmonialSection/TestmonialSection"),
   { ssr: false },
@@ -34,6 +35,12 @@ const Sec2Summary = dynamic(() => import("../components/WhatWeDo"), {
 });
 
 export default function Home() {
+  const [popup, setPopup] = useState<ReactNode>(null);
+
+  const handel_popup = (component: ReactNode) => {
+    setPopup(component);
+  }
+
   return (
     <div className={`overflow-x-hidden ${styles.container}`}>
       <div className="relative w-full pt-12">
@@ -50,6 +57,10 @@ export default function Home() {
 
       <div className="mt-28 w-full flex justify-center items-center">
         <TestmonialSection />
+      </div>
+
+      <div className="my-28 w-full flex justify-center items-center">
+        <WebinarsSection handel_popup={handel_popup} />
       </div>
 
       <div className="relative flex justify-center flex-col">
@@ -116,6 +127,8 @@ export default function Home() {
           />
         </div>
       </div>
+
+      {popup && popup}
     </div>
   );
 }
