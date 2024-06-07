@@ -76,34 +76,6 @@ function MapedComponents(props) {
             "flex-col gap-4 w-full flex place-items-center justify-center mx-auto mb-12"
           }
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height={170}
-            width={170}
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            version="1.1"
-            x="0px"
-            y="0px"
-            viewBox="0 0 100 125"
-            fill={"gray"}
-            xmlSpace="preserve"
-          >
-            <style
-              type="text/css"
-              dangerouslySetInnerHTML={{ __html: "\n\t.st0{fill:#FFFFFF;}\n" }}
-            />
-            <g>
-              <g>
-                <path d="M50,8.8c-20.3,0-36.7,16.5-36.7,36.7v39.4c0,3.4,2.8,6.2,6.2,6.2h61c3.4,0,6.2-2.8,6.2-6.2V45.6    C86.7,25.3,70.3,8.8,50,8.8z M84.7,84.9c0,2.3-1.9,4.2-4.2,4.2h-61c-2.3,0-4.2-1.9-4.2-4.2V45.6c0-19.2,15.6-34.7,34.7-34.7    s34.7,15.6,34.7,34.7V84.9z" />
-                <path d="M33.6,35.7c-2.9,0-5.2,2.3-5.2,5.2s2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2S36.5,35.7,33.6,35.7z M35.3,41.9    c-0.9,0-1.6-1-1.6-2.3s0.7-2.3,1.6-2.3c0.9,0,1.6,1,1.6,2.3S36.3,41.9,35.3,41.9z" />
-                <path d="M66.4,35.7c-2.9,0-5.2,2.3-5.2,5.2s2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2S69.3,35.7,66.4,35.7z M68.1,41.9    c-0.9,0-1.6-1-1.6-2.3s0.7-2.3,1.6-2.3c0.9,0,1.6,1,1.6,2.3S69,41.9,68.1,41.9z" />
-                <path d="M50,49.2c-4.7,0-8.6,3.8-8.6,8.6c0,0.6,0.4,1,1,1s1-0.4,1-1c0-3.6,2.9-6.6,6.6-6.6s6.6,2.9,6.6,6.6c0,0.6,0.4,1,1,1    s1-0.4,1-1C58.6,53.1,54.7,49.2,50,49.2z" />
-              </g>
-            </g>
-          </svg>
-          <h1 className={"-mt-14 text-xl font-bold text-yellow-400/40"}>
-            No more talents to load
-          </h1>
           <p className={" mt-5 text-xl font-bold text-yellow-400/40"}>You can contact us to get access to all talents.</p>
           < ContactForm />
         </div>
