@@ -1,8 +1,10 @@
 "use client";
 import React from 'react';
 
-const heroHeading = "Welcome to Your Job-Ready Journey";
+const heroHeading = "Welcome to Your ";
 const heroHighlightedText = "Job-Ready";
+const subHeadingText = " Journey";
+
 const heroDescription = "We help you become job-ready with our comprehensive programs";
 const heroImageSrc = "/images/JopReady/Office.png";
 const heroImageAlt = "Hero Image";
@@ -14,16 +16,11 @@ const Hero: React.FC = () => {
                 <div className="content flex flex-col gap-12">
                     <div className="text text-white flex flex-col gap-7 w-full text-center md:text-left md:max-w-[550px]">
                         <h1 className='text-4xl md:text-6xl font-semibold'>
-                            {heroHeading.split(heroHighlightedText).map((part, index) => (
-                                <React.Fragment key={index}>
-                                    {part}
-                                    {index < heroHeading.split(heroHighlightedText).length - 1 && (
-                                        <span className="bg-gradient-to-r from-pink-600 to-blue-500 text-transparent bg-clip-text">
-                                            {heroHighlightedText}
-                                        </span>
-                                    )}
-                                </React.Fragment>
-                            ))}
+                            {heroHeading}
+                            <span className="bg-gradient-to-r from-pink-600 to-blue-500 text-transparent bg-clip-text">
+                                {heroHighlightedText}
+                            </span>
+                            {subHeadingText}
                         </h1>
                         <p className='text-xl text-white/60'>{heroDescription}</p>
                     </div>
