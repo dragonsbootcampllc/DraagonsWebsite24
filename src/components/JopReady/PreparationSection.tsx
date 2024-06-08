@@ -26,9 +26,9 @@ const PreparationSection: React.FC = () => {
                     {headingText} <span className="bg-gradient-to-r from-pink-600 to-blue-500 text-transparent bg-clip-text">{highlightedText}</span>
                 </h2>
             </div>
-            <div className="grid grid-col-1 md:grid-cols-3 gap-5">
+            <div className={`grid grid-col-1 md:grid-cols-6 gap-5`}>
                 {preparationSteps.map((step, index) => (
-                    <div key={index} className="text-lg mt-2 p-6 h-64 rounded-xl flex flex-col gap-5 justify-center items-center text-center bg-[#08091b] " >
+                    <div key={index} className={`text-lg mt-2 p-6 h-64 rounded-xl flex ${index<=2? `col-span-2`:`col-span-3`} flex-col gap-5 justify-center items-center text-center bg-[#08091b] `} >
                         <div className="icon ">
                             {step.logo}
                         </div>
