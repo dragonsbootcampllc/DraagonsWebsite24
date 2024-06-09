@@ -8,7 +8,7 @@ export default function Home() {
       <section className="py-20 min-h-screen flex justify-center items-center">
         <div className="container mx-auto ">
           <h1 className="text-6xl font-bold text-center mb-8">
-            Transform Your Career with Dragons Tech Bootcamp
+            Transform Your <span className="text-fuchsia-800">Career</span> with <span className="text-fuchsia-800">Dragons</span> Tech Bootcamp
           </h1>
 
           <h1 className="text-4xl font-bold text-center mb-8">
@@ -24,8 +24,8 @@ export default function Home() {
         </div>
       </section>
       <section className="py-20 min-h-screen">
-        <div className="min-h-screen flex items-center justify-center flex-wrap">
-          <h3 className="text-5xl">What Are Our Programs For?</h3>
+        <div className="flex items-center justify-center flex-wrap">
+          <h3 className="text-5xl text-center">What Are Our Programs For?</h3>
           <Tabs />
         </div>
       </section>
@@ -34,7 +34,7 @@ export default function Home() {
           <h3 className="text-5xl">How we will help you?</h3>
           <div className="container mx-auto p-6">
             <Section
-              title="CS Grads & IT Masters"
+              title="Computer Science Graduates & IT Masters"
               imgSrc="https://via.placeholder.com/400"
               imgAlt="Placeholder Image 1"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

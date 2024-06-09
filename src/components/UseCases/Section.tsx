@@ -24,7 +24,7 @@ export default function Section({
         height={400}
       />
       <div className="w-full md:w-1/2 mx-4 my-2">
-        <h2 className="text-3xl font-bold mb-4">{title}</h2>
+        <h2 className="text-3xl font-bold mb-4 sm:text-center">{title}</h2>
         <p>{content}</p>
       </div>
     </div>

@@ -31,22 +31,26 @@ export default function Tabs() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 max-h-screen">
       <div className="bg-black shadow-md rounded-lg">
         <div className="flex justify-around border-b">
           {tabs.map((tab) => (
             <button
               key={tab.name}
-              className={`p-4 w-full focus:outline-none ${selectedTab.name === tab.name ? "border-b-2 border-blue-500" : "text-gray-600"}`}
+              className={`p-4 w-full md:w-auto focus:outline-none ${selectedTab.name === tab.name ? "border-b-2 border-blue-500" : "text-gray-600"}`}
               onClick={() => setSelectedTab(tab)}
             >
               {tab.name}
             </button>
           ))}
         </div>
-        <div className="p-6 flex gap-2">
-          <p>{selectedTab.content}</p>
-          <img src={selectedTab.image} alt={selectedTab.name} />
+        <div className="p-6 flex flex-col md:flex-row gap-2">
+          <div className="md:w-2/3">
+            <p>{selectedTab.content}</p>
+            </div>
+            <div className="md:w-1/3">
+            <img className="w-full h-auto" src={selectedTab.image} alt={selectedTab.name} />
+          </div>
         </div>
       </div>
     </div>
