@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import React from "react";
 import Footer from "../components/Footer";
 import HeaderComp from "../components/HeaderComp/Header";
+import Navigator from "../components/Natigation/navigation";
 import Head from "next/head";
 export default function App({ Component, pageProps }: AppProps) {
   //TODO: Change and add (Tracks Page(Instade of home), Blog)
@@ -58,8 +59,9 @@ export default function App({ Component, pageProps }: AppProps) {
             href="/Identity/Images/2023/SVG/LLogo.svg"
           />
         </Head>
+        <Navigator />
 
-        <HeaderComp nav_links={nav_links} Join={Join} />
+        {/* <HeaderComp nav_links={nav_links} Join={Join} /> */}
 
         <div className={"w-full"}>
           <Component {...pageProps} />
