@@ -480,7 +480,7 @@ export default function Component() {
   );
 }
 
-function ChevronDownIcon(props) {
+function ChevronDownIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -499,7 +499,7 @@ function ChevronDownIcon(props) {
   );
 }
 
-function MenuIcon(props) {
+function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -515,12 +515,12 @@ function MenuIcon(props) {
     >
       <line x1="4" x2="20" y1="12" y2="12" />
       <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y1="18" />
+      <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
   );
 }
 
-function MountainIcon(props) {
+function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
