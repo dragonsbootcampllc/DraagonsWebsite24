@@ -10,7 +10,8 @@ import {
 import { Drawer, DrawerTrigger, DrawerContent } from "@/components/ui/drawer";
 import { useState } from "react";
 
-const hoverNavItems = " hover:text-sky-500 hover:border-b hover:border-sky-300";
+const hoverNavItems =
+  "text-base hover:text-sky-500 hover:border-b hover:border-sky-300";
 
 export default function Component() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Component() {
   return (
     <header className="flex h-16 w-full justify-center shrink-0 items-center px-4 md:px-6 fixed top-0 left-0 z-50 bg-bgMainHeader">
       <div className="flex items-center max-w-[1400px] justify-between w-full">
-        <Link className="flex relative mr-10" href="/" passHref>
+        <Link className="flex relative xl:mr-56 mr-26" href="/" passHref>
           <Image
             src="Identity/Images/2023/SVG/test.svg"
             alt="logo"
@@ -29,15 +30,15 @@ export default function Component() {
         </Link>
         <div className="flex items-center gap-4 lg:hidden">
           <Link
-            href="http://dragons.divzoon.com/demo"
-            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+            href="/demo"
+            className="sm:inline-flex hidden h-9 items-center justify-center rounded-md border  border-gray-200  px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium shadow-sm"
             prefetch={false}
           >
-            Boot a Demo
+            Boot Demo
           </Link>
           <Link
-            href="http://dragons.divzoon.com/apply"
-            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+            href="/apply"
+            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white text-black  px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium shadow-sm "
             prefetch={false}
           >
             Apply Now
@@ -55,28 +56,28 @@ export default function Component() {
                   Use cases
                 </Link>
                 <Link
-                  href="http://dragons.divzoon.com/talents"
+                  href="/talents"
                   className="font-bold text-lg"
                   prefetch={false}
                 >
                   Talents
                 </Link>
                 <Link
-                  href="http://dragons.divzoon.com/event"
+                  href="/event"
                   className="font-bold text-lg"
                   prefetch={false}
                 >
                   Events
                 </Link>
                 <Link
-                  href="http://dragons.divzoon.com/about"
+                  href="/about"
                   className="font-bold text-lg"
                   prefetch={false}
                 >
                   About Us
                 </Link>
                 <Link
-                  href="http://dragons.divzoon.com/pricing"
+                  href="/pricing"
                   className="font-bold text-lg"
                   prefetch={false}
                 >
@@ -98,7 +99,7 @@ export default function Component() {
                       <div className="space-y-2 w-40">
                         <h3 className="text-base font-medium">
                           <Link
-                            href="http://dragons.divzoon.com/solutions/students/"
+                            href="/solutions/students/"
                             prefetch={false}
                           >
                             For Students
@@ -107,7 +108,7 @@ export default function Component() {
                         <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/students/mentorship"
+                              href="/solutions/students/mentorship"
                               prefetch={false}
                             >
                               Mentorship
@@ -115,7 +116,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/students/job-ready"
+                              href="/solutions/students/job-ready"
                               prefetch={false}
                             >
                               Job Ready
@@ -123,7 +124,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/students/leaders"
+                              href="/solutions/students/leaders"
                               prefetch={false}
                             >
                               Thought Leader
@@ -131,7 +132,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/dsa"
+                              href="/dsa"
                               prefetch={false}
                             >
                               Students Activity
@@ -142,7 +143,7 @@ export default function Component() {
                       <div className="space-y-2 w-40">
                         <h3 className="text-base font-medium">
                           <Link
-                            href="http://dragons.divzoon.com/solutions/partners/"
+                            href="/solutions/partners/"
                             prefetch={false}
                           >
                             For Partners
@@ -151,7 +152,7 @@ export default function Component() {
                         <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/partners/event-sponsor"
+                              href="/solutions/partners/event-sponsor"
                               prefetch={false}
                             >
                               Events Sponsor
@@ -159,7 +160,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/partners/get-talent"
+                              href="/solutions/partners/get-talent"
                               prefetch={false}
                             >
                               Get Talents
@@ -167,7 +168,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/partners/outsourcing"
+                              href="/solutions/partners/outsourcing"
                               prefetch={false}
                             >
                               Software Outsourcing
@@ -188,41 +189,13 @@ export default function Component() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </DrawerTrigger>
-            <DrawerContent className="w-screen h-max p-3 lg:hidden bg-bgMainHeader">
+            <DrawerContent className="w-screen h-max p-5 lg:hidden bg-bgMainHeader">
               <nav className="grid gap-5 py-3">
-                <Link href="#" className="font-bold text-lg" prefetch={false}>
+                <Link href="#" className="font-bold text-xl" prefetch={false}>
                   Use cases
                 </Link>
-                <Link
-                  href="http://dragons.divzoon.com/talents"
-                  className="font-bold text-lg"
-                  prefetch={false}
-                >
-                  Talents
-                </Link>
-                <Link
-                  href="http://dragons.divzoon.com/event"
-                  className="font-bold text-lg"
-                  prefetch={false}
-                >
-                  Events
-                </Link>
-                <Link
-                  href="http://dragons.divzoon.com/about"
-                  className="font-bold text-lg"
-                  prefetch={false}
-                >
-                  About Us
-                </Link>
-                <Link
-                  href="http://dragons.divzoon.com/pricing"
-                  className="font-bold text-lg"
-                  prefetch={false}
-                >
-                  Pricing
-                </Link>
                 <button
-                  className="font-bold flex items-center text-lg"
+                  className="font-bold flex items-center text-xl"
                   onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                 >
                   Solution{" "}
@@ -232,18 +205,15 @@ export default function Component() {
                   <div className="p-3 bg-bgMainHeader z-50 border-slate-900">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2 w-40">
-                        <h3 className="text-base font-medium">
-                          <Link
-                            href="http://dragons.divzoon.com/solutions/students/"
-                            prefetch={false}
-                          >
+                        <h3 className="text-lg font-medium">
+                          <Link href="/solutions/students/" prefetch={false}>
                             For Students
                           </Link>
                         </h3>
-                        <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
+                        <ul className="space-y-1 text-base ml-2 flex flex-col gap-1">
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/students/mentorship"
+                              href="/solutions/students/mentorship"
                               prefetch={false}
                             >
                               Mentorship
@@ -251,7 +221,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/students/job-ready"
+                              href="/solutions/students/job-ready"
                               prefetch={false}
                             >
                               Job Ready
@@ -259,35 +229,29 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/students/leaders"
+                              href="/solutions/students/leaders"
                               prefetch={false}
                             >
                               Thought Leader
                             </Link>
                           </li>
                           <li>
-                            <Link
-                              href="http://dragons.divzoon.com/dsa"
-                              prefetch={false}
-                            >
+                            <Link href="/dsa" prefetch={false}>
                               Students Activity
                             </Link>
                           </li>
                         </ul>
                       </div>
                       <div className="space-y-2 w-40">
-                        <h3 className="text-base font-medium">
-                          <Link
-                            href="http://dragons.divzoon.com/solutions/partners/"
-                            prefetch={false}
-                          >
+                        <h3 className="text-lg font-medium">
+                          <Link href="/solutions/partners/" prefetch={false}>
                             For Partners
                           </Link>
                         </h3>
-                        <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
+                        <ul className="space-y-1 text-base ml-2 flex flex-col gap-1">
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/partners/event-sponsor"
+                              href="/solutions/partners/event-sponsor"
                               prefetch={false}
                             >
                               Events Sponsor
@@ -295,7 +259,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/partners/get-talent"
+                              href="/solutions/partners/get-talent"
                               prefetch={false}
                             >
                               Get Talents
@@ -303,7 +267,7 @@ export default function Component() {
                           </li>
                           <li>
                             <Link
-                              href="http://dragons.divzoon.com/solutions/partners/outsourcing"
+                              href="/solutions/partners/outsourcing"
                               prefetch={false}
                             >
                               Software Outsourcing
@@ -314,46 +278,54 @@ export default function Component() {
                     </div>
                   </div>
                 )}
+                <Link
+                  href="/talents"
+                  className="font-bold text-xl"
+                  prefetch={false}
+                >
+                  Talents
+                </Link>
+                <Link
+                  href="/event"
+                  className="font-bold text-xl"
+                  prefetch={false}
+                >
+                  Events
+                </Link>
+                <Link
+                  href="/about"
+                  className="font-bold text-xl"
+                  prefetch={false}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="font-bold text-xl"
+                  prefetch={false}
+                >
+                  Pricing
+                </Link>
+
+                <Link
+                  href="/demo"
+                  className="sm:hidden x-2 sm:px-4 py-1 sm:py-2 text-xl rounded-md flex justify-center font-medium shadow-sm border"
+                  prefetch={false}
+                >
+                  Boot a Demo
+                </Link>
               </nav>
             </DrawerContent>
           </Drawer>
         </div>
-        <nav className="hidden flex-1 flex-row items-center justify-between gap-5 text-sm font-medium lg:flex max-w-[1400px] mx-auto">
-          <div className="flex gap-5">
+        <nav className="hidden flex-1 flex-row items-center justify-between font-medium lg:flex max-w-[1400px] mx-auto">
+          <div className="flex gap-6">
             <Link
               href="#"
               className={`font-bold ${hoverNavItems}`}
               prefetch={false}
             >
               Use cases
-            </Link>
-            <Link
-              href="http://dragons.divzoon.com/talents"
-              className={`font-bold ${hoverNavItems}`}
-              prefetch={false}
-            >
-              Talents
-            </Link>
-            <Link
-              href="http://dragons.divzoon.com/event"
-              className={`font-bold ${hoverNavItems}`}
-              prefetch={false}
-            >
-              Events
-            </Link>
-            <Link
-              href="http://dragons.divzoon.com/about"
-              className={`font-bold ${hoverNavItems}`}
-              prefetch={false}
-            >
-              About Us
-            </Link>
-            <Link
-              href="http://dragons.divzoon.com/about"
-              className={`font-bold ${hoverNavItems}`}
-              prefetch={false}
-            >
-              Pricing
             </Link>
             <Popover>
               <PopoverTrigger asChild>
@@ -368,10 +340,10 @@ export default function Component() {
               </PopoverTrigger>
               <PopoverContent className="bg-bgMainHeader border-0 z-30 mt-2 mx-32 gap-2 w-screen p-4 hidden lg:flex">
                 {/* <div className="grid grid-cols-2 gap-4 p-4"> */}
-                <div className="space-y-2 flex flex-col gap-2 items-center border border-slate-900 rounded w-1/3 p-3 hover:bg-bgHoverHeader">
+                <div className="space-y-2 flex flex-col gap-2 items-center border border-slate-900 hover:shadow hover:shadow-pink-800 rounded w-1/3 p-3">
                   <h3 className="text-lg font-medium w-max">
                     <Link
-                      href="http://dragons.divzoon.com/solutions/students/"
+                      href="/solutions/students/"
                       prefetch={false}
                       className="hover:text-sky-500"
                     >
@@ -382,7 +354,7 @@ export default function Component() {
                     {/* <div className="flex flex-col gap-3"> */}
                     <li className="hover:text-sky-700">
                       <Link
-                        href="http://dragons.divzoon.com/solutions/students/mentorship"
+                        href="/solutions/students/mentorship"
                         prefetch={false}
                       >
                         Mentorship
@@ -390,7 +362,7 @@ export default function Component() {
                     </li>
                     <li className="hover:text-sky-700">
                       <Link
-                        href="http://dragons.divzoon.com/solutions/students/job-ready"
+                        href="/solutions/students/job-ready"
                         prefetch={false}
                       >
                         Job Ready
@@ -399,28 +371,22 @@ export default function Component() {
                     {/* </div>
                     <div className="flex flex-col gap-3"> */}
                     <li className="hover:text-sky-700">
-                      <Link
-                        href="http://dragons.divzoon.com/solutions/students/leaders"
-                        prefetch={false}
-                      >
+                      <Link href="/solutions/students/leaders" prefetch={false}>
                         Thought Leader
                       </Link>
                     </li>
                     <li className="hover:text-sky-700">
-                      <Link
-                        href="http://dragons.divzoon.com/dsa"
-                        prefetch={false}
-                      >
+                      <Link href="/dsa" prefetch={false}>
                         Students Activity
                       </Link>
                     </li>
                     {/* </div> */}
                   </ul>
                 </div>
-                <div className="space-y-2 flex flex-col gap-2 items-center border border-slate-900 rounded w-1/3 p-3 hover:bg-bgHoverHeader">
+                <div className="space-y-2 flex flex-col gap-2 items-center border border-slate-900 rounded w-1/3 p-3 hover:shadow-inner hover:shadow-pink-800">
                   <h3 className="text-lg font-medium w-max">
                     <Link
-                      href="http://dragons.divzoon.com/solutions/partners/"
+                      href="/solutions/partners/"
                       prefetch={false}
                       className="hover:text-sky-500"
                     >
@@ -430,7 +396,7 @@ export default function Component() {
                   <ul className="text-sm flex gap-4">
                     <li className="hover:text-sky-700">
                       <Link
-                        href="http://dragons.divzoon.com/solutions/partners/event-sponsor"
+                        href="/solutions/partners/event-sponsor"
                         prefetch={false}
                       >
                         Events Sponsor
@@ -438,7 +404,7 @@ export default function Component() {
                     </li>
                     <li className="hover:text-sky-700">
                       <Link
-                        href="http://dragons.divzoon.com/solutions/partners/get-talent"
+                        href="/solutions/partners/get-talent"
                         prefetch={false}
                       >
                         Get Talents
@@ -446,7 +412,7 @@ export default function Component() {
                     </li>
                     <li className="hover:text-sky-700">
                       <Link
-                        href="http://dragons.divzoon.com/solutions/partners/outsourcing"
+                        href="/solutions/partners/outsourcing"
                         prefetch={false}
                       >
                         Software Outsourcing
@@ -457,18 +423,46 @@ export default function Component() {
                 {/* </div> */}
               </PopoverContent>
             </Popover>
+            <Link
+              href="/talents"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              Talents
+            </Link>
+            <Link
+              href="/event"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              Events
+            </Link>
+            <Link
+              href="/about"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/about"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              Pricing
+            </Link>
           </div>
           <div className="flex gap-4">
             <Link
-              href="http://dragons.divzoon.com/demo"
+              href="/demo"
               className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
               prefetch={false}
             >
               Boot a Demo
             </Link>
             <Link
-              href="http://dragons.divzoon.com/apply"
-              className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              href="/apply"
+              className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-300 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 text-black"
               prefetch={false}
             >
               Apply Now
