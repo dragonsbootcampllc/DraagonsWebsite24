@@ -1,75 +1,178 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/F70ypoFzTcf
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-import Link from "next/link"
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
-import { Button } from "@/components/ui/button"
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
+import Link from "next/link";
+import Image from "next/image";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+import { Drawer, DrawerTrigger, DrawerContent } from "@/components/ui/drawer";
+import { useState } from "react";
+
+const hoverNavItems = " hover:text-sky-500 hover:border-b hover:border-sky-300";
 
 export default function Component() {
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+
   return (
-    <header className="flex h-16 w-full  justify-center shrink-0 items-center px-4 md:px-6">
+    <header className="flex h-16 w-full justify-center shrink-0 items-center px-4 md:px-6 fixed top-0 left-0 z-50 bg-bgMainHeader">
       <div className="flex items-center max-w-[1400px] justify-between w-full">
-        <Link href="#" className="flex items-center" prefetch={false}>
-          <MountainIcon className="h-6 w-6 mx-auto" />
-          <span className="sr-only">Acme Inc</span>
+        <Link className="flex relative mr-10" href="/" passHref>
+          <Image
+            src="Identity/Images/2023/SVG/test.svg"
+            alt="logo"
+            priority={true}
+            width={100}
+            height={20}
+          />
         </Link>
         <div className="flex items-center gap-4 lg:hidden">
           <Link
-            href="#"
-            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+            href="http://dragons.divzoon.com/demo"
+            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+            prefetch={false}
+          >
+            Boot a Demo
+          </Link>
+          <Link
+            href="http://dragons.divzoon.com/apply"
+            className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
             prefetch={false}
           >
             Apply Now
           </Link>
-          <Sheet>
+          {/* <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="rounded-full">
                 <MenuIcon className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
-              <nav className="grid gap-2 py-6">
-                <Link href="#" className="font-bold" prefetch={false}>
+            <SheetContent className="w-screen bg-bgMainHeader" side="left">
+              <nav className="grid gap-5 py-6">
+                <Link href="#" className="font-bold text-lg" prefetch={false}>
                   Use cases
                 </Link>
-                <Link href="#" className="font-bold" prefetch={false}>
+                <Link
+                  href="http://dragons.divzoon.com/talents"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
                   Talents
                 </Link>
-                <Link href="#" className="font-bold" prefetch={false}>
+                <Link
+                  href="http://dragons.divzoon.com/event"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
                   Events
                 </Link>
-                <Link href="#" className="font-bold" prefetch={false}>
+                <Link
+                  href="http://dragons.divzoon.com/about"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
                   About Us
                 </Link>
-                <Link href="#" className="font-bold" prefetch={false}>
+                <Link
+                  href="http://dragons.divzoon.com/pricing"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
                   Pricing
                 </Link>
                 <Popover>
                   <PopoverTrigger asChild>
-                    <Link href="#" className="font-bold flex items-center" prefetch={false}>
-                      Solution <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500 dark:text-gray-400" />
+                    <Link
+                      href="#"
+                      className="font-bold flex items-center text-lg"
+                      prefetch={false}
+                    >
+                      Solution{" "}
+                      <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500 dark:text-gray-400" />
                     </Link>
                   </PopoverTrigger>
-                  <PopoverContent className="p-0" align="end">
-                    <div className="grid grid-cols-2 gap-4 p-4">
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-medium">For Students</h4>
-                        <ul className="space-y-1 text-sm">
-                          <li>Mentorship</li>
-                          <li>Job Ready</li>
-                          <li>Thought Leader</li>
-                          <li>Students activity</li>
+                  <PopoverContent className="p-3 border-slate-950" align="start">
+                    <div className="grid grid-rows-2 gap-4">
+                      <div className="space-y-2 w-40">
+                        <h3 className="text-base font-medium">
+                          <Link
+                            href="http://dragons.divzoon.com/solutions/students/"
+                            prefetch={false}
+                          >
+                            For Students
+                          </Link>
+                        </h3>
+                        <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/students/mentorship"
+                              prefetch={false}
+                            >
+                              Mentorship
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/students/job-ready"
+                              prefetch={false}
+                            >
+                              Job Ready
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/students/leaders"
+                              prefetch={false}
+                            >
+                              Thought Leader
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/dsa"
+                              prefetch={false}
+                            >
+                              Students Activity
+                            </Link>
+                          </li>
                         </ul>
                       </div>
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-medium">For Partners</h4>
-                        <ul className="space-y-1 text-sm">
-                          <li>Events Sponsor</li>
-                          <li>Get Talents</li>
+                      <div className="space-y-2 w-40">
+                        <h3 className="text-base font-medium">
+                          <Link
+                            href="http://dragons.divzoon.com/solutions/partners/"
+                            prefetch={false}
+                          >
+                            For Partners
+                          </Link>
+                        </h3>
+                        <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/partners/event-sponsor"
+                              prefetch={false}
+                            >
+                              Events Sponsor
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/partners/get-talent"
+                              prefetch={false}
+                            >
+                              Get Talents
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/partners/outsourcing"
+                              prefetch={false}
+                            >
+                              Software Outsourcing
+                            </Link>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -77,55 +180,304 @@ export default function Component() {
                 </Popover>
               </nav>
             </SheetContent>
-          </Sheet>
+          </Sheet> */}
+          <Drawer>
+            <DrawerTrigger asChild>
+              <Button variant="outline" size="icon" className="rounded-full">
+                <MenuIcon className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent className="w-screen h-max p-3 lg:hidden bg-bgMainHeader">
+              <nav className="grid gap-5 py-3">
+                <Link href="#" className="font-bold text-lg" prefetch={false}>
+                  Use cases
+                </Link>
+                <Link
+                  href="http://dragons.divzoon.com/talents"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
+                  Talents
+                </Link>
+                <Link
+                  href="http://dragons.divzoon.com/event"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
+                  Events
+                </Link>
+                <Link
+                  href="http://dragons.divzoon.com/about"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="http://dragons.divzoon.com/pricing"
+                  className="font-bold text-lg"
+                  prefetch={false}
+                >
+                  Pricing
+                </Link>
+                <button
+                  className="font-bold flex items-center text-lg"
+                  onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                >
+                  Solution{" "}
+                  <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500 dark:text-gray-400" />
+                </button>
+                {isSolutionsOpen && (
+                  <div className="p-3 bg-bgMainHeader z-50 border-slate-900">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2 w-40">
+                        <h3 className="text-base font-medium">
+                          <Link
+                            href="http://dragons.divzoon.com/solutions/students/"
+                            prefetch={false}
+                          >
+                            For Students
+                          </Link>
+                        </h3>
+                        <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/students/mentorship"
+                              prefetch={false}
+                            >
+                              Mentorship
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/students/job-ready"
+                              prefetch={false}
+                            >
+                              Job Ready
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/students/leaders"
+                              prefetch={false}
+                            >
+                              Thought Leader
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/dsa"
+                              prefetch={false}
+                            >
+                              Students Activity
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="space-y-2 w-40">
+                        <h3 className="text-base font-medium">
+                          <Link
+                            href="http://dragons.divzoon.com/solutions/partners/"
+                            prefetch={false}
+                          >
+                            For Partners
+                          </Link>
+                        </h3>
+                        <ul className="space-y-1 text-sm ml-2 flex flex-col gap-1">
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/partners/event-sponsor"
+                              prefetch={false}
+                            >
+                              Events Sponsor
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/partners/get-talent"
+                              prefetch={false}
+                            >
+                              Get Talents
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="http://dragons.divzoon.com/solutions/partners/outsourcing"
+                              prefetch={false}
+                            >
+                              Software Outsourcing
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </nav>
+            </DrawerContent>
+          </Drawer>
         </div>
-        <nav className="hidden flex-1 flex-row items-center justify-center gap-5 text-sm font-medium lg:flex max-w-[1400px] mx-auto">
-          <Link href="#" className="font-bold" prefetch={false}>
-            Use cases
-          </Link>
-          <Link href="#" className="font-bold" prefetch={false}>
-            Talents
-          </Link>
-          <Link href="#" className="font-bold" prefetch={false}>
-            Events
-          </Link>
-          <Link href="#" className="font-bold" prefetch={false}>
-            About Us
-          </Link>
-          <Link href="#" className="font-bold" prefetch={false}>
-            Pricing
-          </Link>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Link href="#" className="font-bold flex items-center" prefetch={false}>
-                Solution <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500 dark:text-gray-400" />
-              </Link>
-            </PopoverTrigger>
-            <PopoverContent className="p-0" align="end">
-              <div className="grid grid-cols-2 gap-4 p-4">
-                <div className="space-y-2">
-                  <h4 className="text-sm font-medium">For Students</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>Mentorship</li>
-                    <li>Job Ready</li>
-                    <li>Thought Leader</li>
-                    <li>Students activity</li>
+        <nav className="hidden flex-1 flex-row items-center justify-between gap-5 text-sm font-medium lg:flex max-w-[1400px] mx-auto">
+          <div className="flex gap-5">
+            <Link
+              href="#"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              Use cases
+            </Link>
+            <Link
+              href="http://dragons.divzoon.com/talents"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              Talents
+            </Link>
+            <Link
+              href="http://dragons.divzoon.com/event"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              Events
+            </Link>
+            <Link
+              href="http://dragons.divzoon.com/about"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              About Us
+            </Link>
+            <Link
+              href="http://dragons.divzoon.com/about"
+              className={`font-bold ${hoverNavItems}`}
+              prefetch={false}
+            >
+              Pricing
+            </Link>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Link
+                  href="#"
+                  className={`font-bold ${hoverNavItems} flex items-center`}
+                  prefetch={false}
+                >
+                  Solution{" "}
+                  <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500 dark:text-gray-400" />
+                </Link>
+              </PopoverTrigger>
+              <PopoverContent className="bg-bgMainHeader border-0 z-30 mt-2 mx-32 gap-2 w-screen p-4 hidden lg:flex">
+                {/* <div className="grid grid-cols-2 gap-4 p-4"> */}
+                <div className="space-y-2 flex flex-col gap-2 items-center border border-slate-900 rounded w-1/3 p-3 hover:bg-bgHoverHeader">
+                  <h3 className="text-lg font-medium w-max">
+                    <Link
+                      href="http://dragons.divzoon.com/solutions/students/"
+                      prefetch={false}
+                      className="hover:text-sky-500"
+                    >
+                      For Students
+                    </Link>
+                  </h3>
+                  <ul className="text-sm flex gap-4">
+                    {/* <div className="flex flex-col gap-3"> */}
+                    <li className="hover:text-sky-700">
+                      <Link
+                        href="http://dragons.divzoon.com/solutions/students/mentorship"
+                        prefetch={false}
+                      >
+                        Mentorship
+                      </Link>
+                    </li>
+                    <li className="hover:text-sky-700">
+                      <Link
+                        href="http://dragons.divzoon.com/solutions/students/job-ready"
+                        prefetch={false}
+                      >
+                        Job Ready
+                      </Link>
+                    </li>
+                    {/* </div>
+                    <div className="flex flex-col gap-3"> */}
+                    <li className="hover:text-sky-700">
+                      <Link
+                        href="http://dragons.divzoon.com/solutions/students/leaders"
+                        prefetch={false}
+                      >
+                        Thought Leader
+                      </Link>
+                    </li>
+                    <li className="hover:text-sky-700">
+                      <Link
+                        href="http://dragons.divzoon.com/dsa"
+                        prefetch={false}
+                      >
+                        Students Activity
+                      </Link>
+                    </li>
+                    {/* </div> */}
                   </ul>
                 </div>
-                <div className="space-y-2">
-                  <h4 className="text-sm font-medium">For Partners</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>Events Sponsor</li>
-                    <li>Get Talents</li>
+                <div className="space-y-2 flex flex-col gap-2 items-center border border-slate-900 rounded w-1/3 p-3 hover:bg-bgHoverHeader">
+                  <h3 className="text-lg font-medium w-max">
+                    <Link
+                      href="http://dragons.divzoon.com/solutions/partners/"
+                      prefetch={false}
+                      className="hover:text-sky-500"
+                    >
+                      For Partners
+                    </Link>
+                  </h3>
+                  <ul className="text-sm flex gap-4">
+                    <li className="hover:text-sky-700">
+                      <Link
+                        href="http://dragons.divzoon.com/solutions/partners/event-sponsor"
+                        prefetch={false}
+                      >
+                        Events Sponsor
+                      </Link>
+                    </li>
+                    <li className="hover:text-sky-700">
+                      <Link
+                        href="http://dragons.divzoon.com/solutions/partners/get-talent"
+                        prefetch={false}
+                      >
+                        Get Talents
+                      </Link>
+                    </li>
+                    <li className="hover:text-sky-700">
+                      <Link
+                        href="http://dragons.divzoon.com/solutions/partners/outsourcing"
+                        prefetch={false}
+                      >
+                        Software Outsourcing
+                      </Link>
+                    </li>
                   </ul>
                 </div>
-              </div>
-            </PopoverContent>
-          </Popover>
+                {/* </div> */}
+              </PopoverContent>
+            </Popover>
+          </div>
+          <div className="flex gap-4">
+            <Link
+              href="http://dragons.divzoon.com/demo"
+              className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              prefetch={false}
+            >
+              Boot a Demo
+            </Link>
+            <Link
+              href="http://dragons.divzoon.com/apply"
+              className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              prefetch={false}
+            >
+              Apply Now
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
 function ChevronDownIcon(props) {
@@ -144,9 +496,8 @@ function ChevronDownIcon(props) {
     >
       <path d="m6 9 6 6 6-6" />
     </svg>
-  )
+  );
 }
-
 
 function MenuIcon(props) {
   return (
@@ -164,11 +515,10 @@ function MenuIcon(props) {
     >
       <line x1="4" x2="20" y1="12" y2="12" />
       <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
+      <line x1="4" x2="20" y1="18" y1="18" />
     </svg>
-  )
+  );
 }
-
 
 function MountainIcon(props) {
   return (
@@ -177,7 +527,7 @@ function MountainIcon(props) {
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      viewBox="0 0 24 24"
+      viewBox="0 0 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -186,5 +536,5 @@ function MountainIcon(props) {
     >
       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
-  )
+  );
 }
