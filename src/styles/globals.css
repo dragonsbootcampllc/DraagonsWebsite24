@@ -21,6 +21,12 @@
   font-style: normal;
 }
 
+* {
+  scroll-margin-top: 10rem;
+  scroll-padding-top: 10rem;
+  scroll-behavior: smooth;
+}
+
 html {
   overflow: hidden;
   height: 100%;

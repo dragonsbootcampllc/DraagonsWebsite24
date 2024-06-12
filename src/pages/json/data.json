@@ -1,5 +1,24 @@
 [
   {
+    "Name": "Faisal Ibrahim",
+    "personal_photo": "/images/talant/Faisal_Ibrahim.jpg",
+    "tags": [
+      {
+        "position": "Software Engineer",
+        "city": "Fayoum",
+        "Food": "☕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/faisalibrahim404",
+    "Link_profile_Github": "https://github.com/faisalIbrahim404",
+    "Link_profile_Discord": "darkcoder662432",
+    "isBoard": true,
+    "isRecomended": true,
+    "isMaintainer": true
+  },
+  {
     "Name": "salaheldin Mohamed",
     "personal_photo": "/images/Founders/WEBP/salah.webp",
     "tags": [
@@ -18,8 +37,6 @@
     "isRecomended": true,
     "isMaintainer": true
   },
-
-
   {
     "Name": "Eslam Mohammed",
     "personal_photo": "/images/4.jpeg",
@@ -39,27 +56,6 @@
     "isRecomended": true,
     "isMaintainer": true
   },
-
-  {
-    "Name": "Faisal Ibrahim",
-    "personal_photo": "/images/talant/Faisal_Ibrahim.jpg",
-    "tags": [
-      {
-        "position": "Front-End",
-        "city": "Fayoum",
-        "Food": "☕",
-        "joinDate": "1/7/2023",
-        "JoinYear": 2
-      }
-    ],
-    "Link_profile_Linkedin": "https://www.linkedin.com/in/faisal-ibrahim-7a9a0927a/",
-    "Link_profile_Github": "https://github.com/DarkCode662432",
-    "Link_profile_Discord": "",
-    "isBoard": false,
-    "isRecomended": true,
-    "isMaintainer": true
-  },
-  
   {
     "Name": "Mohamed Ali",
     "personal_photo": "/images/Founders/Managers_Images/Mohamed_Ali.jpg",
@@ -79,7 +75,6 @@
     "isRecomended": true,
     "isMaintainer": true
   },
-
   {
     "Name": "Mohab Mohammed",
     "personal_photo": "/images/talant/Mohab_Mohammed.jpg",
@@ -99,7 +94,6 @@
     "isRecomended": true,
     "isMaintainer": true
   },
-
   {
     "Name": "Mohamed Gamal Abdelneem ",
     "personal_photo": "/images/talant/Mohamed_Gamal.jpg",

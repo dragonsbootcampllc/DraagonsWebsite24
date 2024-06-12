@@ -36,8 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         // details didn't provided error
         if (!details) {
             return res.status(400).json({ error: 'Please provide details as body' });
-        } else if (!details.icon) {
-            return res.status(400).json({ error: 'Please provide icon in details' });
         } else if (!details.description) {
             return res.status(400).json({ error: 'Please provide description in details' });
         }
