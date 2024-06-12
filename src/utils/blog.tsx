@@ -16,50 +16,52 @@ interface Category {
 }
 
 interface CategoryWithIcon extends Omit<Category, 'icon'> {
-    icon: IconType;
+    iconComponent: IconType;
 }
 
-interface ShortBlog {
+interface BlogSummary {
     icon: string;
     title: string;
     description: string;
     blogs: string[];
 }
 
-interface ShortBlogWithIcon extends Omit<ShortBlog, 'icon'> {
-    icon: IconType;
+interface BlogSummaryWithIcon extends Omit<BlogSummary, 'icon'> {
+    iconComponent: IconType;
 }
 
-// Define a function to fetch from the API
-const categories_fetcher = (url: string) => axios.get(url).then(res => res.data);
-const category_fetcher = (url: string) => axios.get(url).then(res => res.data);
+interface BlogDetails {
+    title: string;
+    icon: string;
+    description: string;
+    content: string;
+}
+
+// Define fetchers
+const get_fetcher = (url: string) => axios.get(url).then(res => res.data);
 
 function useCategories() {
-    const { data, error, isValidating } = useSWR<Category[]>('/api/blogSystem/categories', categories_fetcher);
+    const { data, error, isValidating } = useSWR<Category[]>('/api/blogSystem/categories', get_fetcher);
     const [categories, setCategories] = useState<CategoryWithIcon[]>([]);
 
     useEffect(() => {
         if (data) {
             const importIcons = async () => {
                 const categoriesWithIcons: CategoryWithIcon[] = await Promise.all(data.map(async (category) => {
-                    let icon: IconType = BsBoxes; // Fallback icon
+                    let iconComponent: IconType = BsBoxes; // Fallback icon
 
                     try {
-                        // Dynamically import the icon from react-icons/fa6
                         const iconImport = await import("react-icons/fa6");
-
-                        // Check if the icon exists in the imported module
                         if (iconImport[category.icon as keyof typeof iconImport]) {
-                            icon = iconImport[category.icon as keyof typeof iconImport] as IconType;
+                            iconComponent = iconImport[category.icon as keyof typeof iconImport] as IconType;
                         }
                     } catch {
-                        // Fallback to BsBoxes in case of an error
-                        icon = BsBoxes;
+                        iconComponent = BsBoxes;
                     }
 
                     return {
                         ...category,
-                        icon,
+                        iconComponent,
                     };
                 }));
                 setCategories(categoriesWithIcons);
@@ -71,35 +73,31 @@ function useCategories() {
     return { categories, error, isLoading: isValidating };
 }
 
-function useCategory(category_name: string) {
-    const { data, error, isValidating } = useSWR<ShortBlog[]>(`/api/blogSystem/category?category=${category_name}`, category_fetcher);
-    const [category, setCategory] = useState<ShortBlogWithIcon[]>([]);
+function useCategory(categoryName: string) {
+    const { data, error, isValidating } = useSWR<BlogSummary[]>(`/api/blogSystem/category?category=${categoryName}`, get_fetcher);
+    const [category, setCategory] = useState<BlogSummaryWithIcon[]>([]);
 
     useEffect(() => {
         if (data) {
             const importIcons = async () => {
-                const ShortBlogsWithIcons: ShortBlogWithIcon[] = await Promise.all(data.map(async (blog) => {
-                    let icon: IconType = BsBoxes; // Fallback icon
+                const blogsWithIcons: BlogSummaryWithIcon[] = await Promise.all(data.map(async (blog) => {
+                    let iconComponent: IconType = BsBoxes; // Fallback icon
 
                     try {
-                        // Dynamically import the icon from react-icons/fa6
                         const iconImport = await import("react-icons/fa6");
-
-                        // Check if the icon exists in the imported module
                         if (iconImport[blog.icon as keyof typeof iconImport]) {
-                            icon = iconImport[blog.icon as keyof typeof iconImport] as IconType;
+                            iconComponent = iconImport[blog.icon as keyof typeof iconImport] as IconType;
                         }
                     } catch {
-                        // Fallback to BsBoxes in case of an error
-                        icon = BsBoxes;
+                        iconComponent = BsBoxes;
                     }
 
                     return {
                         ...blog,
-                        icon,
+                        iconComponent,
                     };
                 }));
-                setCategory(ShortBlogsWithIcons);
+                setCategory(blogsWithIcons);
             };
             importIcons();
         }
@@ -108,17 +106,26 @@ function useCategory(category_name: string) {
     return { category, error, isLoading: isValidating };
 }
 
-// Export functions and constants
+function useBlog(categoryName: string, blogName: string) {
+    const { data, error, isValidating } = useSWR<BlogDetails>(
+        `/api/blogSystem/blog?category=${categoryName}&blog=${blogName}`,
+        get_fetcher
+    );
+
+    return { blog: data, error, isLoading: isValidating };
+}
+
 export {
     useCategories,
     useCategory,
+    useBlog,
     BASE_URL
-}
+};
 
-// Export types
 export type {
     Category,
     CategoryWithIcon,
-    ShortBlog,
-    ShortBlogWithIcon
-}
+    BlogSummary,
+    BlogSummaryWithIcon,
+    BlogDetails
+};

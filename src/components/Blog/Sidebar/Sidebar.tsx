@@ -72,7 +72,7 @@ export default function Sidebar() {
 
 
     return (
-        <div className="border-r-2 border-r-slate-200 w-[22rem] px-8 pt-8 min-h-screen flex flex-col gap-4 bg-[#030014]">
+        <div className="border-r-2 h-full border-r-slate-200 w-[22rem] px-8 pt-8 min-h-screen flex flex-col gap-4 bg-[#030014]">
             <Link href={BASE_URL} className="w-full flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
                 <span className="text-2xl"><FaRegNewspaper /></span>
                 <span>Start Guides</span>

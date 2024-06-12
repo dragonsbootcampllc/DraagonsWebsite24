@@ -37,7 +37,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
                 <BlogSidebar />
                 <div className="absolute inset-0 -z-10 h-full w-full bg-[#030014] bg-[linear-gradient(to_right,#8080800f_1px,transparent_1px),linear-gradient(to_bottom,#8080800f_1px,transparent_1px)] bg-[size:14px_24px]"></div>
 
-                <div className="w-full h-full box-border overflow-hidden flex flex-col">
+                <div className="w-full box-border overflow-hidden flex flex-col">
                     <div className="w-full select-none h-24 text-gray-400 box-border flex items-center text-2xl pl-10 gap-4 font-semibold">
                         {currentUrlEnds().map(({ title, url }, index, arr) => (
                             <span key={index} className="flex items-center">
