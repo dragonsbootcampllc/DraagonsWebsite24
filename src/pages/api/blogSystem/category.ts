@@ -45,7 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         };
 
         fs.mkdirSync(categoryPath);
-        fs.writeFileSync(path.join(contentPath, `${category}.json`), JSON.stringify({...categoryDetails, blogs: []}, null, 4));
+        fs.writeFileSync(path.join(contentPath, `${category}.json`), JSON.stringify({ ...categoryDetails, blogs: [] }, null, 4));
 
         res.status(201).json({ message: 'Category created successfully' });
     } else if (req.method == "GET") {
@@ -57,13 +57,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         }
 
         const categoryPath = path.join(contentPath, category as string);
+        const categoryDetailsPath = path.join(contentPath, `${category}.json`);
+        let categoryDetails = {};
 
         if (!fs.existsSync(categoryPath) || !fs.statSync(categoryPath).isDirectory()) {
             return res.status(404).json({ error: 'Category not found' });
         }
 
+        if (fs.existsSync(categoryDetailsPath) && fs.statSync(categoryDetailsPath).isFile()) {
+            categoryDetails = JSON.parse(fs.readFileSync(categoryDetailsPath, 'utf-8') as string);
+        }
+
         const blogs = fs.readdirSync(categoryPath).filter((file) => file.endsWith('.json')).map((file) => JSON.parse(fs.readFileSync(path.join(categoryPath, file), 'utf-8')));
-        res.status(200).json(blogs);
+        res.status(200).json({ blogs, ...categoryDetails });
     } else if (req.method == "DELETE") {
         const { category } = req.query;
 
