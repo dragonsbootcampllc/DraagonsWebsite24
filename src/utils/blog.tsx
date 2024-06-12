@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import useSWR from "swr";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import useSWR from 'swr';
 
 // Define Constants
 const BASE_URL = '/blogs';
@@ -34,12 +34,12 @@ interface Category {
 }
 
 // Define fetchers
-const get_fetcher = (url: string) => axios.get(url).then(res => res.data);
+const getFetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 // Utility function to import icons
 const importIcon = async (iconName: string) => {
     try {
-        const iconImport = await import("react-icons/fa6");
+        const iconImport = await import('react-icons/fa6');
         return iconImport[iconName as keyof typeof iconImport] || null;
     } catch {
         return null;
@@ -47,13 +47,13 @@ const importIcon = async (iconName: string) => {
 };
 
 function useCategories() {
-    const { data: categories, error, isValidating } = useSWR<Category[]>('/api/blogSystem/categories', get_fetcher);
+    const { data: categories, error, isValidating } = useSWR<Category[]>('/api/blogSystem/categories', getFetcher);
 
     return { categories, error, isLoading: isValidating };
 }
 
 function useCategory(categoryName: string) {
-    const { data: category, error, isValidating } = useSWR<Category>(`/api/blogSystem/category?category=${categoryName}`, get_fetcher);
+    const { data: category, error, isValidating } = useSWR<Category>(`/api/blogSystem/category?category=${categoryName}`, getFetcher);
 
     return { category, error, isLoading: isValidating };
 }
@@ -61,23 +61,11 @@ function useCategory(categoryName: string) {
 function useBlog(categoryName: string, blogName: string) {
     const { data: blog, error, isValidating } = useSWR<BlogDetails>(
         `/api/blogSystem/blog?category=${categoryName}&blog=${blogName}`,
-        get_fetcher
+        getFetcher
     );
 
     return { blog, error, isLoading: isValidating };
 }
 
-export {
-    useCategories,
-    useCategory,
-    useBlog,
-    BASE_URL,
-    importIcon
-};
-
-export type {
-    CategorySummary,
-    BlogSummary,
-    BlogDetails,
-    Category
-};
+export { useCategories, useCategory, useBlog, BASE_URL, importIcon };
+export type { CategorySummary, BlogSummary, BlogDetails, Category };

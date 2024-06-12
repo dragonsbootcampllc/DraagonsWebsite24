@@ -23,7 +23,7 @@ export default function BlogView({ title, markdownContent }: BlogViewProps) {
     const handleId = (type: string, text: string) => {
         const id = slugify(text, { lower: true });
         setDocumentHeaders((prevHeaders) => {
-            if (!prevHeaders.some(header => header.id === id)) {
+            if (!prevHeaders.some((header) => header.id === id)) {
                 return [...prevHeaders, { id, title: text, type }];
             }
             return prevHeaders;
@@ -42,14 +42,15 @@ export default function BlogView({ title, markdownContent }: BlogViewProps) {
 
     useEffect(() => {
         const updateActiveHeader = () => {
-            const headerPositions = documentHeaders.map(header => {
+            const headerPositions = documentHeaders.map((header) => {
                 const element = document.getElementById(header.id);
                 return { id: header.id, top: element?.getBoundingClientRect().top || Number.POSITIVE_INFINITY };
             });
 
-            const nearestHeader = headerPositions.reduce((closest, current) => {
-                return (current.top >= 50 && current.top < closest.top) ? current : closest;
-            }, { id: '', top: Number.POSITIVE_INFINITY });
+            const nearestHeader = headerPositions.reduce(
+                (closest, current) => (current.top >= 50 && current.top < closest.top ? current : closest),
+                { id: '', top: Number.POSITIVE_INFINITY }
+            );
 
             if (nearestHeader.id) {
                 setActiveSectionId(nearestHeader.id);
@@ -69,10 +70,18 @@ export default function BlogView({ title, markdownContent }: BlogViewProps) {
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
-                        h1: ({ node, ...props }) => <h1 className="text-5xl w-full max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h1', props.children.toString())} {...props} />,
-                        h2: ({ node, ...props }) => <h2 className="text-3xl w-full max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h2', props.children.toString())} {...props} />,
-                        h3: ({ node, ...props }) => <h3 className="text-2xl w-full max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h3', props.children.toString())} {...props} />,
-                        h4: ({ node, ...props }) => <h4 className="text-xl max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h4', props.children.toString())} {...props} />,
+                        h1: ({ node, ...props }) => (
+                            <h1 className="text-5xl w-full max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h1', String(props.children))} {...props} />
+                        ),
+                        h2: ({ node, ...props }) => (
+                            <h2 className="text-3xl w-full max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h2', String(props.children))} {...props} />
+                        ),
+                        h3: ({ node, ...props }) => (
+                            <h3 className="text-2xl w-full max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h3', String(props.children))} {...props} />
+                        ),
+                        h4: ({ node, ...props }) => (
+                            <h4 className="text-xl max-w-full inline-block font-bold mb-4 mt-10" id={handleId('h4', String(props.children))} {...props} />
+                        ),
                         p: ({ node, ...props }) => <p className="text-lg max-w-full inline-block font-semibold text-slate-200 my-2" {...props} />,
                         a: ({ node, ...props }) => <a className="text-lg max-w-full inline-block font-semibold underline text-blue-500 hover:text-blue-600" {...props} />,
                         img: ({ node, ...props }) => <img className="my-4 max-h-[500px] max-w-[500px] m-auto rounded-3xl cursor-zoom-in active:scale-150 active:shadow-xl shadow active:z-50 transition-all select-none" {...props} />,
@@ -88,10 +97,11 @@ export default function BlogView({ title, markdownContent }: BlogViewProps) {
             <div className="w-[500px] h-full overflow-hidden pl-6 overflow-y-auto items-start justify-start text-start text-lg font-semibold flex flex-col gap-2">
                 <h4 className="text-white text-2xl select-none">Table of content:</h4>
                 <ul>
-                    {documentHeaders.map(header => (
+                    {documentHeaders.map((header) => (
                         <li
                             key={header.id}
-                            className={`cursor-pointer border-l-2 py-2 transition-all ${activeSectionId === header.id ? 'text-blue-500 border-l-blue-1' : 'text-white border-l-slate-600'} ${header.type === 'h1' ? 'pl-2' : header.type === 'h2' ? 'pl-5' : header.type === 'h3' ? 'pl-8' : 'pl-11'}`}
+                            className={`cursor-pointer border-l-2 py-2 transition-all ${activeSectionId === header.id ? 'text-blue-500 border-l-blue-1' : 'text-white border-l-slate-600'} ${header.type === 'h1' ? 'pl-2' : header.type === 'h2' ? 'pl-5' : header.type === 'h3' ? 'pl-8' : 'pl-11'
+                                }`}
                             onClick={() => navigateToHeader(header.id)}
                         >
                             {header.title}
