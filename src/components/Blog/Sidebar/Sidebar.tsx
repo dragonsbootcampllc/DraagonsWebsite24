@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaRegNewspaper } from 'react-icons/fa6';
 import { IoIosArrowForward } from 'react-icons/io';
 import Link from 'next/link';
-import { BASE_URL, useCategories, CategoryWithIcon } from '../../../utils/blog';
+import { BASE_URL, Category, CategorySummary, useCategories } from '@/utils/blog';
 
 // Define the CollapsedLinkProps interface
 interface CollapsedLinkProps { 
@@ -70,7 +70,6 @@ export default function Sidebar() {
     if (error) return <div>Failed to load</div>;
     if (isLoading) return <div>Loading...</div>;
 
-
     return (
         <div className="border-r-2 h-full border-r-slate-200 w-[22rem] px-8 pt-8 min-h-screen flex flex-col gap-4 bg-[#030014]">
             <Link href={BASE_URL} className="w-full flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
@@ -78,7 +77,7 @@ export default function Sidebar() {
                 <span>Start Guides</span>
             </Link>
 
-            {categories.map(({ blogs, category }: CategoryWithIcon, index: number) => (
+            {categories && categories.map(({ blogs, category }: CategorySummary, index: number) => (
                 <CollapsedLink
                     key={index}
                     title={category}

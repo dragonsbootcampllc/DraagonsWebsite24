@@ -47,24 +47,36 @@ const importIcon = async (iconName: string) => {
 };
 
 function useCategories() {
-    const { data: categories, error, isValidating } = useSWR<Category[]>('/api/blogSystem/categories', getFetcher);
+    const { data, error } = useSWR<CategorySummary[]>('/api/blogSystem/categories', getFetcher);
 
-    return { categories, error, isLoading: isValidating };
+    return {
+        categories: data,
+        error,
+        isLoading: !error && !data,
+    };
 }
 
 function useCategory(categoryName: string) {
-    const { data: category, error, isValidating } = useSWR<Category>(`/api/blogSystem/category?category=${categoryName}`, getFetcher);
+    const { data, error } = useSWR<Category>(`/api/blogSystem/category?category=${categoryName}`, getFetcher);
 
-    return { category, error, isLoading: isValidating };
+    return { 
+        data, 
+        error, 
+        isLoading: !error && !data,
+    };
 }
 
 function useBlog(categoryName: string, blogName: string) {
-    const { data: blog, error, isValidating } = useSWR<BlogDetails>(
+    const { data, error } = useSWR<BlogDetails>(
         `/api/blogSystem/blog?category=${categoryName}&blog=${blogName}`,
         getFetcher
     );
 
-    return { blog, error, isLoading: isValidating };
+    return { 
+        blog: data, 
+        error,
+        isLoading: !error && !data,
+    };
 }
 
 export { useCategories, useCategory, useBlog, BASE_URL, importIcon };
