@@ -46,9 +46,9 @@ function Hero() {
           className="text-6xl content-center max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold"
         >
           <h1>
-            Boost Your Experiences in only{" "}
+          Join the hottest field in the world and become a tech rockstar!{" "}
             <span className="bg-gradient-to-r from-pink-600 to-blue-500 text-transparent bg-clip-text">
-              6 Months
+             in 6 Months
             </span>
           </h1>
         </div>
@@ -56,8 +56,7 @@ function Hero() {
           style={{ fontFamily: "interV" }}
           className="text-lg flex px-2 text-center pt-6 relative z-10 text-purple-300/50 justify-center m-auto"
         >
-          We are a team of passionate and creative people who are willing to
-          help you to boost your career
+         Become not only a software engineer, but a tech leader who builds a fulfilling life.
         </p>
       </div>
 
