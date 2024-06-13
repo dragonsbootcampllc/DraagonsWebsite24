@@ -8,6 +8,7 @@ const nextConfig = {
       { hostname: "swiperjs.com" },
       { hostname: "images.unsplash.com" },
     ],
+    domains: ['encrypted-tbn0.gstatic.com']
   },
 };
 
