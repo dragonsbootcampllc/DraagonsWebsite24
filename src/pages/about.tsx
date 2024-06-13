@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-export default function AboutUs(props) {
+export default function AboutUsPage(props: any) {
   return (
     <div id="aboutus">
-      <div className="flex justify-center flex-col items-center w-screen">
+      <div className="flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28 mt-20 mt-20">
         <div className="flex sm:p-4 p-6 items-center justify-center flex-col gap-3 my-24 sm:w-4/5 md:w-4/5 lg:w-3/5">
           <h1 className="md:text-2xl text-xl md:text-center text-start font-medium text-sky-800 uppercase">
             {props.mainHeader}
@@ -63,7 +63,7 @@ export default function AboutUs(props) {
   );
 }
 
-AboutUs.defaultProps = {
+AboutUsPage.defaultProps = {
   mainHeader: "OUR mission",
   subHeader: "To bring real-life interactions to the virtual world seamlessly",
   description:
