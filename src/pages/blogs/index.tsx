@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FaQuestion } from "react-icons/fa6";
 import Layout from './layout';
-import { BASE_URL, CategoryWithIcon, useCategories } from "../../utils/blog";
+import { BASE_URL, useCategories, CategorySummary } from "@/utils/blog";
 
 export default function BlogDiscovery() {
     const { categories, error, isLoading } = useCategories();
@@ -30,7 +30,7 @@ export default function BlogDiscovery() {
                 <input className="w-1/2 text-2xl box-border p-4 focus:outline-none bg-white/20 backdrop-blur-sm focus:border-blue-1 shadow translate-all cursor-text h-16 rounded-xl border border-slate-200" placeholder="Search help (e.g. use cases, step by step guides)"></input>
 
                 <div className="flex justify-center items-center gap-16 flex-wrap mt-12 cursor-pointer">
-                    {categories.map(({ icon: Icon, category, description }: CategoryWithIcon, index: number) => (
+                    {categories && categories.map(({ icon: Icon, category, description }: CategorySummary, index: number) => (
                         <Link
                             href={`${BASE_URL}/${category}`}
                             className="items-center box-border bg-white/20 backdrop-blur-sm p-7 gap-4 text-xl font-semibold border flex border-slate-200 rounded-xl w-96 hover:border-blue-1 shadow hover:shadow-md hover:scale-[1.02] transition-all"
