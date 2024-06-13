@@ -2,6 +2,12 @@
   @tailwind components;
   @tailwind utilities;
 
+* {
+  scroll-margin-top: 10rem;
+  scroll-padding-top: 10rem;
+  scroll-behavior: smooth;
+}
+
   @font-face {
     font-family: "Poppins-Bold";
     font-weight: 400;
