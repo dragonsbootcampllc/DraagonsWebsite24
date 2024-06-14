@@ -8,7 +8,7 @@ const subHeadingText = " With Dragons Bootcamp ";
 
 const Hero: React.FC = () => {
     return (
-        <div className="hero py-[120px] md:py-[140px]">
+        <div className="hero pt-[120px] md:pt-[140px]">
             <div className="container mx-auto flex flex-col justify-between gap-9 items-center">
                 <div className="content flex flex-col gap-12">
                     <div className="text text-white flex flex-col gap-7 w-full text-center md:text-left md:max-w-[1000px]">
