@@ -8,14 +8,19 @@ type SuccessStory = {
     description: string;
 };
 
-// Sample data for the success stories
-const successStories: SuccessStory[] = [
-    { name: 'Jane Doe', image: '/images/jane.jpg', description: 'Jane leveraged her internship to land a full-time position at a leading tech company.' },
-    { name: 'John Smith', image: '/images/john.jpg', description: 'John used his apprenticeship experience to start his own successful business.' },
-    // Add more success stories here
+interface Person {
+    name: string;
+    role: string;
+    description: string;
+    url: string;
+}
+
+const hiredPeople: Person[] = [
+    { name: "Alice", role: "Software Engineer", description: "Hired at Google", url: "/images/JopReady/image1.png" },
+    { name: "Bob", role: "Frontend Developer", description: "Hired at Facebook", url: "/images/JopReady/image2.png" },
+    { name: "Charlotte", role: "Frontend Developer", description: "Hired at Amazon", url: "/images/JopReady/image6.png" },
 ];
 
-// Sample data for the headline, description, and button text
 const headlineText: string = 'Bridging the Gap Between Learning and Industry';
 const descriptionText: string = 'We understand the importance of real-world experience in shaping successful tech professionals.';
 const ctaApplyText: string = 'Apply Now';
@@ -27,24 +32,29 @@ const InternshipSection: React.FC = () => {
             <div className="container mx-auto flex flex-col gap-9">
                 <h2 className="text-4xl md:text-6xl text-center font-semibold">{headlineText}</h2>
                 <p className="text-xl text-center mt-4 mb-8">{descriptionText}</p>
-                <div className="mb-8">
-                    <h3 className="text-3xl text-center font-semibold">Success Stories</h3>
-                    {/* Placeholder for Image Slider */}
-                    <div className="flex gap-6 overflow-x-auto p-4">
-                        {successStories.map((story, index) => (
-                            <div key={index} className="min-w-[300px] bg-white shadow-md rounded-md p-4">
-                                <img src={story.image} alt={story.name} className="h-40 w-full object-cover rounded-md mb-4" />
-                                <h4 className="text-xl font-semibold">{story.name}</h4>
-                                <p className="text-gray-700">{story.description}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                    {hiredPeople.map((person, index) => (
+                        <div key={index} className="group rounded-lg relative border-3 shadow-[0_0_0_0_#fff] hover:shadow-[0_0_.5rem_0rem_rgb(234,179,8)] border-[rgba(162,121,0,0.6)] overflow-hidden">
+                            <div className="image rounded-lg w-full overflow-hidden">
+                                <img
+                                    src={person.url}
+                                    alt="photo"
+                                    className="w-full  transform group-hover:scale-110 filter brightness-75 group-hover:brightness-100 transition-all duration-500"
+                                />
                             </div>
-                        ))}
-                    </div>
+                            <div className="info w-full p-3 absolute bottom-0 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-80 transition-all duration-500 bg-[#030014]">
+                                <h3 className="text-xl font-semibold text-white">{person.name}</h3>
+                                <p className="text-gray-400">{person.role}</p>
+                                <p className="text-gray-500">{person.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
                 <div className="text-center mt-8 flex gap-4 justify-center">
-                    <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                    <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
                         {ctaApplyText}
                     </button>
-                    <button className="bg-gray-500 text-white font-bold py-2 px-4 rounded hover:bg-gray-700 transition duration-300">
+                    <button className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700 transition duration-300">
                         {ctaReadMoreText}
                     </button>
                 </div>
