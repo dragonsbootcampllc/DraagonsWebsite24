@@ -21,17 +21,17 @@ const JobReadyComponent: React.FC = () => {
         <div className="py-6 ">
             <div className="container mx-auto flex flex-col gap-9">
                 <h2 className="text-4xl md:text-6xl text-center font-semibold">{headingText}</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-8">
                     {gridItems.map((item, index) => (
-                        <div key={index} className="p-4  shadow-md rounded-md">
-                            <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                            <p>{item.description}</p>
+                        <div key={index} className={`text-lg mt-2 p-6 h-64 rounded-xl flex ${index <= 1 ? "col-span-3" : index === 2 ? "col-span-6" : "col-span-2"} flex-col gap-5 justify-center items-center text-center bg-[#08091b] `} >
+                            <h3 className="text-3xl font-semibold mb-2 ">{item.title}</h3>
+                            <p className="text-white/70">{item.description}</p>
                         </div>
                     ))}
                 </div>
                 <div className="text-center">
                     <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
-                    {buttonText}
+                        {buttonText}
                     </button>
                 </div>
             </div>
