@@ -22,6 +22,7 @@ const sectionTitle: string = 'Learn from Industry Leaders';
 const sectionDescription: string = 'With our specially crafted curriculum, offering deep insights and authoritative knowledge for a world-class education.';
 const ReadMoreText: string = 'Read More';
 const ApplyNowText: string = 'Apply now';
+const image: string = '/images/JopReady/image.png';
 
 const LearningMaterialComponent: React.FC = () => {
     return (
@@ -29,7 +30,7 @@ const LearningMaterialComponent: React.FC = () => {
             <div className="container mx-auto flex flex-col gap-9">
                 <h2 className="text-4xl md:text-6xl text-center font-semibold">{headlineText}</h2>
                 <p className="text-xl text-center mt-4 mb-8 text-white/70">{descriptionText}</p>
-                <div className="cont flex gap-4">
+                <div className="cont flex gap-4 flex-col md:flex-row">
                     <div className="grid grid-cols-1 gap-4">
                         {gridItems.map((item, index) => (
                             <div key={index} className="text-lg p-6 rounded-xl flex flex-col gap-2 justify-center items-center text-center bg-[#08091b]">
@@ -38,14 +39,14 @@ const LearningMaterialComponent: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="text-center bg-[#08091b] p-6 rounded-xl">
+                    <div className="text-center bg-[#08091b] pt-6 rounded-xl overflow-hidden flex flex-col gap-4 justify-between items-center">
                         <h3 className="text-3xl font-semibold">{sectionTitle}</h3>
                         <p className="text-lg mt-4 mb-8 text-white/70">{sectionDescription}</p>
                         <button className="bg-blue-500 text-white  py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
                             {ReadMoreText}
                         </button>
                         <div className="image">
-                            <img src="/public/images/JopReady/image.png" alt="office" />
+                            <img src={image} alt="office" />
                         </div>
                     </div>
                 </div>
