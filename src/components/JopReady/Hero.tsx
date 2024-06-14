@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                     passHref>
                         <button className='bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300'>Apply now</button>
                     </Link>
-                    <button className='bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300'> Book a 1:1 Call </button>
+                    <button className=" text-blue-600 font-semibold  py-2 px-4 rounded hover:bg-gray-200 transition duration-300"> Book a 1:1 Call </button>
                 </div>
             </div>
         </div>

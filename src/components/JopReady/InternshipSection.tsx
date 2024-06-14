@@ -15,7 +15,7 @@ interface Person {
     url: string;
 }
 
-const hiredPeople: Person[] = [
+const InternshipMember: Person[] = [
     { name: "Alice", role: "Software Engineer", description: "Hired at Google", url: "/images/JopReady/image1.png" },
     { name: "Bob", role: "Frontend Developer", description: "Hired at Facebook", url: "/images/JopReady/image2.png" },
     { name: "Charlotte", role: "Frontend Developer", description: "Hired at Amazon", url: "/images/JopReady/image6.png" },
@@ -29,11 +29,13 @@ const ctaReadMoreText: string = 'Read More';
 const InternshipSection: React.FC = () => {
     return (
         <div className="py-6">
-            <div className="container mx-auto flex flex-col gap-9">
-                <h2 className="text-4xl md:text-6xl text-center font-semibold">{headlineText}</h2>
-                <p className="text-xl text-center mt-4 mb-8">{descriptionText}</p>
+            <div className="container mx-auto flex flex-col justify-center items-center gap-9">
+                <div className="heading md:max-w-[1000px]">
+                    <h2 className="text-4xl md:text-6xl text-center font-semibold">{headlineText}</h2>
+                    <p className="text-xl text-center text-white/70 mt-4 mb-8">{descriptionText}</p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                    {hiredPeople.map((person, index) => (
+                    {InternshipMember.map((person, index) => (
                         <div key={index} className="group rounded-lg relative border-3 shadow-[0_0_0_0_#fff] hover:shadow-[0_0_.5rem_0rem_rgb(234,179,8)] border-[rgba(162,121,0,0.6)] overflow-hidden">
                             <div className="image rounded-lg w-full overflow-hidden">
                                 <img
@@ -51,9 +53,13 @@ const InternshipSection: React.FC = () => {
                     ))}
                 </div>
                 <div className="text-center mt-8 flex gap-4 justify-center">
-                    <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
-                        {ctaApplyText}
-                    </button>
+                    <Link
+                        href="/Pricing"
+                        passHref>
+                        <button className="bg-blue-500 text-white  py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                            {ctaApplyText}
+                        </button>
+                    </Link>
                     <button className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700 transition duration-300">
                         {ctaReadMoreText}
                     </button>
