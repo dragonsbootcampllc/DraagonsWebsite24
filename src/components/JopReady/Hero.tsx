@@ -25,9 +25,9 @@ const Hero: React.FC = () => {
                     <Link
                     href="/Pricing"
                     passHref>
-                        <button className='bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300'>Apply now</button>
+                        <button className='bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300'>Apply now</button>
                     </Link>
-                    <button className='bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300'> Book a 1:1 Call </button>
+                    <button className='bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300'> Book a 1:1 Call </button>
                 </div>
             </div>
         </div>

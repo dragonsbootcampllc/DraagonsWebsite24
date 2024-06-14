@@ -1,6 +1,7 @@
 "use client";
 import Hero from '@/components/JopReady/Hero'
 import PrepareSection from '@/components/JopReady/PrepareSection'
+import LearningMaterialComponent from '@/components/JopReady/LearningMaterialComponent'
 
 
 const JopReady: React.FC = () => {
@@ -8,6 +9,7 @@ const JopReady: React.FC = () => {
         <div className='relative w-full'>
             <Hero />
             <PrepareSection />
+            <LearningMaterialComponent/>
         </div>
     )
 }
