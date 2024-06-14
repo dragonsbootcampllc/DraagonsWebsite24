@@ -1,17 +1,23 @@
 "use client";
 import Link from "next/link";
+import ResumeLogo from "./ResumeLogo";
+import InternationalLogo from "./InternationalLogo";
+import ManSearchLogo from './ManSearchLogo';
+import WorkingHomeLogo from './WorkingHomeLogo';
+import WorldWideLogo from './WorldWideLogo';
 type GridItem = {
     title: string;
     description: string;
+    logo: JSX.Element;
 };
 
 const gridItems: GridItem[] = [
-    { title: 'Hands-on Project', description: 'Gain practical experience by working on real projects.' },
-    { title: 'Hackathons and challenges', description: 'Participate in hackathons and challenges to test your skills.' },
-    { title: 'Internships and Apprenticeships', description: 'Get opportunities to work in internships and apprenticeships.' },
-    { title: 'Resume and interview preparation', description: 'Receive guidance on resume building and interview techniques.' },
-    { title: 'Real World Projects', description: 'Work on projects that simulate real-world scenarios.' },
-    { title: 'Material', description: 'Access to high-quality learning materials and resources.' }
+    { title: 'Hands-on Project', description: 'Gain practical experience by working on real projects.', logo: <WorkingHomeLogo /> },
+    { title: 'Hackathons and challenges', description: 'Participate in hackathons and challenges to test your skills.',logo: <InternationalLogo />  },
+    { title: 'Internships and Apprenticeships', description: 'Get opportunities to work in internships and apprenticeships.', logo: <WorldWideLogo /> },
+    { title: 'Resume and interview preparation', description: 'Receive guidance on resume building and interview techniques.', logo: <ResumeLogo /> },
+    { title: 'Real World Projects', description: 'Work on projects that simulate real-world scenarios.', logo: <ManSearchLogo /> },
+    { title: 'Material', description: 'Access to high-quality learning materials and resources.', logo: <InternationalLogo /> }
 ];
 const headingText: string = 'How We Prepare You to be Job Ready';
 const buttonText: string = 'Apply Now';
