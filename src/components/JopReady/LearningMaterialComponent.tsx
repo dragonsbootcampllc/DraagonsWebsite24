@@ -27,22 +27,24 @@ const image: string = '/images/JopReady/image.png';
 const LearningMaterialComponent: React.FC = () => {
     return (
         <div className="py-6">
-            <div className="container mx-auto flex flex-col gap-9">
-                <h2 className="text-4xl md:text-6xl text-center font-semibold">{headlineText}</h2>
-                <p className="text-xl text-center mt-4 mb-8 text-white/70">{descriptionText}</p>
+            <div className="container mx-auto flex flex-col gap-9 justify-center items-center">
+                <div className="heading md:max-w-[1000px]">
+                    <h2 className="text-4xl md:text-6xl text-center font-semibold">{headlineText}</h2>
+                    <p className="text-xl text-center mt-4 mb-8 text-white/70">{descriptionText}</p>
+                </div>
                 <div className="cont flex gap-4 flex-col md:flex-row">
                     <div className="grid grid-cols-1 gap-4">
                         {gridItems.map((item, index) => (
-                            <div key={index} className="text-lg p-6 rounded-xl flex flex-col gap-2 justify-center items-center text-center bg-[#08091b]">
+                            <div key={index} className="text-lg hover:scale-[1.03] cursor-pointer transition-all p-6 rounded-xl flex flex-col gap-2 justify-center items-center text-center bg-[#08091b]">
                                 <h3 className="text-2xl font-semibold">{item.title}</h3>
                                 <p className="text-white/70">{item.description}</p>
                             </div>
                         ))}
                     </div>
-                    <div className="text-center bg-[#08091b] pt-6 rounded-xl overflow-hidden flex flex-col gap-4 justify-between items-center">
+                    <div className="text-center bg-[#08091b] hover:scale-[1.03] cursor-pointer transition-all pt-6 rounded-xl overflow-hidden flex flex-col gap-4 justify-between items-center">
                         <h3 className="text-3xl font-semibold">{sectionTitle}</h3>
                         <p className="text-lg mt-4 mb-8 text-white/70">{sectionDescription}</p>
-                        <button className="bg-blue-500 text-white  py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                        <button className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700 transition duration-300">
                             {ReadMoreText}
                         </button>
                         <div className="image">

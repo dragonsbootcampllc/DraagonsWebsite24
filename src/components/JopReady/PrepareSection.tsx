@@ -24,13 +24,13 @@ const buttonText: string = 'Apply Now';
 
 const JobReadyComponent: React.FC = () => {
     return (
-        <div className="container mx-auto py-[80px] flex flex-col gap-9">
-            <h2 className="text-4xl md:text-6xl text-center font-semibold">{headingText}</h2>
+        <div className="container mx-auto py-[80px] flex flex-col justify-center items-center gap-9">
+            <h2 className="text-4xl md:text-6xl text-center font-semibold md:max-w-[1000px]">{headingText}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-6 gap-6 mb-8">
                 {gridItems.map((item, index) => (
                     <div
                         key={index}
-                        className={`text-lg mt-2 p-6 h-64 rounded-xl flex 
+                        className={`text-lg mt-2 p-6 h-64 rounded-xl flex hover:scale-[1.03] cursor-pointer transition-all
                                         ${index <= 1 ? "sm:col-span-3" : index === 2 ? "sm:col-span-6" : "sm:col-span-2"} 
                                         flex-col gap-2 p-4 justify-center items-center text-center bg-[#08091b]`}>
                         <span>{item.logo}</span>
