@@ -2,6 +2,8 @@
 import Hero from '@/components/JopReady/Hero'
 import PrepareSection from '@/components/JopReady/PrepareSection'
 import LearningMaterialComponent from '@/components/JopReady/LearningMaterialComponent'
+import InternshipsComponent from '@/components/JopReady/InternshipSection'
+
 
 
 const JopReady: React.FC = () => {
@@ -9,7 +11,8 @@ const JopReady: React.FC = () => {
         <div className='relative w-full'>
             <Hero />
             <PrepareSection />
-            <LearningMaterialComponent/>
+            <LearningMaterialComponent />
+            <InternshipsComponent />
         </div>
     )
 }
