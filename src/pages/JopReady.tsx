@@ -2,7 +2,7 @@
 import Hero from '@/components/JopReady/Hero'
 import PrepareSection from '@/components/JopReady/PrepareSection'
 import LearningMaterialComponent from '@/components/JopReady/LearningMaterialComponent'
-import InternshipsComponent from '@/components/JopReady/InternshipSection'
+import InternshipsSection from '@/components/JopReady/InternshipSection'
 
 
 
@@ -12,7 +12,7 @@ const JopReady: React.FC = () => {
             <Hero />
             <PrepareSection />
             <LearningMaterialComponent />
-            <InternshipsComponent />
+            <InternshipsSection />
         </div>
     )
 }
