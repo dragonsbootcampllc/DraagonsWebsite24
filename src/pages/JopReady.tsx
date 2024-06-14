@@ -1,13 +1,15 @@
 "use client";
-import PricingPage from '@/components/Pricing/PricingPage'
-import React from 'react'
+import Hero from '@/components/JopReady/Hero'
+import PrepareSection from '@/components/JopReady/PrepareSection'
+
 
 const JopReady: React.FC = () => {
     return (
-        <div className='relative w-full pt-28'>
-            <PricingPage />
+        <div className='relative w-full'>
+            <Hero />
+            <PrepareSection />
         </div>
     )
 }
 
-export default JopReady
+export default JopReady;
