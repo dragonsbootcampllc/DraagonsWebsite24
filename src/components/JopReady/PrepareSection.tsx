@@ -24,27 +24,31 @@ const buttonText: string = 'Apply Now';
 
 const JobReadyComponent: React.FC = () => {
     return (
-            <div className="container mx-auto py-6 flex flex-col gap-9">
-                <h2 className="text-4xl md:text-6xl text-center font-semibold">{headingText}</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-6 gap-6 mb-8">
-                    {gridItems.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`text-lg mt-2 p-6 h-64 rounded-xl flex 
+        <div className="container mx-auto py-[80px] flex flex-col gap-9">
+            <h2 className="text-4xl md:text-6xl text-center font-semibold">{headingText}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-6 gap-6 mb-8">
+                {gridItems.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`text-lg mt-2 p-6 h-64 rounded-xl flex 
                                         ${index <= 1 ? "sm:col-span-3" : index === 2 ? "sm:col-span-6" : "sm:col-span-2"} 
                                         flex-col gap-2 p-4 justify-center items-center text-center bg-[#08091b]`}>
-                            <span>{item.logo}</span>
-                            <h3 className="text-2xl font-semibold">{item.title}</h3>
-                            <p className="text-white/70">{item.description}</p>
-                        </div>
-                    ))}
-                </div>
-                <div className="text-center">
-                    <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                        <span>{item.logo}</span>
+                        <h3 className="text-2xl font-semibold">{item.title}</h3>
+                        <p className="text-white/70">{item.description}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="text-center">
+                <Link
+                    href="/Pricing"
+                    passHref>
+                    <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
                         {buttonText}
                     </button>
-                </div>
+                </Link>
             </div>
+        </div>
     );
 }
 
