@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaRegNewspaper } from 'react-icons/fa6';
 import { IoIosArrowForward } from 'react-icons/io';
 import Link from 'next/link';
-import { BASE_URL, Category, CategorySummary, useCategories } from '../../../../blog';
+import { BASE_URL, Category, CategorySummary, useCategories } from '../../../utils/blog';
 
 // Define the CollapsedLinkProps interface
 interface CollapsedLinkProps { 

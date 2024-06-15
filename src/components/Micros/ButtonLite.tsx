@@ -1,7 +1,11 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
 
-function ButtonComponent({ CTAtext }) {
+interface ButtonComponentProps {
+  CTAtext: string;
+}
+
+function ButtonComponent({ CTAtext }: ButtonComponentProps) {
   return (
     <button className='relative group cursor-pointer  shadow-2xl rounded-full p-px text-white font-semibold leading-6 inline-block w-full h-full'>
       <span className='absolute inset-0 overflow-hidden rounded-full'>

@@ -19,7 +19,7 @@ const ctaHeadline: string = "Join 1200+ Students at";
 const heroHighlightedText: string = " Dragons Bootcamp";
 const ctaApplyText: string = "Apply Now";
 const ctaBookCallText: string = "Book 1:1 Call";
-const transformedTalents = useTransformTalentData(talents);
+const transformedTalents  = useTransformTalentData(talents as Talent[]);
 
 const CallToActionComponent: React.FC = () => {
   return (
@@ -51,6 +51,7 @@ const CallToActionComponent: React.FC = () => {
                   name: string;
                   designation: string;
                   image: string;
+                  link_profile_Linkedin: string;
                 }[]
               }
             />
