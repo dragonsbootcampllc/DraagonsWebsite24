@@ -23,8 +23,8 @@ const transformedTalents = useTransformTalentData(talents);
 
 const CallToActionComponent: React.FC = () => {
   return (
-    <div className='py-12 text-white'>
-      <div className='container mx-auto flex flex-col gap-6 items-center text-center'>
+    <div className='py-12 text-white '>
+      <div className='container mx-auto max-w-[1400px] flex flex-col gap-6 items-center text-center'>
       <div className='w-full flex justify-center'>
         <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] '>
           
@@ -34,7 +34,7 @@ const CallToActionComponent: React.FC = () => {
         <h2 className='text-4xl md:text-6xl font-semibold md:max-w-[1000px]'></h2>
         <div
           style={{ fontFamily: "interV" }}
-          className='text-6xl content-center max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+          className='text-6xl content-center  max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
           <h1>
             {ctaHeadline}
             <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'>
@@ -42,8 +42,8 @@ const CallToActionComponent: React.FC = () => {
             </span>
           </h1>
         </div>
-        <div className='hidden md:block'>
-          <div className='flex flex-row items-center justify-center mb-10 w-full'>
+        <div className=' max-w-[1400px]'>
+          <div className=' flex-row hidden md:flex items-center justify-center mb-10 w-full'>
             <AnimatedTooltip
               items={
                 transformedTalents as {
