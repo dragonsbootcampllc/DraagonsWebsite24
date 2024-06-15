@@ -13,7 +13,10 @@ const JopReady: React.FC = () => {
     
 
       <Hero />
-      <PrepareSection />
+      <div className="bg-purple-950/20 w-full rounded-t-3xl">
+ <PrepareSection />
+      </div>
+     
       <LearningMaterialComponent />
       <InternshipsSection />
       <CallToActionComponent />

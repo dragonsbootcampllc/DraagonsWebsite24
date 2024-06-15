@@ -4,8 +4,8 @@ import Link from "next/link";
 import Button from "@/components/Micros/Button";
 import ButtonLite from "@/components/Micros/ButtonLite";
 
-const heroHeading = "Become Job Ready in";
-const heroHighlightedText = " Only 6 Month";
+const heroHeading = "Become Job Ready ";
+const heroHighlightedText = "Only 6 Month";
 const subHeadingText = " With Dragons Bootcamp ";
 const News = {
   id: 1,
@@ -15,7 +15,7 @@ const News = {
 };
 const Hero: React.FC = () => {
   return (
-    <div className='hero  min-h-[700px]'>
+    <div className='hero   min-h-[700px] md:min-h-[calc(100vh-12rem)] '>
       <div className='absolute opacity-30  h-full w-full '>
         <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
       </div>
@@ -59,9 +59,8 @@ const Hero: React.FC = () => {
             </div>
             <p
               style={{ fontFamily: "interV" }}
-              className='text-lg flex px-2 text-center pt-6 relative z-10 text-purple-300/50 justify-center m-auto'>
-              We are a team of passionate and creative people who are willing to
-              help you to boost your career
+              className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+              Join Dragons Bootcamp and become job-ready in just 6 months. Gain essential skills and hands-on experience for a successful career
             </p>
           </div>
         </div>
