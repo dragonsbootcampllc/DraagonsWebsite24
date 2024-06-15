@@ -25,6 +25,12 @@ const CallToActionComponent: React.FC = () => {
   return (
     <div className='py-12 text-white'>
       <div className='container mx-auto flex flex-col gap-6 items-center text-center'>
+      <div className='w-full flex justify-center'>
+        <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] '>
+          
+        </div>{" "}
+      </div>
+
         <h2 className='text-4xl md:text-6xl font-semibold md:max-w-[1000px]'></h2>
         <div
           style={{ fontFamily: "interV" }}
