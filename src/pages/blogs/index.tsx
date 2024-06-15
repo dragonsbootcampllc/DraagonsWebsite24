@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FaQuestion } from "react-icons/fa6";
 import Layout from './layout';
-import { BASE_URL, useCategories, CategorySummary } from "@/utils/blog";
+import { BASE_URL, useCategories, CategorySummary } from "../../../blog";
 
 export default function BlogDiscovery() {
     const { categories, error, isLoading } = useCategories();

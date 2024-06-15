@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import Layout from './layout';
 import { CategoryView, Blog as BlogType } from '@/components/Blog/CategoryView';
-import { BASE_URL, useBlog, useCategory, Category, BlogDetails } from '@/utils/blog';
+import { BASE_URL, useBlog, useCategory, Category, BlogDetails } from '../../../blog';
 import BlogView from '@/components/Blog/BlogView';
 
 export default function View() {
