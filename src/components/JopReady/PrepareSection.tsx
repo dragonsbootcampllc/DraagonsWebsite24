@@ -72,7 +72,7 @@ const JobReadyComponent: React.FC = () => {
             {heroHighlightedText}
           </span>
         </h1>
-      </div>
+      </div> 
 
       <div className='grid grid-cols-1 w-full sm:grid-cols-6 md:grid-cols-6 gap-6 mb-8'>
         {gridItems.map((item, index) => (
