@@ -1,56 +1,105 @@
 "use client";
+import React, { useState } from "react";
 import Link from "next/link";
-
-const headlineText: string = "Transform your Knowledge into Action";
-const descriptionText: string = "Our hands-on project approach goes beyond theoretical learning, giving you the opportunity to apply your knowledge in practical scenarios and develop valuable skills that employers are seeking.";
-const ctaApplyText: string = 'Apply Now';
-const ctaReadMoreText: string = 'Read more';
-const content = [
-    {
-        title: "Skill Development",
-        description: "Engaging in hands-on projects allows you to hone essential technical skills, problem-solving abilities, and collaboration techniques. These are vital competencies sought after by employers in the tech sector.",
-        image: "/images/JopReady/image.png"
-    },
-    {
-        title: "Real-world Experience, and Get Paid",
-        description: "For students interested in freelancing or contracting opportunities, we offer the option to work on contracting projects. These projects involve collaborating with real clients to deliver custom software solutions, websites, or applications. Students have the chance to earn income while gaining valuable professional experience.",
-        image: "/images/JopReady/medical-office-manager.webp",
-
-    }
-];
+import ButtonComponent from "../Micros/Button";
+import ButtonLite from "../Micros/ButtonLite";
 
 const HandsOnProjectsComponent: React.FC = () => {
-    return (
-        <div className="py-6">
-            <div className="container mx-auto flex flex-col justify-center items-center gap-9">
-                <h2 className="text-4xl md:text-6xl text-center font-semibold md:max-w-[1000px]">{headlineText}</h2>
-                <p className="text-xl text-center mb-8 md:max-w-[1000px] text-white/70">{descriptionText}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {content.map((item, index) => (
-                        <div key={index} className="text-center bg-[#08091b] hover:scale-[1.03] cursor-pointer transition-all pt-6 rounded-xl overflow-hidden flex flex-col gap-4 justify-between items-center">
-                            <div className="text">
-                                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
-                                <p className="text-white/70">{item.description}</p>
-                            </div>
-                            <div className="image">
-                                <img src={item.image} alt="image" />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="mt-8 flex gap-4 justify-center">
-                    <Link
-                        href="/Pricing"
-                        passHref>
-                        <button className='bg-blue-500 text-white  py-2 px-4 rounded hover:bg-blue-700 transition duration-300'>{ctaApplyText}</button>
-                    </Link>
-                    <button className=" text-blue-600 font-semibold  py-2 px-4 rounded hover:bg-gray-200 transition duration-300">
-                        {ctaReadMoreText}
-                    </button>
-                </div>
-            </div>
+  const [showDescriptionIndex, setShowDescriptionIndex] = useState<
+    number | null
+  >(null);
+
+  const content = [
+    {
+      title: "Hands-on Skill Development",
+      description:
+        "Develop essential technical skills, problem-solving abilities, and collaboration techniques through hands-on projects.",
+      image: "/images/JopReady/image.png",
+    },
+    {
+      title: "Gain Experience & Get Paid",
+      description:
+        "Gain professional experience and earn income by working on real client projects like custom software solutions, websites, or applications.",
+      image: "/images/JopReady/medical-office-manager.webp",
+    },
+  ];
+
+  const ReadMoreText: string = "Read More";
+const ApplyNowText: string = "Apply now";
+  const handleMouseEnter = (index: number) => {
+    setShowDescriptionIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setShowDescriptionIndex(null);
+  };
+
+  return (
+    <div className='py-6'>
+      <div className='container mx-auto flex flex-col justify-center items-center gap-9'>
+        <div className='w-full flex justify-center'>
+          <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-3xl'></div>
         </div>
-    );
+        <div
+          style={{ fontFamily: "interV" }}
+          className='text-6xl content-center max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+          <h1>
+            Put Your Knowledge Into Action with Intinsive
+            <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'>
+              {" "}Projects
+            </span>
+          </h1>
+        </div>
+        <p className='text-xl text-center mb-8 md:max-w-[800px] text-white/70'>
+          Our hands-on projects allow you to apply your knowledge in real-world
+          scenarios and develop valuable skills that employers are looking for.
+        </p>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+          {content.slice(0, 2).map((item, index) => (
+            <div
+              key={index}
+              className='text-center hover:scale-105 bg-[#08091b] z-10 duration-700 cursor-pointer transition-all pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}>
+              <div className='text-center grid place-items-center'>
+                <h3 className='text-2xl md:text-4xl text-center font-semibold'>
+                  {item.title}
+                </h3>
+              </div>
+              <div
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+                className='image relative rounded-3xl overflow-hidden'>
+            
+                <img src={item.image} alt="image" />
+                  <div
+                    className={`${   showDescriptionIndex === index
+                        ? "bg-gradient-to-t from-purple-900 via-black/50 to-transparent"
+                        : ""}  ${"absolute inset-0 to-transparent rounded-3xl"}`}
+                    style={{ zIndex: 1 }}
+                  ></div>
+              </div>
+              {showDescriptionIndex === index && (
+                <p className='text-lg z-10 absolute bottom-0  mt-4 mb-8 max-w-[600px] text-white/90'>
+                  {item.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className='cta rounded-xl flex gap-5 pb-10'>
+              <Link href='/Pricing' passHref>
+                <div className='h-16 w-64'>
+                  <ButtonComponent CTAtext={ApplyNowText} />
+                </div>
+              </Link>
+              <div className='h-16 w-64'>
+                <ButtonLite CTAtext={ReadMoreText}/>
+              </div>
+            </div>
+      </div>
+    </div>
+  );
 };
 
 export default HandsOnProjectsComponent;
