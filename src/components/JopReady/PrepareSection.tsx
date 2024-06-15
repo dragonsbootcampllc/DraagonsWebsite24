@@ -49,24 +49,31 @@ const gridItems: GridItem[] = [
     logo: <InternationalLogo />,
   },
 ];
-const headingText: string = "How We Prepare You to be Job Ready";
-const CTATextBelow="Offering a complete experience, beyond just the tech.";
+const headingText: string = "How We Prepare You to be";
+const heroHighlightedText: string = " Job Ready ?";
+const CTATextBelow = "Offering a complete experience, beyond just the tech.";
 const buttonText: string = "Apply Now";
 
 const JobReadyComponent: React.FC = () => {
   return (
     <div className='container mx-auto py-[80px] max-w-[1400px] w-full flex flex-col justify-center items-center gap-9'>
-     
-     <div className='w-full flex justify-center'>
-              <div className='bg-purple-700 w-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] h-54'>
-                {gridItems[1].logo}
-              </div>{" "}
-            </div>
+      <div className='w-full flex justify-center'>
+        <div className='bg-purple-700 w-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] h-54'>
+          {gridItems[1].logo}
+        </div>{" "}
+      </div>
+
       <div
         style={{ fontFamily: "interV" }}
         className='text-6xl content-center max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
-        <h1>{headingText}</h1>
+        <h1>
+          {headingText}
+          <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'>
+            {heroHighlightedText}
+          </span>
+        </h1>
       </div>
+
       <div className='grid grid-cols-1 w-full sm:grid-cols-6 md:grid-cols-6 gap-6 mb-8'>
         {gridItems.map((item, index) => (
           <div
@@ -91,7 +98,9 @@ const JobReadyComponent: React.FC = () => {
         ))}
       </div>
       <div className='text-center grid  place-items-center gap-7'>
-      <h2 className="text-2xl md:text-4xl text-center font-semibold">{CTATextBelow}</h2>
+        <h2 className='text-2xl md:text-4xl text-center font-semibold'>
+          {CTATextBelow}
+        </h2>
 
         <Link href='/Pricing' passHref>
           <div className='h-16 w-64'>

@@ -6,7 +6,7 @@ import ButtonLite from "@/components/Micros/ButtonLite";
 
 const heroHeading = "Become Job Ready ";
 const heroHighlightedText = "Only 6 Month";
-const subHeadingText = " With Dragons Bootcamp ";
+const subHeadingText = " With Dragons Bootcamp in ";
 const News = {
   id: 1,
   date: "2020-01-01",
