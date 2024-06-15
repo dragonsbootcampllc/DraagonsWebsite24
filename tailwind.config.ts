@@ -17,6 +17,8 @@ module.exports = {
     extend: {
       animation: {
         shimmer: "shimmer 2s linear infinite",
+        "meteor-effect": "meteor 5s linear infinite",
+
       },
       keyframes: {
         shimmer: {
@@ -27,7 +29,17 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
+
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
+      
     },
   },
   plugins: [addVariablesForColors],

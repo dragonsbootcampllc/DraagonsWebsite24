@@ -1,10 +1,13 @@
 import React from 'react';
 
-const WorkingHomeLogo: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+interface WorkingHomeLogoProps {
+  className?: string;
+}
+
+const WorkingHomeLogo: React.FC<WorkingHomeLogoProps & React.SVGProps<SVGSVGElement>> = ({ className = "", ...props }) => (
     <svg
+        className={`w-full h-full ${className}`}
         fill="#1a1b3d"
-        width="90px"
-        height="90px"
         viewBox="0 0 512 512"
         data-name="Layer 1"
         id="Layer_1"
