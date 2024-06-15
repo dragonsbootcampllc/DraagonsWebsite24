@@ -58,7 +58,7 @@ const JobReadyComponent: React.FC = () => {
   return (
     <div className='container mx-auto py-[80px] max-w-[1400px] w-full flex flex-col justify-center items-center gap-9'>
       <div className='w-full flex justify-center'>
-        <div className='bg-purple-700 w-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] h-54'>
+        <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] '>
           {gridItems[1].logo}
         </div>{" "}
       </div>

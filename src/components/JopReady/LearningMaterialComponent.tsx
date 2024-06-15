@@ -2,6 +2,8 @@
 import Link from "next/link";
 import ButtonComponent from "../Micros/Button";
 import ButtonLite from "../Micros/ButtonLite";
+import InternationalLogo1 from "./WorldWideLogo";
+
 
 // Define the type for our grid items
 type GridItem = {
@@ -9,6 +11,7 @@ type GridItem = {
   description: string;
 };
 
+let InternationalLogo =InternationalLogo1;
 // Sample data for the grid items
 const gridItems: GridItem[] = [
   {
@@ -49,6 +52,12 @@ const LearningMaterialComponent: React.FC = () => {
   return (
     <div className='py-6 '>
       <div className='container max-w-[1400px] mx-auto flex flex-col gap-9 justify-center items-center'>
+      
+      <div className='w-full flex justify-center'>
+        <div className='bg-purple-700 w-[116px] p-2  shadow-2xl shadow-blue-700/40 rounded-[2rem]  h-[116px]'>
+{/* // logo here */}
+        </div>{" "}
+      </div>
         <div className='heading md:max-w-[1000px] p-4'>
           <div
             style={{ fontFamily: "interV" }}
