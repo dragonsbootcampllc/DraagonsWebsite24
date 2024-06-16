@@ -16,7 +16,7 @@ const Dropdown_V2 = dynamic(() => import("./Dropdown_V.2"), {
 });
 
 import levelUp_O2_img from '@/../public/assets/Dash/ESGNAV/o2.png';
-import LogoImage from "@/../public/Identity/Images/2023/SVG/Group 999.svg"; 
+import LogoImage from "@/../public/Identity/Images/2023/SVG/Group 999.svg";
 import sustracker_img from '@/../public/assets/Dash/ESGNAV/sustracker.png';
 import datalab_img from '@/../public/assets/Dash/SolutionNAV/lab.png';
 import pulse_img from '@/../public/assets/Premasset/279b4dee-988e-4168-9745-09c71397741a.png';
@@ -314,20 +314,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-purple-900 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full border-b border-b-[#02c2ab] shadow-md">
+    <nav className="bg-purple-900 bg-opacity-80 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md">
       <div className="flex gap-5 justify-between items-center px-[5%] max-[1130px]:px-0 max-w-[1400px] box-border w-full  h-[4.5rem]">
         <div className="z-50  max-[1130px]:w-full max-[1130px]:flex max-[1130px]:p-[5%] max-[1130px]:h-full justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex gap-[6px] items-center">
-           <div className="w-32 md:w-48">
-           <img
-              className="aspect-square "
-              src={LogoImage.src}
-              alt="Dragons Bootcamp"
-          
-            />
-          
-           </div>
+            <div className="w-32 md:w-48">
+              <img
+                className="aspect-square "
+                src={LogoImage.src}
+                alt="Dragons Bootcamp"
+              />
+            </div>
           </Link>
 
           {/* Logo and Hamburger Menu */}
@@ -403,13 +401,13 @@ const Navbar = () => {
             closeNavigation={closeNavigation}
           />
           {/* CTA Button */}
-        <div  className='h-16 w-64'>
-             <ButtonComponent
-          CTAtext="Make an Impact"
-        /> 
-        </div>
-        
-        
+          <div className='h-16 w-64'>
+            <ButtonComponent
+              CTAtext="Make an Impact"
+            />
+          </div>
+
+
         </div>
       </div>
     </nav>
