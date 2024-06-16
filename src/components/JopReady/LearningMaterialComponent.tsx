@@ -64,7 +64,7 @@ const LearningMaterialComponent: React.FC<MaterialObj> = ({
             <h3 className='text-2xl md:text-5xl text-center font-semibold'>
               {sectionTitle}
             </h3>
-            <p className='text-lg mt-4 mb-8 max-w-[800px] text-white/70'>
+            <p className='text-lg mt-4 mb-8 max-w-[600px] text-white/70'>
               {sectionDescription}
             </p>
 
@@ -93,7 +93,7 @@ const LearningMaterialComponent: React.FC<MaterialObj> = ({
                   </h3>
                 
                 </div>
-                <p className='text-lg mt-4 mb-8  text-white/70'>{item.description}</p>
+                <p className='text-lg mt-4 mb-8 max-w-[600px] text-white/70'>{item.description}</p>
               </div>
             ))}
             
