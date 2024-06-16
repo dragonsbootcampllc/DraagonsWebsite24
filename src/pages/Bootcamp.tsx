@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Hero from "@/components/JopReady/Hero";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import CallToActionComponent from "@/components/JopReady/CallToActionComponent";
@@ -117,9 +118,10 @@ const BootcampPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#030014] text-white flex flex-col items-center py-10 px-4 md:px-8">
-      <div className="text-center flex flex-col gap-10 max-w-5xl mt-12 md:mt-28 w-full">
-        <div>
+    <div className="min-h-screen bg-[#030014] text-white flex flex-col items-center px-4 md:px-8">
+      <div className="text-center flex flex-col gap-10 max-w-5xl w-full">
+        <Hero />
+        <div className="mt-10">
           <div className="my-10 max-md:mt-20">
             <h1 className="lg:text-6xl text-3xl font-bold mb-6">
               Elevate Your Skills with Our Intensive{" "}
