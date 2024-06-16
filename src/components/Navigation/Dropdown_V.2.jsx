@@ -16,7 +16,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
       <div className="group min-[1130px]:h-full cursor-pointer  max-[1130px]:w-full">
         {/* Start Button */}
         <span
-          className="px-4 font-semibold text-white max-[1130px]:py-8 flex items-center justify-center min-[1130px]:h-full transition-all duration-[.45s] max-[1130px]:hover:bg-transparent max-[1130px]:px-0 relative 
+          className="px-4 font-semibold text-white/70 hover:text-white max-[1130px]:py-8 flex items-center justify-center min-[1130px]:h-full transition-all duration-[.45s] max-[1130px]:hover:bg-transparent max-[1130px]:px-0 relative 
                       after:absolute after:h-[2px] after:bg-white after:w-0 after:left-1/2 after:-translate-x-1/2 after:hover:w-full after:transition-all after:bottom-0"
           onClick={toggleTab}
         >
