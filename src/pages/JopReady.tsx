@@ -1,5 +1,5 @@
 "use client";
-import Hero from "@/components/JopReady/Hero";
+import Hero_2 from "@/components/Hero/Hero_2";
 import PrepareSection from "@/components/JopReady/PrepareSection";
 import LearningMaterialComponent from "@/components/JopReady/LearningMaterialComponent";
 import CTAMaterial from "@/components/JopReady/CTAMaterial/CTAMaterial";
@@ -13,23 +13,21 @@ import ManSearchLogo from  "@/components/JopReady/WorldWideLogo";
 import WorkingHomeLogo from "@/components/JopReady/WorldWideLogo";
 import WorldWideLogo from  "@/components/JopReady/WorldWideLogo";
 import { Disc } from "lucide-react";
-const HeroObj = {
+
+const heroObj = {
   News: {
     id: 1,
     date: "2020-01-01",
     content: "New Season just landed💯",
     link: "/blog/news",
   },
-  subHeadingText: " With Dragons Bootcamp in ",
-  heroHighlightedText: "Only 6 Month",
-  heroHeading: "Become Job Ready ",
-  Disctiption: "Join Dragons Bootcamp and become job-ready in just 6 months. Gain essential skills and hands-on experience for a successful career",
+  sub_heading_text: " With Dragons Bootcamp in ",
+  hero_highlighted_text: "Only 6 Month",
+  hero_heading: "Become Job Ready ",
+  disctiption: "Join Dragons Bootcamp and become job-ready in just 6 months. Gain essential skills and hands-on experience for a successful career",
 };
 
-
-
-
-const PrepObj = {
+const prepObj = {
   gridItems: [
     {
       title: "Hands-on Project",
@@ -77,24 +75,9 @@ const PrepObj = {
 const JopReady: React.FC = () => {
   return (
     <div className='relative w-full'>
-      <Hero 
-              News={HeroObj.News}
-              subHeadingText={HeroObj.subHeadingText}
-              heroHighlightedText={HeroObj.heroHighlightedText}
-              heroHeading={HeroObj.heroHeading}
-              Disctiption={HeroObj.Disctiption}
-      />
+      <Hero_2 {...heroObj}/>
       <div className='bg-purple-950/20 w-full rounded-t-3xl'>
-        <PrepareSection
-          gridItems={PrepObj.gridItems}
-          headingText={PrepObj.headingText}
-          heroHighlightedText={PrepObj.heroHighlightedText}
-          CTATextBelow={PrepObj.CTATextBelow}
-          buttonText={PrepObj.buttonText}
-          subHeadingText={PrepObj.subHeadingText}
-          heroHeading={PrepObj.heroHeading}
-          Disctiption={PrepObj.Disctiption}
-        />
+        <PrepareSection {...prepObj} />
       </div>
 
       <LearningMaterialComponent />
