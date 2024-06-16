@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { StickyScroll } from "../components/ui/sticky-scroll-reveal";
-import { InfiniteMovingCards } from "../components/ui/infinite-moving-cards";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import CallToActionComponent from "@/components/JopReady/CallToActionComponent";
+import { motion } from "framer-motion";
+import { LampContainer } from "@/components/ui/lamp";
+
 
 const BootcampPage = () => {
   const content = [
@@ -159,7 +163,7 @@ const BootcampPage = () => {
           </Link>
         </div>
 
-        <div className="my-10">
+        <div className="my-20">
           <h1 className="lg:text-6xl text-3xl font-bold mb-6 mt-10">
             Why You Should Take Dragons Tech Bootcamp
           </h1>
@@ -175,8 +179,25 @@ const BootcampPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-10">
+        <div>
+          <LampContainer>
+            <motion.h1
+              initial={{ opacity: 0.5, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+            >
+              Your dream job <br /> starts here
+            </motion.h1>
+          </LampContainer>
+        </div>
 
+
+        <div className="flex flex-col gap-10">
           <div className="grid my-20 place-items-center   ">
             <div
               style={{ fontFamily: "interV" }}
@@ -195,8 +216,7 @@ const BootcampPage = () => {
               className="text-lg flex pt-6 relative z-10 text-purple-300/50 justify-center text-center m-auto max-w-4xl"
             >
               By joining Dragons you will be able to work with a team and build
-              your career in the field you love, The best part is that it&#39;s
-              free , so what are you waiting for ?
+              your career in the field you love, so what are you waiting for ?
             </p>
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSf6yGyk40x0nNQwP_XSP_dFjiS4I6_7UoAzJDGRunl-NGRUsQ/viewform?usp=pp_url"
