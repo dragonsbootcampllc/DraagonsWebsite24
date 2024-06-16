@@ -16,7 +16,7 @@ const Dropdown_V2 = dynamic(() => import("./Dropdown_V.2"), {
 });
 
 import levelUp_O2_img from '@/../public/assets/Dash/ESGNAV/o2.png';
-import LogoImage from "@/../public/Identity/Images/2023/SVG/Group 999.svg";
+import LogoImage from "@/../public/Identity/Images/2023/SVG/test.svg";
 import sustracker_img from '@/../public/assets/Dash/ESGNAV/sustracker.png';
 import datalab_img from '@/../public/assets/Dash/SolutionNAV/lab.png';
 import pulse_img from '@/../public/assets/Premasset/279b4dee-988e-4168-9745-09c71397741a.png';
@@ -47,6 +47,9 @@ import {
 import business_img from '@/../public/assets/Dash/Solutions/Biz.png';
 import ESG_img from '@/../public/assets/Dash/Solutions/ESG.png';
 import ButtonComponent from "../Micros/Button";
+import ButtonLite from "@/components/Micros/ButtonLite";
+import Button from "@/components/Micros/Button";
+
 
 const simpleFloatAnimation = {
   y: ["-20px", "22px"],
@@ -57,22 +60,37 @@ const simpleFloatAnimation = {
     ease: "easeInOut",
   },
 };
-
-const servicesTabData = {
-  title: "Services",
+const UseCasesTabData = {
+  title: "Use Cases",
   tab1: {
-    title: "ESG Services",
-    path: "service/esg",
-    description:
-      "ESG Services assist companies in implementing sustainable and ethical operational practices.",
-    Icon: <motion.img src={ESG_img} alt="icon" animate={simpleFloatAnimation} />,
+    title: "LevelUp O2®",
+    path: "service/levelup-o2",
+    description: "AI-driven carbon accounting for your entire value chain.",
+    Icon: <motion.img src={levelUp_O2_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   tab2: {
-    title: "Business Assurance",
-    path: "service/business",
+    title: "SusTracker AI®",
+    path: "esg-software/sustainability-tracker",
+    description: "Streamline ESG management for enhanced real-time insights.",
+    Icon: <motion.img src={sustracker_img} alt="icon" animate={simpleFloatAnimation} />,
+  },
+};
+
+const SolutionTabData = {
+  title: "Solutions",
+  tab1: {
+    title: "ESG Pulse",
+    path: "service/esg-pulse",
     description:
-      "Business Services offer essential support for enhancing company efficiency and growth.",
-    Icon: <motion.img src={business_img} alt="icon" animate={simpleFloatAnimation} />,
+      "ESG Pulse offers real-time insights and analytics on sustainability performance metrics.",
+    Icon: <motion.img src={pulse_img} alt="icon" animate={simpleFloatAnimation} />,
+  },
+  tab2: {
+    title: "Data Lab",
+    path: "service/data-lab",
+    description:
+      "Unlock insights with our advanced ESG data analytics and reporting lab.",
+    Icon: <motion.img src={datalab_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   cats: [
     {
@@ -170,94 +188,36 @@ const servicesTabData = {
     ],
   }
 };
-
-const solutionsTabData = {
-  title: "Solutions",
+const TallentsTabData = {
+  title: "Tallents",
   tab1: {
-    title: "ESG Pulse",
-    path: "service/esg-pulse",
+    title: "ESG Services",
+    path: "service/esg",
     description:
-      "ESG Pulse offers real-time insights and analytics on sustainability performance metrics.",
-    Icon: <motion.img src={pulse_img} alt="icon" animate={simpleFloatAnimation} />,
+      "ESG Services assist companies in implementing sustainable and ethical operational practices.",
+    Icon: <motion.img src={ESG_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   tab2: {
-    title: "Data Lab",
-    path: "service/data-lab",
+    title: "Business Assurance",
+    path: "service/business",
     description:
-      "Unlock insights with our advanced ESG data analytics and reporting lab.",
-    Icon: <motion.img src={datalab_img} alt="icon" animate={simpleFloatAnimation} />,
+      "Business Services offer essential support for enhancing company efficiency and growth.",
+    Icon: <motion.img src={business_img} alt="icon" animate={simpleFloatAnimation} />,
   },
+
 };
 
-const academyTabData = {
-  title: "Academy",
-  tab1: {
-    title: "Workshops & Training",
-    path: "/academy/workshops-training",
-    description: "Join our Corporate Workshops for comprehensive ESG training.",
-    Icon: <motion.img src={workshop_img} alt="icon" animate={simpleFloatAnimation} />,
-  },
-  tab2: {
-    title: "Resources Hub",
-    path: "/academy/resources",
-    description:
-      "Explore our Resources Hub tiers for exclusive content and materials.",
-    Icon: <motion.img src={resources_img} alt="icon" animate={simpleFloatAnimation} />,
-  },
-  subTab1: {
-    title: "Blogs",
-    Icon: FaBlog,
-    path: "/academy/blogs",
-  },
-  subTab2: {
-    title: "News & Podcast",
-    Icon: FaBroadcastTower,
-    path: "/academy/news-podcast",
-  },
-  moreLinks1: {
-    links: [
-      {
-        title: "Corporate Workshops & Training",
-        Icon: FaChalkboardTeacher,
-        path: "/academy/corporate-workshops",
-      },
-      {
-        title: "Board and Leadership Development on ESG",
-        Icon: FaChalkboardTeacher,
-        path: "/academy/board-leadership",
-      },
-      {
-        title: "Coaching & Mentoring",
-        Icon: FaChalkboardTeacher,
-        path: "/academy/coaching-mentoring",
-      },
-    ],
-  },
-};
 
-const ESGSoftwareTabData = {
-  title: "ESG Software",
-  tab1: {
-    title: "LevelUp O2®",
-    path: "service/levelup-o2",
-    description: "AI-driven carbon accounting for your entire value chain.",
-    Icon: <motion.img src={levelUp_O2_img} alt="icon" animate={simpleFloatAnimation} />,
-  },
-  tab2: {
-    title: "SusTracker AI®",
-    path: "esg-software/sustainability-tracker",
-    description: "Streamline ESG management for enhanced real-time insights.",
-    Icon: <motion.img src={sustracker_img} alt="icon" animate={simpleFloatAnimation} />,
-  },
-};
+
+
 
 const Navbar = () => {
   // State hooks for controlling UI elements
   const [isNavOpen, setNavOpen] = useState(false);
+  const [isUseCases, setUseCases] = useState(false);
   const [isSolutionsOpen, setSolutionsOpen] = useState(false);
-  const [isServicesOpen, setServicesOpen] = useState(false);
-  const [isAcademyOpen, setAcademyOpen] = useState(false);
-  const [isESGSoftwareOpen, setESGSoftwareOpen] = useState(false);
+  const [isTallentsOpen, setTallentsOpen] = useState(false);
+
 
   // Toggles and close for UI elements, making it clear what they do
   // Navbar functions
@@ -268,6 +228,15 @@ const Navbar = () => {
     setNavOpen(false);
     scrollToTop();
   };
+  
+    // Use cases tab functions
+    const toggleUseCases = () => {
+      setUseCasesOpen(!isUseCasesOpen);
+    };
+    const closeUseCases = () => {
+      setUseCases(false);
+      closeNavigation();
+    };
 
   // Solution tab functions
   const toggleSolutions = () => {
@@ -278,32 +247,15 @@ const Navbar = () => {
     closeNavigation();
   };
 
-  // Services tab functions
-  const toggleServices = () => {
-    setServicesOpen(!isServicesOpen);
+  // Tallents tab functions
+  const toggleTallents = () => {
+    setTallentsOpen(!isTallentsOpen);
   };
-  const closeServices = () => {
-    setServicesOpen(false);
+  const closeTallents = () => {
+    setTallentsOpen(false);
     closeNavigation();
   };
 
-  // Academy tab functions
-  const toggleAcademy = () => {
-    setAcademyOpen(!isAcademyOpen);
-  };
-  const closeAcademy = () => {
-    setAcademyOpen(false);
-    closeNavigation();
-  };
-
-  // Academy tab functions
-  const toggleESGSoftware = () => {
-    setESGSoftwareOpen(!isESGSoftwareOpen);
-  };
-  const closeESGSoftware = () => {
-    setESGSoftwareOpen(false);
-    closeNavigation();
-  };
 
   // Function to bring the user to the top of the page
   const scrollToTop = () => {
@@ -314,14 +266,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-purple-900 bg-opacity-80 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md">
-      <div className="flex gap-5 justify-between items-center px-[5%] max-[1130px]:px-0 max-w-[1400px] box-border w-full  h-[4.5rem]">
-        <div className="z-50  max-[1130px]:w-full max-[1130px]:flex max-[1130px]:p-[5%] max-[1130px]:h-full justify-between items-center">
+    <nav className="bg-purple-900 bg-opacity-50  border-b border-white/20 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md">
+      <div className="flex gap-5 justify-between items-center  max-[1130px]:px-0 max-w-[1400px] box-border w-full  h-[4.5rem]">
+        <div className="z-50 max-[1130px]:w-full max-[1130px]:flex max-[1130px]:p-[5%] max-[1130px]:h-full justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex gap-[6px] items-center">
             <div className="w-32 md:w-48">
               <img
-                className="aspect-square "
+                className="aspect-square"
                 src={LogoImage.src}
                 alt="Dragons Bootcamp"
               />
@@ -330,22 +282,22 @@ const Navbar = () => {
 
           {/* Logo and Hamburger Menu */}
           <button
-            className="hidden max-[1130px]:flex flex-col aspect-square w-12 justify-center items-center gap-[6px]"
+            className="flex xl:hidden flex-col aspect-square w-12 justify-center items-center gap-[6px]"
             onClick={toggleNavigation}
           >
             {/* Simplified class names for readability */}
             <span
-              className={`w-6 h-[2px] bg-[#121212] transition-all duration-[.45s] ${isNavOpen
+              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen
                 ? "-rotate-45 translate-y-2 delay-300"
                 : "rotate-0 translate-y-0"
                 }`}
             ></span>
             <span
-              className={`h-[2px] bg-[#121212] transition-all duration-[.45s] ${isNavOpen ? "w-0" : "w-6 delay-300"
+              className={`h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen ? "w-0" : "w-6 delay-300"
                 }`}
             ></span>
             <span
-              className={`w-6 h-[2px] bg-[#121212] transition-all duration-[.45s] ${isNavOpen
+              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen
                 ? "rotate-45 -translate-y-2 delay-300"
                 : "rotate-0 translate-y-0"
                 }`}
@@ -360,54 +312,59 @@ const Navbar = () => {
             : "max-[1130px]:-translate-y-[120%]"
             } top-full left-0 text-black  max-[1130px]:flex-col max-[1130px]:absolute max-[1130px]:w-full max-[1130px]:pb-[6.5rem] max-[1130px]:h-[calc(100vh-4.5rem)] max-[1130px]:text-lg max-[1130px]:border-b max-[1130px]:border-black`}
         >
-          {/* ESG Software Dropdown */}
+          {/* Use Cases Dropdown */}
           <Dropdown
-            isTabOpen={isESGSoftwareOpen}
-            closeTab={closeESGSoftware}
-            toggleTab={toggleESGSoftware}
-            data={ESGSoftwareTabData}
+            isTabOpen={isUseCases}
+            closeTab={closeUseCases}
+            toggleTab={toggleUseCases}
+            data={UseCasesTabData}
           />
 
           {/* Solutions Dropdown */}
-          <Dropdown
+          <Dropdown_V2
             isTabOpen={isSolutionsOpen}
             toggleTab={toggleSolutions}
             closeTab={closeSolutions}
-            data={solutionsTabData}
+            data={SolutionTabData}
           />
 
-          {/* Services Dropdown */}
-          <Dropdown_V2
-            isTabOpen={isServicesOpen}
-            closeTab={closeServices}
-            toggleTab={toggleServices}
-            data={servicesTabData}
-          />
-
-          {/* Academy Dropdown */}
+          {/* Tallents Dropdown */}
           <Dropdown
-            isTabOpen={isAcademyOpen}
-            closeTab={closeAcademy}
-            toggleTab={toggleAcademy}
-            data={academyTabData}
+            isTabOpen={isTallentsOpen}
+            closeTab={closeTallents}
+            toggleTab={toggleTallents}
+            data={TallentsTabData}
           />
 
           {/* Static Navigation Links */}
 
           <NavbarLink
-            path="/about"
-            title="About us"
+            path="/events"
+            title="Events"
+            toggleNavigation={toggleNavigation}
+            closeNavigation={closeNavigation}
+          />
+          <NavbarLink
+            path="/aboutUs"
+            title="About Us"
+            toggleNavigation={toggleNavigation}
+            closeNavigation={closeNavigation}
+          />
+          <NavbarLink
+            path="/Pricing "
+            title="Pricing "
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
           />
           {/* CTA Button */}
-          <div className='h-16 w-64'>
+          <div className='h-16 w-[350px] flex justify-between gap-3'>
+            <ButtonLite
+              CTAtext="Boot a Demo"
+            />
             <ButtonComponent
-              CTAtext="Make an Impact"
+              CTAtext="Apply Now"
             />
           </div>
-
-
         </div>
       </div>
     </nav>
