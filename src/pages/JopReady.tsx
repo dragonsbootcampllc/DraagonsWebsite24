@@ -118,7 +118,7 @@ const gridItems: GridItem[] = [
 
 const MaterialObj: MaterialObj = {
   gridItems: gridItems,
-  headlineText: " Transform ",
+  headlineText: " Transform Your Career with ",
   heroHighlightedText: " Dragons Bootcamp",
   descriptionText:
     "This program is designed to help students, professionals, and entrepreneurs to learn the latest technologies and build projects that can help them to get a job or grow their business.",
