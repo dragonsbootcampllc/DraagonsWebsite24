@@ -1,41 +1,94 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { StickyScroll } from "../components/ui/sticky-scroll-reveal";
 
 const BootcampPage = () => {
-  // Define an array of section objects
-  const bootcampSections = [
+  const content = [
     {
       title: "Supportive Community",
       description:
-        "Our supportive community lifts you up, not out. Learn & grow with fellow students.",
-      imageSrc: "/images/Bootcamp/1.png",
+        "Join a community where every step forward is celebrated. Our vibrant and supportive network of fellow students is here to lift you up and help you grow, fostering an environment where learning is a shared, uplifting journey.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          <div className="h-full w-full flex items-center justify-center text-white">
+            <Image
+              src="/images/Bootcamp/1.png"
+              width={300}
+              height={300}
+              className="h-full w-full object-cover"
+              alt="linear board demo"
+            />
+          </div>
+        </div>
+      ),
     },
     {
       title: "Strong Industry Connections",
       description:
-        "Network with top companies and industry leaders to get a head start.",
-      imageSrc: "/images/Bootcamp/5.png",
+        "Forge invaluable connections with top companies and industry leaders, opening doors to a world of opportunities. Our robust network paves the way for your career advancement, ensuring you stand out from the crowd.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white">
+          <Image
+            src="/images/Bootcamp/5.png"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
     },
     {
-      title: "Learn what companies are looking for",
+      title: "Learn What Companies Are Looking For",
       description:
-        "Intensive learning immerses you in the developer's zone, allowing you to work on real projects that simulate the working environment.",
-      imageSrc: "/images/Bootcamp/11.png",
+        "Dive into an intensive learning experience that places you at the heart of the developer’s world. Work on real projects that mimic the industry environment, equipping you with the skills and insights companies are actively seeking.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white">
+          <Image
+            src="/images/Bootcamp/11.png"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
     },
     {
       title: "Become a Thought Leader",
       description:
-        "Develop Your Voice and Sharpen your communication skills to share insights and establish yourself as an expert in your field.",
-      imageSrc: "/images/Bootcamp/13.png",
+        "Cultivate your unique voice and refine your communication skills to share profound insights. Establish yourself as a thought leader, respected and recognized as an expert in your field.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white">
+          <Image
+            src="/images/Bootcamp/13.png"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
     },
     {
       title: "Level Up, Get Seen",
       description:
-        "we track everything and share all your progress with our trusted partners, business owners, and recruiters for easy hunting.",
-      imageSrc: "/images/Bootcamp/21.png",
+        "Track your progress seamlessly and showcase your achievements to our trusted partners, business owners, and recruiters. We ensure your talents are visible, making job hunting smoother and more efficient.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white">
+          <Image
+            src="/images/Bootcamp/21.png"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
     },
   ];
+
 
   return (
     <div className="min-h-screen bg-[#030014] text-white flex flex-col items-center py-10 px-4 md:px-8">
@@ -50,9 +103,7 @@ const BootcampPage = () => {
             Bootcamp, designed for rapid, real-world success.
           </p>
         </div>
-
-        <div className="flex flex-col gap-10 mt-8">
-          <Link
+        <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSf6yGyk40x0nNQwP_XSP_dFjiS4I6_7UoAzJDGRunl-NGRUsQ/viewform?usp=pp_url"
             target="_blank"
           >
@@ -80,26 +131,13 @@ const BootcampPage = () => {
               </div>
             </div>
           </Link>
-          {bootcampSections.map((section, index) => (
-            <div
-              key={index}
-              className="p-6 bg-[#0b081b] shadow-lg rounded-lg flex flex-col justify-center items-center"
-            >
-              <h2 className="text-4xl max-md:text-2xl font-semibold mb-4">
-                {section.title}
-              </h2>
-              <p className="text-center max-w-[700px] text-purple-300/80">
-                {section.description}
-              </p>
-              <Image
-                src={section.imageSrc}
-                alt={section.title}
-                width={600}
-                height={400}
-                className="mt-4 rounded-lg"
-              />
-            </div>
-          ))}
+
+        <div className="p-10">
+          <StickyScroll content={content} />
+        </div>
+
+        <div className="flex flex-col gap-10 mt-8">
+
           <div className="grid pt-40 mb-28 place-items-center   ">
             <div
               style={{ fontFamily: "interV" }}
