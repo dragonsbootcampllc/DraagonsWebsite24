@@ -108,28 +108,3 @@ const JopReady: React.FC = () => {
 export default JopReady;
 
 
-
-
-const JopReady: React.FC = () => {
-  return (
-    <div className='relative w-full'>
-      <Hero 
-              News={HeroObj.News}
-              subHeadingText={HeroObj.subHeadingText}
-              heroHighlightedText={HeroObj.heroHighlightedText}
-              heroHeading={HeroObj.heroHeading}
-      />
-      <div className='bg-purple-950/20 w-full rounded-t-3xl'>
-        <PrepareSection />
-      </div>
-
-      <LearningMaterialComponent />
-      <CTAMaterial />
-      <CallToActionComponent />
-      <HandsOnProjectsComponent />
-      <HackathonsComponent />
-    </div>
-  );
-};
-
-export default JopReady;
