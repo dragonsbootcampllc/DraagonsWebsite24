@@ -4,16 +4,7 @@ import PrepareSection from "@/components/JopReady/PrepareSection";
 import LearningMaterialComponent from "@/components/JopReady/LearningMaterialComponent";
 import CTAMaterial from "@/components/JopReady/CTAMaterial/CTAMaterial";
 import CallToActionComponent from "@/components/JopReady/CallToActionComponent";
-import HandsOnProjectsComponent from "@/components/JopReady/HandsOnProjectsComponent";
-import HackathonsComponent from "@/components/JopReady/HackathonsComponent";
-
-
-import InternationalLogo from  "@/components/JopReady/WorldWideLogo";
-import ManSearchLogo from  "@/components/JopReady/WorldWideLogo";
-import WorkingHomeLogo from "@/components/JopReady/WorldWideLogo";
-import WorldWideLogo from  "@/components/JopReady/WorldWideLogo";
-import ResumeLogo from "@/components/JopReady/WorldWideLogo";
-
+import ModernGrid from "@/components/ModernGrid";
 
 const HeroObj = {
   News: {
@@ -40,9 +31,7 @@ const JopReady: React.FC = () => {
        heroHeading={HeroObj.heroHeading}
         Disctiption={HeroObj.Disctiption}
       />
-      <div className='bg-purple-950/20 w-full rounded-t-3xl'>
-        
-      </div>
+        <ModernGrid/>
 
       <LearningMaterialComponent />
       <CTAMaterial />

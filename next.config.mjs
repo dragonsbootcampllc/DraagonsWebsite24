@@ -8,6 +8,7 @@ const nextConfig = {
       { hostname: "swiperjs.com" },
       { hostname: "images.unsplash.com" },
       { hostname: "levelupesg.co" },
+      {hostname:"pbs.twimg.com"},
     ],
   },
 };
