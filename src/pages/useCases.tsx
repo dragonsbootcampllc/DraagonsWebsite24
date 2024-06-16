@@ -7,12 +7,14 @@ import CallToActionComponent from "@/components/JopReady/CallToActionComponent";
 import HandsOnProjectsComponent from "@/components/JopReady/HandsOnProjectsComponent";
 import HackathonsComponent from "@/components/JopReady/HackathonsComponent";
 
-import ResumeLogo from "@/components/JopReady/WorldWideLogo";
+
 import InternationalLogo from  "@/components/JopReady/WorldWideLogo";
 import ManSearchLogo from  "@/components/JopReady/WorldWideLogo";
 import WorkingHomeLogo from "@/components/JopReady/WorldWideLogo";
 import WorldWideLogo from  "@/components/JopReady/WorldWideLogo";
-import { Disc } from "lucide-react";
+import ResumeLogo from "@/components/JopReady/WorldWideLogo";
+
+
 const HeroObj = {
   News: {
     id: 1,
@@ -20,14 +22,11 @@ const HeroObj = {
     content: "New Season just landed💯",
     link: "/blog/news",
   },
-  subHeadingText: " With Dragons Bootcamp in ",
-  heroHighlightedText: "Only 6 Month",
-  heroHeading: "Become Job Ready ",
-  Disctiption: "Join Dragons Bootcamp and become job-ready in just 6 months. Gain essential skills and hands-on experience for a successful career",
+  heroHeading: " Transform ",
+  heroHighlightedText: " Dragons Bootcamp",
+  subHeadingText: " Your Career with",
+  Disctiption: "This program is designed to help students, professionals, and entrepreneurs to learn the latest technologies and build projects that can help them to get a job or grow their business.",
 };
-
-
-
 
 const PrepObj = {
   gridItems: [
@@ -78,11 +77,11 @@ const JopReady: React.FC = () => {
   return (
     <div className='relative w-full'>
       <Hero 
-              News={HeroObj.News}
-              subHeadingText={HeroObj.subHeadingText}
-              heroHighlightedText={HeroObj.heroHighlightedText}
-              heroHeading={HeroObj.heroHeading}
-              Disctiption={HeroObj.Disctiption}
+       News={HeroObj.News}
+       subHeadingText={HeroObj.subHeadingText}
+       heroHighlightedText={HeroObj.heroHighlightedText}
+       heroHeading={HeroObj.heroHeading}
+        Disctiption={HeroObj.Disctiption}
       />
       <div className='bg-purple-950/20 w-full rounded-t-3xl'>
         <PrepareSection
@@ -93,34 +92,8 @@ const JopReady: React.FC = () => {
           buttonText={PrepObj.buttonText}
           subHeadingText={PrepObj.subHeadingText}
           heroHeading={PrepObj.heroHeading}
-          Disctiption={PrepObj.Disctiption}
+          Disctiption={PrepObj.Disctiption} 
         />
-      </div>
-
-      <LearningMaterialComponent />
-      <CTAMaterial />
-      <CallToActionComponent />
-      <HandsOnProjectsComponent />
-      <HackathonsComponent />
-    </div>
-  );
-};
-export default JopReady;
-
-
-
-
-const JopReady: React.FC = () => {
-  return (
-    <div className='relative w-full'>
-      <Hero 
-              News={HeroObj.News}
-              subHeadingText={HeroObj.subHeadingText}
-              heroHighlightedText={HeroObj.heroHighlightedText}
-              heroHeading={HeroObj.heroHeading}
-      />
-      <div className='bg-purple-950/20 w-full rounded-t-3xl'>
-        <PrepareSection />
       </div>
 
       <LearningMaterialComponent />
