@@ -18,6 +18,7 @@ module.exports = {
       animation: {
         shimmer: "shimmer 2s linear infinite",
         "meteor-effect": "meteor 5s linear infinite",
+        'typing-effect': 'typing-effect 1s linear infinite'
 
       },
       keyframes: {
@@ -27,6 +28,14 @@ module.exports = {
           },
           to: {
             backgroundPosition: "-200% 0",
+          },
+        },
+        'typing-effect': {
+          from: {
+            borderRight: "3px solid white",
+          },
+          to: {
+            borderRight: "3px solid transparent",
           },
         },
 
