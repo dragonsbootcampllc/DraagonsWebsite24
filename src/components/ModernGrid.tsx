@@ -16,10 +16,13 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaMedal } from "react-icons/fa";
+import Link from "next/link";
+import ButtonComponent from "./Micros/Button";
+import ButtonLite from "./Micros/ButtonLite";
 
 export function BentoGridThirdDemo() {
   return (
-    <div className='h-screen  grid place-items-center'>
+    <div className='min-h-screen  grid place-items-center'>
       <div
         style={{ fontFamily: "interV" }}
         className='text-6xl content-center  max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
@@ -42,6 +45,16 @@ export function BentoGridThirdDemo() {
           />
         ))}
       </BentoGrid>
+      <div className='cta rounded-xl my-12 flex gap-5'>
+          <Link href='/Pricing' passHref>
+            <div className='h-16 w-64'>
+              <ButtonComponent CTAtext='Apply Now' />
+            </div>
+          </Link>
+          <div className='h-16 w-64'>
+            <ButtonLite CTAtext='Book a 1:1 Call' />
+          </div>
+        </div>
     </div>
   );
 }
