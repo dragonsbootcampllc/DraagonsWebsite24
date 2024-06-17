@@ -26,7 +26,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
 
         {/* Start Dropdown */}
         <div
-          className={`w-screen transition-all flex justify-center items-center min-[1130px]:absolute min-[1130px]:left-1/2 min-[1130px]:top-[calc(100%+1px)] box-border min-[1130px]:-translate-x-1/2 min-[1130px]:shadow-md group-hover:border-b border-b-[#02c2ab] bg-white h-0 ${isTabOpen && "max-[1130px]:h-auto max-[1130px]:py-5"
+          className={`w-screen transition-all flex justify-center items-center min-[1130px]:absolute min-[1130px]:left-1/2 min-[1130px]:top-[calc(100%+1px)] box-border min-[1130px]:-translate-x-1/2 min-[1130px]:shadow-md group-hover:border-b border-b-[#02c2ab] bg-purple-950 h-0 ${isTabOpen && "max-[1130px]:h-auto max-[1130px]:py-5"
             } overflow-hidden min-[1190px]:group-hover:h-[622px] min-[1130px]:group-hover:h-[640px]`}
         >
           {/* Start Inner Container */}
