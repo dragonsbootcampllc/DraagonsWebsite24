@@ -79,15 +79,15 @@ const UseCasesTabData = {
 const SolutionTabData = {
   title: "Solutions",
   tab1: {
-    title: "ESG Pulse",
-    path: "service/esg-pulse",
+    title: "Students",
+    path: "http://dragons.divzoon.com/solutions/students/",
     description:
       "ESG Pulse offers real-time insights and analytics on sustainability performance metrics.",
     Icon: <motion.img src={pulse_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   tab2: {
-    title: "Data Lab",
-    path: "service/data-lab",
+    title: "Partners",
+    path: "http://dragons.divzoon.com/solutions/partners/",
     description:
       "Unlock insights with our advanced ESG data analytics and reporting lab.",
     Icon: <motion.img src={datalab_img} alt="icon" animate={simpleFloatAnimation} />,
@@ -308,8 +308,8 @@ const Navbar = () => {
         {/* Navigation Links and CTA Button */}
         <div
           className={`flex items-center min-[1130px]:justify-end max-[1130px]:flex-col text-[20px] font-normal h-full max-[1130px]:w-full gap-5 max-[1130px]:gap-0 max-[1130px]:overflow-y-scroll max-[1130px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
-            ? "max-[1130px]:translate-y-0"
-            : "max-[1130px]:-translate-y-[120%]"
+            ? "max-[1300px]:translate-y-0"
+            : "max-[1300px]:-translate-y-[120%]"
             } top-full left-0 text-black  max-[1130px]:flex-col max-[1130px]:absolute max-[1130px]:w-full max-[1130px]:pb-[6.5rem] max-[1130px]:h-[calc(100vh-4.5rem)] max-[1130px]:text-lg max-[1130px]:border-b max-[1130px]:border-black`}
         >
           {/* Use Cases Dropdown */}
