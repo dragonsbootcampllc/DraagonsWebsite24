@@ -120,7 +120,17 @@ const BootcampPage = () => {
   return (
     <div className="min-h-screen bg-[#030014] text-white flex flex-col items-center px-4 md:px-8">
       <div className="text-center flex flex-col gap-10 max-w-5xl w-full">
-        <Hero />
+        <Hero 
+          News={{
+            link: "https://www.linkedin.com/company/dragonslearn/",
+            content: "Dragons Learn is now on LinkedIn! Follow us for the latest updates."
+          }}
+          subHeadingText="Transform Your Career with"
+          heroHighlightedText=" Dragons Bootcamp"
+          heroHeading="Join us and take the first step towards transforming your career!"
+          Disctiption="Don't miss out on the opportunity to be part of a program that adapts to your unique needs and goals."
+          
+        />
         <div className="mt-10">
           <div className="my-10 max-md:mt-20">
             <h1 className="lg:text-6xl text-3xl font-bold mb-6">
