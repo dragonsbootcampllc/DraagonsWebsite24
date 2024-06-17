@@ -82,56 +82,58 @@ const SolutionTabData = {
     title: "Students",
     path: "http://dragons.divzoon.com/solutions/students/",
     description:
-      "ESG Pulse offers real-time insights and analytics on sustainability performance metrics.",
+      "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
     Icon: <motion.img src={pulse_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   tab2: {
     title: "Partners",
     path: "http://dragons.divzoon.com/solutions/partners/",
     description:
-      "Unlock insights with our advanced ESG data analytics and reporting lab.",
+      "Enhance your team with our ready-to-deploy graduates skilled in the latest tech trends.",
     Icon: <motion.img src={datalab_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   categories: [
     {
-      title: "Getting Started",
+      title: "Become JopReady",
+      path: "/JopReady",
       color: "#9b59b6",
       links: [
         {
           Icon: IoStatsChart,
-          title: "ESG Program Establishment",
-          path: "services/esg-program-establishment"
+          title: "Get Set for Success: Preparation Strategies",
+          path: "/JopReady#PrepareSection"
         },
         {
           Icon: IoAnalytics,
-          title: "ESG GAP Assessment & Benchmarking",
-          path: "services/esg-gap-assessment-&-benchmarking"
+          title: "Learning Resources: Your Knowledge Toolkit",
+          path: "/JopReady#LearningMaterialComponent"
         },
         {
           Icon: IoEarth,
-          title: "Materiality Assessment & Strategy",
-          path: "services/materiality-assessment-&-strategy"
+          title: "Real-World Experience: Hands-On Projects",
+          path: "/JopReady#HandsOnProjectsComponent"
         },
         {
           Icon: IoLeaf,
-          title: "ESG / Sustainability Managed Services",
-          path: "services/sustainability-managed-services"
+          title: "Next Steps: Your Call to Action",
+          path: "/JopReady#CallToActionComponent"
         },
       ]
     },
     {
       title: "Levelling-Up",
-      color: "#8e44ad",
+      path: "/JopReady",
+      color: "#9b59b6",
       links: [
         {
           Icon: IoBusiness,
           title: "ESG Governance",
-          path: "services/esg-governance"
+          path: "/JopReady#PrepareSection"
         },
         {
           Icon: IoDocumentText,
           title: "ESG Data Management",
-          path: "services/esg-data-management"
+          path: "/JopReady#LearningMaterialComponent"
         },
         {
           Icon: IoWarning,
@@ -147,7 +149,8 @@ const SolutionTabData = {
     },
     {
       title: "Assurance",
-      color: "#7d3c98",
+      path: "JopReady.tsx",
+      color: "#9b59b6",
       links: [
         {
           Icon: IoTrendingUp,

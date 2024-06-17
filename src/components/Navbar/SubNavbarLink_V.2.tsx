@@ -22,8 +22,7 @@ export default function SubNavbarLink_V2({ Icon, title, path, clear, color }: Su
       {/* To generate classes in tailwindCSS */}
       <input type="hidden" className='
       bg-[#8e44ad] text-[#8e44ad]
-      bg-[#7d3c98] text-[#7d3c98]
-      bg-[#9b59b6] text-[#9b59b6]
+      
       ' />
     </Link>
   );

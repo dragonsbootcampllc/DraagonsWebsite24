@@ -35,7 +35,7 @@ const ApplyNowText: string = "Apply now";
   };
 
   return (
-    <div className='py-6'>
+    <div className='py-6' id="HandsOnProjectsComponent">
       <div className='container mx-auto flex flex-col justify-center items-center gap-9'>
         <div className='w-full flex justify-center'>
           <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-3xl'></div>

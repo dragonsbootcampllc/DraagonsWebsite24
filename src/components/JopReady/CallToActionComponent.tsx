@@ -23,7 +23,7 @@ const transformedTalents  = useTransformTalentData(talents as Talent[]);
 
 const CallToActionComponent: React.FC = () => {
   return (
-    <div className='py-12 text-white '>
+    <div className='py-12 text-white ' id="CallToActionComponent">
       <div className='container mx-auto max-w-[1400px] flex flex-col gap-6 items-center text-center'>
       <div className='w-full flex justify-center'>
         <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] '>

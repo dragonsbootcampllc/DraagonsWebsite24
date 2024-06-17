@@ -19,7 +19,7 @@ const CTAMaterial: React.FC = () => {
   } = content;
 
   return (
-    <div className='py-6 relative w-full rounded-t-3xl my-10 min-h-[700px] md:min-h-[calc(100vh-0rem)] place-items-center grid'>
+    <div className='py-6 relative w-full rounded-t-3xl my-10 min-h-[700px] md:min-h-[calc(100vh-0rem)] place-items-center grid' id="CTAMaterial">
       <div className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030014_40%,#63e_100%)] rounded-3xl'></div>
       <div className='container mx-auto flex flex-col justify-center items-center gap-9'>
         <div className='heading md:max-w-[1000px]'>
