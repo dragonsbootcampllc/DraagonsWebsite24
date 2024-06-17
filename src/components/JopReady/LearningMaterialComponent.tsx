@@ -6,7 +6,11 @@ import InternationalLogo1 from "./WorldWideLogo";
 
 
 
-
+type GridItem = {
+  id: number;
+  title: string;
+  description: string;
+};
 let InternationalLogo =InternationalLogo1;
 // Sample data for the grid items
 type MaterialObj = {
