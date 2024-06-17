@@ -41,7 +41,7 @@ export default function AboutUsPage(props: any) {
             </div>
           </div>
 
-          <div className="flex pt-16 md:flex-row flex-col gap-3">
+          <div className="flex pt-16 md:flex-row flex-col-reverse gap-3">
             <div className="flex flex-col justify-center items-center h-full md:w-2/3">
               <Image
                 src={props.story.secondPart.img}
