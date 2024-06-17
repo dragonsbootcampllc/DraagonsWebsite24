@@ -5,50 +5,39 @@ import ButtonLite from "../Micros/ButtonLite";
 import InternationalLogo1 from "./WorldWideLogo";
 
 
-// Define the type for our grid items
+
 type GridItem = {
+  id: number;
   title: string;
   description: string;
 };
-
 let InternationalLogo =InternationalLogo1;
 // Sample data for the grid items
-const gridItems: GridItem[] = [
-  {
-    title: "Expert-Authored Content",
-    description:
-      "Learn from the best with textbooks and resources written by industry leaders.",
-  },
-  {
-    title: "Always Up-to-Date",
-    description:
-      "Our curriculum is reshaped regularly to include the latest trends, tools, and technologies.",
-  },
-  {
-    title: "Hands-On Learning",
-    description:
-      "Engage in practical coding exercises, real-world projects, and interactive workshops.",
-  },
-  {
-    title: "Integrated Learning Pathways",
-    description:
-      "Benefit from our Code Program Plus and Parallel Programs, providing a comprehensive and holistic learning experience.",
-  },
-];
+type MaterialObj = {
+  gridItems: GridItem[];
+  headlineText: string;
+  heroHighlightedText: string;
+  descriptionText: string;
+  sectionTitle: string;
+  sectionDescription: string;
+  ReadMoreText: string;
+  ApplyNowText: string;
+  image: string;
+};
 
-// Sample data for the headline, description, and button text
-const headlineText: string = "Stay Ahead with Cutting-Edge ";
-const heroHighlightedText: string = "Learning Material";
-const descriptionText: string =
-  "Our Bootcamp offers expert-authored, continuously updated materials, ensuring you learn the latest trends, tools, and technologies for real-world application.";
-const sectionTitle: string = "Learn from Industry Leaders";
-const sectionDescription: string =
-  "With our specially crafted curriculum, offering deep insights and authoritative knowledge for a world-class education.";
-const ReadMoreText: string = "Read More";
-const ApplyNowText: string = "Apply now";
-const image: string = "/images/JopReady/image.png";
 
-const LearningMaterialComponent: React.FC = () => {
+
+const LearningMaterialComponent: React.FC<MaterialObj> = ({
+  gridItems,
+  headlineText,
+  heroHighlightedText,
+  descriptionText,
+  sectionTitle,
+  sectionDescription,
+  ReadMoreText,
+  ApplyNowText,
+  image,
+}) => {
   return (
     <div className='py-6'  id="LearningMaterialComponent" >
       <div className='container max-w-[1400px] mx-auto flex flex-col gap-9 justify-center items-center'>
@@ -76,10 +65,10 @@ const LearningMaterialComponent: React.FC = () => {
         </div>
         <div className=' flex gap-4 flex-col md:flex-row-reverse '>
           <div className='text-center bg-[#08091b]  cursor-pointer transition-all pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'>
-            <h3 className='text-2xl md:text-5xl text-center font-semibold'>
+            <h3 className='text-2xl capitalize md:text-5xl text-center font-semibold'>
               {sectionTitle}
             </h3>
-            <p className='text-lg mt-4 mb-8 max-w-[800px] text-white/70'>
+            <p className='text-lg mt-4 mb-8 max-w-[600px] text-white/70'>
               {sectionDescription}
             </p>
 
@@ -98,16 +87,20 @@ const LearningMaterialComponent: React.FC = () => {
             </div>
           </div>{" "}
           <div className='grid grid-cols-1 gap-4'>
-            {gridItems.map((item, index) => (
+            {gridItems?.map((item) => (
               <div
-                key={index}
-                className='text-lg  hover:scale-[1.03] cursor-pointer z-10 transition-all p-6 rounded-3xl flex flex-col gap-2 justify-center items-center text-center bg-[#08091b]'>
-                <h3 className='text-2xl font-semibold'>{item.title}</h3>
-                <p className='text-white/70 max-w-[600px]'>
-                  {item.description}
-                </p>
+                key={item.id}
+                className='bg-[#08091b] flex justify-center flex-col text-center hover:scale-[1.02] z-10 rounded-3xl p-4 cursor-pointer transition-all hover:shadow-2xl shadow-blue-700/40'>
+                <div className='flex justify-center'>
+                  <h3 className='text-2xl  text-white font-semibold'>
+                    {item.title}
+                  </h3>
+                
+                </div>
+                <p className='text-lg mt-4 mb-8  max-w-[500px] text-white/70'>{item.description}</p>
               </div>
             ))}
+            
           </div>
         </div>
       </div>

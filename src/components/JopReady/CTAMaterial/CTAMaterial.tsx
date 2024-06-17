@@ -51,7 +51,7 @@ const CTAMaterial: React.FC = () => {
                 height={2259}
               />
               {card.title && card.description && (
-                <div className='absolute left-0 right-0 grid place-items-center p-4 text-center h-[30%] bg-purple-900/80 backdrop-blur-3xl  w-full bottom-0 rounded-3xl  '>
+                <span className='absolute left-0 right-0 grid place-items-center p-4 text-center h-[30%] bg-purple-900/80 backdrop-blur-3xl  w-full bottom-0 rounded-3xl  '>
                   <p className='font-bold text-yellow-300 text-2xl'>
                     {card.title}
                   </p>
@@ -61,7 +61,7 @@ const CTAMaterial: React.FC = () => {
                       {card.description_Highlighted}
                     </span>
                   </p>
-                </div>
+                </span>
               )}
             </GlareCard>
           ))}
