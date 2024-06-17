@@ -92,10 +92,10 @@ const SolutionTabData = {
       "Unlock insights with our advanced ESG data analytics and reporting lab.",
     Icon: <motion.img src={datalab_img} alt="icon" animate={simpleFloatAnimation} />,
   },
-  cats: [
+  categories: [
     {
       title: "Getting Started",
-      color: "#02c2ab",
+      color: "#9b59b6",
       links: [
         {
           Icon: IoStatsChart,
@@ -121,7 +121,7 @@ const SolutionTabData = {
     },
     {
       title: "Levelling-Up",
-      color: "#168996",
+      color: "#8e44ad",
       links: [
         {
           Icon: IoBusiness,
@@ -147,7 +147,7 @@ const SolutionTabData = {
     },
     {
       title: "Assurance",
-      color: "#112b65",
+      color: "#7d3c98",
       links: [
         {
           Icon: IoTrendingUp,
@@ -188,6 +188,7 @@ const SolutionTabData = {
     ],
   }
 };
+
 const TallentsTabData = {
   title: "Tallents",
   tab1: {
@@ -234,7 +235,7 @@ const Navbar = () => {
     setUseCasesOpen(!isUseCasesOpen);
   };
   const closeUseCases = () => {
-    setUseCases(false);
+    setUseCasesOpen(false);
     closeNavigation();
   };
 
@@ -316,7 +317,7 @@ const Navbar = () => {
 
         {/* Navigation Links and CTA Button */}
         <div
-          className={`flex max-[1496px]:bg-[rgb(44,26,58)] -z-[10] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-[20px] font-normal h-full max-[1496px]:w-full gap-5 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
+          className={`flex max-[1496px]:bg-[#2c1a3a] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-[20px] font-normal h-full max-[1496px]:w-full gap-5 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
             ? "max-[1496px]:translate-y-0"
             : "max-[1496px]:-translate-y-[120%]"
             } top-full left-0 text-black  max-[1496px]:flex-col max-[1496px]:absolute max-[1496px]:w-full max-[1496px]:pb-[6.5rem] max-[1496px]:h-[calc(100vh-4.5rem)] max-[1496px]:text-lg max-[1496px]:border-b max-[1496px]:border-black`}
