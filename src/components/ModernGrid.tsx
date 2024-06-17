@@ -3,6 +3,9 @@ import { cn } from "@/utils/cn";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Talent from "@/pages/json/Team2023.json";
+import JetBrains from '@/../public/Brands/JetBreans.svg';
+import LogoVercel from '@/../public/Brands/Vercel.svg';
+import Logoudacity from '@/../public/Brands/WP.svg';
 import {
   IconBoxAlignRightFilled,
   IconClipboardCopy,
@@ -13,10 +16,13 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaMedal } from "react-icons/fa";
+import Link from "next/link";
+import ButtonComponent from "./Micros/Button";
+import ButtonLite from "./Micros/ButtonLite";
 
 export function BentoGridThirdDemo() {
   return (
-    <div className='h-screen  grid place-items-center'>
+    <div className='min-h-screen  grid place-items-center'>
       <div
         style={{ fontFamily: "interV" }}
         className='text-6xl content-center  max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
@@ -39,6 +45,16 @@ export function BentoGridThirdDemo() {
           />
         ))}
       </BentoGrid>
+      <div className='cta rounded-xl my-12 flex gap-5'>
+          <Link href='/Pricing' passHref>
+            <div className='h-16 w-64'>
+              <ButtonComponent CTAtext='Apply Now' />
+            </div>
+          </Link>
+          <div className='h-16 w-64'>
+            <ButtonLite CTAtext='Book a 1:1 Call' />
+          </div>
+        </div>
     </div>
   );
 }
@@ -225,63 +241,63 @@ const SkeletonFour = () => {
       rotate: 0,
     },
   };
-  return (
-    <motion.div
-      initial='initial'
-      animate='animate'
-      whileHover='hover'
-      className='flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-row space-x-2'>
-      <motion.div
-        variants={first}
-        className='h-full w-1/3 rounded-2xl p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center'>
-        <Image
-          src='https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg'
-          alt='avatar'
-          height='100'
-          width='100'
-          className='rounded-full h-10 w-10'
-        />
-        <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
-          Just code in Vanilla Javascript
-        </p>
-        <p className='border border-red-500  bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4'>
-          Delusional
-        </p>
-      </motion.div>
-      <motion.div className='h-full relative z-20 w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center'>
-        <Image
-          src='https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg'
-          alt='avatar'
-          height='100'
-          width='100'
-          className='rounded-full h-10 w-10'
-        />
-        <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
-          Tailwind CSS is cool, you know
-        </p>
-        <p className='border border-green-500 bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4'>
-          Sensible
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className='h-full w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center'>
-        <Image
-          src='https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg'
-          alt='avatar'
-          height='100'
-          width='100'
-          className='rounded-full h-10 w-10'
-        />
-        <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
-          I love angular, RSC, and Redux.
-        </p>
-        <p className='border border-orange-500  bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4'>
-          Helpless
-        </p>
-      </motion.div>
-    </motion.div>
-  );
+return (
+        <motion.div
+            initial='initial'
+            animate='animate'
+            whileHover='hover'
+            className='flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-row space-x-2'>
+            <motion.div
+                variants={first}
+                className='h-full w-1/3 rounded-2xl p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center'>
+                <Image
+                    src={JetBrains.src}
+                    alt='avatar'
+                    height='100'
+                    width='100'
+                    className='rounded-full bg-white p-1 h-10 w-10'
+                />
+                <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
+               Junior Software Engineer @ Jetbrains
+                </p>
+                <p className='border border-red-500  bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4'>
+                    Not sutiable
+                </p>
+            </motion.div>
+            <motion.div className='h-full relative z-20 w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center'>
+                <Image
+                    src={Logoudacity.src}
+                    alt='avatar'
+                    height='100'
+                    width='100'
+                    className='rounded-full ring-2 h-10 w-10'
+                />
+                <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
+                Software Engineering intern @ wp Engine
+                </p>
+                <p className='border border-green-500 bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4'>
+                    Suitable for you
+                </p>
+            </motion.div>
+            <motion.div
+                variants={second}
+                className='h-full w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center'>
+                <Image
+                    src={LogoVercel.src}
+                    alt='avatar'
+                    height='100'
+                    width='100'
+                    className='rounded-full ring-2 p-1 h-10 w-10'
+                />
+                <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
+                Software Engineering intern @ vercel
+                </p>
+                <p className='border border-orange-500  bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4'>
+                    You can apply 
+                </p>
+            </motion.div>
+        </motion.div>
+);
 };
 const SkeletonFive = () => {
   const variants = {
@@ -318,93 +334,94 @@ const SkeletonFive = () => {
         variants={variants}
         className='flex flex-row rounded-2xl border border-white/[0.2] p-2  items-start space-x-2 bg-black'>
         <Image
-          src='https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg'
+          src={Talent[34].personal_photo}
           alt='avatar'
           height='100'
           width='100'
           className='rounded-full h-10 w-10'
         />
         <p className='text-xs text-neutral-500'>
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
+         i have been learning PHP for 2 years now and i am still not good at it.
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className='flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black'>
-        <p className='text-xs text-neutral-500'>Use PHP.</p>
+        <p className='text-xs text-neutral-500'>
+            your roadmap is : 
+            1) ....
+        </p>
         <div className='h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0' />
       </motion.div>
     </motion.div>
   );
 };
 const items = [
-  {
-    title: "Students",
-    description: (
-      <span className='text-sm'>
-        Sharpen your skills and bridge the gap between theory and real-world
-        development. Conquer challenges with confidence! ⚔️
-      </span>
-    ),
-    header: <SkeletonOne />,
-    className: "md:col-span-1",
-    icon: <IconClipboardCopy className='h-4 w-4 text-neutral-500' />,
-    cta: "Join Now",
-  },
-  {
-    title: "Career Shifters",
-    description: (
-      <span className='text-sm'>
-        Ditch the unfulfilling and dive into the dynamic world of tech. We'll
-        equip you for a thriving new career!
-      </span>
-    ),
-    header: <SkeletonTwo />,
-    className: "md:col-span-1",
-    icon: <IconFileBroken className='h-4 w-4 text-neutral-500' />,
-    cta: "Switch Now",
-  },
-  {
-    title: "Upskilling Developers",
-    description: (
-      <span className='text-sm'>
-        Stay ahead of the curve. Master cutting-edge tech, boost your coding
-        efficiency, and solve problems like a pro!
-      </span>
-    ),
-    header: <SkeletonThree />,
-    className: "md:col-span-1",
-    icon: <IconSignature className='h-4 w-4 text-neutral-500' />,
-    cta: "Upgrade Now",
-  },
-  {
-    title: "Tech Entrepreneurs",
-    description: (
-      <span className='text-sm'>
-        Gain a deep understanding of tech and integrate it seamlessly into your
-        business strategy. Bridge the gap and become a tech titan!
-      </span>
-    ),
-    header: <SkeletonFour />,
-    className: "md:col-span-2",
-    icon: <IconTableColumn className='h-4 w-4 text-neutral-500' />,
-    cta: "Empower Now",
-  },
-  {
-    title: "Join Dragons Tech Bootcamp",
-    description: (
-      <span className='text-sm'>
-        Whether you're a student, a career shifter, an upskilling developer, or
-        a tech entrepreneur, Dragons Tech Bootcamp offers tailored programs to
-        meet your needs.
-      </span>
-    ),
-    header: <SkeletonFive />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className='h-4 w-4 text-neutral-500' />,
-    cta: "Enroll Today",
-  },
+    {
+        title: "Supportive Community",
+        description: (
+            <span className='text-sm'>
+                Join a diverse community of learners, mentors, and industry experts.
+                Get the support you need to succeed!
+            </span>
+        ),
+        header: <SkeletonOne />,
+        className: "md:col-span-1",
+        icon: <IconClipboardCopy className='h-4 w-4 text-neutral-500' />,
+        cta: "Join Now",
+    },
+    {
+        title: "Compeat with Top Talent",
+        description: (
+            <span className='text-sm'>
+             compete with top talent in the Dragons Community.
+                Stand out from the crowd and Get rewarded with cash prizes.
+            </span>
+        ),
+        header: <SkeletonTwo />,
+        className: "md:col-span-1",
+        icon: <IconFileBroken className='h-4 w-4 text-neutral-500' />,
+        cta: "Switch Now",
+    },
+    {
+        title: "Top 3% of Talent ",
+        description: (
+            <span className='text-sm'>
+                challenge yourself and Be part of the top 3% of talent . Get access to exclusive
+                opportunities and resources.
+            </span>
+        ),
+        header: <SkeletonThree />,
+        className: "md:col-span-1",
+        icon: <IconSignature className='h-4 w-4 text-neutral-500' />,
+        cta: "Upgrade Now",
+    },
+    {
+        title: "AI Powered Job Matching",
+        description: (
+            <span className='text-sm'>
+                Get matched with the right job opportunities based on your skills and interests.
+                Let AI do the work for you!
+            </span>
+        ),
+        header: <SkeletonFour />,
+        className: "md:col-span-2",
+        icon: <IconTableColumn className='h-4 w-4 text-neutral-500' />,
+        cta: "Empower Now",
+    },
+    {
+        title: "Ai Powered Learning Pathways",
+        description: (
+            <span className='text-sm'>
+                Get personalized learning pathways based on your goals and interests.
+                Learn at your own pace and achieve your dreams!
+            </span>
+        ),
+        header: <SkeletonFive />,
+        className: "md:col-span-1",
+        icon: <IconBoxAlignRightFilled className='h-4 w-4 text-neutral-500' />,
+        cta: "Enroll Today",
+    },
 ];
 
 export default BentoGridThirdDemo;
