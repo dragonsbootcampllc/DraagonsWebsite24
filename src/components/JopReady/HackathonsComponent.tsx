@@ -43,7 +43,7 @@ const ReadMoreText: string = "Read More";
 
 const HackathonsComponent: React.FC = () => {
   return (
-    <div className='py-6'>
+    <div className='py-6' id="HackathonsComponent">
       <div className='container mx-auto flex flex-col justify-center items-center gap-9'>
         <div className='text md:max-w-[1000px]'>
           <div

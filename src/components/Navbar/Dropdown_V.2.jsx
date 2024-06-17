@@ -6,6 +6,7 @@ import { MdArrowRight } from "react-icons/md";
 import AiInternalAuditIMG from "@/../public/assets/Premasset/bot.png";
 import SubNavbarLink_V3 from "./SubNavbarLink_V.3";
 
+
 const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
   return (
     <div
@@ -41,7 +42,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                 <span className="flex flex-col items-start gap-2 pt-4">
                   <span className="font-bold">{data.tab1.title}</span>
                   <span className="text-white/80">{data.tab1.description}</span>
-                  <span className="max-[1130px]:mb-5 flex justify-center items-center group-hover/learn:ml-5 text-white/70 group-hover/learn:text-white transition-all font-light mt-2">
+                  <span className="max-[1130px]:mb-5 flex justify-center items-center group-hover/learn:ml-5 text-white/70 group-hover/learn:text-purple-400 transition-all font-light mt-2">
                     Learn More{" "}
                     <span className="text-lg box-border pt-1">
                       <MdArrowRight />
@@ -60,9 +61,12 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                     className="flex-grow flex flex-col gap-6 max-[1150px]:pl-5"
                     key={catIndex}
                   >
-                    <h1 className={`font-bold text-[${cat.color}] text-lg`}>
+                    <Link href={cat.path}>
+                    <h1 
+                      className={`font-bold text-[${cat.color}] text-lg`}>
                       {cat.title}
                     </h1>
+                    </Link>
                     <div className="flex flex-col justify-start w-full text-start ">
                       {cat.links.map((link, linkIndex) => (
                         <SubNavbarLink_V2
