@@ -55,7 +55,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
               {/* End Tab One */}
               {/* Start Other Tabs One */}
               <div className="max-w-[1400px] text-start gap-3 w-full justify-start flex items-start pt-10 transition-all px-4 box-border max-[1130px]:flex-col h-full">
-                {data.cats.map((cat, catIndex) => (
+                {data.categories.map((cat, catIndex) => (
                   <div
                     className="flex-grow flex flex-col gap-6 max-[1150px]:pl-5"
                     key={catIndex}
@@ -169,7 +169,7 @@ Dropdown_V2.propTypes = {
   isTabOpen: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    cats: PropTypes.arrayOf(
+    categories: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
         color: PropTypes.string.isRequired,
