@@ -10,7 +10,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
   return (
     <div
       className={
-        "group min-[1130px]:h-full cursor-pointer max-[1130px]:w-full text-[#121212] "
+        "group min-[1130px]:h-full cursor-pointer max-[1130px]:w-full text-white "
       }
     >
       <div className="group min-[1130px]:h-full cursor-pointer  max-[1130px]:w-full">
@@ -26,7 +26,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
 
         {/* Start Dropdown */}
         <div
-          className={`w-screen transition-all flex justify-center items-center min-[1130px]:absolute min-[1130px]:left-1/2 min-[1130px]:top-[calc(100%+1px)] box-border min-[1130px]:-translate-x-1/2 min-[1130px]:shadow-md group-hover:border-b border-b-[#02c2ab] bg-purple-950 h-0 ${isTabOpen && "max-[1130px]:h-auto max-[1130px]:py-5"
+          className={`w-screen transition-all flex justify-center items-center min-[1130px]:absolute min-[1130px]:left-1/2 min-[1130px]:top-[calc(100%+1px)] box-border min-[1130px]:-translate-x-1/2 min-[1130px]:shadow-md group-hover:border-b border-b-purple-900 bg-[#0d0124]  h-0 ${isTabOpen && "max-[1130px]:h-auto max-[1130px]:py-5"
             } overflow-hidden min-[1190px]:group-hover:h-[622px] min-[1130px]:group-hover:h-[640px]`}
         >
           {/* Start Inner Container */}
@@ -35,13 +35,13 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
               {/* Start Tab One */}
               <Link
                 href={data.tab1.path || ""}
-                className="active:scale-90 w-full min-h-[240px] group/learn max-[1130px]:w-[90%] max-[1130px]:mx-[5%] box-border hover:shadow-md hover:border-2 transition-all px-12 flex justify-between items-center bg-[#02c2ab]/40 border border-[#02c2ab] rounded-xl gap-2"
+                className="active:scale-90 w-full min-h-[240px] group/learn max-[1130px]:w-[90%] max-[1130px]:mx-[5%] box-border hover:shadow-md hover:border-2 transition-all px-12 flex justify-between items-center bg-purple-900/40 border border-purple-900 rounded-xl gap-2"
                 onClick={closeTab}
               >
                 <span className="flex flex-col items-start gap-2 pt-4">
                   <span className="font-bold">{data.tab1.title}</span>
-                  <span className="">{data.tab1.description}</span>
-                  <span className="max-[1130px]:mb-5 flex justify-center items-center group-hover/learn:ml-5 group-hover/learn:text-[#02c2ab] transition-all font-light mt-2">
+                  <span className="text-white/80">{data.tab1.description}</span>
+                  <span className="max-[1130px]:mb-5 flex justify-center items-center group-hover/learn:ml-5 text-white/70 group-hover/learn:text-white transition-all font-light mt-2">
                     Learn More{" "}
                     <span className="text-lg box-border pt-1">
                       <MdArrowRight />
@@ -86,13 +86,13 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
               {/* Start Tab Two */}
               <Link
                 href={data.tab2.path || ""}
-                className="active:scale-90 min-h-[240px] w-full group/learn max-[1130px]:w-[90%] border-dashed hover:border-solid max-[1130px]:mx-[5%] box-border hover:shadow-md px-12 flex group/learn justify-center items-center rounded-xl gap-2 transition-all border border-gray-200 hover:border-[#02c2ab] hover:border-2"
+                className="active:scale-90 min-h-[240px] w-full group/learn max-[1130px]:w-[90%] border-dashed hover:border-solid max-[1130px]:mx-[5%] box-border hover:shadow-md px-12 flex group/learn justify-center items-center rounded-xl gap-2 transition-all border border-purple-600 hover:border-purple-900 hover:border-2"
                 onClick={closeTab}
               >
                 <span className="flex flex-col items-start gap-2 pt-4 ">
                   <span className="font-bold">{data.tab2.title}</span>
-                  <span className="">{data.tab2.description}</span>
-                  <span className="max-[1130px]:mb-5 flex justify-center items-center group-hover/learn:ml-5 group-hover/learn:text-[#02c2ab] transition-all font-light mt-2">
+                  <span className="text-white/80">{data.tab2.description}</span>
+                  <span className="max-[1130px]:mb-5 flex justify-center items-center group-hover/learn:ml-5 group-hover/learn:text-purple-400 transition-all font-light mt-2">
                     Learn More{" "}
                     <span className="text-lg box-border pt-1">
                       <MdArrowRight />
