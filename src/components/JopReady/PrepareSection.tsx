@@ -1,65 +1,45 @@
 import React from "react";
 import Link from "next/link";
-import ResumeLogo from "./WorldWideLogo";
-import InternationalLogo from "./WorldWideLogo";
-import ManSearchLogo from "./WorldWideLogo";
-import WorkingHomeLogo from "./WorkingHomeLogo";
-import WorldWideLogo from "./WorldWideLogo";
+
 import { Meteors } from "../ui/meteors";
 import ButtonComponent from "../Micros/Button";
+
 
 type GridItem = {
   title: string;
   description: string;
   logo: JSX.Element;
 };
+type JobReadyComponentProps = {
+  subHeadingText: string;
+  heroHighlightedText: string;
+  heroHeading: string;
+  Disctiption: string;
+  CTATextBelow: string;
+  buttonText: string;
+  gridItems: GridItem[];
+  headingText: string;
 
-const gridItems: GridItem[] = [
-  {
-    title: "Hands-on Project",
-    description: "Gain practical experience by working on real projects.",
-    logo: <WorkingHomeLogo />,
-  },
-  {
-    title: "Hackathons and challenges",
-    description:
-      "Participate in hackathons and challenges to test your skills.",
-    logo: <InternationalLogo />,
-  },
-  {
-    title: "Internships and Apprenticeships",
-    description:
-      "Get opportunities to work in internships and apprenticeships.",
-    logo: <WorldWideLogo />,
-  },
-  {
-    title: "interviews preparation",
-    description:
-      "Receive guidance on resume building and interview techniques.",
-    logo: <ResumeLogo />,
-  },
-  {
-    title: "Real World Projects",
-    description: "Work on projects that simulate real-world scenarios.",
-    logo: <ManSearchLogo />,
-  },
-  {
-    title: "Material",
-    description: "Access to high-quality learning materials and resources.",
-    logo: <InternationalLogo />,
-  },
-];
-const headingText: string = "How We Prepare You to be";
-const heroHighlightedText: string = " Job Ready ?";
-const CTATextBelow = "Offering a complete experience, beyond just the tech.";
-const buttonText: string = "Apply Now";
 
-const PrepareSection: React.FC = () => {
+};
+
+const JobReadyComponent: React.FC<JobReadyComponentProps> = ({
+  heroHighlightedText,
+  gridItems,
+  CTATextBelow,
+  buttonText,
+  headingText,
+
+
+
+
+}) => {
+
   return (
     <div className='container mx-auto py-[80px] max-w-[1400px] w-full flex flex-col justify-center items-center gap-9' id="PrepareSection">
       <div className='w-full flex justify-center'>
         <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] '>
-          {gridItems[1].logo}
+          {gridItems && gridItems[1] && gridItems[1].logo}
         </div>{" "}
       </div>
 
@@ -75,7 +55,7 @@ const PrepareSection: React.FC = () => {
       </div> 
 
       <div className='grid grid-cols-1 w-full sm:grid-cols-6 md:grid-cols-6 gap-6 mb-8'>
-        {gridItems.map((item, index) => (
+        {gridItems && gridItems.map((item, index) => (
           <div
             key={index}
             className={`text-lg overflow-hidden w-full relative min-h-[500px] mt-2 p-6 h-64 rounded-3xl shadow-2xl shadow-purple-500/5 duration-500 flex hover:scale-[1.03] cursor-pointer transition-all
