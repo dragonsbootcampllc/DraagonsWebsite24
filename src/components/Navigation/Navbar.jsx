@@ -192,7 +192,7 @@ const TallentsTabData = {
   title: "Tallents",
   tab1: {
     title: "ESG Services",
-    path: "service/esg",
+    path: "/Talents",
     description:
       "ESG Services assist companies in implementing sustainable and ethical operational practices.",
     Icon: <motion.img src={ESG_img} alt="icon" animate={simpleFloatAnimation} />,
@@ -228,15 +228,15 @@ const Navbar = () => {
     setNavOpen(false);
     scrollToTop();
   };
-  
-    // Use cases tab functions
-    const toggleUseCases = () => {
-      setUseCasesOpen(!isUseCasesOpen);
-    };
-    const closeUseCases = () => {
-      setUseCases(false);
-      closeNavigation();
-    };
+
+  // Use cases tab functions
+  const toggleUseCases = () => {
+    setUseCasesOpen(!isUseCasesOpen);
+  };
+  const closeUseCases = () => {
+    setUseCases(false);
+    closeNavigation();
+  };
 
   // Solution tab functions
   const toggleSolutions = () => {
@@ -266,19 +266,28 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-purple-900 bg-opacity-50  border-b border-white/20 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md">
+    <nav className="bg-purple-900 backdrop-blur-3xl bg-opacity-50  border-b border-white/20 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md">
       <div className="flex gap-5 justify-between items-center  max-[1130px]:px-0 max-w-[1400px] box-border w-full  h-[4.5rem]">
         <div className="z-50 max-[1130px]:w-full max-[1130px]:flex max-[1130px]:p-[5%] max-[1130px]:h-full justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex gap-[6px] items-center">
-            <div className="w-32 md:w-48">
-              <img
-                className="aspect-square"
-                src={LogoImage.src}
-                alt="Dragons Bootcamp"
-              />
+          <div className="left flex gap-3 justify-center items-center">
+            <Link href="/" className="flex gap-[6px] items-center">
+              <div className="w-32 md:w-48">
+                <img
+                  className="aspect-square"
+                  src={LogoImage.src}
+                  alt="Dragons Bootcamp"
+                />
+              </div>
+            </Link>
+            <div
+              className={
+                "border px-2 py-1 text-xs select-none hover:bg-fuchsia-800 duration-300 cursor-pointer  justify-center text-center grid place-items-center m-auto h-6 w-12 relative rounded-full"
+              }
+            >
+              <span className={"absolute"}>DEMO</span>
             </div>
-          </Link>
+          </div>
 
           {/* Logo and Hamburger Menu */}
           <button
