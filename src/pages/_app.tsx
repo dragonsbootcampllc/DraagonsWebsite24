@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
     {
       id: 3,
       name: "Gallery",
-      link: "/Gallary",
+      link: "/Gallery",
     },
     {
       id: 4,
@@ -31,6 +31,11 @@ export default function App({ Component, pageProps }: AppProps) {
       id: 5,
       name: "Bootcamp",
       link: "/Bootcamp",
+    },
+    {
+      id: 6,
+      name: "JopReady",
+      link: "/JopReady",
     },
   ];
 
@@ -65,7 +70,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

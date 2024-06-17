@@ -7,6 +7,8 @@ const nextConfig = {
       { hostname: "i.ibb.co" },
       { hostname: "swiperjs.com" },
       { hostname: "images.unsplash.com" },
+      { hostname: "levelupesg.co" },
+      {hostname:"pbs.twimg.com"},
     ],
     domains: ['encrypted-tbn0.gstatic.com']
   },
