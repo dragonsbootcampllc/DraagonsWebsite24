@@ -1,7 +1,6 @@
 "use client";
 import Hero from "@/components/JopReady/Hero";
-import PrepareSection from "@/components/JopReady/PrepareSection";
-import LearningMaterialComponent from "@/components/JopReady/LearningMaterialComponent";
+import WhatAreOurProgramsForComponent from "@/components/JopReady/LearningMaterialComponent";
 import CTAMaterial from "@/components/JopReady/CTAMaterial/CTAMaterial";
 import CallToActionComponent from "@/components/JopReady/CallToActionComponent";
 import ModernGrid from "@/components/ModernGrid";
@@ -23,26 +22,48 @@ const HeroObj = {
 
 // Define the type for our grid items
 type GridItem = {
+  id: number;
   title: string;
   description: string;
 };
+
+// Define the type for our material object
+type MaterialObj = {
+  gridItems: GridItem[];
+  headlineText: string;
+  heroHighlightedText: string;
+  descriptionText: string;
+  sectionTitle: string;
+  sectionDescription: string;
+  ReadMoreText: string;
+  ApplyNowText: string;
+  image: string;
+};
+
+
+
+
 const gridItems: GridItem[] = [
   {
+    id: 1,
     title: "Expert-Authored Content",
     description:
       "Learn from the best with textbooks and resources written by industry leaders.",
   },
   {
+    id: 2,
     title: "Always Up-to-Date",
     description:
       "Our curriculum is reshaped regularly to include the latest trends, tools, and technologies.",
   },
   {
+    id: 3,
     title: "Hands-On Learning",
     description:
       "Engage in practical coding exercises, real-world projects, and interactive workshops.",
   },
   {
+    id: 4,
     title: "Integrated Learning Pathways",
     description:
       "Benefit from our Code Program Plus and Parallel Programs, providing a comprehensive and holistic learning experience.",
@@ -79,7 +100,7 @@ const JopReady: React.FC = () => {
       />
         <ModernGrid/>
 
-      <LearningMaterialComponent
+      <WhatAreOurProgramsForComponent
         gridItems={MaterialObj.gridItems}
         headlineText={MaterialObj.headlineText}
         heroHighlightedText={MaterialObj.heroHighlightedText}

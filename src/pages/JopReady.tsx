@@ -28,7 +28,7 @@ const HeroObj = {
 };
 // Sample data for the grid items
 type MaterialObj = {
-  gridItems: GridItem[];
+  gridItems: GridItemV2[];
   headlineText: string;
   heroHighlightedText: string;
   descriptionText: string;
@@ -87,27 +87,32 @@ const PrepObj = {
 };
 
 // Define the type for our grid items
-type GridItem = {
+type GridItemV2 = {
+  id: number; // Update this line
   title: string;
   description: string;
 };
-const gridItems: GridItem[] = [
+const gridItems: GridItemV2[] = [
   {
+    id: 1,
     title: "Expert-Authored Content",
     description:
       "Learn from the best with textbooks and resources written by industry leaders.",
   },
   {
+    id: 2,
     title: "Always Up-to-Date",
     description:
       "Our curriculum is reshaped regularly to include the latest trends, tools, and technologies.",
   },
   {
+    id: 3,
     title: "Hands-On Learning",
     description:
       "Engage in practical coding exercises, real-world projects, and interactive workshops.",
   },
   {
+    id: 4,
     title: "Integrated Learning Pathways",
     description:
       "Benefit from our Code Program Plus and Parallel Programs, providing a comprehensive and holistic learning experience.",
