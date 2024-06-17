@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import React from "react";
 import Footer from "../components/Footer";
-const HeaderComp = dynamic(() => import("../components/Navigation/Navbar"), {
+const HeaderComp = dynamic(() => import("../components/Navbar/Navbar"), {
   ssr: false,
 });
 const Head = dynamic(() => import("next/head"), {
