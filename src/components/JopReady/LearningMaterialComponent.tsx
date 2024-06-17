@@ -65,7 +65,7 @@ const LearningMaterialComponent: React.FC<MaterialObj> = ({
         </div>
         <div className=' flex gap-4 flex-col md:flex-row-reverse '>
           <div className='text-center bg-[#08091b]  cursor-pointer transition-all pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'>
-            <h3 className='text-2xl md:text-5xl text-center font-semibold'>
+            <h3 className='text-2xl capitalize md:text-5xl text-center font-semibold'>
               {sectionTitle}
             </h3>
             <p className='text-lg mt-4 mb-8 max-w-[600px] text-white/70'>
@@ -92,12 +92,12 @@ const LearningMaterialComponent: React.FC<MaterialObj> = ({
                 key={item.id}
                 className='bg-[#08091b] flex justify-center flex-col text-center hover:scale-[1.02] z-10 rounded-3xl p-4 cursor-pointer transition-all hover:shadow-2xl shadow-blue-700/40'>
                 <div className='flex justify-center'>
-                  <h3 className='text-2xl text-white font-semibold'>
+                  <h3 className='text-2xl  text-white font-semibold'>
                     {item.title}
                   </h3>
                 
                 </div>
-                <p className='text-lg mt-4 mb-8 max-w-[600px] text-white/70'>{item.description}</p>
+                <p className='text-lg mt-4 mb-8  max-w-[500px] text-white/70'>{item.description}</p>
               </div>
             ))}
             

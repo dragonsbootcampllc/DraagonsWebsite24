@@ -46,27 +46,27 @@ type MaterialObj = {
 const gridItems: GridItem[] = [
   {
     id: 1,
-    title: "Expert-Authored Content",
+    title: "Students",
     description:
-      "Learn from the best with textbooks and resources written by industry leaders.",
+      "preferably CS grads or people that have a good background in it, but we also accept students from other majors.",
   },
   {
     id: 2,
-    title: "Always Up-to-Date",
+    title: "Career Shifters",
     description:
-      "Our curriculum is reshaped regularly to include the latest trends, tools, and technologies.",
+      "People who are looking to shift their career to software development or data science ",
   },
   {
     id: 3,
-    title: "Hands-On Learning",
+    title: " Professionals Shifters",
     description:
-      "Engage in practical coding exercises, real-world projects, and interactive workshops.",
+      "People that are already working in the tech industry but want to learn new technologies or improve their skills.",
   },
   {
     id: 4,
-    title: "Integrated Learning Pathways",
+    title: "Tech Entrepreneurs",
     description:
-      "Benefit from our Code Program Plus and Parallel Programs, providing a comprehensive and holistic learning experience.",
+      "People that are looking to build their own tech startup or improve their existing business.",
   },
 
   
@@ -78,9 +78,9 @@ const MaterialObj: MaterialObj = {
   heroHighlightedText: " Dragons Bootcamp",
   descriptionText:
     "This program is designed to help students, professionals, and entrepreneurs to learn the latest technologies and build projects that can help them to get a job or grow their business.",
-  sectionTitle: "What You Will Learn",
+  sectionTitle: "Join us and take the first step towards transforming your career!",
   sectionDescription:
-    "Our curriculum is designed to help you learn the latest technologies and build projects that can help you get a job or grow your business.",
+    "Don't miss out on the opportunity to be part of a program that adapts to your unique needs and goals.",
   ReadMoreText: "Read More",
   ApplyNowText: "Apply Now",
   image:OFFICE.src,
