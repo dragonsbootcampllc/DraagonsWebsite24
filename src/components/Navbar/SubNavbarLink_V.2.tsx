@@ -20,10 +20,7 @@ export default function SubNavbarLink_V2({ Icon, title, path, clear, color }: Su
       <span className={`text-sm ${color ? `text-[${color}]` : 'text-[#112b65]'} group-hover/subLink:text-[#efefef]`}>{title}</span>
 
       {/* To generate classes in tailwindCSS */}
-      <input type="hidden" className='
-      bg-[#8e44ad] text-[#8e44ad]
-      
-      ' />
+      <input type="hidden" className='bg-[#8e44ad] text-blue-600' />
     </Link>
   );
 }

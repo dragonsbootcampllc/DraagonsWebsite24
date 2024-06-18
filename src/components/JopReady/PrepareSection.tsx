@@ -23,7 +23,7 @@ type JobReadyComponentProps = {
 
 };
 
-const JobReadyComponent: React.FC<JobReadyComponentProps> = ({
+const PrepareSection: React.FC<JobReadyComponentProps> = ({
   heroHighlightedText,
   gridItems,
   CTATextBelow,
