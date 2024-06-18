@@ -10,6 +10,7 @@ const nextConfig = {
       { hostname: "levelupesg.co" },
       {hostname:"pbs.twimg.com"},
     ],
+    domains: ['encrypted-tbn0.gstatic.com']
   },
 };
 
