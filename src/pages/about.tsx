@@ -1,12 +1,32 @@
+import Hero from "@/components/JopReady/Hero";
 import Image from "next/image";
 import React from "react";
 
 export default function AboutUsPage(props: any) {
+  const HeroObj = {
+    News: {
+      id: 1,
+      date: "2020-01-01",
+      content: "New Season just landed💯",
+      link: "/blog/news",
+    },
+    subHeadingText: " With Dragons Bootcamp in ",
+    heroHighlightedText: "Only 6 Month",
+    heroHeading: "Become Job Ready ",
+    Disctiption: "Join Dragons Bootcamp and become job-ready in just 6 months. Gain essential skills and hands-on experience for a successful career",
+  };
   return (
-    <div id="aboutus">
-      <div className="flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28 mt-20 mt-20">
+    <div id="aboutus" className="relative w-full">
+         <Hero
+              News={HeroObj.News}
+              subHeadingText={HeroObj.subHeadingText}
+              heroHighlightedText={HeroObj.heroHighlightedText}
+              heroHeading={HeroObj.heroHeading}
+              Disctiption={HeroObj.Disctiption}
+      />
+      <div className="flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28  mt-20">
         <div className="flex sm:p-4 p-6 items-center justify-center flex-col gap-3 my-24 sm:w-4/5 md:w-4/5 lg:w-3/5">
-          <h1 className="md:text-2xl text-xl md:text-center text-start font-medium text-sky-800 uppercase">
+          <h1 className="md:text-2xl text-xl md:text-center text-start font-medium text-purple-800 uppercase">
             {props.mainHeader}
           </h1>
           <h2 className="md:text-5xl text-3xl font-black md:text-center text-start py-3 md:px-10">
@@ -18,7 +38,7 @@ export default function AboutUsPage(props: any) {
         </div>
 
         <div className="flex sm:p-4 p-6 items-center justify-center flex-col gap-3 md:my-24 sm:w-4/5 md:w-4/5 lg:w-3/5">
-          <h1 className="md:text-xl text-lg text-start font-medium text-sky-800 uppercase">
+          <h1 className="md:text-xl text-lg text-start font-medium text-purple-800 uppercase">
             {props.story.mainHeader}
           </h1>
           <div className="flex py-5 md:flex-row flex-col gap-3">
