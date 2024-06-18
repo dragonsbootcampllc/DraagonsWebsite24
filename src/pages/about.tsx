@@ -3,6 +3,7 @@ import ButtonComponent from "@/components/Micros/Button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CardsHoverEffectDemo from "@/components/Cards/CardHoverEffectDemo";
 import Founding from "@/../public/images/OurStory/3.png";
 import Story2 from "@/../public/images/OurStory/4.png";
 import Story3 from "@/../public/images/OurStory/5.png";
@@ -132,7 +133,10 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
           </p>
         </div>
       )}
+
+      <CardsHoverEffectDemo/>
     </div>
+
   );
 };
 
