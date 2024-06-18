@@ -139,7 +139,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                     className="w-full flex justify-center items-center active:scale-90 transition-all"
                     onClick={closeTab}
                   >
-                    <div className="min-h-[240px] group/learn max-[1130px]:w-[90%] w-full max-[1130px]:mx-[5%] hover:shadow-md hover:border-2 transition-all flex justify-center items-center bg-[#02c2ab]/40 border border-[#02c2ab] rounded-xl gap-2">
+                    <div className="min-h-[240px] group/learn max-[1130px]:w-[90%] w-full max-[1130px]:mx-[5%] hover:shadow-md hover:border-2 transition-all flex justify-center items-center bg-[#8e44ad]/40 border border-[#8e44ad] rounded-xl gap-2">
                       <div className="flex flex-col  gap-2">
                         <div>
                           <img
