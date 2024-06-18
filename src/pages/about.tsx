@@ -41,7 +41,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
   };
 
   return (
-    <div id='aboutus' className='relative w-full flex justify-center'>
+    <div id='aboutus' className='relative w-full flex  justify-center'>
       <Hero
         News={HeroObj.News}
         subHeadingText={HeroObj.subHeadingText}
@@ -96,7 +96,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
                   <Image
                     src={section.img}
                     alt='Story Image'
-                    className='md:w-10/12 hover:scale-105 duration-700 hover:cursor-pointer w-full rounded-3xl'
+                    className='md:w-10/12 md:hover:scale-105 duration-700 hover:cursor-pointer w-full rounded-3xl'
                     width={1000}
                     height={1000}
                     quality={100}
