@@ -126,9 +126,16 @@ AboutUsPage.defaultProps = {
     },
     {
       mainHeader: "Our Story",
-      header: " Dragons Bootcamp's Inaugural Webinar at EELU",
+      header: "Dragons Bootcamp's Inaugural Webinar at EELU",
       paragraph:
         "Partnering with Hatem, Hamdy Saad, an accomplished entrepreneur working remotely for a Dubai-based company at this time, brought his expertise from founding tech ventures such as Divzoon and Dlink. Their collaboration culminated in Dragons Bootcamp's inaugural webinar at EELU, where guest speaker Dario Lencina was featured. This event not only showcased Dragons Bootcamp's innovative approach but also sparked enthusiasm among students and educators.",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2KdfZJkryOCFni4-CUywBU_aFnRntkbniw&s",
+    },
+    {
+      mainHeader: "Our Story",
+      header: "inovating the EdTech industry",
+      paragraph:
+        "nspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp. They emphasized creativity, problem-solving, and hands-on learning through real-world projects and mentorship. Their innovative approach attracted a diverse community eager to thrive in the tech industry, setting the stage for future growth and impact.",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2KdfZJkryOCFni4-CUywBU_aFnRntkbniw&s",
     },
   ],
