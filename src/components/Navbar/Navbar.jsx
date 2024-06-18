@@ -86,22 +86,22 @@ const SolutionTabData = {
       links: [
         {
           Icon: IoStatsChart,
-          title: "Get Set for Success: Preparation Strategies",
+          title: "Preparation Strategies",
           path: "/JopReady#PrepareSection"
         },
         {
           Icon: IoAnalytics,
-          title: "Learning Resources: Your Knowledge Toolkit",
+          title: "Your Knowledge Toolkit",
           path: "/JopReady#LearningMaterialComponent"
         },
         {
           Icon: IoEarth,
-          title: "Real-World Experience: Hands-On Projects",
+          title: "Hands-On Projects",
           path: "/JopReady#HandsOnProjectsComponent"
         },
         {
           Icon: IoLeaf,
-          title: "Next Steps: Your Call to Action",
+          title: "Your Call to Action",
           path: "/JopReady#CallToActionComponent"
         },
       ]
@@ -113,12 +113,12 @@ const SolutionTabData = {
       links: [
         {
           Icon: IoBusiness,
-          title: "Tech Triumph: 6-Month Intensive Bootcamp",
+          title: "6-Month Intensive Bootcamp",
           path: "/Bootcamp#ElevateYourSkills"
         },
         {
           Icon: IoDocumentText,
-          title: "Unlock Your Potential: The Dragoons Tech Bootcamp Advantage",
+          title: "Unlock Your Potential with The Dragoons Tech Bootcamp Advantage",
           path: "/Bootcamp#WhyOurBootcamp"
         },
         {
@@ -130,23 +130,23 @@ const SolutionTabData = {
       ]
     },
     {
-      title: "Assurance",
-      path: "JopReady.tsx",
+      title: "Webinars",
+      path: "/Webinars",
       color: "#9b59b6",
       links: [
         {
           Icon: IoTrendingUp,
-          title: "ESG Third-Party Assurance",
+          title: " Dragoons Bootcamp’s Guide to Full-Stack Development",
           path: "services/esg-third-party-assurance"
         },
         {
           Icon: IoPeople,
-          title: "ESG Supply Chain Audits",
+          title: "Unlocking Insights with Dragoons Bootcamp",
           path: "services/esg-supply-chain-audits"
         },
         {
           Icon: IoLeaf,
-          title: "Corporate Sustainability Due Diligence",
+          title: "Future-Proof Your Skills with Dragoons Bootcamp",
           path: "services/corporate-sustainability-due-diligence"
         },
       ]
