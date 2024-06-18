@@ -1,0 +1,12 @@
+{
+  "DISCOUNT10": {
+    "discount": 10,
+    "usageLimit": 20,
+    "used": 3
+  },
+  "DISCOUNT20": {
+    "discount": 20,
+    "usageLimit": 20,
+    "used": 0
+  }
+}
