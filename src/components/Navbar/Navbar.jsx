@@ -22,6 +22,7 @@ import datalab_img from '@/../public/assets/Dash/SolutionNAV/lab.png';
 import pulse_img from '@/../public/assets/Premasset/279b4dee-988e-4168-9745-09c71397741a.png';
 import resources_img from '@/../public/assets/Dash/academy/resources.png';
 import workshop_img from '@/../public/assets/Dash/academy/workshop.png';
+import Student_img from '@/../public/assets/calculate.png';
 import {
   IoLeaf,
   IoStatsChart,
@@ -68,14 +69,14 @@ const SolutionTabData = {
     path: "http://dragons.divzoon.com/solutions/students/",
     description:
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
-    Icon: <motion.img src={pulse_img} alt="icon" animate={simpleFloatAnimation} />,
+    Icon: <motion.img src={Student_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   tab2: {
     title: "Partners",
     path: "http://dragons.divzoon.com/solutions/partners/",
     description:
       "Enhance your team with our ready-to-deploy graduates skilled in the latest tech trends.",
-    Icon: <motion.img src={datalab_img} alt="icon" animate={simpleFloatAnimation} />,
+    Icon: <motion.img src={Student_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   categories: [
     {
@@ -328,7 +329,7 @@ const Navbar = () => {
             closeNavigation={closeNavigation}
           />
           <NavbarLink
-            path="/aboutUs"
+            path="/aboutus"
             title="About Us"
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
