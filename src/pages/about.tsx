@@ -20,6 +20,11 @@ interface AboutUsProps {
   subHeader: string;
   description: string;
   story: Section[];
+  vision?: {
+    mainHeader: string;
+    subHeader: string;
+    description: string;
+  };
 }
 
 const CTATextBelow = "Ready to start your journey?";
@@ -51,9 +56,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
       />
       <div className='flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28 mt-20 px-4'>
         <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
-          <div
-           
-            className='text-3xl min-h-screen flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+          <div className='text-3xl min-h-screen flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
             <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
               {props.mainHeader}
             </h1>
@@ -61,17 +64,14 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
               {props.subHeader}
               <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
             </h1>
-            <p
-              
-              className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+            <p className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
               {props.description}
             </p>
           </div>
 
           <div className='my-5 min-h-screen md:my-12'>
             <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
-              <div 
-                className='text-3xl py-5 flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+              <div className='text-3xl py-5 flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
                 <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
                   {props.story[0].mainHeader}
                 </h1>
@@ -100,7 +100,6 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
                     width={1000}
                     height={1000}
                     quality={100}
-
                   />
                 </div>
               </div>
@@ -119,6 +118,20 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
           </div>
         </Link>
       </div>
+      {props.vision && (
+        <div className='text-3xl min-h-screen flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+          <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
+            {props.vision.mainHeader}
+          </h1>
+          <h1>
+            {props.vision.subHeader}
+            <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
+          </h1>
+          <p className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+            {props.vision.description}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
@@ -127,37 +140,43 @@ AboutUsPage.defaultProps = {
   mainHeader: "OUR mission",
   subHeader: "Empowering the Next Generation of Tech Innovators",
   description:
-    "To empower aspiring tech professionals by providing immersive, hands-on training that transforms beginners into industry-ready experts. We are dedicated to fostering a supportive learning environment, bridging the skills gap, and driving innovation in the tech industry.",
+    "To empower aspiring tech professionals by providing immersive, hands-on training that transforms beginners into industry-ready experts.",
   story: [
     {
       mainHeader: "Our Story",
       header: "Inception and Founding",
       paragraph:
-        "In Oct 2022, Dragons Bootcamp LLC was born out of a shared vision between two pioneers, Hamdy Saad and Hatem Ali. Hatem, a determined Computer Science student at EElu Fayoum branch, recognized a glaring disparity between traditional academic teachings and the practical skills needed in the tech industry. Despite the supportive academic environment, there was a noticeable gap in preparing students for real-world challenges.",
+        "In Oct 2022, Dragons Bootcamp LLC was born out of a shared vision between two pioneers, Hamdy Saad and Hatem Ali.",
       img: Founding.src,
     },
     {
       mainHeader: "Our Story",
       header: " The Journey Begins",
       paragraph:
-        "Encouraged by the openness and support of Dr. Mohammed Agha, alongside teaching assistants Dr. Rabiee Ayman and Kareem Mangoud, Hatem embarked on a mission. He sought to empower his peers by providing practical, industry-focused insights that were often missing from the standard curriculum. His initiative quickly gained momentum, driven by a passion to bridge the divide between theory and application.",
+        "Encouraged by the openness and support of Dr. Mohammed Agha, alongside teaching assistants Dr. Rabiee Ayman and Kareem Mangoud, Hatem embarked on a mission.",
       img: Story2.src,
     },
     {
       mainHeader: "Our Story",
       header: "Dragons Bootcamp's Inaugural Webinar at EELU",
       paragraph:
-        "Partnering with Hatem, Hamdy Saad, an accomplished entrepreneur working remotely for a Dubai-based company at this time, brought his expertise from founding tech ventures such as Divzoon and Dlink. Their collaboration culminated in Dragons Bootcamp's inaugural webinar at EELU, where guest speaker Dario Lencina was featured. This event not only showcased Dragons Bootcamp's innovative approach but also sparked enthusiasm among students and educators.",
+        "Partnering with Hatem, Hamdy Saad, an accomplished entrepreneur working remotely for a Dubai-based company at this time, brought his expertise from founding tech ventures such as Divzoon and Dlink.",
       img: Story3.src,
     },
     {
       mainHeader: "Our Story",
       header: "Innovating the EdTech industry",
       paragraph:
-        "Inspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp. They emphasized creativity, problem-solving, and hands-on learning through real-world projects and mentorship. Their innovative approach attracted a diverse community eager to thrive in the tech industry, setting the stage for future growth and impact.",
+        "Inspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp.",
       img: Story4.src,
     },
   ],
+  vision: {
+    mainHeader: "OUR Vision",
+    subHeader: "Transforming the Future of Tech Education",
+    description:
+      "Our vision is to revolutionize tech education by equipping aspiring professionals with the skills and knowledge needed to thrive in the ever-evolving tech industry.",
+  },
 };
 
 export default AboutUsPage;
