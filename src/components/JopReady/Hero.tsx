@@ -15,7 +15,9 @@ interface HeroProps {
   Disctiption: string;
 }
 
+
 const Hero: React.FC<HeroProps> = ({ News, subHeadingText, heroHighlightedText, heroHeading, Disctiption }) => {
+
   return (
     <div className='hero relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
       <div className='absolute opacity-30 h-full w-full'>
@@ -50,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ News, subHeadingText, heroHighlightedText, 
             </div>
             <div
               style={{ fontFamily: "interV" }}
-              className='text-2xl md:text-5xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+              className='text-3xl md:text-6xl content-center max-w-4xl text-center  z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
               <h1>
                 {heroHeading}
                 {subHeadingText}
@@ -61,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ News, subHeadingText, heroHighlightedText, 
             </div>
             <p
               style={{ fontFamily: "interV" }}
-              className='text-white/50 text-lg md:text-base container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+              className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
               {Disctiption}
             </p>
           </div>
