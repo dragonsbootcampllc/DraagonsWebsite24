@@ -150,7 +150,7 @@ AboutUsPage.defaultProps = {
       mainHeader: "Our Story",
       header: "Inception and Founding",
       paragraph:
-        "In Oct 2022, Dragons Bootcamp LLC was born out of a shared vision between two pioneers, Hamdy Saad and Hatem Ali.",
+        "In Oct 2022, Dragons Bootcamp LLC was born out of a shared vision between two pioneers, Hamdy Saad and Hatem Ali.\n Hatem, a determined Computer Science student at EElu Fayoum branch, recognized a glaring disparity between traditional academic teachings and the practical skills needed in the tech industry. Despite the supportive academic environment, there was a noticeable gap in preparing students for real-world challenges. ",
       img: Founding.src,
     },
     {
@@ -171,7 +171,7 @@ AboutUsPage.defaultProps = {
       mainHeader: "Our Story",
       header: "Innovating the EdTech industry",
       paragraph:
-        "Inspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp.",
+        "Inspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp. They aim to continue innovating in tech education, pioneering new methodologies and curriculum enhancements that empower future generations of tech leaders. ",
       img: Story4.src,
     },
   ],
