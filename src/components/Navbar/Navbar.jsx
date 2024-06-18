@@ -60,21 +60,6 @@ const simpleFloatAnimation = {
     ease: "easeInOut",
   },
 };
-const UseCasesTabData = {
-  title: "Use Cases",
-  tab1: {
-    title: "LevelUp O2®",
-    path: "service/levelup-o2",
-    description: "AI-driven carbon accounting for your entire value chain.",
-    Icon: <motion.img src={levelUp_O2_img} alt="icon" animate={simpleFloatAnimation} />,
-  },
-  tab2: {
-    title: "SusTracker AI®",
-    path: "esg-software/sustainability-tracker",
-    description: "Streamline ESG management for enhanced real-time insights.",
-    Icon: <motion.img src={sustracker_img} alt="icon" animate={simpleFloatAnimation} />,
-  },
-};
 
 const SolutionTabData = {
   title: "Solutions",
@@ -121,30 +106,26 @@ const SolutionTabData = {
       ]
     },
     {
-      title: "Levelling-Up",
-      path: "/JopReady",
+      title: "Our BootCamp",
+      path: "/Bootcamp",
       color: "#9b59b6",
       links: [
         {
           Icon: IoBusiness,
-          title: "ESG Governance",
-          path: "/JopReady#PrepareSection"
+          title: "Tech Triumph: 6-Month Intensive Bootcamp",
+          path: "/Bootcamp#ElevateYourSkills"
         },
         {
           Icon: IoDocumentText,
-          title: "ESG Data Management",
-          path: "/JopReady#LearningMaterialComponent"
+          title: "Unlock Your Potential: The Dragoons Tech Bootcamp Advantage",
+          path: "/Bootcamp#WhyOurBootcamp"
         },
         {
           Icon: IoWarning,
-          title: "Greenwashing Controls",
-          path: "services/greenwashing-controls"
+          title: "Join Our Bootcamp",
+          path: "Bootcamp/#EnrollNow"
         },
-        {
-          Icon: IoShieldCheckmark,
-          title: "ESG Disclosures & Reporting",
-          path: "services/esg-disclosures-&-reporting"
-        },
+
       ]
     },
     {
@@ -195,17 +176,17 @@ const SolutionTabData = {
 const TallentsTabData = {
   title: "Tallents",
   tab1: {
-    title: "ESG Services",
+    title: "Students",
     path: "/Talents",
     description:
-      "ESG Services assist companies in implementing sustainable and ethical operational practices.",
+      "Our top 3% graduates excel in tech, gaining access to exclusive job opportunities and leading the way in industry success.",
     Icon: <motion.img src={ESG_img} alt="icon" animate={simpleFloatAnimation} />,
   },
   tab2: {
-    title: "Business Assurance",
+    title: "Partners",
     path: "service/business",
     description:
-      "Business Services offer essential support for enhancing company efficiency and growth.",
+      "Spot and recruit top tech talent seamlessly through our HRMS, enhancing your team with industry-leading expertise",
     Icon: <motion.img src={business_img} alt="icon" animate={simpleFloatAnimation} />,
   },
 
@@ -218,7 +199,6 @@ const TallentsTabData = {
 const Navbar = () => {
   // State hooks for controlling UI elements
   const [isNavOpen, setNavOpen] = useState(false);
-  const [isUseCasesOpen, setUseCasesOpen] = useState(false);
   const [isSolutionsOpen, setSolutionsOpen] = useState(false);
   const [isTallentsOpen, setTallentsOpen] = useState(false);
 
@@ -231,15 +211,6 @@ const Navbar = () => {
   const closeNavigation = () => {
     setNavOpen(false);
     scrollToTop();
-  };
-
-  // Use cases tab functions
-  const toggleUseCases = () => {
-    setUseCasesOpen(!isUseCasesOpen);
-  };
-  const closeUseCases = () => {
-    setUseCasesOpen(false);
-    closeNavigation();
   };
 
   // Solution tab functions
@@ -325,12 +296,11 @@ const Navbar = () => {
             : "max-[1496px]:-translate-y-[120%]"
             } top-full left-0 text-black  max-[1496px]:flex-col max-[1496px]:absolute max-[1496px]:w-full max-[1496px]:pb-[6.5rem] max-[1496px]:h-[calc(100vh-4.5rem)] max-[1496px]:text-lg max-[1496px]:border-b max-[1496px]:border-black`}
         >
-          {/* Use Cases Dropdown */}
-          <Dropdown
-            isTabOpen={isUseCasesOpen}
-            closeTab={closeUseCases}
-            toggleTab={toggleUseCases}
-            data={UseCasesTabData}
+          <NavbarLink
+            path="/useCases"
+            title="Use Cases"
+            toggleNavigation={toggleNavigation}
+            closeNavigation={closeNavigation}
           />
 
           {/* Solutions Dropdown */}

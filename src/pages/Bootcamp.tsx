@@ -131,7 +131,7 @@ const BootcampPage = () => {
           Disctiption="Don't miss out on the opportunity to be part of a program that adapts to your unique needs and goals."
           
         />
-        <div className="mt-10">
+        <div className="mt-10" id="ElevateYourSkills">
           <div className="my-10 max-md:mt-20">
             <h1 className="lg:text-6xl text-3xl font-bold mb-6">
               Elevate Your Skills with Our Intensive{" "}
@@ -175,7 +175,7 @@ const BootcampPage = () => {
           </Link>
         </div>
 
-        <div className="my-20">
+        <div className="my-20" id="WhyOurBootcamp">
           <h1 className="lg:text-6xl text-3xl font-bold mb-6 mt-10">
             Why You Should Take Dragons Tech Bootcamp
           </h1>
@@ -234,7 +234,7 @@ const BootcampPage = () => {
               href="https://docs.google.com/forms/d/e/1FAIpQLSf6yGyk40x0nNQwP_XSP_dFjiS4I6_7UoAzJDGRunl-NGRUsQ/viewform?usp=pp_url"
               target="_blank"
             >
-              <div className="flex justify-center mt-8">
+              <div className="flex justify-center mt-8" id="EnrollNow">
                 <div className="group cursor-pointer select-none inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md">
                   <p className="mr-2  inline-block text-white text-sm">
                     Enroll Now
