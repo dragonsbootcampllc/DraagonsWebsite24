@@ -3,10 +3,10 @@ import ButtonComponent from "@/components/Micros/Button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Founding from "@/../public/3.png";
-import Story2 from "@/../public/4.png";
-import Story3 from "@/../public/5.png";
-import Story4 from "@/../public/6.png";
+import Founding from "@/../public/images/OurStory/3.png";
+import Story2 from "@/../public/images/OurStory/4.png";
+import Story3 from "@/../public/images/OurStory/5.png";
+import Story4 from "@/../public/images/OurStory/6.png";
 
 interface Section {
   mainHeader: string;
