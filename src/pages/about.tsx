@@ -3,6 +3,10 @@ import ButtonComponent from "@/components/Micros/Button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Founding from "@/../public/3.png";
+import Story2 from "@/../public/4.png";
+import Story3 from "@/../public/5.png";
+import Story4 from "@/../public/6.png";
 
 interface Section {
   mainHeader: string;
@@ -92,10 +96,12 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
                 <div className='flex flex-col justify-center items-center md:w-1/2'>
                   <Image
                     src={section.img}
-                    alt='founders'
-                    className='md:w-10/12 w-full rounded-3xl'
-                    width={100}
-                    height={100}
+                    alt='Story Image'
+                    className='md:w-10/12  w-full rounded-3xl'
+                    width={1000}
+                    height={1000}
+                    quality={100}
+
                   />
                 </div>
               </div>
@@ -129,28 +135,28 @@ AboutUsPage.defaultProps = {
       header: "Inception and Founding",
       paragraph:
         "In Oct 2022, Dragons Bootcamp LLC was born out of a shared vision between two pioneers, Hamdy Saad and Hatem Ali. Hatem, a determined Computer Science student at EElu Fayoum branch, recognized a glaring disparity between traditional academic teachings and the practical skills needed in the tech industry. Despite the supportive academic environment, there was a noticeable gap in preparing students for real-world challenges.",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2KdfZJkryOCFni4-CUywBU_aFnRntkbniw&s",
+      img: Founding.src,
     },
     {
       mainHeader: "Our Story",
       header: " The Journey Begins",
       paragraph:
         "Encouraged by the openness and support of Dr. Mohammed Agha, alongside teaching assistants Dr. Rabiee Ayman and Kareem Mangoud, Hatem embarked on a mission. He sought to empower his peers by providing practical, industry-focused insights that were often missing from the standard curriculum. His initiative quickly gained momentum, driven by a passion to bridge the divide between theory and application.",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2KdfZJkryOCFni4-CUywBU_aFnRntkbniw&s",
+      img: Story2.src,
     },
     {
       mainHeader: "Our Story",
       header: "Dragons Bootcamp's Inaugural Webinar at EELU",
       paragraph:
         "Partnering with Hatem, Hamdy Saad, an accomplished entrepreneur working remotely for a Dubai-based company at this time, brought his expertise from founding tech ventures such as Divzoon and Dlink. Their collaboration culminated in Dragons Bootcamp's inaugural webinar at EELU, where guest speaker Dario Lencina was featured. This event not only showcased Dragons Bootcamp's innovative approach but also sparked enthusiasm among students and educators.",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2KdfZJkryOCFni4-CUywBU_aFnRntkbniw&s",
+      img: Story3.src,
     },
     {
       mainHeader: "Our Story",
       header: "Innovating the EdTech industry",
       paragraph:
         "Inspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp. They emphasized creativity, problem-solving, and hands-on learning through real-world projects and mentorship. Their innovative approach attracted a diverse community eager to thrive in the tech industry, setting the stage for future growth and impact.",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2KdfZJkryOCFni4-CUywBU_aFnRntkbniw&s",
+      img: Story4.src,
     },
   ],
 };
