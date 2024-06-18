@@ -1,5 +1,7 @@
 import Hero from "@/components/JopReady/Hero";
+import ButtonComponent from "@/components/Micros/Button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface Section {
@@ -15,6 +17,9 @@ interface AboutUsProps {
   description: string;
   story: Section[];
 }
+
+const CTATextBelow = "Ready to start your journey?";
+const buttonText = "Get Started";
 
 const AboutUsPage: React.FC<AboutUsProps> = (props) => {
   const HeroObj = {
@@ -32,7 +37,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
   };
 
   return (
-    <div id='aboutus' className='relative w-full'>
+    <div id='aboutus' className='relative w-full flex justify-center'>
       <Hero
         News={HeroObj.News}
         subHeadingText={HeroObj.subHeadingText}
@@ -40,12 +45,12 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
         heroHeading={HeroObj.heroHeading}
         Disctiption={HeroObj.Disctiption}
       />
-      <div className='flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28  mt-20'>
-        <div className='w-full  place-items-center grid gap-2 max-w-[1400px]'>
+      <div className='flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28 mt-20 px-4'>
+        <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
           <div
             style={{ fontFamily: "interV" }}
             className='text-3xl min-h-screen flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
-            <h1 className='md:text-xl  text-center text-lg  font-medium text-purple-800 uppercase'>
+            <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
               {props.mainHeader}
             </h1>
             <h1>
@@ -54,22 +59,20 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
             </h1>
             <p
               style={{ fontFamily: "interV" }}
-              className='text-white/50  text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+              className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
               {props.description}
             </p>
           </div>
 
           <div className='my-5 min-h-screen md:my-12'>
-            <div className='w-full place-items-center grid  gap-2 max-w-[1400px]'>
+            <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
               <div
                 style={{ fontFamily: "interV" }}
                 className='text-3xl py-5 flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
-                <h1 className='md:text-xl   text-center text-lg  font-medium text-purple-800 uppercase'>
+                <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
                   {props.story[0].mainHeader}
                 </h1>
-                <h1>
-                  {props.subHeader}
-                </h1>
+                <h1>{props.subHeader}</h1>
               </div>
             </div>
             {props.story.map((section: Section, index: number) => (
@@ -99,6 +102,17 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
             ))}
           </div>
         </div>
+      </div>
+      <div className='text-center grid mb-12 place-items-center gap-7 px-4'>
+        <h2 className='text-2xl md:text-4xl text-center font-semibold'>
+          {CTATextBelow}
+        </h2>
+
+        <Link href='/Pricing' passHref>
+          <div className='h-16 w-64'>
+            <ButtonComponent CTAtext={buttonText} />
+          </div>
+        </Link>
       </div>
     </div>
   );
@@ -133,9 +147,9 @@ AboutUsPage.defaultProps = {
     },
     {
       mainHeader: "Our Story",
-      header: "inovating the EdTech industry",
+      header: "Innovating the EdTech industry",
       paragraph:
-        "nspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp. They emphasized creativity, problem-solving, and hands-on learning through real-world projects and mentorship. Their innovative approach attracted a diverse community eager to thrive in the tech industry, setting the stage for future growth and impact.",
+        "Inspired by their initial success, Hamdy and Hatem aimed to revolutionize education with Dragons Bootcamp. They emphasized creativity, problem-solving, and hands-on learning through real-world projects and mentorship. Their innovative approach attracted a diverse community eager to thrive in the tech industry, setting the stage for future growth and impact.",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2KdfZJkryOCFni4-CUywBU_aFnRntkbniw&s",
     },
   ],
