@@ -1,34 +1,52 @@
 "use client"
 import PropTypes from "prop-types";
 import Link from "next/link";
-import SubNavbarLink_V2 from "./SubNavbarLink_V.2";
+import { IoIosArrowDown } from "react-icons/io";
 import { MdArrowRight } from "react-icons/md";
-import AiInternalAuditIMG from "@/../public/assets/Premasset/bot.png";
-import SubNavbarLink_V3 from "./SubNavbarLink_V.3";
-
+import { useState } from 'react';
 
 const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    toggleTab();
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    closeTab();
+  };
+
   return (
     <div
       className={
         "group min-[1130px]:h-full cursor-pointer max-[1130px]:w-full text-white "
       }
     >
-      <div className="group min-[1130px]:h-full cursor-pointer  max-[1130px]:w-full">
+      <div
+        className="group min-[1130px]:h-full cursor-pointer max-[1130px]:w-full"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         {/* Start Button */}
         <span
-          className="px-4 font-semibold text-white/70 hover:text-white max-[1130px]:py-8 flex items-center justify-center min-[1130px]:h-full transition-all duration-[.45s] max-[1130px]:hover:bg-transparent max-[1130px]:px-0 relative 
-                      after:absolute after:h-[2px] after:bg-white after:w-0 after:left-1/2 after:-translate-x-1/2 after:hover:w-full after:transition-all after:bottom-0"
+          className={`px-4 font-semibold flex items-center justify-center min-[1130px]:h-full transition-all duration-[.45s] max-[1130px]:py-8 max-[1130px]:hover:bg-transparent max-[1130px]:px-0 relative
+                      after:absolute after:h-[2px] after:bg-white ${isHovered || isTabOpen ? 'after:w-full text-white' : 'text-white/70 after:w-0'} after:left-1/2 after:-translate-x-1/2 after:transition-all after:bottom-0 after:duration-[.45s]`}
           onClick={toggleTab}
         >
-          {data.title}
+          <div className="flex items-center justify-center space-x-1">
+            <span>{data.title}</span>
+            <IoIosArrowDown
+              className={`transition-transform duration-300 ${isHovered || isTabOpen ? 'rotate-180' : ''}`}
+            />
+          </div>
         </span>
         {/* End Button */}
 
         {/* Start Dropdown */}
         <div
-          className={`w-screen transition-all flex justify-center items-center min-[1130px]:absolute min-[1130px]:left-1/2 min-[1130px]:top-[calc(100%+1px)] box-border min-[1130px]:-translate-x-1/2 min-[1130px]:shadow-md group-hover:border-b border-b-purple-900 bg-[#0d0124]  h-0 ${isTabOpen && "max-[1130px]:h-auto max-[1130px]:py-5"
-            } overflow-hidden min-[1190px]:group-hover:h-[622px] min-[1130px]:group-hover:h-[640px]`}
+          className={`w-screen transition-all flex justify-center items-center min-[1130px]:absolute min-[1130px]:left-1/2 min-[1130px]:top-[calc(100%+1px)] box-border min-[1130px]:-translate-x-1/2 min-[1130px]:shadow-md border-b border-b-purple-900 bg-[#0d0124] h-0 ${isTabOpen && "max-[1130px]:h-auto max-[1130px]:py-5"} overflow-hidden min-[1190px]:group-hover:h-[622px] min-[1130px]:group-hover:h-[640px]`}
         >
           {/* Start Inner Container */}
           <div className="max-w-[1400px] text-start gap-5 w-full justify-start flex items-start pt-10 transition-all px-4 box-border max-[1130px]:flex-col h-full">
@@ -59,15 +77,14 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                 {data.tab1BottomLinks.map((cat, catIndex) => (
                   <Link
                     href={cat.path}
-                    className=" flex group flex-col hover:scale-[1.05] w-full bg-[#8e44ad]/40 border border-[#8e44ad] rounded-xl p-2 gap-1 hover:border-[#8e44ad] hover:bg-[#8e44ad] hover:text-white transition-all duration-300  text-white/80"
+                    className="flex group flex-col hover:scale-[1.05] w-full bg-[#8e44ad]/40 border border-[#8e44ad] rounded-xl p-2 gap-1 hover:border-[#8e44ad] hover:bg-[#8e44ad] hover:text-white transition-all duration-300  text-white/80"
                     key={catIndex}
                   >
                     <div className="head flex justify-start items-center gap-3">
-                      <span className=" rounded-lg text-xl !text-white">
+                      <span className="rounded-lg text-xl !text-white">
                         {cat.Icon}
                       </span>
-                      <h1
-                        className={`font-semibold text-white text-lg`}>
+                      <h1 className={`font-semibold text-white text-lg`}>
                         {cat.title}
                       </h1>
                     </div>
@@ -106,15 +123,14 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                 {data.tab2BottomLinks.map((cat, catIndex) => (
                   <Link
                     href={cat.path}
-                    className=" flex group flex-col hover:scale-[1.05] w-full bg-[#8e44ad]/40 border border-[#8e44ad] rounded-xl p-2 gap-1 hover:border-[#8e44ad] hover:bg-[#8e44ad] hover:text-white transition-all duration-300  text-white/80"
+                    className="flex group flex-col hover:scale-[1.05] w-full bg-[#8e44ad]/40 border border-[#8e44ad] rounded-xl p-2 gap-1 hover:border-[#8e44ad] hover:bg-[#8e44ad] hover:text-white transition-all duration-300  text-white/80"
                     key={catIndex}
                   >
                     <div className="head flex justify-start items-center gap-3">
-                      <span className=" rounded-lg text-xl !text-white">
+                      <span className="rounded-lg text-xl !text-white">
                         {cat.Icon}
                       </span>
-                      <h1
-                        className={`font-semibold text-white text-lg`}>
+                      <h1 className={`font-semibold text-white text-lg`}>
                         {cat.title}
                       </h1>
                     </div>
@@ -139,20 +155,35 @@ Dropdown_V2.propTypes = {
   isTabOpen: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    categories: PropTypes.arrayOf(
+    tab1: PropTypes.shape({
+      path: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      Icon: PropTypes.element,
+    }).isRequired,
+    tab1BottomLinks: PropTypes.arrayOf(
       PropTypes.shape({
+        path: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired,
-        links: PropTypes.arrayOf(
-          PropTypes.shape({
-            Icon: PropTypes.element.isRequired,
-            title: PropTypes.string.isRequired,
-            path: PropTypes.string.isRequired,
-          }).isRequired
-        ).isRequired,
-      }).isRequired
+        description: PropTypes.string.isRequired,
+        Icon: PropTypes.element.isRequired,
+      })
     ).isRequired,
-  }),
+    tab2: PropTypes.shape({
+      path: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      Icon: PropTypes.element,
+    }).isRequired,
+    tab2BottomLinks: PropTypes.arrayOf(
+      PropTypes.shape({
+        path: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        Icon: PropTypes.element.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
 };
 
 export default Dropdown_V2;

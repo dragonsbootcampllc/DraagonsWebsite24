@@ -4,6 +4,8 @@ import Link from "next/link";
 import { MdArrowRight } from "react-icons/md";
 import SubNavbarLink from "./SubNavbarLink";
 import styles from './Dropdown.module.css';
+import { IoIosArrowDown } from "react-icons/io";
+import { useState } from 'react';
 
 const Dropdown = ({ isTabOpen, toggleTab, closeTab, data }) => {
   var height = 0;
@@ -11,14 +13,35 @@ const Dropdown = ({ isTabOpen, toggleTab, closeTab, data }) => {
   if (data.subTab1) height += 90;
   if (data.moreLinks1 || data.moreLinks2) height += 110;
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    toggleTab();
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    closeTab();
+  };
   return (
     <div
       className={"group min-[1130px]:h-full cursor-pointer max-[1130px]:w-full text-white " + styles["group"]}>
       <div className="group min-[1130px]:h-full cursor-pointer max-[1130px]:w-full">
+      <div
+        className="group min-[1130px]:h-full cursor-pointer max-[1130px]:w-full"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         {/* Start Button */}
-        <span className="px-4  max-[1130px]:py-8 font-semibold flex items-center justify-center min-[1130px]:h-full transition-all duration-[.45s] max-[1130px]:hover:bg-transparent max-[1130px]:px-0 relative 
-                      after:absolute after:h-[2px] text-white/70 hover:text-white after:bg-white after:w-0 after:left-1/2 after:-translate-x-1/2 after:hover:w-full after:transition-all after:bottom-0" onClick={toggleTab}>
-          {data.title}
+        <span className={`px-4  max-[1130px]:py-8 font-semibold flex items-center justify-center min-[1130px]:h-full transition-all duration-[.45s] max-[1130px]:hover:bg-transparent max-[1130px]:px-0 relative 
+                      after:absolute after:h-[2px] text-white/70 hover:text-white after:bg-white  ${isHovered || isTabOpen ? 'after:w-full text-white' : 'text-white/70 after:w-0'} after:w-0 after:left-1/2 after:-translate-x-1/2 after:hover:w-full after:transition-all after:bottom-0`} onClick={toggleTab}>
+          <div className="flex items-center justify-center space-x-1">
+            <span>{data.title}</span>
+            <IoIosArrowDown
+              className={`transition-transform duration-300 ${isHovered || isTabOpen ? 'rotate-180' : ''}`}
+            />
+          </div>
         </span>
         {/* End Button */}
 
@@ -111,6 +134,7 @@ const Dropdown = ({ isTabOpen, toggleTab, closeTab, data }) => {
           {/* End Inner Container */}
         </div>
         {/* End Dropdown */}
+      </div>
       </div>
     </div>
   );
