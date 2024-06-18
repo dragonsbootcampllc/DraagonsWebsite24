@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@nextui-org/react";
 
 interface ButtonComponentProps {
   CTAtext: string;
