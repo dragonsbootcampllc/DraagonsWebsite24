@@ -78,101 +78,59 @@ const SolutionTabData = {
       "Enhance your team with our ready-to-deploy graduates skilled in the latest tech trends.",
     Icon: <motion.img src={Student_img} alt="icon" animate={simpleFloatAnimation} />,
   },
-  categories: [
+  tab1BottomLinks: [
     {
       title: "Become JopReady",
+      description: "Get ready for the job market with our career-focused bootcamps.",
       path: "/JopReady",
-      color: "#9b59b6",
-      links: [
-        {
-          Icon: IoStatsChart,
-          title: "Preparation Strategies",
-          path: "/JopReady#PrepareSection"
-        },
-        {
-          Icon: IoAnalytics,
-          title: "Your Knowledge Toolkit",
-          path: "/JopReady#LearningMaterialComponent"
-        },
-        {
-          Icon: IoEarth,
-          title: "Hands-On Projects",
-          path: "/JopReady#HandsOnProjectsComponent"
-        },
-        {
-          Icon: IoLeaf,
-          title: "Your Call to Action",
-          path: "/JopReady#CallToActionComponent"
-        },
-      ]
+      Icon: IoStatsChart,
     },
     {
-      title: "Our BootCamp",
+      title: "Mentorship",
+      description: "Get guidance from industry experts and level up your skills.",
       path: "/Bootcamp",
-      color: "#9b59b6",
-      links: [
-        {
-          Icon: IoBusiness,
-          title: "6-Month Intensive Bootcamp",
-          path: "/Bootcamp#ElevateYourSkills"
-        },
-        {
-          Icon: IoDocumentText,
-          title: "Unlock Your Potential with The Dragoons Tech Bootcamp Advantage",
-          path: "/Bootcamp#WhyOurBootcamp"
-        },
-        {
-          Icon: IoWarning,
-          title: "Join Our Bootcamp",
-          path: "Bootcamp/#EnrollNow"
-        },
-
-      ]
+      Icon: IoBusiness,
     },
     {
-      title: "Webinars",
-      path: "/Webinars",
-      color: "#9b59b6",
-      links: [
-        {
-          Icon: IoTrendingUp,
-          title: " Dragoons Bootcamp’s Guide to Full-Stack Development",
-          path: "services/esg-third-party-assurance"
-        },
-        {
-          Icon: IoPeople,
-          title: "Unlocking Insights with Dragoons Bootcamp",
-          path: "services/esg-supply-chain-audits"
-        },
-        {
-          Icon: IoLeaf,
-          title: "Future-Proof Your Skills with Dragoons Bootcamp",
-          path: "services/corporate-sustainability-due-diligence"
-        },
-      ]
+      title: "Thought Leader",
+      description: "Learn from the best in the industry and stay ahead of the curve.",
+      path: "/Bootcamp",
+      Icon: IoBusiness,
+    },
+    {
+      title: "Students activity",
+      description: "Get involved in our student community and grow your network.",
+      path: "/DSA",
+      Icon: IoTrendingUp,
     },
   ],
-  moreLinks2: {
-    title: "Some Business Services",
-    links: [
-      {
-        title: "Internal Audit",
-        Icon: IoSearchSharp,
-        path: "service/internal-audit",
-      },
-      {
-        title: "Compliance",
-        Icon: IoShieldCheckmarkOutline,
-        path: "service/compliance",
-      },
-      {
-        title: "Risk management",
-        Icon: IoWarningOutline,
-        path: "service/risk-management",
-      }
-    ],
-  }
-};
+  tab2BottomLinks: [
+    {
+      title: "Events Sponsor",
+      description: "Sponsor our events and get access to our top tech talent.",
+      path: "/JopReady",
+      Icon: IoSearchSharp,
+    },
+    {
+      title: " Get Talents",
+      description: "Hire our top graduates and enhance your team ",
+      path: "/Bootcamp",
+      Icon: IoShieldCheckmark,
+    },
+    {
+      title: "Software Outsourcing",
+      description: "Outsource your software development to our top graduates and save time and money.",
+      path: "/Webinar",
+      Icon: IoShieldCheckmarkOutline,
+    },
+    {
+      title: " Intern Program Managmenet",
+      description: "Manage your intern program with our HRMS and get access to top tech talent.",
+      path: "/DSA",
+      Icon: IoPeople,
+    }
+  ],
+}
 
 const TallentsTabData = {
   title: "Tallents",
@@ -329,7 +287,7 @@ const Navbar = () => {
             closeNavigation={closeNavigation}
           />
           <NavbarLink
-            path="/aboutus"
+            path="/about"
             title="About Us"
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
