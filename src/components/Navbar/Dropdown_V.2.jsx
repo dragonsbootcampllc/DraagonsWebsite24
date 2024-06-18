@@ -55,15 +55,15 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
               </Link>
               {/* End Tab One */}
               {/* Start Other Tabs One */}
-              <div className="max-w-[1400px] text-start gap-3 w-full justify-start flex items-start pt-10 transition-all px-4 box-border max-[1130px]:flex-col h-full">
+              <div className="max-w-[1400px] text-start gap-4 w-full justify-evenly flex items-start pt-10 transition-all px-4 box-border max-[1130px]:flex-col h-full">
                 {data.categories.map((cat, catIndex) => (
                   <div
-                    className="flex-grow flex flex-col gap-6 max-[1150px]:pl-5"
+                    className=" flex flex-col w-1/3 gap-6 max-[1150px]:pl-5"
                     key={catIndex}
                   >
                     <Link href={cat.path}>
                     <h1 
-                      className={`font-bold text-[${cat.color}] text-lg`}>
+                      className={`font-semibold text-[${cat.color}] text-lg`}>
                       {cat.title}
                     </h1>
                     </Link>
@@ -75,7 +75,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                           path={link.path}
                           Icon={link.Icon}
                           clear={closeTab}
-                          className={`!justify-start scale-125`}
+                          className={`!justify-center scale-125`}
                           color={cat.color}
                         />
                       ))}
