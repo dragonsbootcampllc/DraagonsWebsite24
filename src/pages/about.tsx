@@ -52,7 +52,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
       <div className='flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28 mt-20 px-4'>
         <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
           <div
-            style={{ fontFamily: "interV" }}
+           
             className='text-3xl min-h-screen flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
             <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
               {props.mainHeader}
@@ -62,7 +62,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
               <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
             </h1>
             <p
-              style={{ fontFamily: "interV" }}
+              
               className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
               {props.description}
             </p>
@@ -70,8 +70,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
 
           <div className='my-5 min-h-screen md:my-12'>
             <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
-              <div
-                style={{ fontFamily: "interV" }}
+              <div 
                 className='text-3xl py-5 flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
                 <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
                   {props.story[0].mainHeader}
@@ -97,7 +96,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
                   <Image
                     src={section.img}
                     alt='Story Image'
-                    className='md:w-10/12  w-full rounded-3xl'
+                    className='md:w-10/12 hover:scale-105 duration-700 hover:cursor-pointer w-full rounded-3xl'
                     width={1000}
                     height={1000}
                     quality={100}
