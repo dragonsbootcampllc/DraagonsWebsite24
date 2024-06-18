@@ -160,7 +160,7 @@ const Navbar = () => {
   const [isNavOpen, setNavOpen] = useState(false);
   const [isSolutionsOpen, setSolutionsOpen] = useState(false);
   const [isTallentsOpen, setTallentsOpen] = useState(false);
-
+  const [activeLink, setActiveLink] = useState(""); // State to track active link
 
   // Toggles and close for UI elements, making it clear what they do
   // Navbar functions
@@ -200,8 +200,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-purple-900 px-12 backdrop-blur-3xl bg-opacity-50  border-b border-white/20 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md">
-      <div className="flex gap-5 justify-between items-center  max-[1496px]:px-0 max-w-[1400px] box-border w-full  h-[4.5rem]">
+    <nav className="bg-purple-900 px-8 backdrop-blur-3xl bg-opacity-50  border-b border-white/20 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md">
+      <div className="flex gap-3 justify-between items-center  max-[1496px]:px-0 max-w-[1400px] box-border w-full  h-[4.5rem]">
         <div className="z-50 max-[1496px]:w-full max-[1496px]:flex max-[1496px]:p-[5%] max-[1496px]:h-full justify-between items-center">
           {/* Logo */}
           <div className="left flex gap-3 justify-center items-center">
@@ -250,7 +250,7 @@ const Navbar = () => {
 
         {/* Navigation Links and CTA Button */}
         <div
-          className={`flex max-[1496px]:bg-[#2c1a3a] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-[20px] font-normal h-full max-[1496px]:w-full gap-5 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
+          className={`flex max-[1496px]:bg-[#2c1a3a] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-[20px] font-normal h-full max-[1496px]:w-full gap-3 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
             ? "max-[1496px]:translate-y-0"
             : "max-[1496px]:-translate-y-[120%]"
             } top-full left-0 text-black  max-[1496px]:flex-col max-[1496px]:absolute max-[1496px]:w-full max-[1496px]:pb-[6.5rem] max-[1496px]:h-[calc(100vh-4.5rem)] max-[1496px]:text-lg max-[1496px]:border-b max-[1496px]:border-black`}
@@ -260,6 +260,8 @@ const Navbar = () => {
             title="Use Cases"
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
+            isActive={activeLink === "/useCases"} // Pass active state
+            onClick={() => setActiveLink("/useCases")} // Update active state
           />
 
           {/* Solutions Dropdown */}
@@ -285,18 +287,24 @@ const Navbar = () => {
             title="Events"
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
+            isActive={activeLink === "/events"} // Pass active state
+            onClick={() => setActiveLink("/events")} // Update active state
           />
           <NavbarLink
             path="/about"
             title="About Us"
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
+            isActive={activeLink === "/about"} // Pass active state
+            onClick={() => setActiveLink("/about")} // Update active state
           />
           <NavbarLink
             path="/Pricing "
             title="Pricing "
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
+            isActive={activeLink === "/Pricing"} // Pass active state
+            onClick={() => setActiveLink("/Pricing")} // Update active state
           />
           {/* CTA Button */}
           <div className='h-16 max-w-[350px] flex max-[402px]:flex-col px-5 w-full justify-between gap-3'>
