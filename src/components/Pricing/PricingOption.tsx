@@ -1,5 +1,11 @@
 import React from 'react';
-import { PricingTierFrequency } from '../../DATA/Pricing/Pricing';
+export interface PricingTierFrequency {
+    id: string;
+    value: string;
+    label: string;
+    priceSuffix: string;
+  }
+  
 
 interface PricingOptionProps {
   option: PricingTierFrequency;

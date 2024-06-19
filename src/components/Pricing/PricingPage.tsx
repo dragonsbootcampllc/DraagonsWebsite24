@@ -1,10 +1,25 @@
-'use client';
 import React, { useState } from 'react';
-import { frequencies, tiers } from '../../DATA/Pricing/Pricing';
+import  frequencies  from '../../DATA/Pricing/frequencies.json';
+import  PricingTier   from '../../DATA/Pricing/tiers.json';
+
+
 import PricingOption from './PricingOption';
 import PricingTierCard from './PricingTierCard';
 import styles from '../../styles/pricing.module.css';
 
+  export interface PricingTierType {
+    name: string;
+    id: string;
+    href: string;
+    discountPrice:Record<number,string >;
+    price:  Record<number,string >;
+    description: string | React.ReactNode;
+    features: string[];
+    featured?: boolean;
+    highlighted?: boolean;
+    cta: string;
+    soldOut?: boolean;
+  }
 const PricingPage: React.FC = () => {
   const [frequency, setFrequency] = useState(frequencies[0]);
 
@@ -22,7 +37,7 @@ const PricingPage: React.FC = () => {
       <div className="w-full flex flex-col items-center mb-24">
         <div className="mx-auto max-w-7xl px-6 xl:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
-            <h1 className=":text-white text-4xl font-semibold max-w-xs sm:max-w-none md:text-6xl !leading-tight">Pricing</h1>
+            <h1 className="text-white text-4xl font-semibold max-w-xs sm:max-w-none md:text-6xl leading-tight">Pricing</h1>
             <p className="text-white mt-6 md:text-xl max-w-prose">
               Everyone should have the opportunity for growth. That’s why we offer a range of payment options.
             </p>
@@ -30,7 +45,7 @@ const PricingPage: React.FC = () => {
 
           {bannerText && (
             <div className="flex justify-center my-4">
-              <p className="px-4 py-3 text-sm font-medium bg-yellow-400/40 text-black  text-white/80 rounded-xl">{bannerText}</p>
+              <p className="px-4 py-3 text-sm font-medium bg-yellow-400/40 text-black rounded-xl">{bannerText}</p>
             </div>
           )}
 
@@ -54,7 +69,7 @@ const PricingPage: React.FC = () => {
             </div>
           )}
 
-          <PricingTierCard tier={tiers[0]} frequency={frequency} />
+          <PricingTierCard tier={PricingTier[0] as PricingTierType} frequency={frequency} />
         </div>
       </div>
     </div>
