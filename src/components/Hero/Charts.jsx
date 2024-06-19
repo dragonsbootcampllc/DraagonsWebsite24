@@ -108,7 +108,7 @@ const chartOptions = {
 
 const Charts = () => (
   <div className="w-screen max-w-[1400px]">
-    <div className="grid grid-cols-4 max-[1100px]:grid-cols-2 max-[560px]:grid-cols-1 max-w-[1440px] w-full m-auto gap-12 text-center mx-auto pt-10">
+    <div className="grid grid-cols-4 max-[1000px]:grid-cols-2 max-[560px]:grid-cols-1 max-w-[1440px] w-full m-auto gap-12 text-center mx-auto pt-10">
       {directors.map(({ title, chartData, num }, index) => (
         <div
           key={index}
