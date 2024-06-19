@@ -23,8 +23,8 @@ ChartJS.register(
 
 const directors = [
   {
-    title: "600% More Productive than online Courses",
-    num: "600%",
+    title: "of all Jobs are remote",
+    num: "50%",
     chartData: {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       datasets: [
@@ -40,7 +40,7 @@ const directors = [
   },
   {
     title: "Jobs Available for Developers",
-    num: "562",
+    num: "1.5M",
     chartData: {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       datasets: [
@@ -56,12 +56,12 @@ const directors = [
   },
   {
     title: "New Developers within the Market",
-    num: "300",
+    num: "695k",
     chartData: {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       datasets: [
         {
-          data: [50, 60, 70, 90, 120, 150],
+          data: [20, 30, 23, 49, 60, 100],
           borderColor: "#3055cf",
           backgroundColor: "rgba(59, 130, 246, 0.2)",
           tension: 0.1,
@@ -71,17 +71,17 @@ const directors = [
     },
   },
   {
-    title: "Average Salaries",
+    title: "Average Salaries ",
     num: (
       <>
-        $80K<span className="text-sm pl-2">/ year</span>
+        $80K
       </>
     ),
     chartData: {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       datasets: [
         {
-          data: [70, 72, 75, 78, 80, 82],
+          data: [30, 42, 75, 68, 80, 92],
           borderColor: "#3055cf",
           backgroundColor: "rgba(59, 130, 246, 0.2)",
           tension: 0.1,
@@ -107,12 +107,12 @@ const chartOptions = {
 };
 
 const Charts = () => (
-  <div className="w-screen max-w-[1400px]">
-    <div className="grid grid-cols-4 max-[1000px]:grid-cols-2 max-[560px]:grid-cols-1 max-w-[1440px] w-full m-auto gap-12 text-center mx-auto pt-10">
+  <div className="w-screen max-w-[1100px]">
+    <div className="grid grid-cols-4 max-[1000px]:grid-cols-2   max-[560px]:grid-cols-1 max-w-[1440px] w-full m-auto gap-12 text-center mx-auto pt-10">
       {directors.map(({ title, chartData, num }, index) => (
         <div
           key={index}
-          className="relative bg-purple-800/20 p-3 min-h-32 hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] transition-all shadow-[0_0_0_0_rgba(255,255,255,1)] cursor-pointer hover:scale-105 flex flex-col justify-between rounded-lg overflow-hidden text-white"
+          className="relative  bg-purple-800/20 p-3 min-h-20  hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] transition-all shadow-[0_0_0_0_rgba(255,255,255,1)] cursor-pointer hover:scale-105 flex flex-col  justify-between rounded-3xl overflow-hidden text-white"
         >
           <h2 className="text-lg z-10">{title}</h2>
           <span className="font-bold z-10 text-7xl">{num}</span>

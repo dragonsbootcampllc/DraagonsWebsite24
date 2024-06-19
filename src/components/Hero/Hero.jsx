@@ -59,10 +59,6 @@ function Hero() {
           help you to boost your career
         </p>
       </div>
-
-      <div className='flex justify-center mt-16 px-3 sm:px-6 md:px-12'>
-        <Charts />
-      </div>
       <div className='cta rounded-xl flex w-full flex-col md:flex-row justify-center my-12 gap-5'>
         <Link href='/Pricing' passHref>
           <div className='h-16 min-w-64'>
@@ -73,6 +69,10 @@ function Hero() {
           <ButtonLite CTAtext='Book a 1:1 Call' />
         </div>
       </div>
+      <div className='flex justify-center mt-16 px-3 sm:px-6 md:px-12'>
+        <Charts />
+      </div>
+ 
       {/* <div className="max-w-[1400px] md:h-[800px] container_3d sm:mt-10 md:mt-3 lg:-mt-20 relative m-auto flex justify-center">
         <Image
           style={{ fontFamily: "interV" }}
