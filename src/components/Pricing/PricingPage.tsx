@@ -1,30 +1,17 @@
 import React, { useState } from 'react';
-import  frequencies  from '../../DATA/Pricing/frequencies.json';
-import  PricingTier   from '../../DATA/Pricing/tiers.json';
-
-
+import frequencies from '../../DATA/Pricing/frequencies.json';
+import PricingTier from '../../DATA/Pricing/tiers.json';
 import PricingOption from './PricingOption';
 import PricingTierCard from './PricingTierCard';
 import styles from '../../styles/pricing.module.css';
 
-  export interface PricingTierType {
-    name: string;
-    id: string;
-    href: string;
-    discountPrice:Record<number,string >;
-    price:  Record<number,string >;
-    description: string | React.ReactNode;
-    features: string[];
-    featured?: boolean;
-    highlighted?: boolean;
-    cta: string;
-    soldOut?: boolean;
-  }
+
+
 const PricingPage: React.FC = () => {
   const [frequency, setFrequency] = useState(frequencies[0]);
 
   const handleFrequencyChange = (value: string) => {
-    const selectedFrequency = frequencies.find(f => f.value === value);
+    const selectedFrequency = frequencies.find((f) => f.value === value);
     if (selectedFrequency) {
       setFrequency(selectedFrequency);
     }
@@ -69,7 +56,8 @@ const PricingPage: React.FC = () => {
             </div>
           )}
 
-          <PricingTierCard tier={PricingTier[0] as PricingTierType} frequency={frequency} />
+          {/* Assuming PricingTier is an array of PricingTierType */}
+          <PricingTierCard tier={PricingTier[0] as any} frequency={frequency as any} />
         </div>
       </div>
     </div>
