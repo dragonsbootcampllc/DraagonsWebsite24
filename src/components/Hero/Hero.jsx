@@ -13,7 +13,7 @@ function Hero() {
   };
 
   return (
-    <div style={{ fontFamily: "interV" }} className="w-full mt-12">
+    <div style={{ fontFamily: "interV" }} className="w-full min-h-screen mt-12">
       <div className="mt-28 mb-6 p-2 flex justify-center">
         <div>
           <Link
@@ -43,7 +43,7 @@ function Hero() {
       <div>
         <div
           style={{ fontFamily: "interV" }}
-          className="text-6xl content-center max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold"
         >
           <h1>
             Boost Your Experiences in only{" "}
@@ -54,18 +54,27 @@ function Hero() {
         </div>
         <p
           style={{ fontFamily: "interV" }}
-          className="text-lg flex px-2 text-center pt-6 relative z-10 text-purple-300/50 justify-center m-auto"
+          className="text-base sm:text-lg flex px-2 text-center pt-6 relative z-10 text-purple-300/50 justify-center m-auto"
         >
           We are a team of passionate and creative people who are willing to
           help you to boost your career
         </p>
       </div>
 
-      <div className="flex justify-center mt-16 px-12 max-[1000px]:px-3">
+      <div className="flex justify-center mt-16 px-3 sm:px-6 md:px-12">
         <Charts />
       </div>
-
-      <div className="max-w-[1400px] md:h-[800px] container_3d sm:mt-10 md:mt-3 lg:-mt-20 relative m-auto flex justify-center">
+      <div className='cta rounded-xl flex gap-5'>
+                    <Link href='/Pricing' passHref>
+                        <div className='h-16 w-64'>
+                            <Button CTAtext='Apply Now' />
+                        </div>
+                    </Link>
+                    <div className='h-16 w-64'>
+                        <ButtonLite CTAtext='Book a 1:1 Call' />
+                    </div>
+                </div>
+      {/* <div className="max-w-[1400px] md:h-[800px] container_3d sm:mt-10 md:mt-3 lg:-mt-20 relative m-auto flex justify-center">
         <Image
           style={{ fontFamily: "interV" }}
           className={`${"absolute z-40 top-12 filter"} ${Styles.Drag3DBoubce}`}
@@ -77,7 +86,7 @@ function Hero() {
           blurDataURL={"/Identity/hero2023Glass.png"}
           priority
         />
-      </div>
+      </div> */}
     </div>
   );
 }
