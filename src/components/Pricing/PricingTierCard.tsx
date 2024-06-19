@@ -5,7 +5,7 @@ import ButtonComponentlite from "../Micros/ButtonLite";
 
 export interface PricingTierFrequency {
   id: string;
-  value: string;
+  value: number;
   label: string;
   priceSuffix: string;
 }
@@ -14,7 +14,7 @@ export interface PricingTier {
   name: string;
   id: string;
   href: string;
-  discountPrice: Record<number, string>;
+  discountPrice: Record<number, number>;
   price: Record<number, number>; // Updated to accept numbers directly
   description: string | React.ReactNode;
   features: string[];
@@ -69,7 +69,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
 
   // Function to calculate and apply discount
   const applyDiscount = (discountPercentage: number) => {
-    const frequencyValue: number = parseInt(frequency.value); // Parse frequency value to ensure it's a number
+    const frequencyValue: number = frequency.value;
 
     if (!tier.price[frequencyValue]) {
       setError("Price not found for selected frequency");
@@ -93,7 +93,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
   };
 
   // Render
-  const priceDisplay: string = `$${tier.price[parseInt(frequency.value)] ?? 0}`;
+  const priceDisplay: string = `$${tier.price[parseInt(frequency.value.toString(), 10) as number] ?? 0}`;
 
   return (
     <div className="flex flex-wrap xl:flex-nowrap items-center bg-gray-900/80 backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-3xl ring-1 ring-gray-300/70 dark:ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
