@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Dragons Bootcamp Program",
+    "id": "0",
+    "href": "/apply",
+    "price": {
+      "1": 499,
+      "2": 499,
+      "3": 699,
+      "4": 799
+    },
+    "discountPrice": {
+      "1": "$399.20",
+      "2": "$399.20",
+      "3": "$559.20",
+      "4": "$639.20"
+    },
+    "description": "Our 6-month Bootcamp is tailored to make you job-ready.",
+    "features": [
+      "Learn what companies are looking for",
+      "Become a Thought Leader",
+      "Level Up, Get Seen",
+      "Strong Industry Connections",
+      "Supportive Community"
+    ],
+    "featured": false,
+    "highlighted": false,
+    "soldOut": false,
+    "cta": "Apply Now"
+  }
+]
