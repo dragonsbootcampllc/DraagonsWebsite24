@@ -29,14 +29,14 @@ const CollapsedLink = ({ title, url, isCollapsed, blogs, onClick }: CollapsedLin
                             </span>
                         </span>
 
-                        <Link href={url} className="inline-block hover:bg-[#1b1731] rounded-md w-full transition-all h-full pl-9">
+                        <Link href={url || ""} className="inline-block hover:bg-[#1b1731] rounded-md w-full transition-all h-full pl-9">
                             {title}
                         </Link>
                     </button>
 
                     <div className={`flex flex-col transition-all font-semibold overflow-hidden ${isCollapsed ? 'h-0 py-0' : 'h-auto py-2'}`}>
                         {blogs.map((blog_name, index) => (
-                            <Link href={`${url}/${blog_name}`} key={index} className="inline-block border-l py-1 group border-l-slate-400 ml-4 w-full transition-all h-full">
+                            <Link href={`${url}/${blog_name}  || ""`} key={index} className="inline-block border-l py-1 group border-l-slate-400 ml-4 w-full transition-all h-full">
                                 <span className="inline-block group-hover:bg-[#1b1731] rounded-md w-[calc(100%-2rem)] transition-all h-full pl-1 ml-4">
                                     {blog_name}
                                 </span>
@@ -46,7 +46,7 @@ const CollapsedLink = ({ title, url, isCollapsed, blogs, onClick }: CollapsedLin
                 </>
             ) : (
                 <span className="cursor-pointer flex justify-center items-center w-full box-border text-start h-8 relative">
-                    <Link href={url} className="inline-block hover:bg-[#1b1731] rounded-md w-full transition-all h-full pl-2">
+                    <Link href={url || ""} className="inline-block hover:bg-[#1b1731] rounded-md w-full transition-all h-full pl-2">
                         {title}
                     </Link>
                 </span>
@@ -72,7 +72,7 @@ export default function Sidebar() {
 
     return (
         <div className="border-r-2 h-full border-r-slate-200 w-[22rem] px-8 pt-8 min-h-screen flex flex-col gap-4 bg-[#030014]">
-            <Link href={BASE_URL} className="w-full flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
+            <Link href={BASE_URL || ""} className="w-full flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
                 <span className="text-2xl"><FaRegNewspaper /></span>
                 <span>Start Guides</span>
             </Link>

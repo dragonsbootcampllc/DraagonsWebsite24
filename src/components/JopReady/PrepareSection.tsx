@@ -23,7 +23,7 @@ type JobReadyComponentProps = {
 
 };
 
-const JobReadyComponent: React.FC<JobReadyComponentProps> = ({
+const PrepareSection: React.FC<JobReadyComponentProps> = ({
   heroHighlightedText,
   gridItems,
   CTATextBelow,
@@ -32,9 +32,11 @@ const JobReadyComponent: React.FC<JobReadyComponentProps> = ({
 
 
 
+
 }) => {
+
   return (
-    <div className='container mx-auto py-[80px] max-w-[1400px] w-full flex flex-col justify-center items-center gap-9'>
+    <div className='container mx-auto py-[80px] max-w-[1400px] w-full flex flex-col justify-center items-center gap-9' id="PrepareSection">
       <div className='w-full flex justify-center'>
         <div className='bg-purple-700 w-[116px]  h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem] '>
           {gridItems && gridItems[1] && gridItems[1].logo}
@@ -90,4 +92,4 @@ const JobReadyComponent: React.FC<JobReadyComponentProps> = ({
   );
 };
 
-export default JobReadyComponent;
+export default PrepareSection;
