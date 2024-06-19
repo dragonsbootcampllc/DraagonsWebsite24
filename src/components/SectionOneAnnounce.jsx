@@ -49,7 +49,7 @@ function SectionOneAnnounce(props) {
             <Link
               legacyBehavior
               aria-label="Get Started"
-              href={props.action}
+              href={props.action  || ""}
               passHref
             >
               <div className="select-none max-w-sm font-bold box-decoration-slice shadow-lg hover:shadow-red-500/50     focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 active:scale-95 duration-100 focus:ring-offset-slate-800   h-12 px-6 rounded-lg w-full flex items-center text-white justify-center sm:w-auto bg-red-500  hover:bg-red-400">
@@ -59,7 +59,7 @@ function SectionOneAnnounce(props) {
             <Link
               legacyBehavior
               aria-label="Our Services"
-              href={props.action2}
+              href={props.action2  || ""}
               passHref
             >
               <div className="select-none font-bold max-w-sm  bg-white mt-4 sm:mt-0 shadow-md  hover:shadow-red-500/50  ring-2  ring-slate-900 hover:bg-gray-300 focus:outline-none focus:ring-2 opacity-90  focus:ring-offset-2 active:scale-95 duration-100 0  text-gray-900  h-12 px-3  sm:px-16 rounded-lg w-full flex items-center justify-center sm:w-auto highlight-white/20 ">

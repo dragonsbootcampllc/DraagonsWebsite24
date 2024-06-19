@@ -54,7 +54,7 @@ export type Person = {
       {
         imageSrc: "/images/talant/Faisel.jpg",
         title: "Faisel Ebrahim",
-        description: "Dragons's Tech team Lead at Neferdata",
+        description: "Dragons's Tech team Lead at ",
         description_Highlighted: "Neferdata",
       },
       {

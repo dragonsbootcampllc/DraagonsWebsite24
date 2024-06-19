@@ -1,9 +1,14 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import dynamic from "next/dynamic";
 import React from "react";
 import Footer from "../components/Footer";
-import HeaderComp from "../components/HeaderComp/Header";
-import Head from "next/head";
+const HeaderComp = dynamic(() => import("../components/Navbar/Navbar"), {
+  ssr: false,
+});
+const Head = dynamic(() => import("next/head"), {
+  ssr: false,
+});
 export default function App({ Component, pageProps }: AppProps) {
   //TODO: Change and add (Tracks Page(Instade of home), Blog)
   let nav_links = [
@@ -64,7 +69,7 @@ export default function App({ Component, pageProps }: AppProps) {
           />
         </Head>
 
-        <HeaderComp nav_links={nav_links} Join={Join} />
+        <HeaderComp />
 
         <div className={"w-full"}>
           <Component {...pageProps} />

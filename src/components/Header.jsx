@@ -33,7 +33,7 @@ function Header(props) {
       }
     >
       <div className="px-4  grid grid-cols-3 py-3 max-w-[1400px] mx-auto  w-full    h-[70px]">
-        <Link href={props.herflogoLink} passHref>
+        <Link href={props.herflogoLink || ""} passHref>
           <div className="mt-2 flex gap-1 hover:opacity-50  duration-700  select-none cursor-pointer ">
             <Image
               className="hover:animate-spin md:block hidden  duration-500"
@@ -58,10 +58,10 @@ function Header(props) {
           </div>
         </Link>
         <div className="lg:flex pt-3 hidden text-stone-100 select-none cursor-pointer  gap-4 justify-center mx-8">
-          <Link href={props.HerfService} passHref>
+          <Link href={props.HerfService || ""} passHref>
             <h5 className="duration-500 hover:text-gray-500">Team</h5>
           </Link>
-          <Link href={props.HerfActivity} passHref>
+          <Link href={props.HerfActivity || ""} passHref>
             <h5 className="duration-500 hover:text-gray-500">Activities</h5>
           </Link>
         </div>
@@ -148,7 +148,7 @@ function Header(props) {
               <div className="lg:flex  gap-3 hidden ">
                 <div className="duration-500 active:scale-95  hover:text-gray-400">
                   {" "}
-                  <Link href={props.herfFacebook} passHref>
+                  <Link href={props.herfFacebook || ""} passHref>
                     <svg
                       fill="white"
                       xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ function Header(props) {
                   </Link>
                 </div>
                 <div className="duration-500 active:scale-95  hover:text-gray-400">
-                  <Link href={props.herfGithub} passHref>
+                  <Link href={props.herfGithub || ""} passHref>
                     <svg
                       version="1.1"
                       id="Capa_1"
@@ -219,7 +219,7 @@ function Header(props) {
                 </div>
 
                 <button className=" hover:text-white box-decoration-slice shadow-md hover:shadow-red-500/40    focus:outline-none focus:ring-1 focus:ring-slate-400 focus:ring-offset-2 active:scale-95 duration-300 focus:ring-offset-slate-800  font-bold h-9 px-6 rounded-lg w-full flex items-center text-gray-900 justify-center sm:w-auto bg-gray-200  hover:bg-red-400">
-                  <Link href={props.HerfDash} passHref>
+                  <Link href={props.HerfDash || ""} passHref>
                     <h4 className="m-auto font-bold text-gray-900 hover:text-gray-900">
                       Join Us
                     </h4>
@@ -236,7 +236,7 @@ function Header(props) {
         className=" absolute TogglerDisplay lg:hidden uppercase h-screen lg:h-0 right-0 rounded-b-xl  max-w-[600px]  bg-gray-900  w-full"
       >
         <div className=" select-none mx-12  cursor-pointer  m-3 text-center lg:hidden">
-          <Link className="text-gray-300" href={props.HerfService} passHref>
+          <Link className="text-gray-300" href={props.HerfService || ""} passHref>
             <div
               onClick={toggler}
               className="  hover:bg-gray-800/40 duration-300 py-2 text-xl font-semibold text-gray-300 rounded-xl"
@@ -246,7 +246,7 @@ function Header(props) {
           </Link>
         </div>
         <div className=" select-none mx-12  cursor-pointer  m-3 text-center lg:hidden">
-          <Link className="text-gray-300" href={props.HerfActivity} passHref>
+          <Link className="text-gray-300" href={props.HerfActivity || ""} passHref>
             <div
               onClick={toggler}
               className="  hover:bg-gray-800/40 duration-300 py-2 text-xl font-semibold text-gray-300 rounded-xl"
@@ -257,7 +257,7 @@ function Header(props) {
         </div>
 
         <div className=" select-none mx-12 cursor-pointer  m-3 text-center lg:hidden">
-          <Link className="text-gray-300" href={props.HerfDash} passHref>
+          <Link className="text-gray-300" href={props.HerfDash || ""} passHref>
             <div
               onClick={toggler}
               className="bg-gray-300 justify-center flex  hover:bg-red-400 duration-300 pt-2 text-xl font-semibold text-gray-900 rounded-xl"
