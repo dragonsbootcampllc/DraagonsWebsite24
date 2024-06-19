@@ -130,7 +130,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
               {discount ? (
                 <>
                   <span className="text-white text-6xl font-bold tracking-tighter">
-                    {discount}
+                    ${discount} 
                   </span>
                   <span className="text-white line-through">{priceDisplay}</span>
                 </>
