@@ -11,7 +11,6 @@ const TechStack = dynamic(() => import("../components/TechStack/TechStack"), {
 
 import { Numbers } from "../components/Numbers/Numbers";
 import { TrustedSection } from "../components/Trusted/TrustedSection";
-import { VideoSection } from "../components/VideoSection/VideoSection";
 import WebinarsSection from "@/components/WebinarsSection/WebinarsSection";
 const TestmonialSection = dynamic(
   () => import("../components/TestmonialSection/TestmonialSection"),

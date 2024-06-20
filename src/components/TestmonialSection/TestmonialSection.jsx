@@ -17,10 +17,10 @@ function TestmonialSection() {
     designation: "Founder & CEO @ Neferdata",
   };
   return (
-    <div className="w-full max-w-[1440px] h-[800px] relative mt-5">
+    <div className="w-full max-w-[1340px] h-[800px] relative mt-5">
       <div className="w-full absolute h-[30%] bg-[#030014] shadow-[0px_2px_20px_20px_rgba(3,0,20,0.97)] z-10 rounded-b-[50%]"></div>
       <div className="container mx-auto flex justify-center h-[55%] relative w-full">
-        <div className="content z-[20] absolute flex flex-col gap-6 max-w-[600px]">
+        <div className="content z-[20] absolute flex flex-col gap-6 max-w-[1000px]">
           <div className="head flex justify-center items-center gap-2">
             <div className="logo h-11 w-11 rounded-full bg-gray-400 relative overflow-hidden">
               <Image
@@ -32,7 +32,7 @@ function TestmonialSection() {
             </div>
             <div className="name text-xl">{Head.Logo_name} </div>
           </div>
-          <div className="text text-white/60 text-[12px] md:text-xl text-center">
+          <div className="text text-white/60 text-[12px] md:text-2xl lg:text-2xl text-center">
             {Description.text1}
             <span className="  text-white"> {Description.span1} </span>
             {Description.text2}
@@ -50,7 +50,7 @@ function TestmonialSection() {
             </div>
             <div className="items text-center">
               <h3 className=" text-2xl">{Info.name}</h3>
-              <p className=" text-[14px] md:text-xl text-white/60">
+              <p className=" text-[14px] md:text-xl lg:text-2xl text-white/60">
                 {Info.designation}
               </p>
             </div>
