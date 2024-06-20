@@ -32,11 +32,11 @@ function TestmonialSection() {
             </div>
             <div className="name text-xl">{Head.Logo_name} </div>
           </div>
-          <div className="text text-white/60 text-[12px] md:text-2xl lg:text-2xl text-center">
+          <div className="text text-white/60 text-[16px] md:text-2xl lg:text-2xl text-center sm:text-lg">
             {Description.text1}
-            <span className="  text-white"> {Description.span1} </span>
+            <span className="text-white"> {Description.span1} </span>
             {Description.text2}
-            <span className=" text-white"> {Description.span2}</span>
+            <span className="text-white"> {Description.span2}</span>
           </div>
           <div className="info flex justify-center items-center md:mt-4 gap-1 flex-col">
             <div className="image rounded-full flex justify-center items-center p-1  ring-1">

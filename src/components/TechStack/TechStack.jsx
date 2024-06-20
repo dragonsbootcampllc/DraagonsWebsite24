@@ -39,10 +39,10 @@ function TechStack(props) {
     <div className='mx-auto z-20  md:px-4 px-1 relative   max-w-[1100px] min-h-screen pb-20   justify-center    text-gray-200 '>
       <div className='w-full  max-w-[1400px] flex flex-col gap-8 text-white'>
         <div className='head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
-          <h1 className='md:text-2xl text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
+          <h1 className='md:text-2xl  grid place-items-center text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
             Tech Stack
           </h1>
-          <h1 className='text-4xl md:text-6xl font-semibold'>
+          <h1 className='text-4xl capitalize md:text-6xl font-semibold'>
             {props.MainText}
           </h1>
           <p className='text-white/50 text-lg md:text-base'>

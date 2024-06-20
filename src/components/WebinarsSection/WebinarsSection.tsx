@@ -17,7 +17,7 @@ export default function WebinarsSection({
   }, []);
 
   const videoSrc = "/Video/Webinar_Video.mp4";
-  const webinarTitle = "Dragons Bootcamp Webinars";
+  const webinarTitle = "Dragon's Webinars";
   const webinarDescription =
     "Join us for our upcoming webinars and learn from industry experts! ";
 
@@ -41,8 +41,8 @@ export default function WebinarsSection({
     <div className="relative w-full flex flex-col gap-12 justify-center items-center">
   
       <div className='head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
-        <h1 className='md:text-2xl text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
-         Dragons Bootcamp Webinars
+        <h1 className='md:text-2xl grid place-items-center text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
+         Dragon's Webinars
         </h1>
 
         <h1 className='text-4xl md:text-6xl font-semibold'>
@@ -50,11 +50,11 @@ export default function WebinarsSection({
           <span className='bg-gradient-to-r from-pink-600 to-blue-500 text-transparent bg-clip-text'>
         {" "}  Webinars  {" "}
           </span>
-          and Learn from Industry Experts 🚀
+          and Learn from Industry Experts 
         </h1>
         <p className='text-white/50 text-lg md:text-base'>
-          Dragons webinars are a great way to learn from industry experts and stay up-to-date on the latest trends. it's exlusive for our students and grads only for free and open for public with a small fee.
-        </p>
+        Join Dragons Webinars to learn from industry experts! Free for students and grads, open to the public with a small fee.
+                </p>
       </div>
       <div className="relative w-full group max-w-5xl overflow-hidden rounded-3xl ">
         {isHydrated && (

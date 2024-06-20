@@ -9,7 +9,7 @@ const HeadData = {
   badge: "Training Service Section",
   title_1: "Empower Your ",
   title_span: "Tech Career",
-  title_2: " with Our Training Programs",
+  title_2: " Career with Us!",
   description:
     "Select a program that aligns with your goals. Whether you're a Beginner or looking to join our intensive six-month Bootcamp, we offer a variety of options tailored to your needs.",
 };
@@ -109,7 +109,7 @@ function TrainingServiceSection() {
   return (
     <div className='w-full min-h-screen max-w-[1400px] flex flex-col gap-8 text-white'>
       <div className='head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
-        <h1 className='md:text-2xl text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
+        <h1 className='md:text-2xl grid place-items-center text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
           {HeadData.badge}
         </h1>
 
