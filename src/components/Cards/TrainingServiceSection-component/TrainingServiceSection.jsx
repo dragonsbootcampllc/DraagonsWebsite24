@@ -38,7 +38,7 @@ const CardsData = [
       image:Bootcamp6Month.src
   },
   {
-    label: "Demo",
+    label: "Demo Available",
     title: "Dragon's Sprints",
     description:
       "Short-term, intensive programs designed to help you master a specific skill or technology.",
@@ -66,7 +66,7 @@ const Card = ({
   <Link
     href="/Contact"
     passHref={true}
-    className={`bg-[#181619] rounded-2xl md:min-h-[500px] min-h-[300px]  relative overflow-hidden text-center p-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-105 
+    className={`bg-[#181619] rounded-2xl min-h-[500px]   relative overflow-hidden text-center p-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300
         ${
           isPremier
             ? "shadow-[0_0_0_0_#fff] hover:shadow-[0_0_.5rem_0rem_rgb(234,179,8)] border-2 border-[rgba(162,121,0,0.6)]"
@@ -78,16 +78,19 @@ const Card = ({
         }`}
   >
     <div className="flex justify-between items-center">
-      <h1 className="font-semibold text-3xl bg-gradient-to-r from-white to-gray-200  text-transparent bg-clip-text">
-        {title}
-      </h1>
-      <div
+    <div className="grid w-full place-items-center">
+    <div
         className={`text-[14px] px-2 border border-white/60 rounded-xl ${
           isPremier && "border-yellow-500 text-yellow-500"
         }`}
       >
         {label}
       </div>
+      <h1 className="font-semibold text-3xl bg-gradient-to-r from-white to-gray-200  text-transparent bg-clip-text">
+        {title}
+      </h1>
+      </div>
+   
     </div>
     <p className="text-[14px] text-start font-semibold">{description}</p>
     <div
