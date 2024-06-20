@@ -96,7 +96,7 @@ const SkeletonOne = () => {
       <motion.div
         variants={variants}
         className='flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black'>
-        <img src={Talent[8].personal_photo} className='rounded-full h-6 w-6' />
+        <Image  alt="avatar" src={Talent[8].personal_photo} className='rounded-full h-6 w-6' />
         <div className='w-full text-xs p-1 min-h-4 px-2 rounded-full bg-neutral-900'>
           {" "}
           How can i install NPM?
@@ -108,7 +108,8 @@ const SkeletonOne = () => {
         <div className='w-full p-1 px-2  min-h-4  text-xs rounded-full bg-neutral-900'>
           Just use npm install
         </div>
-        <img
+        <Image
+        alt="avatar"
           src={Talent[13].personal_photo}
           className='h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0'
         />
@@ -118,7 +119,7 @@ const SkeletonOne = () => {
       <motion.div
         variants={variants}
         className='flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black'>
-        <img src={Talent[8].personal_photo} className='rounded-full h-6 w-6' />
+        <Image  alt="avatar" src={Talent[8].personal_photo} className='rounded-full h-6 w-6' />
         <div className='w-full text-xs p-1 px-2  min-h-4 rounded-full bg-neutral-900'>
           WOW it is that simple?
         </div>
@@ -160,7 +161,7 @@ const SkeletonTwo = () => {
               maxWidth: Math.random() * (100 - 40) + 40 + "%",
             }}
             className='flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black w-full h-4'></motion.div>
-          <img
+          <Image alt="avatar"
             src={Talent[i].personal_photo}
             className='rounded-full z-10 top-0 absolute h-6 w-6'
           />
@@ -202,7 +203,7 @@ const SkeletonThree = () => {
           Top Talent of 2023
         </h1>
 
-        <img
+        <Image  alt="avatar"
           src={Talent[24].personal_photo}
           className='rounded-3xl h-16 w-16 mx-auto mt-4'
         />

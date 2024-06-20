@@ -31,7 +31,7 @@ export type Talent = {
 import { useMemo } from 'react';
 
 const useTransformTalentData = (talents: Talent[]): TransformedTalent[] => {
-    return talents.slice(0, 20).map((talent, index) => ({
+    return talents.slice(0, 10).map((talent, index) => ({
         id: index + 1,
         name: talent.Name,
         designation: `${talent.tags[0]?.position} Developer`,
