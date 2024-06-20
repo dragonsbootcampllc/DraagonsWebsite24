@@ -6,6 +6,7 @@ import hackathonCroud from "@/../public/images/hackathonCroud.png";
 import Gamification from "@/../public/images/Gamification.png";
 import ButtonComponent from "../Micros/Button";
 import ButtonLite from "../Micros/ButtonLite";
+import Image from "next/image";
 const headlineText: string = "Join the  ";
 const HeadLineHighlightedText: string = "Hackathons";
 const HeadLineSubText: string = "Revolution";
@@ -65,8 +66,9 @@ const HackathonsComponent: React.FC = () => {
           {hackathonProjects.map((project, index) => (
             <div key={index} className='relative w-full'>
               <div className='flex flex-col w-full h-[600px] hover:scale-[1.03] cursor-pointer transition-all bg-[#08091b] rounded-3xl overflow-hidden'>
-                <img
+                <Image
                   src={project.image}
+                  fill='responsive'
                   alt='Project Image'
                   className='object-cover rounded-3xl absolute bottom-0 w-full h-[100%]'
                 />
