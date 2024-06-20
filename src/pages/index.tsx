@@ -64,15 +64,16 @@ export default function Home() {
 
       <div className='relative flex justify-center flex-col'>
         <div className='w-auto relative'>
-          <TechStack
-            MainText={[
-              "Our ",
-              <span key='coloredText' className='header text-purple-800'>
-                Tech Stack
-              </span>,
-              " is diverse and strong, we use the latest technologies ",
-            ]}
-          />
+        <TechStack
+  MainText={[
+    "Explore our robust ",
+    <span key='coloredText' className='header text-purple-800'>
+      Tech Stack
+    </span>,
+    " with latest technologies.",
+  ]}
+/>
+
         </div>
       </div>
 
@@ -94,38 +95,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='relative pt-20'>
-        <div className='absolute right-2 -top-[50px] sepia-0 backdrop-opacity-95'>
-          <Image
-            className='relative z-20 bounce-2 box2'
-            src='/images/dragon2.png'
-            alt='Header Image'
-            height={160}
-            width={240}
-            priority
-          />
-        </div>
-
-        <div
-          className='backdrop-blur-xl w-full h-full bg-gray-700/5'
-          style={{
-            boxSizing: "border-box",
-            filter: "drop-shadow(0px 0px 10px, #000000)",
-          }}>
-          <Sec2Summary
-            MainPTexe='Dragons is a Bootcamp and activity program, that helps people to take their first step toward their career, Listen from people of the same age, speakers working in top companies and people can help you grow as a person.'
-            MainText={[
-              "Give People ",
-              <span key='coloredText' className='header text-red-400'>
-                Hope and Trust
-              </span>,
-              " ,and See What Happens🚀",
-            ]}
-            ActionButton='Join Us Now'
-            action='/Join'
-          />
-        </div>
-      </div>
+     
 
       {popup && popup}
     </div>

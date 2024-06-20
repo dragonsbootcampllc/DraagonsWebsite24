@@ -7,7 +7,7 @@ const BOOTCAMP_URL = "/Bootcamp";
 function GridSection() {
   const head = {
     badge: "Bootcamp Program",
-    title: "Elevate Your Skills with Our Intensive 6-Month Tech Bootcamp",
+    title: "Boost Your Skills with Our 6-Month Tech Bootcamp",
     text: "Master key technologies and leadership skills in our intensive Bootcamp, designed for rapid, real-world success",
   };
 
