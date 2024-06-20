@@ -74,7 +74,7 @@ const SolutionTabData = {
   },
   tab2: {
     title: "Partners",
-    path: "http://dragons.divzoon.com/solutions/partners/",
+    path: "/Partners",
     description:
       "Enhance your team with our ready-to-deploy graduates skilled in the latest tech trends.",
     Icon: (
