@@ -66,10 +66,11 @@ export default function Home() {
         <div className='w-auto relative'>
           <TechStack
             MainText={[
-              <span key='coloredText' className='header text-red-400'>
-                Technologies
+              "Our ",
+              <span key='coloredText' className='header text-purple-800'>
+                Tech Stack
               </span>,
-              " You Will Explore with Us",
+              " is diverse and strong, we use the latest technologies ",
             ]}
           />
         </div>
