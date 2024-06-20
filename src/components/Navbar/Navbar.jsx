@@ -1,7 +1,6 @@
 "use client";
 import { React, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
 const Dropdown = dynamic(() => import("./Dropdown"), {
@@ -15,51 +14,28 @@ const Dropdown_V2 = dynamic(() => import("./Dropdown_V.2"), {
   ssr: false,
 });
 
-import levelUp_O2_img from "@/../public/assets/Dash/ESGNAV/o2.png";
 import LogoImage from "@/../public/Identity/Images/2023/SVG/test.svg";
-import sustracker_img from "@/../public/assets/Dash/ESGNAV/sustracker.png";
-import datalab_img from "@/../public/assets/Dash/SolutionNAV/lab.png";
-import pulse_img from "@/../public/assets/Premasset/279b4dee-988e-4168-9745-09c71397741a.png";
-import resources_img from "@/../public/assets/Dash/academy/resources.png";
-import workshop_img from "@/../public/assets/Dash/academy/workshop.png";
-import Student_img from "@/../public/assets/calculate.png";
+import Student1_img from "/public/assets/calculate.png";
+import Partener1_img from "/public/assets/planning.png";
+import Student2_img from "/public/assets/earth.png";
+import Partener2_img from "/public/assets/Dashboard.png";
+
+
+import { PiStudentFill } from "react-icons/pi";
+import { SiCodementor } from "react-icons/si";
 import {
-  IoLeaf,
   IoStatsChart,
-  IoEarth,
   IoPeople,
   IoBusiness,
-  IoDocumentText,
   IoShieldCheckmark,
-  IoAnalytics,
-  IoTrendingUp,
-  IoWarning,
   IoSearchSharp,
   IoShieldCheckmarkOutline,
-  IoWarningOutline,
 } from "react-icons/io5";
 
-import {
-  FaChalkboardTeacher,
-  FaBlog,
-  FaBroadcastTower,
-  FaRobot,
-} from "react-icons/fa";
-import business_img from "@/../public/assets/Dash/Solutions/Biz.png";
-import ESG_img from "@/../public/assets/Dash/Solutions/ESG.png";
 import ButtonComponent from "../Micros/Button";
 import ButtonLite from "@/components/Micros/ButtonLite";
-import Button from "@/components/Micros/Button";
 
-const simpleFloatAnimation = {
-  y: ["-20px", "22px"],
-  transition: {
-    repeat: Infinity,
-    repeatType: "reverse",
-    duration: 4,
-    ease: "easeInOut",
-  },
-};
+
 
 const SolutionTabData = {
   title: "Solutions",
@@ -68,18 +44,14 @@ const SolutionTabData = {
     path: "http://dragons.divzoon.com/solutions/students/",
     description:
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
-    Icon: (
-      <motion.img src={Student_img} alt='icon' animate={simpleFloatAnimation} />
-    ),
+    Icon: Student1_img,
   },
   tab2: {
     title: "Partners",
     path: "http://dragons.divzoon.com/solutions/partners/",
     description:
       "Enhance your team with our ready-to-deploy graduates skilled in the latest tech trends.",
-    Icon: (
-      <motion.img src={Student_img} alt='icon' animate={simpleFloatAnimation} />
-    ),
+    Icon: Partener1_img,
   },
   tab1BottomLinks: [
     {
@@ -87,28 +59,28 @@ const SolutionTabData = {
       description:
         "Get ready for the job market with our career-focused bootcamps.",
       path: "/JopReady",
-      Icon: IoStatsChart,
+      Icon: <IoStatsChart />,
     },
     {
       title: "Mentorship",
       description:
         "Get guidance from industry experts and level up your skills.",
-      path: "/Bootcamp",
-      Icon: IoBusiness,
+      path: "/mentors",
+      Icon: <SiCodementor />,
     },
     {
       title: "Thought Leader",
       description:
         "Learn from the best in the industry and stay ahead of the curve.",
       path: "/Bootcamp",
-      Icon: IoBusiness,
+      Icon: <IoBusiness />,
     },
     {
       title: "Students activity",
       description:
         "Get involved in our student community and grow your network.",
       path: "/DSA",
-      Icon: IoTrendingUp,
+      Icon: <PiStudentFill />,
     },
   ],
   tab2BottomLinks: [
@@ -116,27 +88,27 @@ const SolutionTabData = {
       title: "Events Sponsor",
       description: "Sponsor our events and get access to our top tech talent.",
       path: "/JopReady",
-      Icon: IoSearchSharp,
+      Icon: <IoSearchSharp />,
     },
     {
       title: " Get Talents",
       description: "Hire our top graduates and enhance your team ",
       path: "/Bootcamp",
-      Icon: IoShieldCheckmark,
+      Icon: <IoShieldCheckmark />,
     },
     {
       title: "Software Outsourcing",
       description:
         "Outsource your software development to our top graduates and save time and money.",
       path: "/Webinar",
-      Icon: IoShieldCheckmarkOutline,
+      Icon: <IoShieldCheckmarkOutline />,
     },
     {
       title: " Intern Program Managmenet",
       description:
         "Manage your intern program with our HRMS and get access to top tech talent.",
       path: "/DSA",
-      Icon: IoPeople,
+      Icon: <IoPeople />,
     },
   ],
 };
@@ -148,22 +120,14 @@ const TallentsTabData = {
     path: "/Talents",
     description:
       "Our top 3% graduates excel in tech, gaining access to exclusive job opportunities and leading the way in industry success.",
-    Icon: (
-      <motion.img src={ESG_img} alt='icon' animate={simpleFloatAnimation} />
-    ),
+    Icon: Student2_img,
   },
   tab2: {
     title: "Partners",
     path: "service/business",
     description:
       "Spot and recruit top tech talent seamlessly through our HRMS, enhancing your team with industry-leading expertise",
-    Icon: (
-      <motion.img
-        src={business_img}
-        alt='icon'
-        animate={simpleFloatAnimation}
-      />
-    ),
+    Icon: Partener2_img,
   },
 };
 
@@ -172,7 +136,6 @@ const Navbar = () => {
   const [isNavOpen, setNavOpen] = useState(false);
   const [isSolutionsOpen, setSolutionsOpen] = useState(false);
   const [isTallentsOpen, setTallentsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState(""); // State to track active link
 
   // Toggles and close for UI elements, making it clear what they do
   // Navbar functions
@@ -241,38 +204,33 @@ const Navbar = () => {
             onClick={toggleNavigation}>
             {/* Simplified class names for readability */}
             <span
-              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${
-                isNavOpen
+              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen
                   ? "-rotate-45 translate-y-2 delay-300"
                   : "rotate-0 translate-y-0"
-              }`}></span>
+                }`}></span>
             <span
-              className={`h-[2px] bg-white transition-all duration-[.45s] ${
-                isNavOpen ? "w-0" : "w-6 delay-300"
-              }`}></span>
+              className={`h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen ? "w-0" : "w-6 delay-300"
+                }`}></span>
             <span
-              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${
-                isNavOpen
+              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen
                   ? "rotate-45 -translate-y-2 delay-300"
                   : "rotate-0 translate-y-0"
-              }`}></span>
+                }`}></span>
           </button>
         </div>
 
         {/* Navigation Links and CTA Button */}
         <div
-          className={`flex max-[1496px]:bg-[#2c1a3a] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-lg font-normal h-full max-[1496px]:w-full gap-3 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${
-            isNavOpen
+          className={`flex max-[1496px]:bg-[#2c1a3a] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-lg font-normal h-full max-[1496px]:w-full gap-3 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
               ? "max-[1496px]:translate-y-0"
               : "max-[1496px]:-translate-y-[120%]"
-          } top-full left-0 text-black  max-[1496px]:flex-col max-[1496px]:absolute max-[1496px]:w-full max-[1496px]:pb-[6.5rem] max-[1496px]:h-[calc(100vh-4.5rem)] max-[1496px]:text-lg max-[1496px]:border-b max-[1496px]:border-black`}>
+            } top-full left-0 text-black  max-[1496px]:flex-col max-[1496px]:absolute max-[1496px]:w-full max-[1496px]:pb-[6.5rem] max-[1496px]:h-[calc(100vh-4.5rem)] max-[1496px]:text-lg max-[1496px]:border-b max-[1496px]:border-black`}>
           <NavbarLink
             path='/useCases'
             title='Use Cases'
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
-            isActive={activeLink === "/useCases"} // Pass active state
-            onClick={() => setActiveLink("/useCases")} // Update active state
+
           />
 
           {/* Solutions Dropdown */}
@@ -298,24 +256,19 @@ const Navbar = () => {
             title='Events'
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
-            isActive={activeLink === "/events"} // Pass active state
-            onClick={() => setActiveLink("/events")} // Update active state
           />
           <NavbarLink
             path='/about'
             title='About Us'
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
-            isActive={activeLink === "/about"} // Pass active state
-            onClick={() => setActiveLink("/about")} // Update active state
+
           />
           <NavbarLink
             path='/Pricing '
             title='Pricing '
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
-            isActive={activeLink === "/Pricing"} // Pass active state
-            onClick={() => setActiveLink("/Pricing")} // Update active state
           />
           {/* CTA Button */}
           <div className='h-16 max-w-[350px] relative  grid place-items-center md:grid-cols-2   w-full  gap-3'>
@@ -323,7 +276,9 @@ const Navbar = () => {
             </div>
 
             <div className='h-12 w-full'>
-              <ButtonComponent className='!text-sm' CTAtext='Apply Now' />
+              <Link href='/Pricing' >
+                <ButtonComponent className='!text-sm' CTAtext='Apply Now' />
+              </Link>
             </div>
           </div>
         </div>
