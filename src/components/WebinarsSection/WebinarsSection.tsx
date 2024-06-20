@@ -28,7 +28,7 @@ export default function WebinarsSection({
         videoComponent={
           <video
             src={videoSrc}
-            className="w-full max-w-5xl rounded-lg"
+            className="w-full  rounded-3xl "
             controls
             autoPlay
           ></video>
@@ -70,7 +70,7 @@ export default function WebinarsSection({
             className="absolute inset-0 w-full bg-black/20 cursor-pointer rounded-3xl transition-all duration-300 flex justify-center items-end"
             onClick={onOverlayClick}
           >
-            <div className="text-white text-center w-full h-1/2 flex flex-col justify-end items-center bg-gradient-to-t from-purple-950/70 to-transparent pb-10">
+            <div className="text-white hidden text-center w-full h-1/2 md:flex flex-col justify-end items-center bg-gradient-to-t from-purple-950/70 to-transparent pb-10">
               <h2 className="text-3xl font-bold">{webinarTitle}</h2>
               <p className="text-lg mt-2">{webinarDescription}</p>
             </div>
