@@ -107,6 +107,7 @@ const Card = ({
 />
 
     </div>
+    <p className="opacity-45">click on the card to learn more</p>
   </Link>
 );
 
