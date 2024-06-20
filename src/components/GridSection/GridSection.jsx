@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import ButtonComponent from "../Micros/Button";
 
 const BOOTCAMP_URL = "/Bootcamp";
 
 function GridSection() {
   const head = {
-    badge: "Grid Section",
+    badge: "Bootcamp Program",
     title: "Elevate Your Skills with Our Intensive 6-Month Tech Bootcamp",
     text: "Master key technologies and leadership skills in our intensive Bootcamp, designed for rapid, real-world success",
   };
@@ -38,47 +39,54 @@ function GridSection() {
     },
   ];
 
+  const CTATextBelow = "Ready to take the next step?";
+  const buttonText = "Get Started";
   return (
-    <div className="w-full max-w-[1400px] flex flex-col justify-center items-center gap-8 text-white">
+    <div className="w-full flex flex-col  min-h-screen max-w-[1400px] justify-center items-center gap-8 text-white">
       <div className="container mx-auto flex flex-col gap-7 justify-center items-center text-center max-w-[800px] pt-5">
-        <div className="badge w-fit mx-auto text-white/70 rounded-lg border border-white/40 px-2 py-1">
-          {head.badge}
-        </div>
+      <h1 className="md:text-2xl text-xl md:text-center text-start font-medium text-purple-800 uppercase">
+        {head.badge}
+          </h1> 
         <h1 className="text-4xl md:text-6xl font-semibold">{head.title}</h1>
         <p className="text-white/50 text-[16px] md:text-base">{head.text}</p>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-y-4 md:gap-5">
+      <div className="container  max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-y-4 md:gap-5">
         {cardsData.map(({ title, text, image }, index) => (
           <Link
             href={BOOTCAMP_URL}
             key={index}
-            className={`hover:scale-[1.03] cursor-pointer transition-all ${index <= 1 ? "col-span-2 lg:col-span-3" : "col-span-2"} overflow-hidden bg-[#181619] rounded-xl h-[375px] text-left flex flex-col justify-between`}
+            className={`hover:scale-[1.03] cursor-pointer transition-all ${index <= 1 ? "col-span-2 lg:col-span-3" : "col-span-2"} overflow-hidden bg-purple-800/20 rounded-3xl h-[375px] text-left flex flex-col justify-between`}
           >
-            <div className="p-5 flex flex-col gap-1">
+            <div className="p-5  flex flex-col gap-1">
               <h1 className="text-2xl">{title}</h1>
               <p className="text-[14px] text-white/50">{text}</p>
             </div>
 
-            <div className="w-full h-64 relative">
+            <div className="w-full h-full relative">
               <Image
                 src={image}
                 alt={title}
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
+                className="absolute bottom-0 left-0 w-full h-full"
               />
             </div>
           </Link>
         ))}
       </div>
+      <div className='text-center grid mb-12 place-items-center gap-7 px-4'>
+        <h2 className='text-2xl md:text-4xl text-center font-semibold'>
+          {CTATextBelow}
+        </h2>
 
-      <Link
-        href={BOOTCAMP_URL}
-        className="border-2 w-fit text-2xl rounded-full py-1 px-3 inline-block hover:bg-purple-900 hover:text-white transition-all hover:border-purple-900 mt-5"
-      >
-        {"Learn More"}
-      </Link>
+        <Link href='/Pricing' passHref>
+          <div className='h-16 w-64'>
+            <ButtonComponent CTAtext={buttonText} />
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
