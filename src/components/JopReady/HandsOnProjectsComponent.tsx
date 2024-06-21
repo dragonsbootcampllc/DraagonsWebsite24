@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import ButtonComponent from "../Micros/Button";
 import ButtonLite from "../Micros/ButtonLite";
+import Image from "next/image";
 
 const HandsOnProjectsComponent: React.FC = () => {
   const [showDescriptionIndex, setShowDescriptionIndex] = useState<
@@ -58,7 +59,7 @@ const ApplyNowText: string = "Apply now";
           {content.slice(0, 2).map((item, index) => (
             <div
               key={index}
-              className='text-center hover:scale-105 bg-[#08091b] z-10 duration-700 cursor-pointer transition-all pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'
+              className='text-center  w-full h-full hover:scale-105 bg-[#08091b] z-10 duration-700 cursor-pointer transition-all pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}>
               <div className='text-center grid place-items-center'>
@@ -69,9 +70,13 @@ const ApplyNowText: string = "Apply now";
               <div
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
-                className='image relative rounded-3xl overflow-hidden'>
+                className='image relative  w-full h-full rounded-3xl overflow-hidden'>
             
-                <img src={item.image} alt="image" />
+                <Image  
+                  src={item.image}
+                 fill={true}
+                 className='object-cover rounded-3xl   w-full h-full'
+                 alt="image" />
                   <div
                     className={`${   showDescriptionIndex === index
                         ? "bg-gradient-to-t from-purple-900 via-black/50 to-transparent"
