@@ -24,8 +24,8 @@ const HeroObj = {
 const Partenrs: React.FC = () => {
     return (
         <div className=" ">
-            <div className=" flex flex-col gap-[70px] mt-10  h-full w-full relative bg-slate-950 ">
-                <div className="absolute inset-0 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:65px_65px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+            <div className="flex flex-col gap-[50px] bg-fixed bg-cover mt-10 h-full w-full relative">
+                <div className="absolute bg-fixed z-[-1] inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_70%_100%_at_70%_10%,_#000_60%,_transparent_100%)]"></div>
                 <Hero
                     News={HeroObj.News}
                     subHeadingText={HeroObj.subHeadingText}
@@ -36,7 +36,7 @@ const Partenrs: React.FC = () => {
 
                 <GetTalents />
                 <InternProgramManagement />
-                <EventSponsor />
+                <EventSponsor  />
                 <SoftwareOutsourcing />
                 <YearRoundedInternship />
 
