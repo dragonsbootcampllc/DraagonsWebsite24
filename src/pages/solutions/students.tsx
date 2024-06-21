@@ -24,8 +24,10 @@ interface ForStudentsProps {
   };
 }
 
-const CTATextBelow = "Ready to start your journey?";
-const buttonText = "Get Started";
+const CTATextAbove = "Unlock Your Potential with Our Bootcamp!";
+const CTATextBelow =
+  "Join hundreds of successful graduates. Ready to take the leap?";
+const buttonText = "Start Your Journey";
 
 const ForStudentPage: React.FC<ForStudentsProps> = (props) => {
   const HeroObj = {
@@ -65,12 +67,15 @@ const ForStudentPage: React.FC<ForStudentsProps> = (props) => {
         </div>
       </div>
       <div className="text-center grid mb-12 place-items-center gap-7 px-4">
-        <h2 className="text-2xl md:text-4xl text-center font-semibold">
-          {CTATextBelow}
+        <h2 className="text-4xl md:text-6xl font-bold leading-snug text-gray-900">
+          {CTATextAbove}
         </h2>
+        <p className="text-xl md:text-2xl text-center font-medium text-gray-700">
+          {CTATextBelow}
+        </p>
         <Link href="/Pricing" passHref>
-          <div className="h-16 w-64">
-            <ButtonComponent CTAtext={buttonText} />
+          <div className="h-20 w-72">
+            <ButtonComponent className="text-xl" CTAtext={buttonText} />
           </div>
         </Link>
       </div>
