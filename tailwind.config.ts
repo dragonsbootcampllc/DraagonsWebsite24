@@ -21,6 +21,12 @@ module.exports = {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+      maxWidth: {
+        'slider-image': '300px', 
+      },
+      maxHeight: {
+        'slider-image': '200px', 
+      },
       keyframes: {
         shimmer: {
           from: {
