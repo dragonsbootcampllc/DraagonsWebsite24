@@ -1,0 +1,6 @@
+[
+    { "id": "1", "value": "1", "label": "Pay Cash", "priceSuffix": "/One time" },
+    { "id": "2", "value": "2", "label": "6 m installment", "priceSuffix": "/month" },
+    { "id": "3", "value": "3", "label": "12 m installment", "priceSuffix": "/month" },
+    { "id": "4", "value": "4", "label": "18 m installment", "priceSuffix": "/month" }
+]

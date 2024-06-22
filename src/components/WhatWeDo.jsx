@@ -32,7 +32,7 @@ function WhatWeDo(props) {
         <div className="mt-6  mx-12 sm:mx-0  sm:mt-10 sm:flex  justify-left sm:space-x-6 text-sm">
           <Link legacyBehavior href={props.action} passHref>
             <div className=" box-decoration-slice shadow-lg hover:shadow-red-500/50    focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 active:scale-95 duration-100 focus:ring-offset-slate-800  font-semibold h-12 px-6 rounded-lg w-full flex items-center text-white justify-center sm:w-auto bg-red-500  hover:bg-red-400">
-              {props.ActionButton}
+              {props.ActionButton || ""}
             </div>
           </Link>
         </div>
