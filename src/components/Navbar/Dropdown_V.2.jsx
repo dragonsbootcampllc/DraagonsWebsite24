@@ -1,9 +1,23 @@
 "use client"
 import PropTypes from "prop-types";
 import Link from "next/link";
+import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdArrowRight } from "react-icons/md";
 import { useState } from 'react';
+import { motion } from "framer-motion";
+
+const simpleFloatAnimation = {
+  y: ["-20px", "22px"],
+  transition: {
+    repeat: Infinity,
+    repeatType: "reverse",
+    duration: 4,
+    ease: "easeInOut",
+  },
+};
+const MotionImage = motion(Image);
+
 
 const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -32,7 +46,7 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
         {/* Start Button */}
         <span
           className={`px-4 font-semibold flex items-center justify-center min-[1130px]:h-full transition-all duration-[.45s] max-[1130px]:py-8 max-[1130px]:hover:bg-transparent max-[1130px]:px-0 relative
-                      after:absolute after:h-[2px] after:bg-white ${isHovered || isTabOpen ? 'after:w-full text-white' : 'text-white/70 after:w-0'} after:left-1/2 after:-translate-x-1/2 after:transition-all after:bottom-0 after:duration-[.45s]`}
+                      after:absolute after:h-[2px]  after:bg-white ${isHovered || isTabOpen ? 'after:w-full text-white' : 'text-white/70 after:w-0'} after:left-1/2 after:-translate-x-1/2 after:transition-all after:bottom-0 after:duration-[.45s]`}
           onClick={toggleTab}
         >
           <div className="flex items-center justify-center space-x-1">
@@ -67,8 +81,8 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                     </span>
                   </span>
                 </span>
-                <span className="text-[5rem] max-[1130px]:hidden inline-block max-w-[25%] ">
-                  {data.tab1.Icon}
+                <span className="text-[5rem] max-[1130px]:hidden inline-block max-w-[25%]" >
+                  <MotionImage src={data.tab1.Icon} width={300} height={300} animate={simpleFloatAnimation} alt="icon" />
                 </span>
               </Link>
               {/* End Tab One */}
@@ -112,8 +126,8 @@ const Dropdown_V2 = ({ isTabOpen, toggleTab, closeTab, data }) => {
                     </span>
                   </span>
                 </span>
-                <span className="text-[5rem] max-[1130px]:hidden inline-block max-w-[25%]">
-                  {data.tab2.Icon}
+                <span className="text-[5rem] max-[1130px]:hidden inline-block max-w-[25%]" >
+                  <MotionImage src={data.tab2.Icon} width={300} height={300} animate={simpleFloatAnimation} alt="icon" />
                 </span>
               </Link>
               {/* End Tab Two */}
