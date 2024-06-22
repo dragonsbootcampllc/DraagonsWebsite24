@@ -42,6 +42,11 @@ export default function App({ Component, pageProps }: AppProps) {
       name: "JopReady",
       link: "/JopReady",
     },
+    {
+      id: 7,
+      name: "students",
+      link: "/students",
+    },
   ];
 
   let Join = [
