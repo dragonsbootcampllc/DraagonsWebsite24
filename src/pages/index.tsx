@@ -81,7 +81,8 @@ const HeadDataStudentActivity = {
   title_1: "Tech-Driven  ",
   title_span: " Student ",
   title_2: "Initiative",
-  description:"Our students are constantly working on projects, attending workshops, and participating in hackathons. Check out some of their latest activities.",
+  description:
+    "Our students are constantly working on projects, attending workshops, and participating in hackathons. Check out some of their latest activities.",
 };
 
 const CardsDataStudentActivity = [
@@ -119,15 +120,17 @@ export default function Home() {
 
   return (
     <div className={`overflow-x-hidden ${styles.container}`}>
+      <div className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030019_40%,#63e_100%)]'></div>
+  
+      <div className='absolute opacity-30 h-full w-full'>
+        <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
+      </div>
       <div className='relative w-full pt-12'>
         <Hero />
       </div>
 
       <div className='w-full flex justify-center'>
-        <TrainingServiceSection
-          HeadData={HeadData}
-          CardsData={CardsData}
-        />
+        <TrainingServiceSection HeadData={HeadData} CardsData={CardsData} />
       </div>
 
       <div className='mt-12 w-full flex justify-center items-center'>
@@ -157,7 +160,8 @@ export default function Home() {
       </div>
       <div className='w-full flex justify-center'>
         <StudentActivitySection
-         HeadData={HeadDataStudentActivity} CardsData={CardsDataStudentActivity}
+          HeadData={HeadDataStudentActivity}
+          CardsData={CardsDataStudentActivity}
         />
       </div>
 
