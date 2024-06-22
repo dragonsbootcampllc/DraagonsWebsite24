@@ -108,10 +108,10 @@ const Charts = () => (
       {directors.map(({ title, chartData, num }, index) => (
         <div
           key={index}
-          className="relative  bg-purple-800/20 p-4 min-h-20  hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] transition-all shadow-[0_0_0_0_rgba(255,255,255,1)] cursor-pointer hover:scale-105 flex flex-col  justify-between rounded-3xl overflow-hidden text-white"
+          className="relative  bg-purple-800/20 p-4 min-h-20  hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] transition-all shadow-[0_0_0_0_rgba(255,255,255,1)] cursor-pointer hover:scale-105 flex flex-col  justify-between rounded-xl overflow-hidden text-white"
         >
-          <span className="font-bold text-4xl text-white mb-4 block">{num}</span>
           <h2 className="text-lg font-semibold text-white mb-2">{title}</h2>
+          <span className="font-bold text-6xl text-white mb-4 block">{num}</span>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 opacity-10"></div>
           <div className="relative">
             <Line data={chartData} options={chartOptions} />
