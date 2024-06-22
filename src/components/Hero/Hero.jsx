@@ -55,8 +55,7 @@ function Hero() {
         <p
           style={{ fontFamily: "interV" }}
           className='text-base sm:text-lg flex px-2 text-center pt-6 relative z-10 text-purple-300/50 justify-center m-auto'>
-          We are a team of passionate and creative people who are willing to
-          help you to boost your career
+         join our student activity to prepare yourself for real-life jobs!
         </p>
       </div>
       <div className='cta rounded-xl flex w-full flex-col md:flex-row justify-center my-12 gap-5'>
