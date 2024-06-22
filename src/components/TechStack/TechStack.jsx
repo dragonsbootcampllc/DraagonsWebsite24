@@ -28,7 +28,6 @@ import { MdOutlineDataObject } from "react-icons/md";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { HiTemplate } from "react-icons/hi";
 
-
 function TechStack(props) {
   const [toggleState, setToggleState] = useState(1);
   const toggleTab = (index) => {
@@ -137,6 +136,7 @@ function TechStack(props) {
                 <div className='hover:bg-gray-700/40  grid cursor-pointer select-none duration-500 text-gray-500 hover:text-gray-200  rounded-md relative    max-w-[125] min-w-[100px] sm:min-w-[125px] text-center justify-center min-h-[125px]'>
                   <div className='w-full grid place-items-center'>
                     <TbBrandThreejs className='w-[45px] h-[48px]' />
+                  
                   </div>
                   <h6>Three.js </h6>
                 </div>
