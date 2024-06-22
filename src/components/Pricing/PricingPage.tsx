@@ -36,11 +36,16 @@ const PricingPage: React.FC = () => {
             </div>
           )}
 
+      
+
           {frequencies.length > 1 && (
-            <div className="mt-16 flex justify-center">
+            <div className="mt-16 relative flex justify-center">
+                          <div className='w-full grid place-items-center absolute   '>
+<span className='text-2xl mt-1 text-white font-semibold'>installments Available Soon</span>
+              </div>
               <div
                 role="radiogroup"
-                className="grid gap-x-1 rounded-full p-1 text-center text-xs font-semibold leading-5 bg-black ring-1 ring-inset ring-gray-800"
+                className="grid gap-x-1 opacity-30 bg-purple-800/20 rounded-full p-1 text-center text-xs font-semibold leading-5 bg-black ring-1 ring-inset ring-gray-800"
                 style={{ gridTemplateColumns: `repeat(${frequencies.length}, minmax(0, 1fr))` }}
               >
                 <p className="sr-only">Payment frequency</p>
@@ -55,6 +60,7 @@ const PricingPage: React.FC = () => {
               </div>
             </div>
           )}
+     
 
           {/* Assuming PricingTier is an array of PricingTierType */}
           <PricingTierCard tier={PricingTier[0] as any} frequency={frequency as any} />

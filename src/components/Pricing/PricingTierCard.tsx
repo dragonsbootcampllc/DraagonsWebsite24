@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../../styles/pricing.module.css";
 import ButtonComponent from "../Micros/Button";
 import ButtonComponentlite from "../Micros/ButtonLite";
+import Link from "next/link";
 
 export interface PricingTierFrequency {
   id: string;
@@ -143,11 +144,11 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
                 {frequency.priceSuffix}
               </span>
             </p>
-            <a href={tier.href} className="flex justify-center mt-8 flex-shrink-0">
+            <Link   href='https://docs.google.com/forms/d/e/1FAIpQLSf6yGyk40x0nNQwP_XSP_dFjiS4I6_7UoAzJDGRunl-NGRUsQ/viewform?usp=pp_url' className="flex justify-center mt-8 flex-shrink-0">
               <div className="h-16 w-64">
                 <ButtonComponent CTAtext={tier.cta} />
               </div>
-            </a>
+            </Link>
             <p className="mt-2 text-xs leading-5 text-gray-400">
               Sign up in seconds, no credit card required.
             </p>

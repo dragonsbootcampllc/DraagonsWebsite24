@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,10 +16,10 @@ const Card = ({
   label,
   isDisabled,
   image,
+  ...props
 }) => (
   <Link
-    href='/Contact'
-    passHref={true}
+    href={isDisabled ? "#" : props.link || "#"}
     className={`bg-[#181619] rounded-2xl min-h-[500px]   relative overflow-hidden text-center p-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300
         ${
           isPremier
@@ -28,7 +29,7 @@ const Card = ({
         ${
           isDisabled &&
           "hover:!scale-100 hover:shadow-none !opacity-40 !cursor-not-allowed"
-        }`}>
+        }`} passHref>
     <div className='flex justify-between items-center'>
       <div className='grid w-full place-items-center'>
         <div
