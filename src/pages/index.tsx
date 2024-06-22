@@ -138,7 +138,7 @@ export default function Home() {
         <TestmonialSection />
       </div>
 
-      <div className='my-28 w-full flex justify-center items-center'>
+      <div className='mb-28 w-full flex justify-center items-center'>
         <WebinarsSection handel_popup={handel_popup} />
       </div>
 
