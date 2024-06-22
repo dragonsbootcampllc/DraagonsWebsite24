@@ -15,14 +15,16 @@ const Dropdown_V2 = dynamic(() => import("./Dropdown_V.2"), {
 });
 
 import LogoImage from "@/../public/Identity/Images/2023/SVG/test.svg";
-import Student1_img from "/public/assets/calculate.png";
-import Partener1_img from "/public/assets/planning.png";
-import Student2_img from "/public/assets/earth.png";
-import Partener2_img from "/public/assets/Dashboard.png";
 
-
-import { PiStudentFill } from "react-icons/pi";
-import { SiCodementor } from "react-icons/si";
+import sustracker_img from "@/../public/assets/Dash/ESGNAV/sustracker.png";
+import datalab_img from "@/../public/assets/Dash/SolutionNAV/lab.png";
+import pulse_img from "@/../public/assets/Premasset/279b4dee-988e-4168-9745-09c71397741a.png";
+import resources_img from "@/../public/assets/Dash/academy/resources.png";
+import workshop_img from "@/../public/assets/Dash/academy/workshop.png";
+import Student_img from "@/../public/images/NAV/Solutions/solutionStudents.png";
+import Student_img2 from "@/../public/images/NAV/Solutions/solutionPartners.png";
+import TalentsStudent from "@/../public/images/NAV/Talents/talentForStudent.png";
+import TalentsPartners from "@/../public/images/NAV/Talents/talentForPartner.png";
 import {
   IoStatsChart,
   IoPeople,
@@ -44,14 +46,20 @@ const SolutionTabData = {
     path: "http://dragons.divzoon.com/solutions/students/",
     description:
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
-    Icon: Student1_img,
+
+    Icon: (
+      <motion.img src={Student_img.src}  alt='icon' animate={simpleFloatAnimation} />
+    ),
   },
   tab2: {
     title: "Partners",
-    path: "http://dragons.divzoon.com/solutions/partners/",
+    path: "/Partners",
     description:
       "Enhance your team with our ready-to-deploy graduates skilled in the latest tech trends.",
-    Icon: Partener1_img,
+
+    Icon: (
+      <motion.img src={Student_img2.src} alt='icon' animate={simpleFloatAnimation} />
+    ),
   },
   tab1BottomLinks: [
     {
@@ -114,20 +122,30 @@ const SolutionTabData = {
 };
 
 const TallentsTabData = {
-  title: "Tallents",
+  title: "Talents",
   tab1: {
     title: "Students",
     path: "/Talents",
     description:
       "Our top 3% graduates excel in tech, gaining access to exclusive job opportunities and leading the way in industry success.",
-    Icon: Student2_img,
+
+    Icon: (
+      <motion.img src={TalentsStudent.src} alt='icon' animate={simpleFloatAnimation} />
+    ),
   },
   tab2: {
     title: "Partners",
     path: "service/business",
     description:
       "Spot and recruit top tech talent seamlessly through our HRMS, enhancing your team with industry-leading expertise",
-    Icon: Partener2_img,
+
+    Icon: (
+      <motion.img
+        src={TalentsPartners.src}
+        alt='icon'
+        animate={simpleFloatAnimation}
+      />
+    ),
   },
 };
 
