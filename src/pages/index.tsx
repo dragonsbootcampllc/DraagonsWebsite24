@@ -23,6 +23,7 @@ const Sec2Summary = dynamic(() => import("../components/WhatWeDo"), { ssr: false
 import { Numbers } from "../components/Numbers/Numbers";
 import { TrustedSection } from "../components/Trusted/TrustedSection";
 import TrainingServiceSection from "@/components/Cards/TrainingServiceSection-component/TrainingServiceSection";
+import { link } from "fs";
 
 const HeadData = {
   badge: "Training Service Section",
@@ -40,6 +41,7 @@ const CardsData = [
     description: "Be a real software engineer and master problem-solving, data structures, algorithms, and more to become a proficient software engineer.",
     overlayStyle: "radial-gradient(136.22% 75.8% at 50% 27.57%, #171619 0%, rgba(23, 22, 25, 1) 61.62%, rgba(0, 49, 239, 1) 79.17%, rgba(251, 53, 208, 1) 100%)",
     image: fundamentals,
+    link: "/Fundamental",
   },
   {
     label: "Special",
@@ -48,6 +50,7 @@ const CardsData = [
     description: " Our six-month, full-time program is designed to help you master the skills needed to launch a career in software engineering.",
     overlayStyle: "radial-gradient(329.95% 173.05% at 50.04% 100%, #fc36d0 0%, rgba(252, 54, 208, 1) 0.52%, rgba(0, 49, 239, 1) 18.71%, rgba(23, 22, 25, 1) 28.65%, rgba(23, 22, 25, 1) 100%)",
     image: Bootcamp6Month,
+    link: "/Bootcamp",
   },
   {
     label: "Demo Available",
@@ -55,6 +58,7 @@ const CardsData = [
     description: "Short-term, intensive programs designed to help you master a specific skill or technology.",
     overlayStyle: "radial-gradient(136.22% 75.8% at 50% 27.57%, #171619 0%, rgba(23, 22, 25, 1) 61.62%, rgba(0, 49, 239, 1) 79.17%, rgba(251, 53, 208, 1) 100%)",
     image: DragonsSprints,
+    link: "/DragonsSprints",
   },
 ];
 
