@@ -2,6 +2,8 @@
 import { React, useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { motion } from 'framer-motion';
+
 
 const Dropdown = dynamic(() => import("./Dropdown"), {
   ssr: false,
@@ -15,12 +17,6 @@ const Dropdown_V2 = dynamic(() => import("./Dropdown_V.2"), {
 });
 
 import LogoImage from "@/../public/Identity/Images/2023/SVG/test.svg";
-
-import sustracker_img from "@/../public/assets/Dash/ESGNAV/sustracker.png";
-import datalab_img from "@/../public/assets/Dash/SolutionNAV/lab.png";
-import pulse_img from "@/../public/assets/Premasset/279b4dee-988e-4168-9745-09c71397741a.png";
-import resources_img from "@/../public/assets/Dash/academy/resources.png";
-import workshop_img from "@/../public/assets/Dash/academy/workshop.png";
 import Student_img from "@/../public/images/NAV/Solutions/solutionStudents.png";
 import Student_img2 from "@/../public/images/NAV/Solutions/solutionPartners.png";
 import TalentsStudent from "@/../public/images/NAV/Talents/talentForStudent.png";
@@ -36,7 +32,19 @@ import {
 
 import ButtonComponent from "../Micros/Button";
 import ButtonLite from "@/components/Micros/ButtonLite";
+import { SiCodementor } from "react-icons/si";
+import { PiStudentFill } from "react-icons/pi";
 
+
+const simpleFloatAnimation = {
+  y: ["-20px", "22px"],
+  transition: {
+    repeat: Infinity,
+    repeatType: "reverse",
+    duration: 4,
+    ease: "easeInOut",
+  },
+};
 
 
 const SolutionTabData = {
