@@ -1,4 +1,7 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
 const DSA = () => {
@@ -84,7 +87,29 @@ const DSA = () => {
       width="800"
       height="400"
       className="rounded-lg mb-8"
+
         />
+ <div className="flex flex-col px-10 items-center max-w-3xl">
+  <h2 className="text-3xl font-semibold mb-4 p-10">Our Student Activity Partners</h2>
+  <Slider
+    dots={true}
+    infinite={true}
+    speed={500}
+    slidesToShow={3}
+    slidesToScroll={1}
+     className="max-w-[900px] my-slider"
+  >
+   <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDiuwrEZCz3lzKjeLumQEFSZyleJUYPT2IUGDmdUVv6DLJm4DrNZ_R77FUA&s" alt="Partner 1" className="slider-image" />
+    </div>
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDiuwrEZCz3lzKjeLumQEFSZyleJUYPT2IUGDmdUVv6DLJm4DrNZ_R77FUA&s" alt="Partner 2" className="slider-image" />
+    </div>
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDiuwrEZCz3lzKjeLumQEFSZyleJUYPT2IUGDmdUVv6DLJm4DrNZ_R77FUA&s" alt="Partner 3" className="slider-image" />
+    </div>
+  </Slider>
+</div>
       </div>
     </div>
     </div>
