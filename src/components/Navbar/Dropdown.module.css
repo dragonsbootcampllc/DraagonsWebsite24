@@ -1,0 +1,30 @@
+@media (min-width: 1130px) {
+    /* 250 */
+    .group:hover .min-\[1130px\]\:group-hover\:h-\[250px\] {
+      height: 250px;
+    }
+    /* 90 */
+    .group:hover .min-\[1130px\]\:group-hover\:h-\[90px\] {
+      height: 90px;
+    }
+    /* 110 */
+    .group:hover .min-\[1130px\]\:group-hover\:h-\[110px\] {
+      height: 110px;
+    }
+    /* 250 + 90 */
+    .group:hover .min-\[1130px\]\:group-hover\:h-\[340px\] {
+      height: 340px;
+    }
+    /* 250 + 110 */
+    .group:hover .min-\[1130px\]\:group-hover\:h-\[360px\] {
+      height: 360px;
+    }
+    /* 110 + 90 */
+    .group:hover .min-\[1130px\]\:group-hover\:h-\[200px\] {
+      height: 200px;
+    }
+    /* 250 + 110 + 90 */
+    .group:hover .min-\[1130px\]\:group-hover\:h-\[450px\] {
+      height: 450px;
+    } 
+  }

@@ -17,9 +17,9 @@ export default function WebinarsSection({
   }, []);
 
   const videoSrc = "/Video/Webinar_Video.mp4";
-  const webinarTitle = "Webinar Name";
+  const webinarTitle = "Dragon's Webinars";
   const webinarDescription =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. eos velit expedita aut quasi minus molestias!";
+    "Join us for our upcoming webinars and learn from industry experts! ";
 
   const onOverlayClick = useCallback(() => {
     handel_popup(
@@ -28,7 +28,7 @@ export default function WebinarsSection({
         videoComponent={
           <video
             src={videoSrc}
-            className="w-full max-w-5xl rounded-lg"
+            className="w-full  rounded-3xl "
             controls
             autoPlay
           ></video>
@@ -39,15 +39,24 @@ export default function WebinarsSection({
 
   return (
     <div className="relative w-full flex flex-col gap-12 justify-center items-center">
-      <div className="w-full flex justify-center flex-col items-center">
-        <h1 className="text-7xl font-bold blur-sm text-white/30 animate-pulse">
-          Ready For a Sprint?
+  
+      <div className='head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+        <h1 className='md:text-2xl grid place-items-center text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
+         Dragon's Webinars
         </h1>
-        <h1 className="text-7xl font-bold text-white/80 -mt-16">
-          Ready For a Sprint?
+
+        <h1 className='text-4xl md:text-6xl font-semibold'>
+        Join Our  
+          <span className='bg-gradient-to-r from-pink-600 to-blue-500 text-transparent bg-clip-text'>
+        {" "}  Webinars  {" "}
+          </span>
+          and Learn from Industry Experts 
         </h1>
+        <p className='text-white/50 text-lg md:text-base'>
+        Join Dragons Webinars to learn from industry experts! Free for students and grads, open to the public with a small fee.
+                </p>
       </div>
-      <div className="relative w-full group max-w-5xl overflow-hidden rounded-lg ">
+      <div className="relative w-full group max-w-5xl overflow-hidden rounded-3xl ">
         {isHydrated && (
           <video
             src={videoSrc}
@@ -58,10 +67,10 @@ export default function WebinarsSection({
         )}
         {isHydrated && (
           <div
-            className="absolute inset-0 w-full bg-black/20 cursor-pointer rounded-lg transition-all duration-300 flex justify-center items-end"
+            className="absolute inset-0 w-full bg-black/20 cursor-pointer rounded-3xl transition-all duration-300 flex justify-center items-end"
             onClick={onOverlayClick}
           >
-            <div className="text-white text-center w-full h-1/2 flex flex-col justify-end items-center bg-gradient-to-t from-purple-950/70 to-transparent pb-10">
+            <div className="text-white hidden text-center w-full h-1/2 md:flex flex-col justify-end items-center bg-gradient-to-t from-purple-950/70 to-transparent pb-10">
               <h2 className="text-3xl font-bold">{webinarTitle}</h2>
               <p className="text-lg mt-2">{webinarDescription}</p>
             </div>
@@ -70,9 +79,9 @@ export default function WebinarsSection({
         {isHydrated && (
           <button
             onClick={onOverlayClick}
-            className="w-16 aspect-square transition-all hover:animate-pulse rounded-full justify-center items-center flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-white/50 opacity-50 group-hover:opacity-100 shadow-white"
+            className="w-20 aspect-square transition-all animate-pulse rounded-3xl justify-center items-center flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-purple-800/90 opacity-80 group-hover:opacity-100 shadow-white"
           >
-            <Play stroke="black" size={32} strokeWidth={3} />
+            <Play stroke="white"  size={60} strokeWidth={3} />
           </button>
         )}
       </div>

@@ -90,7 +90,7 @@ function cardTeam(props) {
                 <div className="duration-500 active:scale-95 mt-[6px]  hover:text-gray-400">
                   {" "}
                   {props.herfLinkedIn ? (
-                    <Link legacyBehavior href={props.herfLinkedIn} passHref>
+                    <Link legacyBehavior href={props.herfLinkedIn  || ""} passHref>
                       <svg
                         width="23px"
                         height="23px"
@@ -111,7 +111,7 @@ function cardTeam(props) {
                 <div className="duration-500 active:scale-95 mt-[6px]  hover:text-gray-400">
                   {" "}
                   {props.herfGithub ? (
-                    <Link legacyBehavior href={props?.herfGithub} passHref>
+                    <Link legacyBehavior href={props?.herfGithub  || ""} passHref>
                       <svg
                         version="1.1"
                         id="Capa_1"
