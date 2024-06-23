@@ -116,14 +116,14 @@ const SolutionTabData = {
       title: "Software Outsourcing",
       description:
         "Outsource your software development to our top graduates and save time and money.",
-      path: "/Webinar",
+      path: "/Webinars",
       Icon: <IoShieldCheckmarkOutline />,
     },
     {
       title: " Intern Program Managmenet",
       description:
         "Manage your intern program with our HRMS and get access to top tech talent.",
-      path: "/DSA",
+      path: "/BackEnd",
       Icon: <IoPeople />,
     },
   ],
