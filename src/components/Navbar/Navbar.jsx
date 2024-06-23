@@ -109,7 +109,7 @@ const SolutionTabData = {
     {
       title: " Get Talents",
       description: "Hire our top graduates and enhance your team ",
-      path: "/Bootcamp",
+      path: "/FrontEnd",
       Icon: <IoShieldCheckmark />,
     },
     {
