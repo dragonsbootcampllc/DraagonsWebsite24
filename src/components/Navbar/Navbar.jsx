@@ -51,7 +51,7 @@ const SolutionTabData = {
   title: "Solutions",
   tab1: {
     title: "Students",
-    path: "http://dragons.divzoon.com/solutions/students/",
+    path: "/Students/",
     description:
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
 
