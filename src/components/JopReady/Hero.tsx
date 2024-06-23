@@ -23,8 +23,7 @@ const Hero: React.FC<HeroProps> = ({
   Disctiption,
 }) => {
   return (
-    <div className='hero  relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
-    
+    <div id="global-bg" className='hero  relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
       <div className='container mx-auto pt-[120px] md:pt-[140px] flex flex-col justify-between gap-9 items-center px-4'>
         <div className='content flex flex-col gap-12'>
           <div>
