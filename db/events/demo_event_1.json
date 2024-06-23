@@ -1,0 +1,16 @@
+{
+    "name": "Webinar on AI",
+    "startDate": "2024-07-01T00:00:00Z",
+    "webinarDate": "2024-07-15T00:00:00Z",
+    "speakers": [
+        {
+            "name": "John Doe",
+            "title": "AI Expert",
+            "company": "Tech Co."
+        }
+    ],
+    "status": "waiting",
+    "minPrice": 10,
+    "maxPrice": 50,
+    "seatNumber": 95
+}
