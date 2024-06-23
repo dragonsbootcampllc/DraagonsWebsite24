@@ -22,8 +22,8 @@ const heroObj = {
     description: "Master backend development with our bootcamp. Learn Python, Gen AI, PostgreSQL, and Django through hands-on projects. Elevate your coding skills today!",
 };
 
-const BackEndObj = {
-    BackEnd: [
+const DataObj = {
+    DataObj: [
         {
             title: "Introduction to Python Basics",
             description: "Learn Python basics: variables, data types, control structures, and basic scripting with hands-on exercises.",
@@ -155,7 +155,7 @@ function BackEndPage() {
                 ReadMoreText={MaterialObj.ReadMoreText}
                 image={MaterialObj.image}
             />
-            <BackEndCards {...BackEndObj} />
+            <BackEndCards {...DataObj} />
             <CallToActionComponent />
 
         </div>

@@ -2,7 +2,7 @@ import { GlareCard } from "@/components/ui/glare-card";
 import Button from "@/components/Micros/Button";
 import Link from "next/link";
 
-interface BackEnd {
+interface DataObj {
     title: string;
     description: string;
     link: string;
@@ -15,7 +15,7 @@ interface HeadTextProps {
 }
 
 interface BackEndProps {
-    BackEnd: BackEnd[];
+    DataObj: DataObj[];
     headText: HeadTextProps;
 
 }
@@ -25,7 +25,7 @@ const CTA = {
     ctaApplyText: "Apply Now",
 }
 
-export default function BackEndCards({ BackEnd ,headText }: BackEndProps) {
+export default function Cards({ DataObj ,headText }: BackEndProps) {
     return (
         <div className="bg-[#0e0124]  rounded-t-[25px] py-10">
             <div className="w-full flex flex-col container mx-auto min-h-screen justify-center items-center gap-8 text-white">
@@ -44,7 +44,7 @@ export default function BackEndCards({ BackEnd ,headText }: BackEndProps) {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {BackEnd.map((BackEndCard, index) => (
+                    {DataObj.map((BackEndCard, index) => (
                         <GlareCard Type={'a'} url={BackEndCard.link}>
                             <div key={index} className="bg-purple-950 cursor-pointer p-6 h-full flex flex-col justify-between rounded-lg">
 
@@ -78,5 +78,5 @@ export default function BackEndCards({ BackEnd ,headText }: BackEndProps) {
 }
 
 export type {
-    BackEndCards
+    Cards
 };
