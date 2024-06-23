@@ -51,7 +51,7 @@ const SolutionTabData = {
   title: "Solutions",
   tab1: {
     title: "Students",
-    path: "/Students/",
+    path: "/Students",
     description:
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
 
@@ -88,7 +88,7 @@ const SolutionTabData = {
       title: "Thought Leader",
       description:
         "Learn from the best in the industry and stay ahead of the curve.",
-      path: "/Bootcamp",
+      path: "#",
       Icon: <IoBusiness />,
     },
     {
@@ -103,27 +103,27 @@ const SolutionTabData = {
     {
       title: "Events Sponsor",
       description: "Sponsor our events and get access to our top tech talent.",
-      path: "/JopReady",
+      path: "#",
       Icon: <IoSearchSharp />,
     },
     {
       title: " Get Talents",
       description: "Hire our top graduates and enhance your team ",
-      path: "/Talents",
+      path: "#",
       Icon: <IoShieldCheckmark />,
     },
     {
       title: "Software Outsourcing",
       description:
         "Outsource your software development to our top graduates and save time and money.",
-      path: "/Webinar",
+      path: "#",
       Icon: <IoShieldCheckmarkOutline />,
     },
     {
       title: " Intern Program Managmenet",
       description:
         "Manage your intern program with our HRMS and get access to top tech talent.",
-      path: "/DSA",
+      path: "#",
       Icon: <IoPeople />,
     },
   ],
@@ -143,7 +143,7 @@ const TallentsTabData = {
   },
   tab2: {
     title: "Partners",
-    path: "service/business",
+    path: "#",
     description:
       "Spot and recruit top tech talent seamlessly through our HRMS, enhancing your team with industry-leading expertise",
 
