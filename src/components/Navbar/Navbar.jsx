@@ -103,7 +103,7 @@ const SolutionTabData = {
     {
       title: "Events Sponsor",
       description: "Sponsor our events and get access to our top tech talent.",
-      path: "/JopReady",
+      path: "/DataAnalysis",
       Icon: <IoSearchSharp />,
     },
     {
@@ -143,7 +143,7 @@ const TallentsTabData = {
   },
   tab2: {
     title: "Partners",
-    path: "service/business",
+    path: "/DataAnalysis",
     description:
       "Spot and recruit top tech talent seamlessly through our HRMS, enhancing your team with industry-leading expertise",
 
