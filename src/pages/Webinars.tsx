@@ -66,7 +66,7 @@ const heroObj = {
   hero_heading: "Join industry ",
   sub_heading_text: "experts for insights and best ",
   hero_highlighted_text: "practice advice",
-  disctiption: "Live and on-demand.",
+  description: "Live and on-demand.",
 };
 
 
