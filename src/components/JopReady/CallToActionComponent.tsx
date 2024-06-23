@@ -19,7 +19,7 @@ const ctaHeadline: string = "Join 1200+ Students at";
 const heroHighlightedText: string = " Dragons Bootcamp";
 const ctaApplyText: string = "Apply Now";
 const ctaBookCallText: string = "Book 1:1 Call";
-const transformedTalents  = useTransformTalentData(talents as Talent[]);
+const transformedTalents = useTransformTalentData(talents as Talent[]);
 
 const CallToActionComponent: React.FC = () => {
   return (
@@ -66,34 +66,41 @@ const CallToActionComponent: React.FC = () => {
           </div>
 
           <div className='py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-4 md:px-8'>
-            <Card title='Master Frontend Development' icon={<AceternityIcon />}>
-              <CanvasRevealEffect
-                animationSpeed={5.1}
-                containerClassName='bg-emerald-900'
-              />
-            </Card>
-            
-            <Card title='Excel in Data Analysis' icon={<AceternityIcon />}>
-              <CanvasRevealEffect
-                animationSpeed={3}
-                containerClassName='bg-sky-600'
-                colors={[[125, 211, 252]]}
-              />
-            </Card>
-            <Card
-              title='Craft Scalable Backend Solutions'
-              icon={<AceternityIcon />}>
-              <CanvasRevealEffect
-                animationSpeed={3}
-                containerClassName='bg-black'
-                colors={[
-                  [236, 72, 153],
-                  [232, 121, 249],
-                ]}
-                dotSize={2}
-              />
-              <div className='absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90' />
-            </Card>
+            <Link href='/FrontEnd' passHref>
+              <Card title='Master Frontend Development' icon={<AceternityIcon />}>
+                <CanvasRevealEffect
+                  animationSpeed={5.1}
+                  containerClassName='bg-emerald-900'
+                />
+              </Card>
+            </Link>
+
+            <Link href='/DataAnalysis' passHref>
+              <Card title='Excel in Data Analysis' icon={<AceternityIcon />}>
+                <CanvasRevealEffect
+                  animationSpeed={3}
+                  containerClassName='bg-sky-600'
+                  colors={[[125, 211, 252]]}
+                />
+              </Card>
+            </Link>
+
+            <Link href='/BackEnd' passHref>
+              <Card
+                title='Craft Scalable Backend Solutions'
+                icon={<AceternityIcon />}>
+                <CanvasRevealEffect
+                  animationSpeed={3}
+                  containerClassName='bg-black'
+                  colors={[
+                    [236, 72, 153],
+                    [232, 121, 249],
+                  ]}
+                  dotSize={2}
+                />
+                <div className='absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90' />
+              </Card>
+            </Link>
           </div>
         </div>
       </div>
