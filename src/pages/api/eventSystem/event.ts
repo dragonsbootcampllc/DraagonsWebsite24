@@ -6,15 +6,22 @@ import Joi from 'joi';
 import { calculateSpan } from '@/pages/api/utils/event';
 
 const configPath = path.join(process.cwd(), 'db', 'events', 'config.json');
+const eventsDir = path.join(process.cwd(), 'db', 'events');
 
 const eventSchema = Joi.object({
     name: Joi.string().required(),
     startDate: Joi.date().required(),
     webinarDate: Joi.date().required(),
-    speakers: Joi.array().items(Joi.string()).required(),
-    dragonsMembersNumber: Joi.number().required(),
+    speakers: Joi.array().items(Joi.object({
+        name: Joi.string().required(),
+        bio: Joi.string().default(""),
+        title: Joi.string().required(),
+        image: Joi.string().required(),
+        company: Joi.string().required()
+    })).required(),
+    dragonsMembersNumber: Joi.number(),
     seatNumber: Joi.number().required(),
-    duration: Joi.number().required(),
+    duration: Joi.number(),
     minPrice: Joi.number().required(),
     maxPrice: Joi.number().required()
 });
@@ -38,9 +45,7 @@ function handlePost(req: NextApiRequest, res: NextApiResponse) {
         startDate,
         webinarDate,
         speakers,
-        dragonsMembersNumber,
         status: "waiting",
-        duration,
         minPrice,
         maxPrice,
         reservedTickets: 0,
@@ -48,7 +53,7 @@ function handlePost(req: NextApiRequest, res: NextApiResponse) {
         ticketIds: []
     };
 
-    const eventPath = path.join(process.cwd(), 'db', 'events', `${name}.json`);
+    const eventPath = path.join(eventsDir, `${name}.json`);
     if (fs.existsSync(eventPath)) {
         return res.status(409).json({ message: 'Event with this name already exists' });
     }
@@ -58,6 +63,8 @@ function handlePost(req: NextApiRequest, res: NextApiResponse) {
     // Update config
     config.eventsCount += 1;
     config.events.push(name);
+    config.dragonsMembersNumber = dragonsMembersNumber;
+    config.duration = duration;
     writeJSON(configPath, config);
 
     res.status(201).json({ message: 'Event created successfully' });
@@ -71,7 +78,7 @@ function handlePut(req: NextApiRequest, res: NextApiResponse) {
         return res.status(400).json({ message: error.details[0].message });
     }
 
-    const eventPath = path.join(process.cwd(), 'db', 'events', `${name}.json`);
+    const eventPath = path.join(eventsDir, `${name}.json`);
 
     if (!fs.existsSync(eventPath)) {
         return res.status(404).json({ message: 'Event not found' });
@@ -86,8 +93,8 @@ function handlePut(req: NextApiRequest, res: NextApiResponse) {
 }
 
 function handleGet(req: NextApiRequest, res: NextApiResponse) {
-    const { name } = req.query;
-    const eventPath = path.join(process.cwd(), 'db', 'events', `${name}.json`);
+    const { name } = req.query as { name: string };
+    const eventPath = path.join(eventsDir, `${name}.json`);
 
     if (!fs.existsSync(eventPath)) {
         return res.status(404).json({ message: 'Event not found' });
@@ -107,7 +114,7 @@ function handleGet(req: NextApiRequest, res: NextApiResponse) {
 
 function handleDelete(req: NextApiRequest, res: NextApiResponse) {
     const { name } = req.body;
-    const eventPath = path.join(process.cwd(), 'db', 'events', `${name}.json`);
+    const eventPath = path.join(eventsDir, `${name}.json`);
 
     if (!fs.existsSync(eventPath)) {
         return res.status(404).json({ message: 'Event not found' });
@@ -137,6 +144,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         case 'GET':
             return handleGet(req, res);
         default:
-            res.status(405).json({ message: 'Method not allowed' });
+            return res.status(405).json({ message: 'Method not allowed' });
     }
 }
