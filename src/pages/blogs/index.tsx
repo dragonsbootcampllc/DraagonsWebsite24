@@ -22,8 +22,8 @@ export function BlogDiscovery() {
           <h1 className='md:text-xl text-center text-lg font-medium pt-2 text-purple-800 uppercase'>
             Help Center
           </h1>
-          <h1>
-            How can we help?
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative capitalize text-gray-200 font-semibold">
+            Get Answers to Common Questions
             <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
           </h1>
 

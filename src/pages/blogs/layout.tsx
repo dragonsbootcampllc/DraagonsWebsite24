@@ -21,7 +21,6 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
 
     return formatedText;
   };
-
   const currentUrlEnds = () => {
     const titles = router.asPath.split("/").filter(Boolean);
     let currentUrl = "";
@@ -30,7 +29,6 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
       return { title: formatTitles(title), url: currentUrl };
     });
   };
-
   return (
     <div className='grid relative z-20  h-full place-items-center'>
       <div className='  h-full w-full relative grid pt-24 max-w-[1400px]'>

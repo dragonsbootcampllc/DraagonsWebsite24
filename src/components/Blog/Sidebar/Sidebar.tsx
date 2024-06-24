@@ -72,24 +72,23 @@ export default function Sidebar() {
 
     return (
         <div className="border-r-2 h-full hidden border-r-slate-200/20 w-[22rem]  relative min-h-screen md:flex flex-col gap-4 ">
-           <div className='sticky z-20 top-20'>
-           <Link href={BASE_URL || ""} className="w-full hover:bg-purple-800/20 p-2 rounded-2xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
-                <span className="text-2xl bg-purple-800 p-[6px] rounded-xl "><FaRegNewspaper className='h-5 w-5' /></span>
-                <span>Start Guides</span>
-            </Link>
+            <div className='sticky z-20 top-20'>
+                <Link href={BASE_URL || ""} className="w-full hover:bg-purple-800/20 p-2 rounded-2xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
+                    <span className="text-2xl bg-purple-800 p-[6px] rounded-xl "><FaRegNewspaper className='h-5 w-5' /></span>
+                    <span>Start Guides</span>
+                </Link>
 
-            {categories && categories.map(({ blogs, category }: CategorySummary, index: number) => (
-                <CollapsedLink
-                    key={index}
-                    title={category}
-                    blogs={blogs}
-                    url={`/${BASE_URL}/${category}`}
-                    isCollapsed={collapsed[index]}
-                    onClick={() => handleClick(index)}
-                />
-            ))}
-           </div>
-           
+                {categories && categories.map(({ blogs, category }: CategorySummary, index: number) => (
+                    <CollapsedLink
+                        key={index}
+                        title={category}
+                        blogs={blogs}
+                        url={`/${BASE_URL}/${decodeURIComponent(category)}`}
+                        isCollapsed={collapsed[index]}
+                        onClick={() => handleClick(index)}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
