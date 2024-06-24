@@ -4,7 +4,7 @@ import { FaQuestion } from "react-icons/fa";
 import Layout from "./layout";
 import { BASE_URL, useCategories, CategorySummary } from "@/utils/blog";
 
-export default function BlogDiscovery() {
+export function BlogDiscovery() {
   const { categories, error, isLoading } = useCategories();
 
   if (error) return <div>Failed to load</div>;
@@ -12,7 +12,7 @@ export default function BlogDiscovery() {
 
   return (
     <Layout>
-      <div className='w-full  flex flex-col items-center h-full   box-border   justify-center text-slate-200'>
+      <div className='w-full min-h-screen h-full relative  grid place-items-center  items-center  text-slate-200'>
         <div className='text-3xl  flex-col content-center max-w-4xl  text-center md:text-5xl z-10 flex justify-center  relative mb-3 text-gray-200 font-semibold'>
           <div className='w-full flex justify-center'>
             <div className='bg-purple-700 relative w-[100px] h-[100px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem]'>
@@ -36,7 +36,7 @@ export default function BlogDiscovery() {
           </div>
         </div>
 
-        <div className='flex justify-center items-center gap-16 flex-wrap mt-12 cursor-pointer'>
+        <div className='flex justify-center items-center gap-16 flex-wrap  cursor-pointer'>
           {categories &&
             categories.map(
               (
@@ -45,7 +45,7 @@ export default function BlogDiscovery() {
               ) => (
                 <Link
                   href={`${BASE_URL}/${category}`}
-                  className='items-center box-border bg-white/20 backdrop-blur-sm p-7 gap-4 text-xl font-semibold border flex border-slate-200 rounded-xl w-96 hover:border-blue-1 shadow hover:shadow-md hover:scale-[1.02] transition-all'
+                  className='items-center box-border bg-white/20 backdrop-blur-sm p-7 gap-4 text-xl font-semibold border flex border-slate-200 rounded-xl w-96 h-40 hover:border-blue-1 shadow hover:shadow-md hover:scale-[1.02] transition-all'
                   key={index}>
                   <span className='text-8xl text-white'>
                     <Icon />
@@ -64,3 +64,5 @@ export default function BlogDiscovery() {
     </Layout>
   );
 }
+
+export default BlogDiscovery;
