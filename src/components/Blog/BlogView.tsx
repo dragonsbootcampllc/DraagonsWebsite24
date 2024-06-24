@@ -65,7 +65,7 @@ export default function BlogView({ title, markdownContent }: BlogViewProps) {
     }, [documentHeaders]);
 
     return (
-        <div className="h-screen overflow-hidden w-full flex pt-24">
+        <div className="h-screen max-w-[1400px] overflow-hidden w-full flex pt-24">
             <div className="w-full h-full text-white overflow-hidden overflow-y-auto pl-10 pr-12 box-border text-balance pb-28">
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
