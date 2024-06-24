@@ -2,24 +2,35 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { readJSON, writeJSON } from '@/pages/api/utils/utils';
-import { validateEventDetails, calculateSpan } from '@/pages/api/utils/event';
+import Joi from 'joi';
+import { calculateSpan } from '@/pages/api/utils/event';
 
 const configPath = path.join(process.cwd(), 'db', 'events', 'config.json');
+
+const eventSchema = Joi.object({
+    name: Joi.string().required(),
+    startDate: Joi.date().required(),
+    webinarDate: Joi.date().required(),
+    speakers: Joi.array().items(Joi.string()).required(),
+    dragonsMembersNumber: Joi.number().required(),
+    seatNumber: Joi.number().required(),
+    duration: Joi.number().required(),
+    minPrice: Joi.number().required(),
+    maxPrice: Joi.number().required()
+});
 
 function handleOptions(res: NextApiResponse) {
     res.status(200).end();
 }
 
 function handlePost(req: NextApiRequest, res: NextApiResponse) {
-    const { name, startDate, webinarDate, speakers, dragonsMembersNumber, seatNumber, duration, minPrice, maxPrice } = req.body;
+    const { error, value } = eventSchema.validate(req.body);
 
-    // Validate event details
-    const validationError = validateEventDetails(req.body);
-    if (validationError) {
-        return res.status(400).json({ message: validationError });
+    if (error) {
+        return res.status(400).json({ message: error.details[0].message });
     }
 
-    // Calculate ticket number
+    const { name, startDate, webinarDate, speakers, dragonsMembersNumber, seatNumber, duration, minPrice, maxPrice } = value;
     const config = readJSON(configPath);
 
     const event = {
@@ -33,7 +44,8 @@ function handlePost(req: NextApiRequest, res: NextApiResponse) {
         minPrice,
         maxPrice,
         reservedTickets: 0,
-        seatNumber
+        seatNumber,
+        ticketIds: []
     };
 
     const eventPath = path.join(process.cwd(), 'db', 'events', `${name}.json`);
@@ -53,6 +65,12 @@ function handlePost(req: NextApiRequest, res: NextApiResponse) {
 
 function handlePut(req: NextApiRequest, res: NextApiResponse) {
     const { name, ...updates } = req.body;
+    const { error } = eventSchema.validate(updates, { allowUnknown: true });
+
+    if (error) {
+        return res.status(400).json({ message: error.details[0].message });
+    }
+
     const eventPath = path.join(process.cwd(), 'db', 'events', `${name}.json`);
 
     if (!fs.existsSync(eventPath)) {
@@ -61,12 +79,6 @@ function handlePut(req: NextApiRequest, res: NextApiResponse) {
 
     const event = readJSON(eventPath);
     const updatedEvent = { ...event, ...updates };
-
-    // Validate updated event details
-    const validationError = validateEventDetails(updatedEvent);
-    if (validationError) {
-        return res.status(400).json({ message: validationError });
-    }
 
     writeJSON(eventPath, updatedEvent);
 
@@ -122,7 +134,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             return handlePut(req, res);
         case 'DELETE':
             return handleDelete(req, res);
-        case 'GET': 
+        case 'GET':
             return handleGet(req, res);
         default:
             res.status(405).json({ message: 'Method not allowed' });
