@@ -72,4 +72,52 @@ export type Person = {
       },
     ],
   };
+  export const EssentialSkillscontent: Content = {
+    headlineText: "At Dragons we empower you with ",
+    heroHighlightedText: "essential Skills",
+    descriptionText: "Your way for effective leading projects and cultivate high-performance teams.",
+    ctaApplyText: "Apply Now",
+    ctaReadMoreText: "Read More",
+    glareCards: [
+      {
+        title: "Strategic Planning",
+        description:
+        "Strategic planning charts your organization’s path to success. Start with a clear vision and mission statement. Set SMART goals and conduct a analysis to guide decisions. Action plans and KPIs ensure you stay on track.",
+        imageSrc:"/images/Bootcamp/1.png"
+      },
+      {
+        title: "Team Dynamics",
+        description:
+        "Understanding team dynamics is key to creating a cohesive team. Define roles clearly and foster open communication. Resolve conflicts constructively, motivate with recognition and growth opportunities, and embrace diversity for innovative solutions.",
+        imageSrc:"/images/Bootcamp/5.png"
   
+      },
+      {
+        title: "Desicion making",
+        description:
+          "Effective decision-making uses data and critical thinking to minimize risks and optimize outcomes.Solve problems systematically, involve the team in decisions, and manage risks proactively for project success.",
+          imageSrc:"/images/Bootcamp/11.png"
+      },
+    ],
+  };
+  export const essentialSkills = [
+    {
+      title: "Strategic Planning",
+      description:
+      "Strategic planning charts your organization’s path to success. Start with a clear vision and mission statement. Set SMART goals and conduct a analysis to guide decisions. Action plans and KPIs ensure you stay on track.",
+      imageSrc:"/images/Bootcamp/1.png"
+    },
+    {
+      title: "Team Dynamics",
+      description:
+      "Understanding team dynamics is key to creating a cohesive team. Define roles clearly and foster open communication. Resolve conflicts constructively, motivate with recognition and growth opportunities, and embrace diversity for innovative solutions.",
+      imageSrc:"/images/Bootcamp/5.png"
+
+    },
+    {
+      title: "Desicion making",
+      description:
+        "Effective decision-making uses data and critical thinking to minimize risks and optimize outcomes. Solve problems systematically, involve the team in decisions, and manage risks proactively for project success.",
+        imageSrc:"/images/Bootcamp/11.png"
+    },
+  ]; 
