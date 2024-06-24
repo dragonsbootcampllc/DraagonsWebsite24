@@ -32,7 +32,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
     };
 
     return (
-      <div className='grid relative place-items-center'>
+      <div className='grid relative z-20 place-items-center'>
         <div className='flex min-h-screen w-full relative pt-24 max-w-[1500px]'>
           <div className='flex relative min-h-screen w-full h-[calc(100vh-5.5rem)]'>
             <BlogSidebar />
