@@ -15,9 +15,9 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
 
         formatedText = formatedText
             .replace('Ai ', 'AI ')
-            .replace(' Ai', ' AI')
-            .replace('Api ', 'API ')
-            .replace(' Api', ' API');
+            .replace(' Ai ', ' AI ')
+            .replace(' Api ', ' API ')
+            .replace(' Api ', ' API ');
 
         return formatedText;
     };
@@ -32,11 +32,11 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
     };
 
     return (
-        <div className="flex h-screen w-full pt-24">
-            <div className="flex w-full h-[calc(100vh-5.5rem)]">
+      <div className='grid place-items-center'>
+          <div className="flex min-h-screen w-full pt-24 max-w-[1500px]">
+            <div className="flex  min-h-screen w-full h-[calc(100vh-5.5rem)]">
                 <BlogSidebar />
-                <div className="absolute inset-0 -z-10 h-full w-full bg-[#030014] bg-[linear-gradient(to_right,#8080800f_1px,transparent_1px),linear-gradient(to_bottom,#8080800f_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-
+                <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030014_40%,#63e_100%)]"></div>
                 <div className="w-full box-border overflow-hidden flex flex-col">
                     <div className="w-full select-none h-24 text-gray-400 box-border flex items-center text-2xl pl-10 gap-4 font-semibold">
                         {currentUrlEnds().map(({ title, url }, index, arr) => (
@@ -48,19 +48,20 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
                                 </Link>
                                 {index + 1 !== arr.length && (
                                     <span className={`transition-all ${index + 1 === arr.length ? 'text-slate-800' : 'text-gray-400'}`}>
-                                        /
+                                        &gt;
                                     </span>
                                 )}
                             </span>
                         ))}
                     </div>
 
-                    <div className="h-full overflow-hidden overflow-y-auto box-border w-full flex justify-center items-center">
+                    <div className="h-full  overflow-hidden overflow-y-auto box-border w-full flex justify-center items-center">
                         {children}
                     </div>
                 </div>
             </div>
         </div>
+      </div>
     );
 };
 
