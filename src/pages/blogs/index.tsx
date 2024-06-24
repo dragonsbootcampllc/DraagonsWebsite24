@@ -12,7 +12,7 @@ export function BlogDiscovery() {
 
   return (
     <Layout>
-      <div className='w-full min-h-screen h-full relative  grid place-items-center  items-center  text-slate-200'>
+      <div className='relative w-full min-h-screen h-full items-center  flex flex-col   text-slate-200'>
         <div className='text-3xl  flex-col content-center max-w-4xl  text-center md:text-5xl z-10 flex justify-center  relative mb-3 text-gray-200 font-semibold'>
           <div className='w-full flex justify-center'>
             <div className='bg-purple-700 relative w-[100px] h-[100px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem]'>
@@ -30,14 +30,14 @@ export function BlogDiscovery() {
           <p className='text-white/50 font-normal text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
             Get answers to common questions on all things Dragons
           </p>
-          <div className='w-full pt-5 relative'>
+          <div className='w-full pt-5  relative'>
             <input
               className='w-full text-2xl box-border p-4 focus:outline-none bg-white/20 backdrop-blur-sm focus:border-blue-1 shadow translate-all cursor-text h-16 rounded-xl border border-slate-200'
               placeholder='Search help (e.g. use cases, step by step guides)'></input>
           </div>
         </div>
 
-        <div className='flex justify-center items-center gap-16 flex-wrap  cursor-pointer'>
+        <div className='flex justify-center  pt-12 relative items-center gap-4 flex-wrap  cursor-pointer'>
           {categories &&
             categories.map(
               (
