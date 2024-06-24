@@ -206,9 +206,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className='left flex gap-3 justify-center relative items-center'>
             <Link href='/' className='flex gap-[6px] relative items-center'>
-              <div className='w-32 bg-fuchsia-300 relative md:w-48'>
+              <div className='w-32   relative md:w-48'>
                 <img
-                  className='aspect-square'
+                  className='aspect-auto'
                   src={LogoImage.src}
                   alt='Dragons Bootcamp'
                 />
