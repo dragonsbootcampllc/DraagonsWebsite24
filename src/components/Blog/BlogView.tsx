@@ -70,27 +70,27 @@ export default function BlogView({ title, markdownContent }: BlogViewProps) {
 
 return (
     <div className='h-full relative max-w-[1400px]  w-full flex pt-24'>
-        <div className='w-full h-full text-white   pl-10 pr-12 box-border text-balance pb-28'>
+        <div className='w-full h-full text-white px-4 box-border text-balance pb-28'>
             <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
                     h1: ({ node, ...props }) => (
                         <h1
-                            className='text-5xl w-full max-w-full inline-block font-bold mb-4 mt-10'
+                            className='md:text-5xl text-3xl w-full max-w-full inline-block font-bold mb-4 mt-10'
                             id={handleId("h1", String(props.children))}
                             {...props}
                         />
                     ),
                     h2: ({ node, ...props }) => (
                         <h2
-                            className={`text-3xl w-full max-w-full inline-block font-bold mb-4 mt-10 `}
+                            className={` md:text-3xl text-xl w-full max-w-full inline-block font-bold mb-4 mt-10 `}
                             id={handleId("h2", String(props.children))}
                             {...props}
                         />
                     ),
                     h3: ({ node, ...props }) => (
                         <h3
-                            className='text-2xl w-full max-w-full inline-block font-bold mb-4 mt-10'
+                            className='text-lg md:text-2xl w-full max-w-full inline-block font-bold mb-4 mt-10'
                             id={handleId("h3", String(props.children))}
                             {...props}
                         />
@@ -104,7 +104,7 @@ return (
                     ),
                     p: ({ node, ...props }) => (
                         <p
-                            className='text-lg max-w-full inline-block font-semibold text-slate-200 my-2'
+                            className='md:text-lg text-md max-w-full inline-block font-semibold text-slate-200 my-2'
                             {...props}
                         />
                     ),
@@ -168,8 +168,5 @@ return (
             </div>
             </div>
         </div>
-        
-            
-
 );
 }
