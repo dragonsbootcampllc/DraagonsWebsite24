@@ -1,50 +1,66 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaQuestion } from "react-icons/fa6";
-import Layout from './layout';
+import React from "react";
+import Link from "next/link";
+import { FaQuestion } from "react-icons/fa";
+import Layout from "./layout";
 import { BASE_URL, useCategories, CategorySummary } from "@/utils/blog";
 
 export default function BlogDiscovery() {
-    const { categories, error, isLoading } = useCategories();
+  const { categories, error, isLoading } = useCategories();
 
-    if (error) return <div>Failed to load</div>;
-    if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Failed to load</div>;
+  if (isLoading) return <div>Loading...</div>;
 
-    return (
-        <Layout>
-            <div className="w-full flex flex-col items-center h-full overflow-hidden overflow-y-auto box-border py-12 px-12 gap-10 justify-center text-slate-200">
-                <span className="p-4">
-                    <span className="rounded-full flex justify-center items-center shadow-purple-400 shadow-lg animate-bounce bg-white text-purple-950 text-5xl w-16 aspect-square">
-                        <FaQuestion />
-                    </span>
-                </span>
-
-                <h1 className="text-8xl text-center font-semibold text-white">
-                    How can we help?
-                </h1>
-
-                <p className="text-2xl font-semibold w-96 text-center">
-                    Get answers to common questions on all things Dragons
-                </p>
-
-                <input className="w-1/2 text-2xl box-border p-4 focus:outline-none bg-white/20 backdrop-blur-sm focus:border-blue-1 shadow translate-all cursor-text h-16 rounded-xl border border-slate-200" placeholder="Search help (e.g. use cases, step by step guides)"></input>
-
-                <div className="flex justify-center items-center gap-16 flex-wrap mt-12 cursor-pointer">
-                    {categories && categories.map(({ icon: Icon, category, description }: CategorySummary, index: number) => (
-                        <Link
-                            href={`${BASE_URL}/${category}`}
-                            className="items-center box-border bg-white/20 backdrop-blur-sm p-7 gap-4 text-xl font-semibold border flex border-slate-200 rounded-xl w-96 hover:border-blue-1 shadow hover:shadow-md hover:scale-[1.02] transition-all"
-                            key={index}
-                        >
-                            <span className="text-8xl text-white"><Icon /></span>
-                            <span>
-                                {category}
-                                <span className="text-slate-400 break-all pl-2">{description}</span>
-                            </span>
-                        </Link>
-                    ))}
-                </div>
+  return (
+    <Layout>
+      <div className='w-full  flex flex-col items-center h-full   box-border   justify-center text-slate-200'>
+        <div className='text-3xl  flex-col content-center max-w-4xl  text-center md:text-5xl z-10 flex justify-center  relative mb-3 text-gray-200 font-semibold'>
+          <div className='w-full flex justify-center'>
+            <div className='bg-purple-700 relative w-[100px] h-[100px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem]'>
+              <FaQuestion className='w-full h-full p-2' />
             </div>
-        </Layout>
-    );
+          </div>
+          <h1 className='md:text-xl text-center text-lg font-medium pt-2 text-purple-800 uppercase'>
+            Help Center
+          </h1>
+          <h1>
+            How can we help?
+            <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
+          </h1>
+          <p className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+            Get answers to common questions on all things Dragons
+          </p>
+          <div className='w-full pt-5 relative'>
+            <input
+              className='w-full text-2xl box-border p-4 focus:outline-none bg-white/20 backdrop-blur-sm focus:border-blue-1 shadow translate-all cursor-text h-16 rounded-xl border border-slate-200'
+              placeholder='Search help (e.g. use cases, step by step guides)'></input>
+          </div>
+        </div>
+
+        <div className='flex justify-center items-center gap-16 flex-wrap mt-12 cursor-pointer'>
+          {categories &&
+            categories.map(
+              (
+                { icon: Icon, category, description }: CategorySummary,
+                index: number
+              ) => (
+                <Link
+                  href={`${BASE_URL}/${category}`}
+                  className='items-center box-border bg-white/20 backdrop-blur-sm p-7 gap-4 text-xl font-semibold border flex border-slate-200 rounded-xl w-96 hover:border-blue-1 shadow hover:shadow-md hover:scale-[1.02] transition-all'
+                  key={index}>
+                  <span className='text-8xl text-white'>
+                    <Icon />
+                  </span>
+                  <span>
+                    {category}
+                    <span className='text-slate-400 break-all pl-2'>
+                      {description}
+                    </span>
+                  </span>
+                </Link>
+              )
+            )}
+        </div>
+      </div>
+    </Layout>
+  );
 }
