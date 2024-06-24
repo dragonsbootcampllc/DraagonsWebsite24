@@ -26,7 +26,8 @@ export function BlogDiscovery() {
             How can we help?
             <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
           </h1>
-          <p className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+
+          <p className='text-white/50 font-light text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
             Get answers to common questions on all things Dragons
           </p>
           <div className='w-full pt-5 relative'>
