@@ -34,16 +34,16 @@ const CanvaReveal: React.FC<CanvaRevealProps> =  ({ctaHeadline,heroHighlightedTe
         </div>{" "}
       </div>
 
-        <h2 className='text-4xl md:text-6xl font-semibold md:max-w-[1000px]'></h2>
+        <h2 className='text-4xl md:text-6xl font-semibold md:max-w-[1000px]'>  {ctaHeadline}</h2>
         <div
           style={{ fontFamily: "interV" }}
           className='text-6xl content-center  max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
-          <h1>
-            {ctaHeadline}
-            <h6 className='bg-gradient-to-r text-2xl from-purple-700 to-purple-900 text-transparent bg-clip-text'>
-              {heroHighlightedText}
-            </h6>
-          </h1>
+                
+                  <p
+              style={{ fontFamily: "interV" }}
+              className='text-white/50 text-lg md:text-base container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+             {heroHighlightedText}
+            </p>
         </div>
         <div className=' max-w-[1400px]'>
           <div className='mt-8 flex gap-4 justify-center'>
