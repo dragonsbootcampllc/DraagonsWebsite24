@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "@/components/Micros/Button";
 import ButtonLite from "@/components/Micros/ButtonLite";
 
-interface HRFeature {
+interface HiringStep {
     title: string;
     description: string;
     image: string;
@@ -15,37 +15,37 @@ const CTA = {
     ctaReadMoreText: "Learn More",
 };
 
-const hrFeatures: HRFeature[] = [
+const hiringSteps: HiringStep[] = [
     {
-        title: "Automated Recruitment Workflow",
-        description: "Streamline your hiring process with automated job postings, applications, and interviews.",
-        image:  "/images/thought_leader.jpg",
+        title: "Post Your Job Openings",
+        description: "Easily post job openings and reach a wide audience of qualified candidates.",
+        image: "/images/People_Hiring.jpg",
     },
     {
-        title: "Performance Tracking and Analytics",
-        description: "Track employee performance with detailed analytics to ensure continuous improvement.",
-        image:  "/images/learning_companies.jpg",
+        title: "Review Pre-Screened Candidates",
+        description: "Quickly review candidates that have been pre-screened to match your criteria.",
+        image: "/images/Hiring_Great_Employee.webp",
     },
     {
-        title: "Employee Self-Service Portal",
-        description: "Empower employees with a portal for managing personal information, leave requests, and more.",
-        image: "/images/industry_connections.jpg",
+        title: "Conduct Interviews with Ease",
+        description: "Schedule and conduct interviews seamlessly with our integrated tools.",
+        image: "/images/hiring-small-business.jpg",
     },
     {
-        title: "Centralized Employee Data Management",
-        description: "Manage all employee information in one place for easy access and updates.",
-        image:  "/images/supportive_community.jpg",
+        title: "Seamless Onboarding Experience",
+        description: "Ensure a smooth onboarding process for new hires with our efficient system.",
+        image: "/images/hiring-vs-onboarding.png",
     },
 ];
 
 const headText = {
-    headlineText: "Streamline Your ",
-    heroHighlightedText: "HR Management",
+    headlineText: "Simplify Your ",
+    heroHighlightedText: "Hiring Process",
     subheadlineText: "",
-    descriptionText: "Our advanced HR management system ensures seamless integration of top talent into your organization. From initial contact to onboarding, manage all HR processes efficiently and effectively.",
+    descriptionText: "Our streamlined hiring process makes it easy to find and onboard the right candidates. Save time and resources with our efficient system, designed to connect you with top talent quickly.",
 };
 
-const HRManagementSection: React.FC = () => {
+const HiringProcessSection: React.FC = () => {
     return (
         <div className="w-full container mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
             <div className="heading md:max-w-[1000px] text-center">
@@ -64,7 +64,7 @@ const HRManagementSection: React.FC = () => {
                 </p>
             </div>
             <div className="container max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3  gap-5">
-                {hrFeatures.map((item, index) => (
+                {hiringSteps.map((item, index) => (
                     <div
                         key={index}
                         className={`rounded-2xl bg-purple-950 ${index >= 3 ? 'col-span-1 md:col-span-3 ' : 'col-span-1'}  min-h-[400px] hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] relative overflow-hidden text-center pt-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300`}
@@ -104,4 +104,4 @@ const HRManagementSection: React.FC = () => {
     );
 };
 
-export default HRManagementSection;
+export default HiringProcessSection;

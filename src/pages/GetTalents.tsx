@@ -1,10 +1,9 @@
-import EventSponsor from "@/components/Partenrs/EventSponsor";
-import GetTalents from "@/components/Partenrs/GetTalents";
-import InternProgramManagement from "@/components/Partenrs/InternProgramManagement";
-import SoftwareOutsourcing from "@/components/Partenrs/SoftwareOutsourcing";
-import YearRoundedInternship from "@/components/Partenrs/YearRoundedInternship";
 import Hero from "@/components/JopReady/Hero";
 import HRMSSection from "@/components/GetTalents/HRMSSection";
+import TopTalentsSection from "@/components/GetTalents/TopTalentsSection";
+import HiringProcessSection from "@/components/GetTalents/HiringProcessSection";
+import ContinuousSupportSection from "@/components/GetTalents/ContinuousSupportSection";
+import CallToActionSection from "@/components/GetTalents/CallToActionSection";
 
 const HeroObj = {
     News: {
@@ -33,11 +32,10 @@ const GetTalentsPage: React.FC = () => {
                     Disctiption={HeroObj.Disctiption}
                 />
                 <HRMSSection/>
-                <GetTalents />
-                <InternProgramManagement />
-                <EventSponsor  />
-                <SoftwareOutsourcing />
-                <YearRoundedInternship />
+                <TopTalentsSection />
+                <HiringProcessSection />
+                <ContinuousSupportSection />
+                <CallToActionSection />
 
             </div>
         </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "@/components/Micros/Button";
 import ButtonLite from "@/components/Micros/ButtonLite";
 
-interface HRFeature {
+interface SupportService {
     title: string;
     description: string;
     image: string;
@@ -15,37 +15,33 @@ const CTA = {
     ctaReadMoreText: "Learn More",
 };
 
-const hrFeatures: HRFeature[] = [
+const supportServices: SupportService[] = [
     {
-        title: "Automated Recruitment Workflow",
-        description: "Streamline your hiring process with automated job postings, applications, and interviews.",
-        image:  "/images/thought_leader.jpg",
+        title: "Onboarding and Training Programs",
+        description: "Comprehensive onboarding and training programs to get your new hires up to speed quickly.",
+        image:"/images/Hiring_Great_Employee.webp",
+        
     },
     {
-        title: "Performance Tracking and Analytics",
-        description: "Track employee performance with detailed analytics to ensure continuous improvement.",
-        image:  "/images/learning_companies.jpg",
+        title: "Regular Performance Reviews",
+        description: "Regular performance reviews to ensure continuous improvement and employee satisfaction.",
+        image:  "/images/People_Hiring.jpg", 
     },
     {
-        title: "Employee Self-Service Portal",
-        description: "Empower employees with a portal for managing personal information, leave requests, and more.",
-        image: "/images/industry_connections.jpg",
-    },
-    {
-        title: "Centralized Employee Data Management",
-        description: "Manage all employee information in one place for easy access and updates.",
-        image:  "/images/supportive_community.jpg",
+        title: "Access to Professional Development Resources",
+        description: "Provide your team with access to a wide range of professional development resources.",
+        image: "/images/hiring-small-business.jpg",
     },
 ];
 
 const headText = {
-    headlineText: "Streamline Your ",
-    heroHighlightedText: "HR Management",
+    headlineText: "Ongoing Support for Your ",
+    heroHighlightedText: "Team",
     subheadlineText: "",
-    descriptionText: "Our advanced HR management system ensures seamless integration of top talent into your organization. From initial contact to onboarding, manage all HR processes efficiently and effectively.",
+    descriptionText: "Beyond hiring, we offer continuous support to help your new employees thrive. From professional development resources to performance feedback, we ensure your team remains engaged and productive.",
 };
 
-const HRManagementSection: React.FC = () => {
+const ContinuousSupportSection: React.FC = () => {
     return (
         <div className="w-full container mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
             <div className="heading md:max-w-[1000px] text-center">
@@ -63,11 +59,11 @@ const HRManagementSection: React.FC = () => {
                     {headText.descriptionText}
                 </p>
             </div>
-            <div className="container max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3  gap-5">
-                {hrFeatures.map((item, index) => (
+            <div className="container max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {supportServices.map((item, index) => (
                     <div
                         key={index}
-                        className={`rounded-2xl bg-purple-950 ${index >= 3 ? 'col-span-1 md:col-span-3 ' : 'col-span-1'}  min-h-[400px] hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] relative overflow-hidden text-center pt-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300`}
+                        className={`rounded-2xl bg-purple-950 ${index > 2 ? 'col-span-3' : `col-span-1`}  min-h-[400px] hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] relative overflow-hidden text-center pt-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300`}
                     >
                         <h3 className="font-semibold text-3xl bg-gradient-to-r from-white to-gray-200 text-transparent bg-clip-text">
                             {item.title}
@@ -94,7 +90,7 @@ const HRManagementSection: React.FC = () => {
                         <Button CTAtext={CTA.ctaApplyText} />
                     </div>
                 </Link>
-                <Link href="/HRManagement" passHref>
+                <Link href="/SupportDevelopment" passHref>
                     <div className="h-12 w-48 md:h-16 md:w-64">
                         <ButtonLite CTAtext={CTA.ctaReadMoreText} />
                     </div>
@@ -104,4 +100,4 @@ const HRManagementSection: React.FC = () => {
     );
 };
 
-export default HRManagementSection;
+export default ContinuousSupportSection;
