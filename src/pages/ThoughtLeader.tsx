@@ -7,6 +7,10 @@ import OFFICE from "@/../public/images/JopReady/image.png";
 import LearningMaterialComponent from "@/components/JopReady/LearningMaterialComponent";
 import CanvaReveal from "@/components/Cards/CanvaReveal";
 import GlareCards from "@/components/Cards/GlareCards";
+import techwriting from "@/../public/images/ThoughtLeader/techWriting.png";
+import publicspeacking from "@/../public/images/ThoughtLeader/PublicSpeacking.png";
+import presentation from "@/../public/images/ThoughtLeader/Presentation.png";
+
 
 const HeroObj = {
   News: {
@@ -49,16 +53,19 @@ const communicationSkills = [
     title: "Overcoming Stage Fright",
     points:
       "Causes , Effects of Stage Fright/n Preparation Techniques /n Mindfulness and Relaxation/n Confidence Building",
+      image: publicspeacking.src,
   },
   {
     title: "Effective Presentations",
     points:
       "Structuring Your Presentation/n Engaging Visuals Audience /nEngagement Body Language /n Handling Q&A Sessions",
+      image: presentation.src,
   },
   {
     title: "Technical Blogs and Articles",
     points:
       "Identifying Your Audience Clear/n Writing Structuring Content/n Engaging Storytelling SEO/n Best Practices Regular Publishing",
+      image: techwriting.src,
   },
 ];
 const networking = [
@@ -113,26 +120,37 @@ const ThoughtLeader = () => {
       </div>
       <div className='mt-10 flex flex-col justify-center items-center'>
         <div className='mt-10 flex flex-col justify-center items-center'>
-          <div className='my-10 max-md:mt-20 flex flex-col justify-center items-center text-center'>
-            <h1 className='lg:text-6xl text-3xl font-bold mb-6'>
-              Communicate with Impact
-              <h2 className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'>
-                Develope Essential Communication Skills
-              </h2>
+          <div
+            style={{ fontFamily: "interV" }}
+            className='text-6xl content-center max-w-4xl text-center md:text-7xl  flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+            <h1>
+              Develop Essential
+              <span className='bg-gradient-to-r capitalize from-purple-700 to-purple-900 text-transparent bg-clip-text'>
+                {" "}
+                Communication{" "}
+              </span>
+              Skills
             </h1>
           </div>
-          <p className='text-xl select-text  text-center mt-4 mb-8 text-white/70'>
-            At Dragons BootCamp, we believe effective communication is key to
-            leadership and success in tech.
-            <br /> Our program helps you master public speaking, clear writing,
-            and storytelling to convey ideas and engage audiences confidently
+
+          <p className='text-xl text-center max-w-4xl text-white/70 mt-4 mb-8'>
+            At Dragons BootCamp, effective communication is key to leadership
+            and tech success. Master public speaking, clear writing, and
+            storytelling to engage audiences confidently
           </p>
         </div>
       </div>
-      <div className=' mt-4 p-3 flex flex-row justify-center items-center'>
-        {communicationSkills.map((skill, index) => (
-          <CardsMeteors key={index} title={skill.title} points={skill.points} />
-        ))}
+      <div className=' grid place-items-center relative'>
+        <div className='  max-w-[1400px]    w-full flex flex-col lg:flex-row items-center'>
+          {communicationSkills.map((skill, index) => (
+            <CardsMeteors
+              key={index}
+              title={skill.title}
+              points={skill.points}
+              image={skill.image}
+            />
+          ))}
+        </div>
       </div>
       <LearningMaterialComponent
         gridItems={MaterialObj.gridItems}
