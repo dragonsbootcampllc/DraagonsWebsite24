@@ -82,20 +82,20 @@ export type Person = {
       {
         title: "Strategic Planning",
         description:
-          "Chart your organization’s path with a clear vision, SMART goals, and thorough analysis. Use action plans and KPIs to stay on track.",
-        imageSrc: "/images/Bootcamp/1.png",
+          "Chart your organization’s path with a clear vision and thorough analysis.",
+        imageSrc: "/images/ThoughtLeader/Planning.png",
       },
       {
         title: "Team Dynamics",
         description:
-          "Create a cohesive team by defining roles, fostering communication, resolving conflicts, recognizing achievements, and embracing diversity.",
-        imageSrc: "/images/Bootcamp/5.png",
+          "Create a cohesive team by defining roles, fostering communication",
+        imageSrc: "/images/ThoughtLeader/TeamD.png",
       },
       {
         title: "Decision Making",
         description:
           "Use data and critical thinking to make decisions. Solve problems systematically, involve the team, and manage risks for project success.",
-        imageSrc: "/images/Bootcamp/11.png",
+        imageSrc: "/images/ThoughtLeader/dissionMaking.png",
       },
     ]
     
