@@ -18,8 +18,7 @@ const GlareCards: React.FC = () => {
   } = EssentialSkillscontent;
 
   return (
-    <div className='py-6 relative w-full rounded-t-3xl my-10 min-h-[700px] md:min-h-[calc(100vh-0rem)] place-items-center grid' id="CTAMaterial">
-      <div className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030014_40%,#63e_100%)] rounded-3xl'></div>
+    <div className='py-6 relative w-full rounded-t-3xl min-h-screen place-items-center grid' >
       <div className='container mx-auto flex flex-col justify-center items-center gap-9'>
         <div className='heading md:max-w-[1000px]'>
           <div
@@ -27,7 +26,7 @@ const GlareCards: React.FC = () => {
             className='text-6xl content-center max-w-4xl text-center md:text-7xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
             <h1>
               {headlineText}
-              <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'>
+              <span className='bg-gradient-to-r capitalize from-purple-700 to-purple-900 text-transparent bg-clip-text'>
                 {heroHighlightedText}
               </span>
             </h1>
