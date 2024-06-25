@@ -60,12 +60,12 @@ export default function View() {
     const { error, blog, isLoading } = blogResult;
 
     return blog ? (
-      <div className='w-full grid place-items-center'>
+      <div className='w-full min-h-screen grid place-items-center'>
         <BlogView markdownContent={blog.content} title={blog.title} />
       </div>
     ) : (
-      <div className='w-full grid place-items-center'>
-        <div>{isLoading ? "Loading..." : "404: Blog not found"}</div>
+      <div className='w-full min-h-screen grid capitalize place-items-center'>
+        <div>{isLoading ? "Loading..." : "404: Blog not found, this is a website demo version so you may see some errors"}</div>
       </div>
     );
   }

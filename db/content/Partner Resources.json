@@ -1,6 +1,6 @@
 {
-    "icon": "FaHandshake",
-    "category": "Partner Resources",
-    "description": "Opportunities and resources for partners.",
-    "blogs": []
+  "icon": "FaHandshake",
+  "category": "Partner Resources",
+  "description": "Opportunities and resources for partners.",
+  "blogs": ["Benefits of Year-Round Hiring, A Comprehensive Guide"]
 }
