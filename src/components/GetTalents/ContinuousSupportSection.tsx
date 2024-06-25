@@ -43,7 +43,7 @@ const headText = {
 
 const ContinuousSupportSection: React.FC = () => {
     return (
-        <div className="w-full container mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
+        <div className="w-full relative container mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
             <div className="heading md:max-w-[1000px] text-center">
                 <h1
                     style={{ fontFamily: "interV" }}

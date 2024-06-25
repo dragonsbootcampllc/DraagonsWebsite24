@@ -47,7 +47,7 @@ const headText = {
 
 const HRManagementSection: React.FC = () => {
     return (
-        <div className="w-full container  max-w-[1000px] mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
+        <div className="w-full container relative  max-w-[1000px] mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
             <div className="heading text-center">
                 <h1
                     style={{ fontFamily: "interV" }}
