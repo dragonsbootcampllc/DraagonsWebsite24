@@ -27,18 +27,22 @@ export default function View() {
     }
   }
 
-  // Helper function to clean URL parts
-  const cleanSlug = (part: string) => part.replace(/^\/+|\/+$/g, "");
-
-  const categoryResult = useCategory(cleanSlug(categoryName));
-  const blogResult = useBlog(cleanSlug(categoryName), cleanSlug(blogName));
+  const categoryResult = useCategory(categoryName);
+  const blogResult = useBlog(categoryName, blogName);
 
   if (slug?.length === 1) {
     const { error, data, isLoading } = categoryResult;
 
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
+
     if (data) {
       const categoryDescription = data.description || "";
-
       const blogs: BlogType[] = data.blogs.map((blog) => ({
         title: blog.title,
         description: blog.description,
@@ -55,20 +59,29 @@ export default function View() {
         </Layout>
       );
     }
-    return <div>{isLoading ? "Loading..." : "404: Category not found"}</div>;
+
+    return <div>404: Category not found</div>;
   } else if (slug?.length === 2) {
     const { error, blog, isLoading } = blogResult;
 
+    if (isLoading) {
+      return <div className="w-full min-h-screen grid place-items-center">Loading...</div>;
+    }
+
+    if (error) {
+      return <div className="w-full min-h-screen grid place-items-center">Error: {error.message}</div>;
+    }
+
     return blog ? (
-      <div className='w-full min-h-screen grid place-items-center'>
+      <div className="w-full min-h-screen grid place-items-center">
         <BlogView markdownContent={blog.content} title={blog.title} />
       </div>
     ) : (
-      <div className='w-full min-h-screen grid capitalize place-items-center'>
-        <div>{isLoading ? "Loading..." : "404: Blog not found, this is a website demo version so you may see some errors"}</div>
+      <div className="w-full min-h-screen grid capitalize place-items-center">
+        <div>404: Blog not found, this is a website demo version so you may see some errors</div>
       </div>
     );
   }
 
-  return <div>{"404: Page not found"}</div>;
+  return <div>404: Page not found</div>;
 }
