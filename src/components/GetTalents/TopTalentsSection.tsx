@@ -106,7 +106,7 @@ const GetTalents: React.FC = () => {
                                 height={2259}
                             />
                             {card.title && card.description && (
-                                <div className="absolute left-0 right-0 grid place-items-center p-4 text-center h-[30%] bg-purple-900/80 backdrop-blur-3xl w-full bottom-0 rounded-b-3xl">
+                                <div className="absolute left-0 right-0 grid place-items-center p-4 text-center h-[30%] bg-purple-900/80 backdrop-blur-3xl w-full bottom-0 rounded-3xl">
                                     <p className="font-bold text-yellow-300 text-lg md:text-xl lg:text-2xl">
                                         {card.title}
                                     </p>
@@ -125,7 +125,7 @@ const GetTalents: React.FC = () => {
                     {highlights.map((item, index) => (
                         <div
                             key={index}
-                            className={`rounded-2xl bg-purple-950   min-h-[100px] hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] relative overflow-hidden text-center pt-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300`}
+                            className={`rounded-3xl bg-purple-800/40   min-h-[100px] hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] relative overflow-hidden text-center pt-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300`}
                         >
                             <p className="text-[14px] sm:text-sm md:text-base lg:text-lg text-center text-white/70 px-3 font-semibold">
                                 {item.description}

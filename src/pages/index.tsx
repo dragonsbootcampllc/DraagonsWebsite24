@@ -104,19 +104,19 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div className='w-full flex justify-center'>
+      <div className='w-full relative flex justify-center'>
         <TrainingServiceSection HeadData={HeadData} CardsData={CardsData} />
       </div>
 
-      <div className='mt-12 w-full flex justify-center items-center'>
+      <div className='mt-12 w-full relative flex justify-center items-center'>
         <GridSection />
       </div>
 
-      <div className='mt-28 w-full flex justify-center items-center'>
+      <div className='mt-28 w-full relative flex justify-center items-center'>
         <TestmonialSection />
       </div>
 
-      <div className='mb-28 w-full flex justify-center items-center'>
+      <div className='mb-28 w-full relative flex justify-center items-center'>
         <WebinarsSection handel_popup={handel_popup} />
       </div>
 
