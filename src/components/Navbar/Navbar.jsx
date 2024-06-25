@@ -2,8 +2,7 @@
 import { React, useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { motion } from 'framer-motion';
-
+import { motion } from "framer-motion";
 
 const Dropdown = dynamic(() => import("./Dropdown"), {
   ssr: false,
@@ -35,7 +34,6 @@ import ButtonLite from "@/components/Micros/ButtonLite";
 import { SiCodementor } from "react-icons/si";
 import { PiStudentFill } from "react-icons/pi";
 
-
 const simpleFloatAnimation = {
   y: ["-20px", "22px"],
   transition: {
@@ -46,7 +44,6 @@ const simpleFloatAnimation = {
   },
 };
 
-
 const SolutionTabData = {
   title: "Solutions",
   tab1: {
@@ -56,7 +53,11 @@ const SolutionTabData = {
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
 
     Icon: (
-      <motion.img src={Student_img.src}  alt='icon' animate={simpleFloatAnimation} />
+      <motion.img
+        src={Student_img.src}
+        alt='icon'
+        animate={simpleFloatAnimation}
+      />
     ),
   },
   tab2: {
@@ -66,7 +67,11 @@ const SolutionTabData = {
       "Enhance your team with our ready-to-deploy graduates skilled in the latest tech trends.",
 
     Icon: (
-      <motion.img src={Student_img2.src} alt='icon' animate={simpleFloatAnimation} />
+      <motion.img
+        src={Student_img2.src}
+        alt='icon'
+        animate={simpleFloatAnimation}
+      />
     ),
   },
   tab1BottomLinks: [
@@ -138,7 +143,11 @@ const TallentsTabData = {
       "Our top 3% graduates excel in tech, gaining access to exclusive job opportunities and leading the way in industry success.",
 
     Icon: (
-      <motion.img src={TalentsStudent.src} alt='icon' animate={simpleFloatAnimation} />
+      <motion.img
+        src={TalentsStudent.src}
+        alt='icon'
+        animate={simpleFloatAnimation}
+      />
     ),
   },
   tab2: {
@@ -190,7 +199,6 @@ const Navbar = () => {
     setTallentsOpen(false);
     closeNavigation();
   };
-
   // Function to bring the user to the top of the page
   const scrollToTop = () => {
     window.scrollTo({
@@ -201,12 +209,12 @@ const Navbar = () => {
 
   return (
     <nav className='bg-purple-950/20  sticky top-0 px-8 backdrop-blur-3xl bg-opacity-50  border-b border-purple-900/20 py-4   font-inter m-0  z-50 left-1/2 flex justify-center w-full  shadow-md'>
-      <div className='flex  gap-3 justify-between items-center  max-[1496px]:px-0 max-w-[1400px] box-border w-full  h-[2.5rem]'>
-        <div className='relative max-[1496px]:w-full max-[1496px]:flex max-[1496px]:p-[5%]  h-auto justify-between items-center'>
+      <div className='flex  gap-3 justify-between items-center  max-[1096px]:px-0 max-w-[1400px] box-border w-full  h-[2.5rem]'>
+        <div className='relative max-[1096px]:w-full max-[1096px]:flex max-[1096px]:p-[5%]  h-auto justify-between items-center'>
           {/* Logo */}
           <div className='left flex gap-3 justify-center relative items-center'>
             <Link href='/' className='flex gap-[6px] relative items-center'>
-              <div className='w-32   relative md:w-48'>
+              <div className='w-32 sm:w-36   relative 2xl:w-48'>
                 <img
                   className='aspect-auto'
                   src={LogoImage.src}
@@ -226,37 +234,40 @@ const Navbar = () => {
 
           {/* Logo and Hamburger Menu */}
           <button
-            className='flex min-[1497px]:hidden flex-col aspect-square w-12 justify-center items-center gap-[6px]'
+            className='flex min-[1096px]:hidden flex-col aspect-square w-12 justify-center items-center gap-[6px]'
             onClick={toggleNavigation}>
             {/* Simplified class names for readability */}
             <span
-              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen
+              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${
+                isNavOpen
                   ? "-rotate-45 translate-y-2 delay-300"
                   : "rotate-0 translate-y-0"
-                }`}></span>
+              }`}></span>
             <span
-              className={`h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen ? "w-0" : "w-6 delay-300"
-                }`}></span>
+              className={`h-[2px] bg-white transition-all duration-[.45s] ${
+                isNavOpen ? "w-0" : "w-6 delay-300"
+              }`}></span>
             <span
-              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${isNavOpen
+              className={`w-6 h-[2px] bg-white transition-all duration-[.45s] ${
+                isNavOpen
                   ? "rotate-45 -translate-y-2 delay-300"
                   : "rotate-0 translate-y-0"
-                }`}></span>
+              }`}></span>
           </button>
         </div>
 
         {/* Navigation Links and CTA Button */}
         <div
-          className={`flex max-[1496px]:bg-[#2c1a3a] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-lg font-normal h-full max-[1496px]:w-full gap-3 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
-              ? "max-[1496px]:translate-y-0"
-              : "max-[1496px]:-translate-y-[120%]"
-            } top-full left-0 text-black  max-[1496px]:flex-col max-[1496px]:absolute max-[1496px]:w-full max-[1496px]:pb-[6.5rem] max-[1496px]:h-[calc(100vh-4.5rem)] max-[1496px]:text-lg max-[1496px]:border-b max-[1496px]:border-black`}>
+          className={`flex max-[1096px]:bg-[#150a30] items-center max-[1096px]:justify-end min-[1096px]:justify-center max-[1096px]:flex-col text-lg md:text-sm lg:text-md  xl:text-lg font-mono h-full flex-grow  gap-0  xl:gap-2  max-[1096px]:overflow-y-scroll max-[1096px]:overflow-x-hidden  text-center duration-[.45s] ${
+            isNavOpen
+              ? "max-[1096px]:translate-y-0 "
+              : "max-[1096px]:-translate-y-[120%]"
+          } top-full left-0 right-0 text-black  max-[1096px]:flex-col max-[1096px]:absolute max-[1096px]:w-full max-[1096px]:pb-[6rem]  max-[1096px]:min-h-[calc(100vh-4.5rem)] max-[1096px]:text-lg max-[1096px]:border-b max-[1096px]:border-black`}>
           <NavbarLink
             path='/useCases'
             title='Use Cases'
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
-
           />
 
           {/* Solutions Dropdown */}
@@ -288,21 +299,19 @@ const Navbar = () => {
             title='About Us'
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
-
           />
           <NavbarLink
-            path='/Pricing '
-            title='Pricing '
+            path='/Pricing'
+            title='Pricing'
             toggleNavigation={toggleNavigation}
             closeNavigation={closeNavigation}
           />
           {/* CTA Button */}
-          <div className='h-16 max-w-[350px] relative  grid place-items-center md:grid-cols-2   w-full  gap-3'>
-            <div className='h-12 hidden md:block w-full'>
-            </div>
+          <div className='h-16 px-4 max-w-[170px] relative  grid place-items-center   w-full  gap-3'>
+           
 
             <div className='h-12 w-full'>
-              <Link href='/Pricing' >
+              <Link href='/Pricing'>
                 <ButtonComponent className='!text-sm' CTAtext='Apply Now' />
               </Link>
             </div>
