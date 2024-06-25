@@ -124,7 +124,6 @@ const BootcampPage = () => {
 
   return (
     <div className='min-h-screen   flex-col  text-white flex justify-center  items-center px-4 md:px-8'>
-         <div className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030019_40%,#63e_100%)]'></div>
       <div className='text-center flex flex-col gap-10 max-w-[1400px] w-full'>
         
         <Hero
