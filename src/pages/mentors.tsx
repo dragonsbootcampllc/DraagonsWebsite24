@@ -36,7 +36,7 @@ export default function mentors() {
         hero_heading: 'Empower Your Journey with Guidance from ',
         sub_heading_text: '',
         hero_highlighted_text: 'Top Industry Experts',
-        disctiption: '',
+        description: '',
     }
 
     const gridItems: GridItemV2[] = [

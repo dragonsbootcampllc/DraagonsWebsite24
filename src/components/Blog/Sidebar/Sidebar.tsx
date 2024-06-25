@@ -71,22 +71,24 @@ export default function Sidebar() {
     if (isLoading) return <div>Loading...</div>;
 
     return (
-        <div className="border-r-2 h-full border-r-slate-200 w-[22rem] px-8 pt-8 min-h-screen flex flex-col gap-4 bg-[#030014]">
-            <Link href={BASE_URL || ""} className="w-full flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
-                <span className="text-2xl"><FaRegNewspaper /></span>
-                <span>Start Guides</span>
-            </Link>
+        <div className="border-r-2 h-full hidden border-r-slate-200/20 w-[22rem]  relative min-h-screen md:flex flex-col gap-4 ">
+            <div className='sticky z-20 top-20'>
+                <Link href={BASE_URL || ""} className="w-full hover:bg-purple-800/20 p-2 rounded-2xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center">
+                    <span className="text-2xl bg-purple-800 p-[6px] rounded-xl "><FaRegNewspaper className='h-5 w-5' /></span>
+                    <span>Start Guides</span>
+                </Link>
 
-            {categories && categories.map(({ blogs, category }: CategorySummary, index: number) => (
-                <CollapsedLink
-                    key={index}
-                    title={category}
-                    blogs={blogs}
-                    url={`/${BASE_URL}/${category}`}
-                    isCollapsed={collapsed[index]}
-                    onClick={() => handleClick(index)}
-                />
-            ))}
+                {categories && categories.map(({ blogs, category }: CategorySummary, index: number) => (
+                    <CollapsedLink
+                        key={index}
+                        title={category}
+                        blogs={blogs}
+                        url={`/${BASE_URL}/${decodeURIComponent(category)}`}
+                        isCollapsed={collapsed[index]}
+                        onClick={() => handleClick(index)}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

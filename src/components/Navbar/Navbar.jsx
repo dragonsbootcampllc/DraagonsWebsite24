@@ -51,7 +51,7 @@ const SolutionTabData = {
   title: "Solutions",
   tab1: {
     title: "Students",
-    path: "http://dragons.divzoon.com/solutions/students/",
+    path: "/Students",
     description:
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
 
@@ -88,7 +88,7 @@ const SolutionTabData = {
       title: "Thought Leader",
       description:
         "Learn from the best in the industry and stay ahead of the curve.",
-      path: "/Bootcamp",
+      path: "#",
       Icon: <IoBusiness />,
     },
     {
@@ -103,27 +103,27 @@ const SolutionTabData = {
     {
       title: "Events Sponsor",
       description: "Sponsor our events and get access to our top tech talent.",
-      path: "/JopReady",
+      path: "#",
       Icon: <IoSearchSharp />,
     },
     {
       title: " Get Talents",
       description: "Hire our top graduates and enhance your team ",
-      path: "/Bootcamp",
+      path: "#",
       Icon: <IoShieldCheckmark />,
     },
     {
       title: "Software Outsourcing",
       description:
         "Outsource your software development to our top graduates and save time and money.",
-      path: "/Webinar",
+      path: "#",
       Icon: <IoShieldCheckmarkOutline />,
     },
     {
       title: " Intern Program Managmenet",
       description:
         "Manage your intern program with our HRMS and get access to top tech talent.",
-      path: "/DSA",
+      path: "#",
       Icon: <IoPeople />,
     },
   ],
@@ -143,7 +143,7 @@ const TallentsTabData = {
   },
   tab2: {
     title: "Partners",
-    path: "service/business",
+    path: "#",
     description:
       "Spot and recruit top tech talent seamlessly through our HRMS, enhancing your team with industry-leading expertise",
 
@@ -200,15 +200,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-purple-950/20 px-8 backdrop-blur-3xl bg-opacity-50  border-b border-purple-900/20 py-4 fixed top-0 font-inter m-auto -translate-x-1/2 z-50 left-1/2 flex justify-center w-full  shadow-md'>
-      <div className='flex gap-3 justify-between items-center  max-[1496px]:px-0 max-w-[1400px] box-border w-full  h-[2.5rem]'>
-        <div className='z-50 max-[1496px]:w-full max-[1496px]:flex max-[1496px]:p-[5%] max-[1496px]:h-full justify-between items-center'>
+    <nav className='bg-purple-950/20  sticky top-0 px-8 backdrop-blur-3xl bg-opacity-50  border-b border-purple-900/20 py-4   font-inter m-0  z-50 left-1/2 flex justify-center w-full  shadow-md'>
+      <div className='flex  gap-3 justify-between items-center  max-[1496px]:px-0 max-w-[1400px] box-border w-full  h-[2.5rem]'>
+        <div className='relative max-[1496px]:w-full max-[1496px]:flex max-[1496px]:p-[5%]  h-auto justify-between items-center'>
           {/* Logo */}
-          <div className='left flex gap-3 justify-center items-center'>
-            <Link href='/' className='flex gap-[6px] items-center'>
-              <div className='w-32 md:w-48'>
+          <div className='left flex gap-3 justify-center relative items-center'>
+            <Link href='/' className='flex gap-[6px] relative items-center'>
+              <div className='w-32   relative md:w-48'>
                 <img
-                  className='aspect-square'
+                  className='aspect-auto'
                   src={LogoImage.src}
                   alt='Dragons Bootcamp'
                 />

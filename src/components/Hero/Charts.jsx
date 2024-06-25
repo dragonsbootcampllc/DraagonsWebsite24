@@ -18,7 +18,7 @@ ChartJS.register(
   LineElement,
   Tooltip,
   Filler,
-  Legend,
+  Legend
 );
 
 const directors = [
@@ -72,11 +72,7 @@ const directors = [
   },
   {
     title: "Average Salaries ",
-    num: (
-      <>
-        $80K
-      </>
-    ),
+    num: "$80K",
     chartData: {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
       datasets: [
@@ -107,16 +103,17 @@ const chartOptions = {
 };
 
 const Charts = () => (
-  <div className="w-screen max-w-[1100px]">
-    <div className="grid grid-cols-4 max-[1000px]:grid-cols-2   max-[560px]:grid-cols-1 max-w-[1440px] w-full m-auto gap-12 text-center mx-auto pt-10">
+  <div className="max-w-[1200px] mx-auto py-10">
+    <div className="grid grid-cols-4 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
       {directors.map(({ title, chartData, num }, index) => (
         <div
           key={index}
-          className="relative  bg-purple-800/20 p-3 min-h-20  hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] transition-all shadow-[0_0_0_0_rgba(255,255,255,1)] cursor-pointer hover:scale-105 flex flex-col  justify-between rounded-3xl overflow-hidden text-white"
+          className="relative  bg-purple-800/20 p-4 min-h-20  hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] transition-all shadow-[0_0_0_0_rgba(255,255,255,1)] cursor-pointer hover:scale-105 flex flex-col  justify-between rounded-xl overflow-hidden text-white"
         >
-          <h2 className="text-lg z-10">{title}</h2>
-          <span className="font-bold z-10 text-7xl">{num}</span>
-          <div className="absolute h-full w-full top-0 left-0 -z-10">
+          <h2 className="text-lg font-semibold text-white mb-2">{title}</h2>
+          <span className="font-bold text-6xl text-white mb-4 block">{num}</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 opacity-10"></div>
+          <div className="relative">
             <Line data={chartData} options={chartOptions} />
           </div>
         </div>
