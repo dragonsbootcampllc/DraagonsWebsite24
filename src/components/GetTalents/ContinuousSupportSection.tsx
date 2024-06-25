@@ -26,7 +26,7 @@ const supportServices: SupportService[] = [
         title: "Regular Performance Reviews",
         description: "Regular performance reviews to ensure continuous improvement and employee satisfaction.",
         image:  "/images/People_Hiring.jpg", 
-    },
+    }, 
     {
         title: "Access to Professional Development Resources",
         description: "Provide your team with access to a wide range of professional development resources.",
