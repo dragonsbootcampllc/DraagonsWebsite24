@@ -74,28 +74,25 @@ export const InfiniteMovingCards = ({
       className={cn(
         "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
-      )}
-    >
+      )}>
       <ul
         ref={scrollerRef}
         className={cn(
           " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
-        )}
-      >
+        )}>
         {items.map((item, idx) => (
           <li
-            className="w-[350px] min-h-[500px]  max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
-            style={{
-              background:
-                "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
-            }}
-            key={idx}
-          >
-            <div className="grid gap-2">
-              <h3 className="text-lg md:text-2xl font-bold text-gray-100">{item.title}</h3>
-              <p className="md:text-lg text-sm text-gray-400 mt-2">{item.description}</p>
+            className='w-[350px] h-auto bg-purple-800/20 max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-200/20 px-8 py-6 md:w-[450px]'
+            key={idx}>
+            <div className='grid gap-2'>
+              <h3 className='text-lg md:text-2xl font-extrabold text-gray-100'>
+                {item.title}
+              </h3>
+              <p className='md:text-lg text-sm text-gray-400 mt-2'>
+                {item.description}
+              </p>
             </div>
           </li>
         ))}
