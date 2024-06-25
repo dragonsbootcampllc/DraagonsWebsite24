@@ -167,7 +167,7 @@ const ThoughtLeader = () => {
         heroHighlightedText='In Dragons BootCamp, we empower you to excel in content creation and personal branding, equipping you with the skills to thrive in the digital landscape and establish a strong online presence.'
         ctaApplyText='Apply Now'
         ctaBookCallText='Book 1:1 Call'
-        ctaHeadline='Empower Your Presence'
+        ctaHeadline='Be a Thought Leader in Tech' 
         C1='Build Trust and Strong reputation'
         C2='Create Compelling Content'
         C3='Personal Branding'
