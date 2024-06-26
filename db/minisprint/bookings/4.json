@@ -1,0 +1,9 @@
+{
+    "id": 4,
+    "minisprintName": "test",
+    "user": {
+        "name": "dsf",
+        "email": "sfldsf@gmial.com"
+    },
+    "is_paid": false
+}
