@@ -8,7 +8,7 @@ export const TrustedSection = () => {
 
       <div
         className={
-          "relative z-10 saturate-50 contrast-150 opacity-50 overflow-clip w-full"
+          "relative z-10 saturate-50 contrast-150 opacity-70 overflow-clip w-full"
         }
       >
         {/* <SliderTrusted /> */}
