@@ -118,7 +118,7 @@ export default function index() {
                 {minisprintData.length !== 0 ? 
                     minisprintData.map((minisprint, i) => <MinisprintCard key={i} {...minisprint} />)
                     :
-                    <div className='flex flex-col items-center justify-center w-full h-[500px] text-center text-5xl font-semibold text-[#333333]'>
+                    <div className='flex flex-col items-center justify-center w-full h-[500px] text-center text-5xl font-semibold text-purple-400/50'>
                         No courses found
                     </div>
                 }
