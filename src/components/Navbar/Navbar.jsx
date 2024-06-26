@@ -15,11 +15,11 @@ const Dropdown_V2 = dynamic(() => import("./Dropdown_V.2"), {
   ssr: false,
 });
 
-import LogoImage from "@/../public/Identity/Images/2023/SVG/test.svg";
-import Student_img from "@/../public/images/NAV/Solutions/solutionStudents.png";
-import Student_img2 from "@/../public/images/NAV/Solutions/solutionPartners.png";
-import TalentsStudent from "@/../public/images/NAV/Talents/talentForStudent.png";
-import TalentsPartners from "@/../public/images/NAV/Talents/talentForPartner.png";
+import LogoImage from "../../../public/Identity/Images/2023/SVG/test.svg";
+import Student_img from "../../../public/images/NAV/Solutions/solutionStudents.png";
+import Student_img2 from "../../../public/images/NAV/Solutions/solutionPartners.png";
+import TalentsStudent from "../../../public/images/NAV/Talents/talentForStudent.png";
+import TalentsPartners from "../../../public/images/NAV/Talents/talentForPartner.png";
 import {
   IoStatsChart,
   IoPeople,
@@ -33,6 +33,7 @@ import ButtonComponent from "../Micros/Button";
 import ButtonLite from "@/components/Micros/ButtonLite";
 import { SiCodementor } from "react-icons/si";
 import { PiStudentFill } from "react-icons/pi";
+import Image from "next/image";
 
 const simpleFloatAnimation = {
   y: ["-20px", "22px"],
@@ -53,11 +54,7 @@ const SolutionTabData = {
       "Advance your career with Dragoons Bootcamp’s targeted courses in data analysis and full-stack development.",
 
     Icon: (
-      <motion.img
-        src={Student_img.src}
-        alt='icon'
-        animate={simpleFloatAnimation}
-      />
+     <Image src={Student_img.src} alt='icon' animate={simpleFloatAnimation} />
     ),
   },
   tab2: {
@@ -258,12 +255,11 @@ const Navbar = () => {
 
         {/* Navigation Links and CTA Button */}
         <div
-          className={`flex max-[1096px]:bg-[#150a30] items-center max-[1096px]:justify-end min-[1096px]:justify-center max-[1096px]:flex-col text-lg md:text-sm lg:text-md  xl:text-lg font-mono h-full flex-grow  gap-0  xl:gap-2  max-[1096px]:overflow-y-scroll max-[1096px]:overflow-x-hidden  text-center duration-[.45s] ${
-            isNavOpen
-              ? "max-[1096px]:translate-y-0 "
-              : "max-[1096px]:-translate-y-[120%]"
-          } top-full left-0 right-0 text-black  max-[1096px]:flex-col max-[1096px]:absolute max-[1096px]:w-full max-[1096px]:pb-[6rem]  max-[1096px]:min-h-[calc(100vh-4.5rem)] max-[1096px]:text-lg max-[1096px]:border-b max-[1096px]:border-black`}>
-          <NavbarLink
+        className={`flex max-[1496px]:bg-[#2c1a3a] items-center min-[1496px]:justify-end max-[1496px]:flex-col text-lg font-normal h-full max-[1496px]:w-full gap-3 max-[1496px]:gap-0 max-[1496px]:overflow-y-scroll max-[1496px]:overflow-x-hidden w-screen  flex-grow text-center transition-all box-border duration-[.45s] ${isNavOpen
+          ? "max-[1496px]:translate-y-0"
+          : "max-[1496px]:-translate-y-[120%]"
+        } top-full left-0 text-black  max-[1496px]:flex-col max-[1496px]:absolute max-[1496px]:w-full max-[1496px]:pb-[6.5rem] max-[1496px]:h-[calc(100vh-4.5rem)] max-[1496px]:text-lg max-[1496px]:border-b max-[1496px]:border-black`}>
+           <NavbarLink
             path='/useCases'
             title='Use Cases'
             toggleNavigation={toggleNavigation}
@@ -279,12 +275,19 @@ const Navbar = () => {
           />
 
           {/* Tallents Dropdown */}
-          <Dropdown
+          
+          <NavbarLink
+            path='/Talents'
+            title='Talents'
+            toggleNavigation={toggleNavigation}
+            closeNavigation={closeNavigation}
+          />
+          {/* <Dropdown
             isTabOpen={isTallentsOpen}
             closeTab={closeTallents}
             toggleTab={toggleTallents}
             data={TallentsTabData}
-          />
+          /> */}
 
           {/* Static Navigation Links */}
 
