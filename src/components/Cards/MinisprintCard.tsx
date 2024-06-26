@@ -3,7 +3,7 @@ import ButtonComponent from '../Micros/Button';
 import ButtonLite from '../Micros/ButtonLite';
 import { Date_1, Time_1 } from '../Icons';
 
-interface MinisprintCardProps {
+export interface MinisprintCardProps {
     price: string;
     title: string;
     description: string;
