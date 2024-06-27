@@ -72,12 +72,12 @@ function MyDisclosure() {
 
   return (
   <div className="grid place-items-center">
-      <div className='w-full grid gap-5 max-w-[1400px] lg:grid-cols-2 place-items-center p-2 my-12'>
+      <div className='w-full relative grid gap-5 max-w-[1400px] lg:grid-cols-2 place-items-center p-2 my-12'>
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className='text-5xl md:text-7xl relative  h-full text-center max-w-4xl z-10 flex justify-center m-auto  mb-3 text-gray-200 font-semibold'>
+        className='text-5xl md:text-7xl relative  h-full text-center max-w-4xl  z-10 flex justify-center m-auto  mb-3 text-gray-200 font-semibold'>
         <h1 className=' sticky top-0 text-center mt-5  capitalize '>
           Frequently <span className='text-purple-900'>Asked</span> Questions
         </h1>
