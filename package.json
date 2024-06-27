@@ -13,7 +13,7 @@
     "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@headlessui/react": "^2.1.0",
+    "@headlessui/react": "^2.1.1",
     "@million/lint": "^1.0.0-rc.26",
     "@mui/material": "^5.15.19",
     "@nextui-org/react": "^2.4.1",
