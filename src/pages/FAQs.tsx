@@ -48,13 +48,6 @@ const MyHelpCenter: React.FC = () => {
         </h1>
         <h1>How can we help you?</h1>
       </div>
-      {/* <input
-        type="search"
-        placeholder="Search..."
-        className="shadow appearance-none border rounded min-w-[200px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        value={searchInput}
-        onChange={handleSearch}
-      /> */}
       <div className='text-3xl md:text-xl text-center max-w-[1000px] gap-4 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center m-auto relative mb-3 p-5 text-gray-200 font-semibold'>
         {searchResults.map((result, index) => (
           <div key={index} className='w-full grid place-items-center  sm:w-auto mx-2 mb-4'>
