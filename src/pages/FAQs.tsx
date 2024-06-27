@@ -1,3 +1,4 @@
+import ButtonComponent from "@/components/Micros/Button";
 import React, { useEffect, useState, ChangeEvent } from "react";
 
 interface SearchResult {
@@ -40,26 +41,36 @@ const MyHelpCenter: React.FC = () => {
   };
 
   return (
-    <div className="w-full text-center p-2 my-12">
-      <h1 className="text-4xl">Welcome to the Help Center</h1>
-      <div className="p-10 text-7xl">
-        <h2>How can we help you?</h2>
+    <div className='w-full text-center p-2 my-12'>
+      <div className='text-3xl  flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+        <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
+          Welcome to the Help Center
+        </h1>
+        <h1>How can we help you?</h1>
       </div>
-      <input
+      {/* <input
         type="search"
         placeholder="Search..."
         className="shadow appearance-none border rounded min-w-[200px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         value={searchInput}
         onChange={handleSearch}
-      />
-      <div className="text-3xl md:text-xl text-center max-w-4xl z-10 border-violet-600 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center m-auto relative mb-3 p-5 text-gray-200 font-semibold">
+      /> */}
+      <div className='text-3xl md:text-xl text-center max-w-[1100px] gap-4 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center m-auto relative mb-3 p-5 text-gray-200 font-semibold'>
         {searchResults.map((result, index) => (
-          <div key={index} className="bg-white p-4 shadow rounded-lg mb-4 mr-5">
-            <h2 className="text-gray-600">{result.title}</h2>
-            <p className="text-gray-400">{result.description}</p>
-            <button className="bg-violet-600 text-white py-2 mt-5 px-4 rounded-[1rem] duration-[0.5s] hover:bg-blue-600">
-              Explore articles
-            </button>
+          <div key={index} className='w-full sm:w-auto mx-2 mb-4'>
+            <div className='bg-purple-800/20 p-6 shadow rounded-3xl'>
+              <h2 className='text-gray-200 text-lg sm:text-xl'>
+                {result.title}
+              </h2>
+              <p className='text-gray-400 text-sm'>{result.description}</p>
+             
+              <div className="py-2">
+              <ButtonComponent 
+                CTAtext='Explore articles'
+              
+              />
+                </div>
+            </div>
           </div>
         ))}
       </div>
