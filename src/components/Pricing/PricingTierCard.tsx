@@ -97,12 +97,12 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
   const priceDisplay: string = `$${tier.price[parseInt(frequency.value.toString(), 10) as number] ?? 0}`;
 
   return (
-    <div className="flex flex-wrap xl:flex-nowrap items-center bg-gray-900/80 backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-3xl ring-1 ring-gray-300/70 dark:ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
+    <div className="flex flex-wrap container xl:flex-nowrap items-center bg-purple-950/80 backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-3xl ring-1 ring-gray-400/70 dark:ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
       <div className="p-8 sm:p-10 xl:flex-auto">
-        <h3 className="text-white text-2xl font-bold tracking-tight">
+        <h3 className="text-white text-3xl font-semibold tracking-tight">
           {tier.name}
         </h3>
-        <p className="mt-6 text-base leading-7 text-gray-400">
+        <p className="mt-6  text-xl leading-7 text-white/70">
           {tier.description}
         </p>
         <div className="mt-12 flex items-center gap-x-4">
@@ -125,13 +125,13 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
         </div>
       </div>
       <div className="-mt-2 p-2 xl:pr-8 xl:mt-0 w-full xl:max-w-md xl:flex-shrink-0">
-        <div className={`${styles.fancyGlass} rounded-2xl py-10 text-center ring-1 ring-inset ring-gray-800/50 xl:flex xl:flex-col xl:justify-center xl:py-16`}>
+        <div className={`${styles.fancyGlass} rounded-2xl py-10 text-center ring-1 ring-inset ring-gray-600 xl:flex xl:flex-col xl:justify-center xl:py-16`}>
           <div className="mx-auto max-w-xs px-8">
             <p className="mt-6 flex items-baseline justify-center gap-x-2">
               {discount ? (
                 <>
                   <span className="text-white text-6xl font-bold tracking-tighter">
-                    ${discount} 
+                    ${discount}
                   </span>
                   <span className="text-white line-through">{priceDisplay}</span>
                 </>
@@ -144,7 +144,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
                 {frequency.priceSuffix}
               </span>
             </p>
-            <Link   href='https://docs.google.com/forms/d/e/1FAIpQLSf6yGyk40x0nNQwP_XSP_dFjiS4I6_7UoAzJDGRunl-NGRUsQ/viewform?usp=pp_url' className="flex justify-center mt-8 flex-shrink-0">
+            <Link href='https://docs.google.com/forms/d/e/1FAIpQLSf6yGyk40x0nNQwP_XSP_dFjiS4I6_7UoAzJDGRunl-NGRUsQ/viewform?usp=pp_url' className="flex justify-center mt-8 flex-shrink-0">
               <div className="h-16 w-64">
                 <ButtonComponent CTAtext={tier.cta} />
               </div>
