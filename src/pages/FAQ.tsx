@@ -1,6 +1,10 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 function MyDisclosure() {
   const FQA = [
@@ -67,37 +71,37 @@ function MyDisclosure() {
   ];
 
   return (
-    <div className='w-full grid place-items-center p-2 my-12'>
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className='text-5xl md:text-7xl text-center max-w-4xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'
-    >
-      <h1>
-        Frequently <span className='text-purple-900'>Asked</span> Questions
-      </h1>
-    </motion.div>
-    <div className='max-w-4xl w-full'>
-      {FQA.map((item, index) => (
-        <Disclosure key={index}>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-purple-800/20 w-full my-2 p-2 rounded-3xl"
-          >
-            <DisclosureButton className='bg-purple-800/20 text-left text-md sm:text-xl px-3 md:px-8 capitalize w-full py-2 text-gray-100 rounded-[1rem] duration-[0.5s] hover:border-t-white hover:bg-purple-800 max-md:rounded-md transition-colors'>
-              {item.question}
-            </DisclosureButton>
-            <DisclosurePanel className='text-gray-400 px-3 md:px-8 text-sm sm:text-lg text-left py-2 transition-opacity'>
-              {item.answer}
-            </DisclosurePanel>
-          </motion.div>
-        </Disclosure>
-      ))}
+  <div className="grid place-items-center">
+      <div className='w-full grid gap-5 max-w-[1400px] lg:grid-cols-2 place-items-center p-2 my-12'>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className='text-5xl md:text-7xl relative  h-full text-center max-w-4xl z-10 flex justify-center m-auto  mb-3 text-gray-200 font-semibold'>
+        <h1 className=' sticky top-0 text-center mt-5  capitalize '>
+          Frequently <span className='text-purple-900'>Asked</span> Questions
+        </h1>
+      </motion.div>
+      <div className='max-w-4xl w-full'>
+        {FQA.map((item, index) => (
+          <Disclosure key={index}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className='bg-purple-800/20 w-full my-2 p-2 rounded-3xl'>
+              <DisclosureButton className='bg-purple-800/20 text-left text-md sm:text-xl px-3 md:px-8 capitalize w-full py-2 text-gray-100 rounded-[1rem] duration-[0.5s] hover:border-t-white hover:bg-purple-800 max-md:rounded-md transition-colors'>
+                {item.question}
+              </DisclosureButton>
+              <DisclosurePanel className='text-gray-400 px-3 md:px-8 text-sm sm:text-lg text-left py-2 transition-opacity'>
+                {item.answer}
+              </DisclosurePanel>
+            </motion.div>
+          </Disclosure>
+        ))}
+      </div>
     </div>
-  </div>
+    </div>
   );
 }
 
