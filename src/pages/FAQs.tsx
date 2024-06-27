@@ -55,21 +55,20 @@ const MyHelpCenter: React.FC = () => {
         value={searchInput}
         onChange={handleSearch}
       /> */}
-      <div className='text-3xl md:text-xl text-center max-w-[1100px] gap-4 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center m-auto relative mb-3 p-5 text-gray-200 font-semibold'>
+      <div className='text-3xl md:text-xl text-center max-w-[1000px] gap-4 z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center m-auto relative mb-3 p-5 text-gray-200 font-semibold'>
         {searchResults.map((result, index) => (
-          <div key={index} className='w-full sm:w-auto mx-2 mb-4'>
-            <div className='bg-purple-800/20 p-6 shadow rounded-3xl'>
-              <h2 className='text-gray-200 text-lg sm:text-xl'>
-                {result.title}
-              </h2>
-              <p className='text-gray-400 text-sm'>{result.description}</p>
-             
-              <div className="py-2">
-              <ButtonComponent 
-                CTAtext='Explore articles'
-              
-              />
+          <div key={index} className='w-full grid place-items-center  sm:w-auto mx-2 mb-4'>
+            <div className='bg-purple-800/20 max-w-[400px] aspect-auto grid place-items-center p-4 shadow rounded-3xl'>
+              <div>
+                <h2 className='text-gray-200 text-lg sm:text-xl'>
+                  {result.title}
+                </h2>
+                <p className='text-gray-400 text-sm'>{result.description}</p>
+
+                <div className='py-2'>
+                  <ButtonComponent CTAtext='Explore articles' />
                 </div>
+              </div>
             </div>
           </div>
         ))}
