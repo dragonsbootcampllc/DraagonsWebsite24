@@ -51,7 +51,7 @@ const MyHelpCenter: React.FC = () => {
       className='text-3xl flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'
     >
       <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
-        Welcome to the Help Center
+        Help Center
       </h1>
       <h1>How can we help you?</h1>
     </motion.div>
