@@ -6,6 +6,7 @@ interface ButtonComponentProps {
   className?: string;
   type?: 'button' | 'link'; // Specify possible types
   href?: string; // href is required if type is 'link'
+  props: any
 }
 
 const ButtonComponent: React.FC<ButtonComponentProps> = ({
