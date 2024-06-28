@@ -1,4 +1,3 @@
-// pages/api/book.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import { readJSON, writeJSON } from '@/pages/api/utils/utils';
 import path from 'path';
