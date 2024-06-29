@@ -5,10 +5,6 @@ import LearningMaterialComponent from "@/components/JopReady/LearningMaterialCom
 import OFFICE from "@/../public/images/JopReady/image.png";
 import CallToActionComponent from "@/components/JopReady/CallToActionComponent";
 
-
-
-
-
 const heroObj = {
     News: {
         id: 2,
