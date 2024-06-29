@@ -65,7 +65,7 @@ function Talents(props: TalentsProps) {
   return (
     <div className={"w-full min-h-[900px] "}>
       <div>
-        <div className="w-full min-h-[900px]  pt-20">
+        <div className="w-full min-h-[900px] ">
           <div className="bg-slate-900/10">
             <div className="bg-gradient-to-b from-violet-600/[.15] via-transparent">
               <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
