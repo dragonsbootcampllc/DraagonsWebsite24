@@ -1,28 +1,3 @@
 [
-  {
-    "firstName": "hAZM",
-    "lastName": "mOHAMED",
-    "email": "hazemmohamed345674@gmail.com",
-    "country": "Egypt",
-    "phoneNumber": "012901389189",
-    "program": "backend"
-  },
-  {
-    "firstName": "Owwrdw",
-    "lastName": "wvqvcqg",
-    "email": "hazemmohamed345674@gmail.com",
-    "country": "VVCBeb",
-    "phoneNumber": "01013576184",
-    "program": "dataAnalysis"
-  },
-  {
-    "firstName": "kjvglk",
-    "lastName": "GG",
-    "email": "BVLKmk@gmail.com",
-    "country": "VVCBeb",
-    "phoneNumber": "87656v qhg",
-    "program": "Front-End",
-    "IsCoupon": false,
-    "CouponCode": ""
-  }
+
 ]

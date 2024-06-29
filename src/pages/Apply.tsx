@@ -65,17 +65,16 @@ const ApplyPricing = () => {
     };
 
     const router = useRouter();
-    const { program } = router.query;
+    const { program, coupon } = router.query;
 
     useEffect(() => {
-        if (program) {
-            setFormData((prevData) => ({
-                ...prevData,
-                program: program as string,
-            }));
-            console.log(`Program selected: ${program}`);
-        }
-    }, [program]);
+        setFormData((prevData) => ({
+            ...prevData,
+            program: program as string || 'frontend',
+            CouponCode: coupon ? (coupon as string) : '',
+            IsCoupon: !!coupon,
+        }));
+    }, [program, coupon]);
 
     return (
         <div className="container mx-auto w-full flex flex-col gap-8 justify-center items-center mb-24">
