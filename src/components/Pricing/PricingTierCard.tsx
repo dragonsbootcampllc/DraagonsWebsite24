@@ -12,6 +12,7 @@ export interface PricingTierFrequency {
 }
 
 export interface PricingTier {
+  program: string;
   name: string;
   id: string;
   href: string;
@@ -45,7 +46,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ coupon }),
+      body: JSON.stringify({ coupon, program: tier.program }),
     })
       .then((response) => {
         if (!response.ok) {
@@ -55,8 +56,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
       })
       .then((data) => {
         if (data && data.discount) {
-          const discountPercentage: number = data.discount; // Assuming the API returns the discount percentage
-          applyDiscount(discountPercentage);
+          applyDiscount(data.discount);
         } else {
           setError(data.message || "Invalid coupon code");
           setDiscount(0);
@@ -79,10 +79,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
     }
 
     const priceNumber: number = tier.price[frequencyValue];
-    const priceWithSuffix: string = `$${priceNumber}`;
-
-    const priceMultiplier: number = 1 - discountPercentage / 100;
-    const discountedPrice: number = priceNumber * priceMultiplier;
+    const discountedPrice: number = priceNumber * (1 - discountPercentage / 100);
 
     setDiscount(Math.floor(discountedPrice));
     setError("");
@@ -94,7 +91,8 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
   };
 
   // Render
-  const priceDisplay: string = `$${tier.price[parseInt(frequency.value.toString(), 10) as number] ?? 0}`;
+  const priceDisplay: string = `$${tier.price[frequency.value] ?? 0}`;
+  const queryParams = new URLSearchParams({ program: tier.program }).toString();
 
   return (
     <div className="flex flex-wrap container xl:flex-nowrap items-center bg-purple-950/80 backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-3xl ring-1 ring-gray-400/70 dark:ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
@@ -102,7 +100,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
         <h3 className="text-white text-3xl font-semibold tracking-tight">
           {tier.name}
         </h3>
-        <p className="mt-6  text-xl leading-7 text-white/70">
+        <p className="mt-6 text-xl leading-7 text-white/70">
           {tier.description}
         </p>
         <div className="mt-12 flex items-center gap-x-4">
@@ -144,7 +142,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
                 {frequency.priceSuffix}
               </span>
             </p>
-            <Link href='https://docs.google.com/forms/d/e/1FAIpQLSf6yGyk40x0nNQwP_XSP_dFjiS4I6_7UoAzJDGRunl-NGRUsQ/viewform?usp=pp_url' className="flex justify-center mt-8 flex-shrink-0">
+            <Link href={`/Apply?${queryParams}`} className="flex justify-center mt-8 flex-shrink-0">
               <div className="h-16 w-64">
                 <ButtonComponent CTAtext={tier.cta} />
               </div>

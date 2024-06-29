@@ -1,12 +1,38 @@
 {
-  "DISCOUNT10": {
-    "discount": 10,
-    "usageLimit": 20,
-    "used": 0
+  "Front-End": {
+    "DISCOUNT10": {
+      "discount": 10,
+      "usageLimit": 20,
+      "used": 2
+    },
+    "DISCOUNT20": {
+      "discount": 20,
+      "usageLimit": 20,
+      "used": 10
+    }
   },
-  "DISCOUNT20": {
-    "discount": 20,
-    "usageLimit": 20,
-    "used": 7
+  "Back-End": {
+    "DISCOUNT10": {
+      "discount": 10,
+      "usageLimit": 20,
+      "used": 1
+    },
+    "DISCOUNT20": {
+      "discount": 20,
+      "usageLimit": 20,
+      "used": 10
+    }
+  },
+  "Data Analysis": {
+    "DISCOUNT10": {
+      "discount": 10,
+      "usageLimit": 20,
+      "used": 1
+    },
+    "DISCOUNT20": {
+      "discount": 20,
+      "usageLimit": 20,
+      "used": 9
+    }
   }
 }
