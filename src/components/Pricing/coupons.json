@@ -8,7 +8,7 @@
     "DISCOUNT20": {
       "discount": 20,
       "usageLimit": 20,
-      "used": 10
+      "used": 11
     }
   },
   "Back-End": {
@@ -20,7 +20,7 @@
     "DISCOUNT20": {
       "discount": 20,
       "usageLimit": 20,
-      "used": 10
+      "used": 11
     }
   },
   "Data Analysis": {
@@ -32,7 +32,7 @@
     "DISCOUNT20": {
       "discount": 20,
       "usageLimit": 20,
-      "used": 9
+      "used": 10
     }
   }
 }

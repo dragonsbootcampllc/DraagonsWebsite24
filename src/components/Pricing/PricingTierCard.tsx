@@ -142,7 +142,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
                 {frequency.priceSuffix}
               </span>
             </p>
-            <Link href={`/Apply?${queryParams}`} className="flex justify-center mt-8 flex-shrink-0">
+            <Link href={`/Apply?${queryParams}&coupon=${coupon}`} className="flex justify-center mt-8 flex-shrink-0">
               <div className="h-16 w-64">
                 <ButtonComponent CTAtext={tier.cta} />
               </div>
