@@ -134,9 +134,8 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
         </div>
       )}
 
-      <CardsHoverEffectDemo/>
+      <CardsHoverEffectDemo />
     </div>
-
   );
 };
 

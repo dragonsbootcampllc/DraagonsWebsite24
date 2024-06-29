@@ -47,8 +47,8 @@ const headText = {
 
 const HRManagementSection: React.FC = () => {
     return (
-        <div className="w-full container mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
-            <div className="heading md:max-w-[1000px] text-center">
+        <div className="w-full container  max-w-[1000px] mx-auto flex flex-col min-h-screen justify-center items-center gap-8 text-white px-4 sm:px-6 lg:px-8">
+            <div className="heading text-center">
                 <h1
                     style={{ fontFamily: "interV" }}
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto z-10 relative mb-3 text-gray-200 font-semibold"
@@ -63,18 +63,18 @@ const HRManagementSection: React.FC = () => {
                     {headText.descriptionText}
                 </p>
             </div>
-            <div className="container max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3  gap-5">
+            <div className="container  mx-auto grid grid-cols-1 md:grid-cols-3  gap-5">
                 {hrFeatures.map((item, index) => (
                     <div
                         key={index}
-                        className={`rounded-2xl bg-purple-950 ${index >= 3 ? 'col-span-1 md:col-span-3 ' : 'col-span-1'}  min-h-[400px] hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] relative overflow-hidden text-center pt-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300`}
+                        className={`row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-none p-4 bg-purple-800/40 border-white/[0.2] border justify-between flex flex-col  [&>p:text-lg] md:col-span-1 ${index >= 3 ? 'col-span-1 md:col-span-3 text-xl md:text-3xl ' : 'col-span-1 md:text-xl'}   min-h-[400px] hover:shadow-[0_0_.5rem_0rem_rgba(251,53,208,1)] relative overflow-hidden text-center pt-5 flex flex-col gap-5 cursor-pointer transition-all hover:scale-[1.02] duration-300`}
                     >
-                        <h3 className="font-semibold text-3xl bg-gradient-to-r from-white to-gray-200 text-transparent bg-clip-text">
+                        <h3 className="font-sans font-bold   px-3 text-neutral-200 mb-2 mt-2">
                             {item.title}
                         </h3>
-                        <p className="text-[14px] sm:text-sm md:text-base lg:text-lg text-center text-white/70 px-3 font-semibold">
+                        {/* <p className="font-sans font-normal  text-xs text-neutral-300">
                             {item.description}
-                        </p>
+                        </p> */}
                         <div className="w-full h-60 sm:h-80 md:h-full relative">
                             <Image
                                 src={item.image}
@@ -82,7 +82,7 @@ const HRManagementSection: React.FC = () => {
                                 layout="fill"
                                 objectFit="cover"
                                 objectPosition="center"
-                                className="absolute bottom-0 left-0 w-full h-full"
+                                className="absolute bottom-0 rounded-3xl left-0 w-full h-full"
                             />
                         </div>
                     </div>
