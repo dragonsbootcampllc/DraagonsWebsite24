@@ -33,7 +33,7 @@ const Card = ({
     <div className='flex justify-between items-center'>
       <div className='grid w-full place-items-center'>
         <div
-          className={`text-[14px] px-2 border border-white/60 rounded-xl ${
+          className={`text-[14px] px-2 border  border-white/60 mb-2 rounded-xl ${
             isPremier && "border-yellow-500 text-yellow-500"
           }`}>
           {label}
@@ -43,7 +43,7 @@ const Card = ({
         </h1>
       </div>
     </div>
-    <p className='text-[14px] text-start font-semibold'>{description}</p>
+    <p className='text-[14px] text-center font-semibold'>{description}</p>
     <div
       className='absolute top-0 left-0 w-full h-full opacity-50'
       style={{ background: overlayStyle }}
