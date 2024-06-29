@@ -5,9 +5,9 @@ import Button from "@/components/Micros/Button";
 import ButtonLite from "@/components/Micros/ButtonLite";
 import TrainingServiceSection from "@/components/Cards/TrainingServiceSection-component/TrainingServiceSection";
 import { StaticImageData } from "next/image";
-import image1 from "@/../public/images/People_Hiring.jpg";
-import image2 from "@/../public/images/hiring-small-business.jpg";
-import image3 from "@/../public/images/Hiring_Great_Employee.webp";
+import image1 from "@/../public/images/OutSourcing/startups.png";
+import image2 from "@/../public/images/OutSourcing/Enterprice.png";
+import image3 from "@/../public/images/OutSourcing/startups.png";
 
 interface HeadData {
     badge: string;
@@ -37,8 +37,8 @@ const headData: HeadData = {
 const cardsData: CardData[] = [
     {
         label: "Book now!",
-        title: "Startups",
-        description: "New businesses looking to leverage technology to scale rapidly and efficiently.",
+        title: "Startups Focus on Growth",
+        description: "New businesses looking to scale can leverage our expertise to build a strong foundation for growth. We can help you build your MVP or full product.",
         overlayStyle: "radial-gradient(136.22% 75.8% at 50% 27.57%, #171619 0%, rgba(23, 22, 25, 1) 61.62%, rgba(0, 49, 239, 1) 79.17%, rgba(251, 53, 208, 1) 100%)",
         image: image1,
         link: "/Pricing",
@@ -53,8 +53,8 @@ const cardsData: CardData[] = [
     },
     {
         label: "Book now!",
-        title: "Busy Professionals",
-        description: "Individuals with extensive to-do lists who need expert help to accomplish their goals quickly and effectively.",
+        title: "Busy DEVs Needing Help",
+        description: "Developers needing help with a project or looking to outsource a project to focus on other tasks. We can help you with your project.",
         overlayStyle: "radial-gradient(136.22% 75.8% at 50% 27.57%, #171619 0%, rgba(23, 22, 25, 1) 61.62%, rgba(0, 49, 239, 1) 79.17%, rgba(251, 53, 208, 1) 100%)",
         image: image3,
         link: "/Pricing",
