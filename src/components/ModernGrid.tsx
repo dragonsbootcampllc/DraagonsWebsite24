@@ -25,7 +25,7 @@ export function BentoGridThirdDemo() {
     <div className='min-h-screen grid place-items-center px-4 md:px-8'>
       <div
         style={{ fontFamily: "interV" }}
-        className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center max-w-4xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+        className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center max-w-4xl z-10 flex justify-center m-auto relative text-gray-200 font-semibold my-10'>
         <h1>
           Why You Should Take Dragons
           <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'>
@@ -33,19 +33,19 @@ export function BentoGridThirdDemo() {
           </span>
         </h1>
       </div>
-      <BentoGrid className='max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4'>
+      <BentoGrid className='max-w-4xl mx-auto md:auto-rows-[20rem]'>
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
             description={item.description}
             header={item.header}
-            className={cn("p-4 md:p-6 lg:p-8", item.className)}
+            className={cn("[&>p:text-lg]", item.className)}
             icon={item.icon}
           />
         ))}
       </BentoGrid>
-      <div className='cta rounded-xl my-12 flex flex-col md:flex-row gap-5'>
+      <div className='cta rounded-xl max-sm:w-full max-sm:px-6 my-12 flex flex-col md:flex-row gap-5'>
         <Link href='/Pricing' passHref>
           <div className='h-16 w-full md:w-64'>
             <ButtonComponent CTAtext='Apply Now' />
@@ -60,7 +60,7 @@ export function BentoGridThirdDemo() {
 }
 
 const Skeleton = () => (
-  <div className='flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-dot-black/[0.2] border border-transparent border-white/[0.2] bg-black'></div>
+  <div className='flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-dot-black/[0.2] border border-transparent bg-black'></div>
 );
 
 const SkeletonOne = () => {
@@ -113,6 +113,8 @@ const SkeletonOne = () => {
           src={Talent[13].personal_photo}
           className='h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0'
         />
+
+        <div />
       </motion.div>
       <motion.div
         variants={variants}
@@ -221,51 +223,62 @@ const SkeletonThree = () => {
     </motion.div>
   );
 };
-
 const SkeletonFour = () => {
   const first = {
-    initial: { x: 20, rotate: -5 },
-    hover: { x: 0, rotate: 0 },
+    initial: {
+      x: 20,
+      rotate: -5,
+    },
+    hover: {
+      x: 0,
+      rotate: 0,
+    },
   };
   const second = {
-    initial: { x: -20, rotate: 5 },
-    hover: { x: 0, rotate: 0 },
+    initial: {
+      x: -20,
+      rotate: 5,
+    },
+    hover: {
+      x: 0,
+      rotate: 0,
+    },
   };
   return (
     <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2] flex-col md:flex-row md:space-x-2">
+      initial='initial'
+      animate='animate'
+      whileHover='hover'
+      className='flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-row space-x-2'>
       <motion.div
         variants={first}
-        className="h-full w-full md:w-1/3 rounded-2xl p-4 bg-black border-white/[0.1] border flex flex-col items-center justify-center mb-2 md:mb-0">
+        className='h-full w-1/3 rounded-2xl p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center'>
         <Image
           src={JetBrains.src}
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full bg-white p-1 h-10 w-10"
+          alt='avatar'
+          height='100'
+          width='100'
+          className='rounded-full bg-white p-1 h-10 w-10'
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
           Junior Software Engineer @ Jetbrains
         </p>
-        <p className="border border-red-500 bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Not suitable
+        <p className='border border-red-500  bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4'>
+          Not sutiable
         </p>
       </motion.div>
       <motion.div className="h-full relative z-20 w-full md:w-1/3 rounded-2xl p-4 bg-black border-white/[0.1] border flex flex-col items-center justify-center mb-2 md:mb-0">
         <Image
           src={Logoudacity.src}
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full ring-2 h-10 w-10"
+          alt='avatar'
+          height='100'
+          width='100'
+          className='rounded-full ring-2 h-10 w-10'
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
           Software Engineering intern @ wp Engine
         </p>
-        <p className="border border-green-500 bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className='border border-green-500 bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4'>
           Suitable for you
         </p>
       </motion.div>
@@ -274,22 +287,21 @@ const SkeletonFour = () => {
         className="h-full w-full md:w-1/3 rounded-2xl p-4 bg-black border-white/[0.1] border flex flex-col items-center justify-center">
         <Image
           src={LogoVercel.src}
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full ring-2 p-1 h-10 w-10"
+          alt='avatar'
+          height='100'
+          width='100'
+          className='rounded-full ring-2 p-1 h-10 w-10'
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Software Engineering intern @ Vercel
+        <p className='sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4'>
+          Software Engineering intern @ vercel
         </p>
-        <p className="border border-orange-500 bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className='border border-orange-500  bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4'>
           You can apply
         </p>
       </motion.div>
     </motion.div>
   );
 };
-
 const SkeletonFive = () => {
   const variants = {
     initial: { x: 0 },
@@ -310,18 +322,18 @@ const SkeletonFive = () => {
 
   return (
     <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2] flex-col space-y-2">
+      initial='initial'
+      whileHover='animate'
+      className='flex flex-1 w-full h-full min-h-[6rem]  bg-dot-white/[0.2]  flex-col space-y-2'>
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-white/[0.2] p-2 items-start space-x-2 bg-black">
+        className='flex flex-row rounded-2xl border border-white/[0.2] p-2  items-start space-x-2 bg-black'>
         <Image
           src={Talent[34].personal_photo}
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
+          alt='avatar'
+          height='100'
+          width='100'
+          className='rounded-full h-10 w-10'
         />
         <p className="text-xs text-neutral-500">
           I have been learning PHP for 2 years now and I am still not good at it.
@@ -333,71 +345,75 @@ const SkeletonFive = () => {
         <p className="text-xs text-neutral-500">
           Your roadmap is: 1- ....
         </p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+        <div className='h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0' />
       </motion.div>
     </motion.div>
   );
 };
-
 const items = [
   {
     title: "Supportive Community",
     description: (
-      <span className="text-sm">
-        Join a diverse community of learners, mentors, and industry experts. Get the support you need to succeed!
+      <span className='text-sm'>
+        Join a diverse community of learners, mentors, and industry experts.
+        Get the support you need to succeed!
       </span>
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconClipboardCopy className='h-4 w-4 text-neutral-500' />,
     cta: "Join Now",
   },
   {
-    title: "Compete with Top Talent",
+    title: "Compeat with Top Talent",
     description: (
-      <span className="text-sm">
-        Compete with top talent in the Dragons Community. Stand out from the crowd and get rewarded with cash prizes.
+      <span className='text-sm'>
+        compete with top talent in the Dragons Community.
+        Stand out from the crowd and Get rewarded with cash prizes.
       </span>
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconFileBroken className='h-4 w-4 text-neutral-500' />,
     cta: "Switch Now",
   },
   {
-    title: "Top 3% of Talent",
+    title: "Top 3% of Talent ",
     description: (
-      <span className="text-sm">
-        Challenge yourself and be part of the top 3% of talent. Get access to exclusive opportunities and resources.
+      <span className='text-sm'>
+        challenge yourself and Be part of the top 3% of talent . Get access to exclusive
+        opportunities and resources.
       </span>
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconSignature className='h-4 w-4 text-neutral-500' />,
     cta: "Upgrade Now",
   },
   {
     title: "AI Powered Job Matching",
     description: (
-      <span className="text-sm">
-        Get matched with the right job opportunities based on your skills and interests. Let AI do the work for you!
+      <span className='text-sm'>
+        Get matched with the right job opportunities based on your skills and interests.
+        Let AI do the work for you!
       </span>
     ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <IconTableColumn className='h-4 w-4 text-neutral-500' />,
     cta: "Empower Now",
   },
   {
-    title: "AI Powered Learning Pathways",
+    title: "Ai Powered Learning Pathways",
     description: (
-      <span className="text-sm">
-        Get personalized learning pathways based on your goals and interests. Learn at your own pace and achieve your dreams!
+      <span className='text-sm'>
+        Get personalized learning pathways based on your goals and interests.
+        Learn at your own pace and achieve your dreams!
       </span>
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBoxAlignRightFilled className='h-4 w-4 text-neutral-500' />,
     cta: "Enroll Today",
   },
 ];
