@@ -116,7 +116,7 @@ const SolutionTabData = {
       title: "Software Outsourcing",
       description:
         "Outsource your software development to our top graduates and save time and money.",
-      path: "#",
+      path: "/SoftwareOutsourcingPage",
       Icon: <IoShieldCheckmarkOutline />,
     },
     {
