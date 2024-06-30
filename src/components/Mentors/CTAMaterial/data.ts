@@ -41,23 +41,5 @@ export const content: Content = {
       description: "Dragons's Tech team Lead at ",
       description_Highlighted: "Actus Go",
     },
-    {
-      imageSrc: "/images/talant/Faisel.jpg",
-      title: "Faisel Ebrahim",
-      description: "Dragons's Tech team Lead at Neferdata",
-      description_Highlighted: "Neferdata",
-    },
-    {
-      imageSrc: "/images/talant/MoALI.png",
-      title: "Mohammed Ali",
-      description: "Dragons's Tech team Lead at ",
-      description_Highlighted: "LevelUp ESG",
-    },
-    {
-      imageSrc: "/images/talant/AhmedSherif.jpeg",
-      title: "Ahmed Sherif",
-      description: "Dragons's Tech team Lead at ",
-      description_Highlighted: "Actus Go",
-    },
   ],
 };
