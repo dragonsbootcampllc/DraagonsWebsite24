@@ -1,5 +1,10 @@
+"use client";
 import Image from "next/image";
-function TestmonialSection() {
+import React from "react";
+import { BackgroundGradient } from "../ui/background-gradient";
+import { IconAppWindow } from "@tabler/icons-react";
+
+function TestimonialSection() {
   const Head = {
     logo_image: "",
     Logo_name: "Neferdata",
@@ -13,11 +18,11 @@ function TestmonialSection() {
   };
   const Info = {
     image: "/images/Kamil.jpeg",
-    name: "Kamil litman",
+    name: "Kamil Litman",
     designation: "Founder & CEO @ Neferdata",
   };
   return (
-    <div className="w-full max-w-[1340px] h-[800px] relative mt-5">
+    <div className="max-md:hidden w-full max-w-[1340px] h-[800px] relative mt-5">
       <div className="w-full absolute h-[30%] bg-[#030014] shadow-[0px_2px_20px_20px_rgba(3,0,20,0.97)] z-10 rounded-b-[50%]"></div>
       <div className="container mx-auto flex justify-center h-[55%] relative w-full">
         <div className="content z-[20] absolute flex flex-col gap-6 max-w-[1000px]">
@@ -39,31 +44,68 @@ function TestmonialSection() {
             <span className="text-white"> {Description.span2}</span>
           </div>
           <div className="info flex justify-center items-center md:mt-4 gap-1 flex-col">
-            <div className="image rounded-full flex justify-center items-center p-1  ring-1">
+            <div className="image rounded-full flex justify-center items-center p-1 ring-1">
               <Image
                 src={Info.image}
                 alt="logo"
                 width="80"
                 height="80"
-                className=" rounded-full"
+                className="rounded-full"
               />
             </div>
             <div className="items text-center">
               <h3 className=" text-2xl">{Info.name}</h3>
-              <p className=" text-[14px] md:text-xl lg:text-2xl text-white/60">
+              <p className="text-[14px] md:text-xl lg:text-2xl text-white/60">
                 {Info.designation}
               </p>
             </div>
           </div>
         </div>
-        <div className="grediant-background rounded-b-[85px] bg-gradient-to-r from-[#236c8c] to-[#a3127e]  w-[calc(100%-80px)] z-[2] h-[calc(100%-40px)] absolute   ">
+        <div className="grediant-background rounded-b-[85px] bg-gradient-to-r from-[#236c8c] to-[#a3127e] w-[calc(100%-80px)] z-[2] h-[calc(100%-40px)] absolute">
           {" "}
         </div>
-        <div className="colored-background shadow-[inset_0px_0px_10px_2px_rgba(255,255,255,0.2)] mx-auto  bg-gradient-to-r from-[#2c2d7c] to-[#18113f] rounded-b-[120px]  w-full z-[1] h-full absolute ">
+        <div className="colored-background shadow-[inset_0px_0px_10px_2px_rgba(255,255,255,0.2)] mx-auto bg-gradient-to-r from-[#2c2d7c] to-[#18113f] rounded-b-[120px] w-full z-[1] h-full absolute">
           {" "}
         </div>
       </div>
     </div>
   );
 }
-export default TestmonialSection;
+
+function SmallScreenTestimonialSection() {
+  return (
+    <div className="md:hidden my-10 mb-20">
+      <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900">
+        <Image
+          src={`/images/Kamil.jpeg`}
+          alt="jordans"
+          height="400"
+          width="400"
+          className="object-contain"
+        />
+        <h2 className="max-md:text-2xl font-semibold mt-4 mb-2 text-neutral-200">Kamil Litman</h2>
+        <p className="text-base sm:text-xl mt-4 mb-2 text-neutral-200">
+          Founder & CEO @ Neferdata
+        </p>
+
+        <p className="text-sm text-neutral-400">
+          Dragons Bootcamp has been essential in helping us find the new talent.
+          Their developers go beyond just implementing tasks; they take full
+          ownership, consistently deliver outcomes, and add their own
+          perspective and ideas.
+        </p>
+      </BackgroundGradient>
+    </div>
+  );
+}
+
+function MainComponent() {
+  return (
+    <>
+      <TestimonialSection />
+      <SmallScreenTestimonialSection />
+    </>
+  );
+}
+
+export default MainComponent;
