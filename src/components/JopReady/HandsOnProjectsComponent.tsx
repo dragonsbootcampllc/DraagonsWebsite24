@@ -4,6 +4,7 @@ import Link from "next/link";
 import ButtonComponent from "../Micros/Button";
 import ButtonLite from "../Micros/ButtonLite";
 import Image from "next/image";
+import { FaLaptopCode } from "react-icons/fa6";
 
 const HandsOnProjectsComponent: React.FC = () => {
   const [showDescriptionIndex, setShowDescriptionIndex] = useState<number | null>(null);
@@ -38,7 +39,9 @@ const HandsOnProjectsComponent: React.FC = () => {
     <div className='py-6' id='HandsOnProjectsComponent'>
       <div className='container mx-auto flex flex-col justify-center items-center gap-9'>
         <div className='w-full flex justify-center'>
-          <div className='bg-purple-700 w-[80px] h-[80px] p-2 shadow-2xl shadow-blue-700/40 rounded-3xl md:w-[116px] md:h-[116px]'></div>
+          <div className='flex justify-center items-center bg-purple-700 w-[80px] text-center h-[80px] p-2 shadow-2xl shadow-blue-700/40 rounded-3xl md:w-[116px] md:h-[116px]'>
+            <FaLaptopCode className='text-black text-5xl' />
+          </div>
         </div>
         <div
           style={{ fontFamily: "interV" }}
@@ -77,8 +80,8 @@ const HandsOnProjectsComponent: React.FC = () => {
                 />
                 <div
                   className={`${showDescriptionIndex === index
-                      ? "bg-gradient-to-t from-purple-900 via-black/50 to-transparent"
-                      : ""
+                    ? "bg-gradient-to-t from-purple-900 via-black/50 to-transparent"
+                    : ""
                     } absolute inset-0 rounded-3xl`}
                   style={{ zIndex: 1 }}></div>
               </div>
