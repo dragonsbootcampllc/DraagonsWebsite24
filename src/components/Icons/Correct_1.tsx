@@ -13,7 +13,7 @@ export default function Correct_1(props: SVGProps) {
             height="100%"
             viewBox="0 0 196.887 196.887"
             style={{
-                enableBackground: "new 0 0 196.887 196.887",
+                // enableBackground: "new 0 0 196.887 196.887",
             }}
             xmlSpace="preserve"
             {...props}
