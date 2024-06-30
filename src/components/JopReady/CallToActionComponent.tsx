@@ -8,6 +8,7 @@ import { Talent } from "../HOOKs/useTransformTalentData";
 import DragonsLogo3D from "@/../public/Identity/hero2023Glass.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { PiStudentBold } from "react-icons/pi";
 
 import useTransformTalentData from "../HOOKs/useTransformTalentData";
 import ButtonComponent from "../Micros/Button";
@@ -26,7 +27,9 @@ const CallToActionComponent: React.FC = () => {
     <div className='py-12 text-white ' id="CallToActionComponent">
       <div className='container mx-auto max-w-[1400px] flex flex-col gap-6 items-center text-center px-4'>
         <div className='w-full flex justify-center'>
-          <div className='bg-purple-700 w-[116px] h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem]'></div>
+          <div className='flex justify-center items-center bg-purple-700 w-[116px] h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem]'>
+            <PiStudentBold className='text-black text-6xl' />
+          </div>
         </div>
 
         <div

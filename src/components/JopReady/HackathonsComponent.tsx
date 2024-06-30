@@ -47,9 +47,9 @@ const HackathonsComponent: React.FC = () => {
         <div className="text max-w-full md:max-w-[1000px]">
           <div
             style={{ fontFamily: "interV" }}
-            className="text-4xl md:text-6xl lg:text-7xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold"
+            className="text-3xl md:text-6xl lg:text-7xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold"
           >
-            <h1>
+            <h1 >
               {headlineText}
               <span className="bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text">
                 {HeadLineHighlightedText}
