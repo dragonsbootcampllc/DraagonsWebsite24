@@ -69,7 +69,7 @@ const Hero: React.FC<HeroProps> = ({
             </p>
           </div>
         </div>
-        <div className='cta rounded-xl flex flex-col md:flex-row gap-5'>
+        <div className='cta max-sm:w-full rounded-xl flex flex-col md:flex-row gap-5'>
           <Link href='/Pricing' passHref>
             <div className='h-14 md:h-16 w-full md:w-64'>
               <Button CTAtext='Apply Now' />
