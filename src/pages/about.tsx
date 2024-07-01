@@ -37,7 +37,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
       id: 1,
       date: "2020-01-01",
       content: "New Season just landed💯",
-      link: "/blog/news",
+      link: "#",
     },
     heroHeading: "The story of a ",
     subHeadingText: "Student activity that ",
