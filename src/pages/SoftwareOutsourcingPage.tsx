@@ -38,7 +38,7 @@ const SoftwareOutsourcingPage: React.FC = () => {
                 Disctiption={HeroObj.Disctiption}
             />
             <WhyDragons />
-            <div className=' w-full relative flex justify-center items-center'>
+            <div className=' w-full px-6 relative flex justify-center items-center'>
                 <TestmonialSection />
             </div>
 
