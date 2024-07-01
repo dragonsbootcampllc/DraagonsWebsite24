@@ -190,7 +190,7 @@ function Footer() {
         <div className="grid grid-cols-1 relative w-full gap-8 lg:grid-cols-3">
           <div className="relative w-full z-10">
             <div className="text-white w-auto">
-              <div className="flex items-center -ml-7 -mt-4 w-auto">
+              <div className="flex items-center -ml-8 -mt-3 w-auto">
                 <Link
                   href="/"
                   className="flex hover:animate-pulse items-center cursor-pointer hover:bg-gray-900/30 duration-700 rounded-2xl w-auto pt-4"
@@ -198,24 +198,24 @@ function Footer() {
                   <Image
                     src={logoImg}
                     alt="Dragons Bootcamp LLC"
-                    className="aspect-video object-contain w-40 h-12 p-2 rounded-3xl px-4 hover:bg-black/20 duration-500 "
+                    className="aspect-video object-contain w-56 h-16 p-3 rounded-3xl px-6 hover:bg-purple-600/20 duration-500 "
                   />
                 </Link>
               </div>
             </div>
 
-            <p className="max-w-xs mt-2 font-bold text-white">
+            <p className="max-w-xs text-lg mt-2 font-bold text-white">
               Prepare for the future. Just say the magic word: ready for a
               sprint?
             </p>
-            <p className="relative mt-4 block">Address:</p>
-            <p className="relative block">
+            <p className="relative mt-4 block text-lg">Address:</p>
+            <p className="relative block text-lg">
               USA Inc. (HQ), 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801,
               USA
             </p>
 
             <p className="mt-4 max-w-xs text-white font-bold">
-              <span className="relative ">Reach through our social Media</span>{" "}
+              <span className="relative text-lg">Reach through our social Media</span>{" "}
               <br />
             </p>
 
@@ -230,7 +230,7 @@ function Footer() {
                     className="text-gray-200 transition"
                   >
                     <span className="sr-only select-none">{title}</span>
-                    <span className="w-6 inline-block hover:!-rotate-6 hover:text-blue-700 hover:!scale-150 transition-all">
+                    <span className="w-8 inline-block hover:!-rotate-6 hover:text-blue-700 hover:!scale-150 transition-all">
                       <Icon />
                     </span>
                   </a>
@@ -260,14 +260,14 @@ function Footer() {
                           ) : (
                             <Link
                               href={link.url}
-                              className="text-gray-200 hover:bg-purple-800 py-1 px-2 rounded-full duration-300 transition"
+                              className="text-gray-200 text-lg hover:text-purple-600 duration-200 transition"
                             >
                               {link.title}
                             </Link>
                           )
                         ) : (
                           <>
-                            <span className="text-gray-200">{link.title}</span>
+                            <span className="text-gray-200 text-lg">{link.title}</span>
                             <span className="soon text-xs rounded-full bg-purple-800 mx-2 py-[2px] px-[4px]">
                               Soon
                             </span>
