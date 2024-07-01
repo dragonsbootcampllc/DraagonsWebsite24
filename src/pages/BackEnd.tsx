@@ -14,7 +14,7 @@ const heroObj = {
         id: 2,
         date: "2020-01-01",
         content: "New Season just landed💯",
-        link: "/blog/news",
+        link: "#",
     },
     hero_heading: "Master the Backend with Comprehensive ",
     sub_heading_text: "Bootcamp for ",

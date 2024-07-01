@@ -12,7 +12,7 @@ const HeroObj = {
         id: 1,
         date: "2020-01-01",
         content: "New Season just landed💯",
-        link: "/blog/news",
+        link: "#",
     },
     heroHeading: "Unlock Innovation with ",
     subHeadingText: " Strategic ",

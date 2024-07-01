@@ -16,7 +16,7 @@ const DSA = () => {
       id: 1,
       date: "2024-01-01",
       content: "New Season just landed💯",
-      link: "/blog/news",
+      link: "#",
     },
     subHeadingText: "",
     heroHighlightedText: "Connect, Create, Innovate",
