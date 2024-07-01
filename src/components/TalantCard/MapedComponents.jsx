@@ -76,7 +76,7 @@ function MapedComponents(props) {
             "flex-col gap-4 w-full flex place-items-center justify-center mx-auto mb-12"
           }
         >
-          <p className={" mt-5 text-xl font-bold text-yellow-400/40"}>You can contact us to get access to all talents.</p>
+          <p className={"text-center px-10 mt-5 text-xl font-bold text-yellow-400/40"}>You can contact us to get access to all talents.</p>
           < ContactForm />
         </div>
       )}
