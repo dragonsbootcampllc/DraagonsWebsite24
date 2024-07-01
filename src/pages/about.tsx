@@ -47,7 +47,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
   };
 
   return (
-    <div id='aboutus' className='relative w-full flex  justify-center'>
+    <div id='aboutus' className='relative w-full flex flex-col items-center'>
       <Hero
         News={HeroObj.News}
         subHeadingText={HeroObj.subHeadingText}
@@ -55,9 +55,9 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
         heroHeading={HeroObj.heroHeading}
         Disctiption={HeroObj.Disctiption}
       />
-      <div className='flex justify-center flex-col items-center w-screen lg:mt-56 md:mt-28 mt-20 px-4'>
-        <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
-          <div className='text-3xl min-h-screen flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+      <div className='flex flex-col items-center w-full lg:mt-56 md:mt-28 mt-20 px-4'>
+        <div className='w-full max-w-6xl grid gap-2 place-items-center'>
+          <div className='text-3xl flex-col content-center text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
             <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
               {props.mainHeader}
             </h1>
@@ -65,14 +65,14 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
               {props.subHeader}
               <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
             </h1>
-            <p className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+            <p className='text-white/50 text-lg md:text-base container mx-auto flex flex-col gap-7 justify-center text-center max-w-2xl pt-5'>
               {props.description}
             </p>
           </div>
 
-          <div className='my-5 min-h-screen md:my-12'>
-            <div className='w-full place-items-center grid gap-2 max-w-[1400px]'>
-              <div className='text-3xl py-5 flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+          <div className='my-5 md:my-12'>
+            <div className='w-full grid gap-2 place-items-center'>
+              <div className='text-3xl py-5 flex-col content-center text-center md:text-5xl z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
                 <h1 className='md:text-xl text-center text-lg font-medium text-purple-800 uppercase'>
                   {props.story[0].mainHeader}
                 </h1>
@@ -82,7 +82,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
             {props.story.map((section: Section, index: number) => (
               <div
                 key={index}
-                className={`flex max-w-[1200px] py-5 ${
+                className={`flex max-w-6xl py-5 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 } flex-col gap-3`}>
                 <div className='flex flex-col md:w-1/2 gap-3'>
@@ -128,7 +128,7 @@ const AboutUsPage: React.FC<AboutUsProps> = (props) => {
             {props.vision.subHeader}
             <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
           </h1>
-          <p className='text-white/50 text-lg md:text-base head container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+          <p className='text-white/50 text-lg md:text-base container mx-auto flex flex-col gap-7 justify-center text-center max-w-2xl pt-5'>
             {props.vision.description}
           </p>
         </div>
