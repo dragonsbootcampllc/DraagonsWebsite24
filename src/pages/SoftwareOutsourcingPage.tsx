@@ -13,7 +13,7 @@ const HeroObj = {
         id: 1,
         date: "2020-01-01",
         content: "New Season just landed💯",
-        link: "/blog/news",
+        link: "#",
     },
     heroHeading: "Boost Your Business with ",
     subHeadingText: "Expert Software Outsourcing at ",
@@ -38,7 +38,7 @@ const SoftwareOutsourcingPage: React.FC = () => {
                 Disctiption={HeroObj.Disctiption}
             />
             <WhyDragons />
-            <div className=' w-full relative flex justify-center items-center'>
+            <div className=' w-full px-6 relative flex justify-center items-center'>
                 <TestmonialSection />
             </div>
 
