@@ -90,8 +90,8 @@ function Contact() {
             },
           }}>
           {!showSuccess ? (
-            <div className='grid pt-20 h-screen max-w-[1600px] m-auto place-items-center mb-20 lg:grid-flow-col grid-flow-row'>
-              <div>
+            <div className='grid h-screen max-w-[1600px] m-auto place-items-center my-20 lg:grid-flow-col grid-flow-row'>
+              <div className="max-md:hidden">
                 <FormSideSection />
               </div>
 
@@ -190,7 +190,7 @@ function Contact() {
             </div>
           ) : (
             <div className='flex max-md:flex-col-reverse items-center justify-around h-screen'>
-              <div>
+              <div className="max-md:hidden">
                 <FormSideSection />
               </div>
               <div>
