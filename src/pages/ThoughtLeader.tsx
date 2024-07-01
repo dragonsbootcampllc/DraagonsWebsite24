@@ -17,7 +17,7 @@ const HeroObj = {
     id: 1,
     date: "2020-01-01",
     content: "New Season just landed💯",
-    link: "/blog/news",
+    link: "#",
   },
   subHeadingText: " With Dragons Bootcamp in ",
   heroHighlightedText: "Only 6 Month",

@@ -31,7 +31,7 @@ export default function mentors() {
       id: 3,
       date: "2020-01-01",
       content: "Meet Our Expert Mentors Today!",
-      link: "/blog/news",
+      link: "#",
     },
     hero_heading: 'Empower Your Journey with Guidance from ',
     sub_heading_text: '',

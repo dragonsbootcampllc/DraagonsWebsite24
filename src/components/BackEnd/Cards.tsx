@@ -58,7 +58,7 @@ export default function Cards({ DataObj ,headText }: BackEndProps) {
                                 <p className="mt-4 text-gray-400">{BackEndCard.description}</p>
 
                                 <span className="mt-4  text-white/80 hover:text-white">
-                                    Read more &rarr;
+                                    {" "}
                                 </span>
 
                             </div>
