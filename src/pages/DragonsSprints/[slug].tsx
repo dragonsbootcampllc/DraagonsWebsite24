@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useRouter } from "next/router";
 import ButtonComponent from '@/components/Micros/Button';
 import { Correct_1, Document_1, Time_1 } from '@/components/Icons';
-import CourseHeasder from '@/pages/DragonsSprints/Components/CourseHeader';
+import CourseHeasder from '@/pages/DragonsSprints/Components/Header/CourseHeader';
 interface Coupon {
   name: string,
   discount: number
