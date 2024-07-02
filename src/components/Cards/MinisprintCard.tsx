@@ -41,7 +41,7 @@ const MinisprintCard: React.FC<MinisprintCardProps> = ({
         <Image
           layout='fill'
           objectFit='cover'
-          className='min-w-ful rounded-3xl min-h-full object-cover hover:scale-[1.8] scale-[1.7] transition-all'
+          className='min-w-full rounded-3xl min-h-full object-cover hover:scale-[1.8] scale-[1.7] transition-all'
           src={imageUrl}
           alt={title}
           style={{ transformOrigin: "right center" }}
