@@ -33,7 +33,11 @@ function Topics({ Topics, title }: { Topics: any[], title: string }) {
                     objectFit="cover"
                   />
                 </div>
-                <div className='py-1'>{topic.title}</div>
+                <div className='py-1'>
+                <h1 className='xl:text-2xl capitalize lg:text-xl md:text-lg sm:text-md py-4 md:py-0   font-bold'>
+                {topic.title}
+          </h1>
+                  </div>
               </div>
             ))}
           </div>

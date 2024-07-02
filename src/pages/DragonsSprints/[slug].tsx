@@ -54,7 +54,7 @@ export default function minisprint_explore_view() {
   };
   const price = 1250;
 
-  const Topics= [
+  const Topics = [
     {
       title: "Introduction",
       image: CoverImage.src,
@@ -75,7 +75,7 @@ export default function minisprint_explore_view() {
 
   return (
     <div className='grid place-items-center '>
-      <div className=' h-full flex-col max-w-[1400px] w-full flex justify-center'>
+      <div className='h-full flex-col max-w-[1400px] w-full flex justify-center'>
         <CourseHeasder
           title={minisprint_name}
           description={description}
@@ -86,10 +86,26 @@ export default function minisprint_explore_view() {
           Language={Language}
           HasCertificate={HasCertificate}
         />
-        <div className='my-12 flex flex-col gap-4 w-full'>
-          <OverViewComponent description={description} title={"OverView"} />
-          <TopicsComponent Topics={Topics} title={"Topics"} />
+       <div className="w-full flex justify-center">
+       <div className='flex md:flex-row flex-col max-w-[1200px]'>
+          <div className='w-full md:w-2/3'>
+            {" "}
+            <div className='flex-shrink flex flex-col gap-4 '>
+              <OverViewComponent description={description} title={"OverView"} />
+              <TopicsComponent Topics={Topics} title={"Topics"} />
+            </div>
+          </div>
+          <div className='w-1/3 h-full flex-shrink '>
+            <div className='w-full p-1 bg-purple-800/20 rounded-3xl'>
+              <div className='w-full relative bg-purple-800 min-h-[200px] rounded-3xl cursor-pointer'>
+                <div className='text-base px-3 md:px-6 absolute  grid place-items-center   lg:text-3xl font-medium text-gray-200 h-full w-full '>
+                  <span className='w-full'></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+       </div>
       </div>
     </div>
   );
