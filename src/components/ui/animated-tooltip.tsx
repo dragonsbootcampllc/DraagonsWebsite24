@@ -86,7 +86,7 @@ export const AnimatedTooltip = ({
               width={100}
               src={item.image}
               alt={item.name}
-              className='object-cover !m-0 !p-0 object-top rounded-full h-20 w-20 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500'
+              className='object-cover aspect-square !m-0 !p-0 object-top rounded-full h-full w-full border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500'
             />
           </Link>
         </div>
@@ -129,7 +129,7 @@ export const AnimatedTooltip = ({
             </motion.div>
           )}
         </AnimatePresence>
-        <div className='object-cover place-items-center grid bg-yellow-300 text-purple-900  font-extrabold   object-top rounded-full h-20 w-20 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500'>
+        <div className='object-cover place-items-center grid bg-yellow-300 text-purple-900  font-extrabold   object-top rounded-full h-full w-full aspect-square border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500'>
           <span className=' p-0 m-0 text-lg'>
             1200+
           </span>
