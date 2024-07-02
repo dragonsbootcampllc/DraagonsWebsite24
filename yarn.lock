@@ -476,6 +476,7 @@
   dependencies:
     tslib "^2.4.0"
 
+<<<<<<< HEAD
 "@hapi/hoek@^9.0.0", "@hapi/hoek@^9.3.0":
   version "9.3.0"
   resolved "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.3.0.tgz"
@@ -488,6 +489,8 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+=======
+>>>>>>> 408d4ab776b9d12b6b77a2fc1dc9f82fec3b7e8d
 "@headlessui/react@^2.1.1":
   version "2.1.1"
   resolved "https://registry.npmjs.org/@headlessui/react/-/react-2.1.1.tgz"
