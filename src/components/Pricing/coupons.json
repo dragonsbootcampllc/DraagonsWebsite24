@@ -8,5 +8,10 @@
     "discount": 20,
     "usageLimit": 20,
     "used": 8
+  },
+  "DragonsEgy73": {
+    "discount": 73,
+    "usageLimit": 1000,
+    "used": 0
   }
 }
