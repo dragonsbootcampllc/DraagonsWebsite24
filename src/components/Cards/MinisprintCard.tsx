@@ -31,7 +31,7 @@ const MinisprintCard: React.FC<MinisprintCardProps> = ({
   exploreUrl,
 }) => {
   const maxDescriptionLength = 100;
-  const BASE_URL = "/minisprints";
+  const BASE_URL = "/DragonsSprints";
 
   return (
     <div
