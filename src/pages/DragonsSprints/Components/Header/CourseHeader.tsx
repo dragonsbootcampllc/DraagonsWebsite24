@@ -4,6 +4,7 @@ import talents from "@/pages/json/Team2023.json";
 import useTransformTalentData from "@/components/HOOKs/useTransformTalentData";
 import { Talent } from "@/components/HOOKs/useTransformTalentData";
 import VideoComponenet from "./VideoComponenet";
+import OverView from "../OverView";
 
 function CourseHeader({
   title,
@@ -67,6 +68,7 @@ function CourseHeader({
         Language={Language}
         HasCertificate={HasCertificate}
       />
+ 
     </div>
   );
 }
