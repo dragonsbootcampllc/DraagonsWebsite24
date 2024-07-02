@@ -77,8 +77,8 @@ const ApplyPricing = () => {
     }, [program, coupon]);
 
     return (
-        <div className="container mx-auto w-full flex flex-col gap-8 justify-center items-center mb-24">
-            <form onSubmit={handleSubmit} className="w-[600px] bg-purple-950 p-5 rounded-xl shadow-lg mt-[100px]">
+        <div className="container mx-auto w-full flex flex-col gap-8 justify-center items-center mb-24 px-4">
+            <form onSubmit={handleSubmit} className="w-full md:w-[600px] bg-purple-950 p-5 rounded-xl shadow-lg mt-[100px]">
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="mb-4 flex-1">
                         <label className="block text-sm font-medium text-white/70">First Name</label>
