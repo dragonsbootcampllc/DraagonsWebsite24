@@ -19,7 +19,7 @@ export default function minisprint_explore_view() {
   const description = 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem';
   const benefits = ['test test test test', 'test 1 test 1 test 1 test 1', 'test 2 test 2 test 2 test 2', 'test 3 test 3 test 3', 'test 4 test 4 test 4 test 4 test 4 test 4'];
   const content = {
-    duration: '2 weeks',
+    duration: '70 hours / 2 weeks', 
     assignments: '',
     articles: '8',
     resources: '5'
