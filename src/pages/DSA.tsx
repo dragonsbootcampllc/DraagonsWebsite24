@@ -1,13 +1,10 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 import Hero from "@/components/JopReady/Hero";
 import { TrustedSection } from "../components/Trusted/TrustedSection";
 import LearningMaterialComponent from "@/components/JopReady/LearningMaterialComponent";
 import OFFICE from "@/../public/images/Gallery/18.png";
 import HackathonsComponent from "@/components/JopReady/HackathonsComponent";
+import PartnerSlider from "@/components/PartnerSlider";
 
 const DSA = () => {
 
@@ -16,7 +13,7 @@ const DSA = () => {
       id: 1,
       date: "2024-01-01",
       content: "New Season just landed💯",
-      link: "/blog/news",
+      link: "#",
     },
     subHeadingText: "",
     heroHighlightedText: "Connect, Create, Innovate",
@@ -102,6 +99,7 @@ const DSA = () => {
           image={MaterialObj.image}
         />
       </div>
+<<<<<<< HEAD
       <div className="flex flex-col px-5 md:px-10 items-center max-w-3xl py-10">
   <h2 className="text-4xl md:text-7xl font-semibold justify-center mb-4 md:mb-10 p-5 md:p-10 text-center">
     Student Activity <span className="text-purple-800 mr-1 grid place-content-center">Partners</span>
@@ -156,6 +154,14 @@ const DSA = () => {
     <div className="w-full">
       <HackathonsComponent />
     </div>
+=======
+      <div className="my-20">
+        <PartnerSlider />
+      </div>
+      <div className="w-full">
+        <HackathonsComponent />
+      </div>
+>>>>>>> 408d4ab776b9d12b6b77a2fc1dc9f82fec3b7e8d
     </div>
 
   );

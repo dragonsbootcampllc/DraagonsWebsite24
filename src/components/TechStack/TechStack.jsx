@@ -41,7 +41,7 @@ function TechStack(props) {
           <h1 className='md:text-2xl  grid place-items-center text-xl md:text-center text-start font-medium text-purple-800 uppercase'>
             Tech Stack
           </h1>
-          <h1 className='text-4xl capitalize md:text-6xl font-semibold'>
+          <h1 className='text-3xl capitalize md:text-6xl font-semibold'>
             {props.MainText}
           </h1>
           <p className='text-white/50 text-lg md:text-base'>
