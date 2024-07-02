@@ -4,7 +4,25 @@ import talents from "@/pages/json/Team2023.json";
 import useTransformTalentData from "@/components/HOOKs/useTransformTalentData";
 import { Talent } from "@/components/HOOKs/useTransformTalentData";
 
-function CourseHeader(props) {
+function CourseHeader({
+  title,
+  description,
+  duration,
+  Instructors,
+  Category,
+  Level,
+  Language,
+  HasCertificate,
+}: {
+  title?: string;
+  description?: string;
+  duration?: string;
+  Instructors?: string[];
+  Category?: string[];
+  Level?: string[];
+  Language?: string[];
+  HasCertificate?: boolean;
+}) {
   const transformedTalents = useTransformTalentData(talents as Talent[]);
 
   return (
@@ -20,18 +38,25 @@ function CourseHeader(props) {
             intensive 2 weeks of learning, practice, and mentorship.
           </p>
         </div>
-        <div className='flex-row hidden md:flex relative h-16 mb-10 '>
-          <AnimatedTooltip
-            items={
-              transformedTalents as {
-                id: number;
-                name: string;
-                designation: string;
-                image: string;
-                link_profile_Linkedin: string;
-              }[]
-            }
-          />
+        <div className='flex gap-8 w-full max-w-2xl flex-row-reverse'>
+          <div className='flex w-full max-w-28  '>
+            <div className='text-base max-w-24 relative w-full h-16 grid bg-slate-500/20 place-items-center p-0 m-0 border-l-4 px-2  py-2 lg:text-lg font-medium text-gray-200 '>
+              <p className='absolute pl-1 w-full grid place-items-center h-full'> Dragons's Advisors</p>
+            </div>
+          </div>
+          <div className='flex-row  w-full hidden md:flex relative h-16 mb-10 '>
+            <AnimatedTooltip
+              items={
+                transformedTalents as {
+                  id: number;
+                  name: string;
+                  designation: string;
+                  image: string;
+                  link_profile_Linkedin: string;
+                }[]
+              }
+            />
+          </div>
         </div>
       </div>
       <div className='aspect-video rounded-md h-full w-full  bg-slate-200'></div>
