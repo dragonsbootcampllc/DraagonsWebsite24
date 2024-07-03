@@ -46,7 +46,10 @@ function CourseHeader({
               <p className='absolute pl-1 w-full grid place-items-center h-full'> Dragons's Advisors</p>
             </div>
           </div>
-          <div className='flex-row  w-full hidden md:flex relative h-16 mb-10 '>
+          <div className='flex-row overflow-hidden   w-full hidden md:flex relative h-16 mb-10 '>
+<div className="absolute w-full h-full z-10  backdrop-blur-md  overflow-hidden">
+  <div className="w-full h-full bg-gradient-to-t text-2xl font-medium  grid place-items-center from-black to-transparent">Announced Soon</div>
+</div>
             <AnimatedTooltip
               items={
                 transformedTalents as {
