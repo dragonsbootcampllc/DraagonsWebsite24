@@ -43,14 +43,14 @@ const HandsOnProjectsComponent: React.FC = () => {
     };
 
     return (
-        <div className='py-6' >
-            <div className='container mx-auto flex flex-col justify-center items-center gap-9'>
+        
+            <div className='container mx-auto flex flex-col justify-center py-6 items-center gap-9'>
                 <div className='w-full flex justify-center'>
                     <div className='flex justify-center items-center bg-purple-700 w-[80px] text-center h-[80px] p-2 shadow-2xl shadow-blue-700/40 rounded-3xl md:w-[116px] md:h-[116px]'>
                         <FaLaptopCode className='text-black text-5xl' />
                     </div>
                 </div>
-                <div className="heading md:max-w-[1000px] text-center">
+                <div className="heading px-5 md:max-w-[1000px] text-center">
                     <h1
                         style={{ fontFamily: "interV" }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto z-10 relative mb-3 text-gray-200 font-semibold"
@@ -65,11 +65,11 @@ const HandsOnProjectsComponent: React.FC = () => {
                         {headText.descriptionText}
                     </p>
                 </div>
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                     {content.map((item, index) => (
                         <div
                             key={index}
-                            className='relative text-center w-[400px] hover:scale-105 bg-[#08091b] z-10 duration-700 cursor-pointer transition-transform pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'
+                            className='relative text-center w-[350px] md:w-[400px] hover:scale-105 bg-[#08091b] z-10 duration-700 cursor-pointer transition-transform pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={handleMouseLeave}>
                             <div className='text-center grid place-items-center'>
@@ -102,7 +102,7 @@ const HandsOnProjectsComponent: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <div className='cta max-sm:w-full max-sm:px-6 rounded-xl flex flex-col md:flex-row gap-4 md:gap-6 pb-10'>
+                <div className='cta max-sm:w-full justify-center items-center max-sm:px-6 rounded-xl flex flex-col md:flex-row gap-4 md:gap-6 pb-10'>
                     <Link href='/Pricing' passHref>
                         <div className="h-12 w-48 md:h-16 md:w-64">
                             <ButtonComponent CTAtext={ApplyNowText} />
@@ -110,7 +110,6 @@ const HandsOnProjectsComponent: React.FC = () => {
                     </Link>
                 </div>
             </div>
-        </div>
     );
 };
 
