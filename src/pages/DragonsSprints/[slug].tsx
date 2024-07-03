@@ -23,9 +23,7 @@ export default function minisprint_explore_view() {
   const [couponInput, setCouponInput] = useState("");
   const [discount, setDiscount] = useState(0);
 
-  const description =
-    '"The Developer\'s Quest With Real-World Scenarios" is an intensive 2-week program designed to give aspiring developers a deep dive into various technical career paths. Through a combination of learning, practice, and mentorship, participants will gain hands-on experience with real-world scenarios, helping them make informed decisions about their career direction in the tech industry.';
-  const benefits = [
+  const description = "\"The Developer's Quest With Real-World Scenarios\" is an intensive 2-week program designed to guide aspiring developers through various technical career paths. This comprehensive course covers a wide range of topics, from front-end and back-end development to DevOps, full-stack applications, mobile development, and emerging technologies like blockchain and IoT. Through hands-on experience with real-world scenarios, daily mentorship, and industry insights, participants gain practical skills and knowledge to make informed career decisions. The program includes building responsive web applications, creating RESTful APIs, implementing CI/CD pipelines, and exploring data science and machine learning. By the end, participants will have a clear understanding of different tech career paths, hands-on experience with diverse technologies, and valuable connections in the industry.";  const benefits = [
     "test test test test",
     "test 1 test 1 test 1 test 1",
     "test 2 test 2 test 2 test 2",
@@ -68,7 +66,7 @@ export default function minisprint_explore_view() {
 
   const Topics = [
     {
-      title: "Introduction",
+      title: "The Forest and Dragon's Egg",
       image: CoverImage.src,
     },
     {

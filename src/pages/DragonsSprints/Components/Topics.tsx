@@ -34,7 +34,7 @@ function Topics({ Topics, title }: { Topics: any[], title: string }) {
                   />
                 </div>
                 <div className='py-1'>
-                <h1 className='xl:text-2xl capitalize lg:text-xl md:text-lg sm:text-md py-4 md:py-0   font-bold'>
+                <h1 className=' xl:text-lg capitalizev px-2  sm:text-xs py-4 md:py-0   font-bold'>
                 {topic.title}
           </h1>
                   </div>
