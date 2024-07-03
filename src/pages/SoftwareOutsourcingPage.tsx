@@ -36,7 +36,6 @@ const SoftwareOutsourcingPage: React.FC = () => {
       <div className=' w-full relative flex justify-center items-center'>
         <TestmonialSection />
       </div>
-
       <TargetedCompaniesSection />
       <CallToAction />
     </div>

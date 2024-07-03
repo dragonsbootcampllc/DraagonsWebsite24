@@ -6,6 +6,7 @@ import CourseHeasder from "@/pages/DragonsSprints/Components/Header/CourseHeader
 import OverViewComponent from "@/pages/DragonsSprints/Components/OverView";
 import TopicsComponent from "./Components/Topics";
 import CoverImage from "@/../public/45f.png";
+import Transformation from "./Components/Transformation";
 
 interface Coupon {
   name: string;
@@ -23,7 +24,7 @@ export default function minisprint_explore_view() {
   const [discount, setDiscount] = useState(0);
 
   const description =
-    "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem";
+    '"The Developer\'s Quest With Real-World Scenarios" is an intensive 2-week program designed to give aspiring developers a deep dive into various technical career paths. Through a combination of learning, practice, and mentorship, participants will gain hands-on experience with real-world scenarios, helping them make informed decisions about their career direction in the tech industry.';
   const benefits = [
     "test test test test",
     "test 1 test 1 test 1 test 1",
@@ -44,13 +45,22 @@ export default function minisprint_explore_view() {
   const HasCertificate = true;
 
   const requirements = [
-    "test test test test",
-    "test 1 test 1 test 1 test 1",
-    "test 2 test 2 test 2 test 2",
-    "test 3 test 3 test 3",
-    "test 4 test 4 test 4 test 4 test 4 test 4",
+    "Basic understanding of programming concepts.",
+    "Access to a computer and the internet.",
+    "A willingness to learn, collaborate with others and positive attitude.",
+    "A passion for technology and innovation.",
+    "A growth mindset and a desire to succeed.",
+    "A commitment to completing the program.",
+    "not shy to ask questions. :)"
   ];
 
+  const Outcomes = [
+    "Understand the different technical career paths offered in the tech industry.",
+    "Acquire practical experience with real-world scenarios.",
+    "Make informed decisions about your career direction.",
+    "Build a network of peers and potential career connections.",
+    "Gain insights and networking opportunities with experienced mentors and industry professionals."
+  ];
   const add_coupon = (couponData: Coupon | null) => {
     setCoupon(couponData);
   };
@@ -77,7 +87,7 @@ export default function minisprint_explore_view() {
 
   const [error, setError] = useState("");
   const [discountedPrice, setDiscountedPrice] = useState(price);
-  
+
   // Function to handle applying coupon
   const handleApplyCoupon = () => {
     setError("");
@@ -112,8 +122,8 @@ export default function minisprint_explore_view() {
         setCoupon(null);
       });
   };
-  
-  const applyDiscount = (discountPercentage:any) => {
+
+  const applyDiscount = (discountPercentage: any) => {
     const discountedAmount = price * (discountPercentage / 100);
     const newPrice = price - discountedAmount;
     setDiscountedPrice(newPrice);
@@ -132,7 +142,7 @@ export default function minisprint_explore_view() {
           Language={Language}
           HasCertificate={HasCertificate}
         />
-        <div className='w-full flex justify-center'>
+        <div className='w-full flex py-4 justify-center'>
           <div className='flex md:flex-row gap-4 flex-col w-full max-w-[1300px] px-2'>
             <div className='w-full md:w-2/3'>
               {" "}
@@ -142,6 +152,11 @@ export default function minisprint_explore_view() {
                   title={"Overview"}
                 />
                 <TopicsComponent Topics={Topics} title={"Topics"} />
+                <Transformation
+                  title={"Transformation"}
+                  Requirements={requirements}
+                  Outcomes={Outcomes}
+                />
               </div>
             </div>
             <div className='w-1/3 h-full flex-shrink '>
