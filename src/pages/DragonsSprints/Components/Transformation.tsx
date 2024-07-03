@@ -31,6 +31,7 @@ return (
                      </h2>
                      <ul className="list-none">
                        {Requirements.map((requirement:any, index:any) => (
+
                          <li className="py-2 flex items-start" key={index}>
                            <FaCheckCircle className="mr-2 mt-1 text-green-500 flex-shrink-0" />
                            <span>{requirement}</span>
@@ -44,6 +45,7 @@ return (
                      </h2>
                      <ul className="list-none">
                        {Outcomes.map((outcome:any, index:any) => (
+
                          <li className="py-2 flex items-start" key={index}>
                            <FaLightbulb className="mr-2 mt-1 text-yellow-500 flex-shrink-0" />
                            <span>{outcome}</span>

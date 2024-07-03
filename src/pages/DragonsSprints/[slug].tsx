@@ -10,6 +10,7 @@ import Transformation from "./Components/Transformation";
 import CheckOutButton from "@/components/CheckoutButton";
 
 
+
 interface Coupon {
   name: string;
   discount: number;
@@ -164,12 +165,15 @@ export default function minisprint_explore_view() {
                 <div className='w-full relative aspect-square bg-purple-800 h-[200px] rounded-3xl cursor-pointer'>
                   <div className='text-base  px-3 md:px-6 absolute  grid place-items-center   lg:text-3xl font-medium text-gray-200 h-full w-full '>
                     <div className='w-full  flex justify-center items-center'>
+
                       <div className='rounded-md h-4/5 w-full text-gray-300 text-4xl font-bold flex flex-col justify-end gap-5 p-4'>
                         <span className='flex justify-center h-full items-center relative'>
                           <span className='text-5xl font-bold relative'>
                             ${discountedPrice.toFixed(2)}
                           </span>
+
                           {/* {coupon && (
+
                             <>
                               <span className='text-xl font-bold line-through px-2 text-gray-300/40'>
                                 ${price.toFixed(2)}
@@ -178,9 +182,11 @@ export default function minisprint_explore_view() {
                                 {coupon.discount}%
                               </span>
                             </>
+
                           )} */}
                         </span>
                         {/* {error && (
+
                           <span className='text-red-500 text-sm'>{error}</span>
                         )}
 
@@ -195,10 +201,12 @@ export default function minisprint_explore_view() {
                           CTAtext='Apply Coupon'
                           onClick={handleApplyCoupon}
                           className='!h-fit'
+
                         /> */}
                       
                         <CheckOutButton CTAtext='Buy Now' className='!h-fit'
                           createCheckoutSession='/api/Checkout-DragonsSprint'
+
                         />
                       </div>
                     </div>
