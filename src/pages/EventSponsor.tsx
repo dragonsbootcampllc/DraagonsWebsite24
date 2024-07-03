@@ -2,7 +2,7 @@
 import Hero from "@/components/JopReady/Hero";
 
 import TailoredBrandIntegration from "@/components/Eventponsor/TailoredBrandIntegration";
-
+import HostingEvents from "@/components/Eventponsor/HostingEvents";
 import CTAMaterial from "@/components/JopReady/CTAMaterial/CTAMaterial";
 import CallToActionComponent from "@/components/JopReady/CallToActionComponent";
 import HandsOnProjectsComponent from "@/components/JopReady/HandsOnProjectsComponent";
@@ -35,6 +35,7 @@ const EventSponsor: React.FC = () => {
                 Disctiption={HeroObj.Disctiption}
             />
             <TailoredBrandIntegration />
+            <HostingEvents/>
             <CTAMaterial/>
             <CallToActionComponent/>
             <HandsOnProjectsComponent/>
