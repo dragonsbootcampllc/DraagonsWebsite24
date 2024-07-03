@@ -103,7 +103,7 @@ const SolutionTabData = {
     {
       title: "Events Sponsor",
       description: "Sponsor our events and get access to our top tech talent.",
-      path: "#",
+      path: "/EventSponsor",
       Icon: <IoSearchSharp />,
     },
     {
