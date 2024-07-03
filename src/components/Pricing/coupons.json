@@ -1,17 +1,39 @@
 {
-  "DISCOUNT10": {
-    "discount": 10,
-    "usageLimit": 20,
-    "used": 0
+  "Front-End": {
+    "DISCOUNT10": {
+      "discount": 10,
+      "usageLimit": 20,
+      "used": 2
+    },
+    "DISCOUNT20": {
+      "discount": 20,
+      "usageLimit": 20,
+      "used": 11
+    }
   },
-  "DISCOUNT20": {
-    "discount": 20,
-    "usageLimit": 20,
-    "used": 8
+  "Back-End": {
+    "DISCOUNT10": {
+      "discount": 10,
+      "usageLimit": 20,
+      "used": 1
+    },
+    "DISCOUNT20": {
+      "discount": 20,
+      "usageLimit": 20,
+      "used": 12
+    }
   },
-  "DragonsEgy73": {
-    "discount": 73,
-    "usageLimit": 1000,
-    "used": 0
+  "Data Analysis": {
+    "DISCOUNT10": {
+      "discount": 10,
+      "usageLimit": 20,
+      "used": 1
+    },
+    "DISCOUNT20": {
+      "discount": 20,
+      "usageLimit": 20,
+      "used": 10
+    }
+
   }
 }
