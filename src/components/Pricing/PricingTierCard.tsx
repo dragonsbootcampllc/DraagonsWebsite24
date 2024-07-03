@@ -27,7 +27,7 @@ export interface PricingTier {
 }
 
 interface PricingTierCardProps {
-  tier: PricingTier;
+    tier: PricingTier;
   frequency: PricingTierFrequency;
 }
 
@@ -95,7 +95,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
   const queryParams = new URLSearchParams({ program: tier.program }).toString();
 
   return (
-    <div className="flex flex-wrap container xl:flex-nowrap items-center bg-purple-950/80 backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-3xl ring-1 ring-gray-400/70 dark:ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
+    <div className="flex flex-wrap container xl:flex-nowrap items-center bg-purple-800/20 backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-3xl ring-1 ring-gray-400/70 dark:ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
       <div className="p-8 sm:p-10 xl:flex-auto">
         <h3 className="text-white text-3xl font-semibold tracking-tight">
           {tier.name}

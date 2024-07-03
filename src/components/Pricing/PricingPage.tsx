@@ -23,7 +23,7 @@ const PricingPage: React.FC = () => {
     <div className={`flex flex-col w-full items-center ${styles.fancyOverlay}`}>
       <div className="container mx-auto w-full flex flex-col gap-8 justify-center items-center mb-24">
 
-        <div className="text max-w-full md:max-w-[1000px]">
+        <div className="text  max-w-[1000px]">
           <div
             style={{ fontFamily: "interV" }}
             className="text-4xl md:text-6xl lg:text-7xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold"
@@ -70,7 +70,7 @@ const PricingPage: React.FC = () => {
 
 
         {/* Assuming PricingTier is an array of PricingTierType */}
-        <div className='flex flex-col gap-6'>
+        <div className='flex flex-col max-w-[1000px] gap-6'>
           <PricingTierCard tier={PricingTier[0] as any} frequency={frequency as any} />
           <PricingTierCard tier={PricingTier[1] as any} frequency={frequency as any} />
           <PricingTierCard tier={PricingTier[2] as any} frequency={frequency as any} />
