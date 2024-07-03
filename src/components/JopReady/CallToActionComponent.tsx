@@ -43,7 +43,8 @@ const CallToActionComponent: React.FC = () => {
           </h1>
         </div>
         <div className='max-w-[1400px]'>
-          <div className='flex-row hidden md:flex relative h-24 mb-10 '>
+          <div className="grid place-items-center w-full">
+          <div className='flex-row hidden md:flex relative h-20 mb-10 '>
             <AnimatedTooltip
               items={
                 transformedTalents as {
@@ -55,6 +56,7 @@ const CallToActionComponent: React.FC = () => {
                 }[]
               }
             />
+          </div>
           </div>
           <div className='mt-8 flex flex-col md:flex-row gap-4 justify-center'>
             <Link href='/Pricing' passHref>
