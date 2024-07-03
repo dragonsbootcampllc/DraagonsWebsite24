@@ -1,7 +1,18 @@
+# node_modules is ignored by default
 node_modules
-.next
 
-# Million Lint
+
+# Build files
+build
+github
+dist
+out
+
+
+
+# any forlder start with "." and file with "."
+
+.*
 .million
-
+.next
 .env
