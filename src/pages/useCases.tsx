@@ -12,7 +12,7 @@ const HeroObj = {
     id: 1,
     date: "2020-01-01",
     content: "New Season just landed💯",
-    link: "/blog/news",
+    link: "#",
   },
   heroHeading: " Transform ",
   heroHighlightedText: " Dragons Bootcamp",
@@ -69,7 +69,7 @@ const gridItems: GridItem[] = [
       "People that are looking to build their own tech startup or improve their existing business.",
   },
 
-  
+
 ];
 
 const MaterialObj: MaterialObj = {
@@ -83,7 +83,7 @@ const MaterialObj: MaterialObj = {
     "Don't miss out on the opportunity to be part of a program that adapts to your unique needs and goals.",
   ReadMoreText: "Read More",
   ApplyNowText: "Apply Now",
-  image:OFFICE.src,
+  image: OFFICE.src,
 };
 
 
@@ -91,14 +91,14 @@ const MaterialObj: MaterialObj = {
 const JopReady: React.FC = () => {
   return (
     <div className='relative w-full'>
-      <Hero 
-       News={HeroObj.News}
-       subHeadingText={HeroObj.subHeadingText}
-       heroHighlightedText={HeroObj.heroHighlightedText}
-       heroHeading={HeroObj.heroHeading}
+      <Hero
+        News={HeroObj.News}
+        subHeadingText={HeroObj.subHeadingText}
+        heroHighlightedText={HeroObj.heroHighlightedText}
+        heroHeading={HeroObj.heroHeading}
         Disctiption={HeroObj.Disctiption}
       />
-        <ModernGrid/>
+      <ModernGrid />
 
       <WhatAreOurProgramsForComponent
         gridItems={MaterialObj.gridItems}
