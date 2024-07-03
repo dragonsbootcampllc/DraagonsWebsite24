@@ -24,7 +24,7 @@ const transformedTalents = useTransformTalentData(talents as Talent[]);
 
 const CallToActionComponent: React.FC = () => {
   return (
-    <div className='py-12 text-white ' id="CallToActionComponent">
+    <div className='py-12 text-white ' id='CallToActionComponent'>
       <div className='container mx-auto max-w-[1400px] flex flex-col gap-6 items-center text-center px-4'>
         <div className='w-full flex justify-center'>
           <div className='flex justify-center items-center bg-purple-700 w-[116px] h-[116px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem]'>
@@ -34,8 +34,7 @@ const CallToActionComponent: React.FC = () => {
 
         <div
           style={{ fontFamily: "interV" }}
-          className='text-4xl md:text-6xl lg:text-7xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'
-        >
+          className='text-4xl md:text-6xl lg:text-7xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
           <h1>
             {ctaHeadline}
             <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'>
@@ -44,15 +43,17 @@ const CallToActionComponent: React.FC = () => {
           </h1>
         </div>
         <div className='max-w-[1400px]'>
-          <div className='flex-row hidden md:flex items-center justify-center mb-10 w-full'>
+          <div className='flex-row hidden md:flex relative h-24 mb-10 '>
             <AnimatedTooltip
-              items={transformedTalents as {
-                id: number;
-                name: string;
-                designation: string;
-                image: string;
-                link_profile_Linkedin: string;
-              }[]}
+              items={
+                transformedTalents as {
+                  id: number;
+                  name: string;
+                  designation: string;
+                  image: string;
+                  link_profile_Linkedin: string;
+                }[]
+              }
             />
           </div>
           <div className='mt-8 flex flex-col md:flex-row gap-4 justify-center'>
@@ -70,7 +71,9 @@ const CallToActionComponent: React.FC = () => {
 
           <div className='py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-4 md:px-8'>
             <Link href='/FrontEnd' passHref>
-              <Card title='Master Frontend Development' icon={<AceternityIcon />}>
+              <Card
+                title='Master Frontend Development'
+                icon={<AceternityIcon />}>
                 <CanvasRevealEffect
                   animationSpeed={5.1}
                   containerClassName='bg-emerald-900'
@@ -125,15 +128,13 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className='border group/canvas-card flex items-center justify-center overflow-hidden border-white/[0.2] rounded-3xl max-w-sm w-full mx-auto p-4 h-[30rem] relative'
-    >
+      className='border group/canvas-card flex items-center justify-center overflow-hidden border-white/[0.2] rounded-3xl max-w-sm w-full mx-auto p-4 h-[30rem] relative'>
       <AnimatePresence>
         {hovered && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className='h-full w-full absolute inset-0'
-          >
+            className='h-full w-full absolute inset-0'>
             {children}
           </motion.div>
         )}
@@ -173,8 +174,7 @@ export const Icon = ({ className, ...rest }: any) => {
       strokeWidth='1.5'
       stroke='currentColor'
       className={className}
-      {...rest}
-    >
+      {...rest}>
       <path strokeLinecap='round' strokeLinejoin='round' d='M12 6v12m6-6H6' />
     </svg>
   );
