@@ -60,7 +60,7 @@ const HandsOnProjectsComponent: React.FC = () => {
           {content.map((item, index) => (
             <div
               key={index}
-              className='relative text-center w-full h-full hover:scale-105 bg-[#08091b] z-10 duration-700 cursor-pointer transition-transform pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'
+              className='relative text-center w-[400px] hover:scale-105 bg-[#08091b] z-10 duration-700 cursor-pointer transition-transform pt-6 rounded-3xl overflow-hidden flex flex-col gap-4 justify-between items-center'
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}>
               <div className='text-center grid place-items-center'>
@@ -82,14 +82,14 @@ const HandsOnProjectsComponent: React.FC = () => {
                   className={`${showDescriptionIndex === index
                     ? "bg-gradient-to-t from-purple-900 via-black/50 to-transparent"
                     : ""
-                    } absolute inset-0 rounded-3xl`}
+                    } absolute inset-0 rounded-3xl `}
                   style={{ zIndex: 1 }}></div>
               </div>
-              {showDescriptionIndex === index && (
-                <p className='text-sm md:text-base lg:text-lg z-10 absolute bottom-0 p-4 mb-8 max-w-[600px] text-white/90'>
-                  {item.description}
-                </p>
-              )}
+              <p
+                className={`text-sm md:text-base lg:text-lg z-10 absolute bottom-0 p-4 mb-8 max-w-[600px] transition-transform duration-700 ease-in-out text-white/90 ${showDescriptionIndex === index ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
+              >
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
