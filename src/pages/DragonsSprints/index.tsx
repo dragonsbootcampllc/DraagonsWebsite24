@@ -32,7 +32,7 @@ import React from 'react';
 export default function index() {
 
     return (
-        <div className='flex flex-col  relative min-h-[screen] justify-center items-center mx-auto max-w-[2000px] mb-12'>
+        <div className='flex flex-col  relative min-h-screen justify-center items-center mx-auto max-w-[2000px] mb-12'>
             {/* <Hero_2 {...heroObj} /> */}
             <HeroSlider exploreUrl={minisprintData[0].exploreUrl}/>
             <div className='flex justify-center min-h-[400px] items-center flex-wrap w-11/12 gap-12'>
