@@ -18,17 +18,17 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'infinite-scroll': 'infinite_scroll 25s linear infinite',
+        "infinite-scroll": "infinite_scroll 25s linear infinite",
         shimmer: "shimmer 2s linear infinite",
         "meteor-effect": "meteor 5s linear infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       maxWidth: {
-        'slider-image': '300px', 
+        "slider-image": "300px",
       },
       maxHeight: {
-        'slider-image': '200px', 
+        "slider-image": "200px",
       },
       keyframes: {
         shimmer: {
@@ -40,9 +40,9 @@ module.exports = {
           },
         },
         infinite_scroll: {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
-      },
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
           "70%": { opacity: "1" },
@@ -59,7 +59,7 @@ module.exports = {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, addVariablesForColors],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
