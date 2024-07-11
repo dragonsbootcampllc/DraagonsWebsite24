@@ -1,4 +1,5 @@
 import MillionLint from "@million/lint";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -26,5 +27,6 @@ const nextConfig = {
     ],
     domains: ["encrypted-tbn0.gstatic.com"],
   },
+  output: 'export', // Add the output property here
 };
 export default MillionLint.next()(nextConfig);
