@@ -12,7 +12,7 @@ out
 
 # any forlder start with "." and file with "."
 
-.*
+
 .million
 .next
 .env
