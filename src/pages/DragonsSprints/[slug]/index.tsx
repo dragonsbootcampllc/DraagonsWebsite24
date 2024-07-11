@@ -130,7 +130,7 @@ export default function CourseDetailPage() {
                           </span>
                         </span>
                         {hasAccess ? (
-                          <Link href={`/DragonsSprints/${slug}/explore`}>
+                          <Link href={`/DragonsSprints/${slug}/Explore`}>
                             <ButtonComponent
                               CTAtext='Go to Course'
                               className='!h-fit'
