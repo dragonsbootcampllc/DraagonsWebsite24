@@ -2,8 +2,8 @@ import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export const HoverEffect = ({
-  items,
+const HoverEffect = ({
+  items = [], // Set a default value
   className,
   isPathwayOpen,
 }: {
@@ -24,7 +24,7 @@ export const HoverEffect = ({
         "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
         className
       )}>
-      {items.map((item, idx) => (
+      {items && items.length > 0 ? items.map((item, idx) => (
         <div
           key={item?.title}
           className='relative group block p-2 h-full w-full'
@@ -64,7 +64,7 @@ export const HoverEffect = ({
             )}
           </Card>
         </div>
-      ))}
+      )) : null}
     </div>
   );
 };
@@ -130,3 +130,5 @@ export const CardDescription = ({
     </p>
   );
 };
+
+export default HoverEffect;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/router';
-import { HoverEffect } from "@/pages/DragonsSprints/[slug]/Components/card-hover-effectv2";
+import HoverEffect from "@/pages/DragonsSprints/[slug]/Components/card-hover-effectv2";
 import { log } from 'console';
 import { BrainCircuit, Radio, Shapes } from 'lucide-react';
 
