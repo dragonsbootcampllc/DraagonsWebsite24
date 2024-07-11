@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { useUser } from '@clerk/nextjs';
+import Link from 'next/link';
 import ButtonComponent from "@/components/Micros/Button";
 import { Correct_1, Document_1, Time_1 } from "@/components/Icons";
 import CourseHeasder from "@/pages/DragonsSprints/Components/Header/CourseHeader";
 import OverViewComponent from "@/pages/DragonsSprints/Components/OverView";
-import TopicsComponent from "./Components/Topics";
+import TopicsComponent from "../Components/Topics";
 import CoverImage from "@/../public/45f.png";
-import Transformation from "./Components/Transformation";
+import Transformation from "../Components/Transformation";
 import CheckOutButton from "@/components/CheckoutButton";
 
 interface Coupon {
@@ -14,15 +16,20 @@ interface Coupon {
   discount: number;
 }
 
-export default function minisprint_explore_view() {
+export default function CourseDetailPage() {
   const router = useRouter();
+  const { slug } = router.query;
+  const { user, isLoaded } = useUser();
+  const [hasAccess, setHasAccess] = useState(false);
   const minisprint_name = "The Developer's Quest with Real-World Scenarios";
-  const [coupon, setCoupon] = useState<Coupon | null>({
-    name: "DISCOUNT20",
-    discount: 20,
-  });
-  const [couponInput, setCouponInput] = useState("");
-  const [discount, setDiscount] = useState(0);
+  const [discountedPrice, setDiscountedPrice] = useState(30);
+
+  useEffect(() => {
+    if (isLoaded && user) {
+      const userCourses = user.publicMetadata.courses as string[] || [];
+      setHasAccess(userCourses.includes(slug as string));
+    }
+  }, [isLoaded, user, slug]);
 
   const description =
     '"The Developer\'s Quest With Real-World Scenarios" is an intensive 2-week program designed to guide aspiring developers through various technical career paths. This comprehensive course covers a wide range of topics, from front-end and back-end development to DevOps, full-stack applications, mobile development, and emerging technologies like blockchain and IoT. Through hands-on experience with real-world scenarios, daily mentorship, and industry insights, participants gain practical skills and knowledge to make informed career decisions. The program includes building responsive web applications, creating RESTful APIs, implementing CI/CD pipelines, and exploring data science and machine learning. By the end, participants will have a clear understanding of different tech career paths, hands-on experience with diverse technologies, and valuable connections in the industry.';
@@ -62,10 +69,6 @@ export default function minisprint_explore_view() {
     "Build a network of peers and potential career connections.",
     "Gain insights and networking opportunities with experienced mentors and industry professionals.",
   ];
-  const add_coupon = (couponData: Coupon | null) => {
-    setCoupon(couponData);
-  };
-  const price = 30;
 
   const Topics = [
     {
@@ -86,50 +89,6 @@ export default function minisprint_explore_view() {
     },
   ];
 
-  const [error, setError] = useState("");
-  const [discountedPrice, setDiscountedPrice] = useState(price);
-
-  // Function to handle applying coupon
-  // const handleApplyCoupon = () => {
-  //   setError("");
-  //   fetch("/api/CouponSystem/validate-coupon.js", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({ coupon: couponInput }),
-  //   })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error("Failed to validate coupon");
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       if (data && data.discount) {
-  //         const discountPercentage = data.discount;
-  //         applyDiscount(discountPercentage);
-  //         setCoupon({ name: couponInput, discount: discountPercentage });
-  //         setCouponInput("");
-  //       } else {
-  //         setError(data.message || "Invalid coupon code");
-  //         setDiscountedPrice(price);
-  //         setCoupon(null);
-  //       }
-  //     })
-  //     .catch((err) => {
-  //       setError("An error occurred. Please try again.");
-  //       setDiscountedPrice(price);
-  //       setCoupon(null);
-  //     });
-  // };
-
-  // const applyDiscount = (discountPercentage: any) => {
-  //   const discountedAmount = price * (discountPercentage / 100);
-  //   const newPrice = price - discountedAmount;
-  //   setDiscountedPrice(newPrice);
-  // };
-
   return (
     <div className='grid place-items-center '>
       <div className='h-full flex-col max-w-[1400px] w-full flex justify-center'>
@@ -146,7 +105,6 @@ export default function minisprint_explore_view() {
         <div className='w-full flex py-4 justify-center'>
           <div className='flex md:flex-row gap-4 flex-col w-full max-w-[1300px] px-2'>
             <div className='w-full md:w-2/3'>
-              {" "}
               <div className='flex-shrink  w-full flex flex-col gap-4 '>
                 <OverViewComponent
                   description={description}
@@ -170,44 +128,21 @@ export default function minisprint_explore_view() {
                           <span className='text-5xl font-bold relative'>
                             ${discountedPrice.toFixed(2)}
                           </span>
-
-                          {/* {coupon && (
-
-                            <>
-                              <span className='text-xl font-bold line-through px-2 text-gray-300/40'>
-                                ${price.toFixed(2)}
-                              </span>
-                              <span className='text-xl text-yellow-500 animate-pulse hover:scale-105 transition-all'>
-                                {coupon.discount}%
-                              </span>
-                            </>
-
-                          )} */}
                         </span>
-                        {/* {error && (
-
-                          <span className='text-red-500 text-sm'>{error}</span>
+                        {hasAccess ? (
+                          <Link href={`/DragonsSprints/${slug}/explore`}>
+                            <ButtonComponent
+                              CTAtext='Go to Course'
+                              className='!h-fit'
+                            />
+                          </Link>
+                        ) : (
+                          <CheckOutButton
+                            CTAtext='Buy Now'
+                            className='!h-fit'
+                            createCheckoutSession='/api/Checkout-DragonsSprint'
+                          />
                         )}
-
-                        <input
-                          type='text'
-                          className='inline-block p-2 text-lg text-black bg-blue-200 border-blue-500 transition-all shadow-[0_0_0_0px_rgba(13,119,252,0.5)] focus:shadow-[0_0_0_3px_rgba(13,119,252,0.5)] border rounded-lg focus:outline-none overflow-y-auto overflow-x-hidden w-full h-20'
-                          onChange={(e) => setCouponInput(e.target.value)}
-                          value={couponInput}
-                          placeholder='Enter coupon code'
-                        />
-                        <ButtonComponent
-                          CTAtext='Apply Coupon'
-                          onClick={handleApplyCoupon}
-                          className='!h-fit'
-
-                        /> */}
-
-                        <CheckOutButton
-                          CTAtext='Buy Now'
-                          className='!h-fit'
-                          createCheckoutSession='/api/Checkout-DragonsSprint'
-                        />
                       </div>
                     </div>
                   </div>

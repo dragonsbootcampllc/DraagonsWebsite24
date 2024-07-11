@@ -6,22 +6,21 @@ const Footer = dynamic(() => import("@/components/Footer"));
 
 import HeaderComp from "@/components/Navbar/Navbar";
 import Head from "next/head";
-
+import { ClerkProvider } from "@clerk/nextjs";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div>
-        <div className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030014_40%,#63e_100%)]'></div>
-        <HeadSEO />
-
-        <HeaderComp />
-
-        <div className={"w-full"}>
-          <Component {...pageProps} />
+      <ClerkProvider>
+        <div>
+          <div className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030014_40%,#63e_100%)]'></div>
+          <HeadSEO />
+          <HeaderComp />
+          <div className={"w-full"}>
+            <Component {...pageProps} />
+          </div>
         </div>
-      </div>
-
-      <Footer />
+        <Footer />
+      </ClerkProvider>
     </>
   );
 }
