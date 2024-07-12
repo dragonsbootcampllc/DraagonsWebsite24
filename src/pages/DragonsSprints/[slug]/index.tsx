@@ -129,7 +129,7 @@ export default function CourseDetailPage() {
                             ${discountedPrice.toFixed(2)}
                           </span>
                         </span>
-                        {hasAccess ? (
+                        {isLoaded && hasAccess ? (
                           <Link href={`/DragonsSprints/${slug}/Explore`}>
                             <ButtonComponent
                               CTAtext='Go to Course'
