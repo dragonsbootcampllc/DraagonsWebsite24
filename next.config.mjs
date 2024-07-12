@@ -29,7 +29,7 @@ const nextConfig = {
     ],
     domains: ["encrypted-tbn0.gstatic.com"],
   },
-  output: 'export',  // Ensure static export is set
+  // output: 'export',  // Ensure static export is set
 };
 
 export default MillionLint.next()(nextConfig);
