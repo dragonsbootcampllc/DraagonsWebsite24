@@ -1,13 +1,15 @@
 import { useRouter } from "next/router";
 import { useUser } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
-import CardNavOptions from "@/pages/DragonsSprints/[slug]/Components/cards"
+import CardNavOptions from "@/pages/DragonsSprints/[slug]/Components/cards";
+import CheckoutButton from "@/components/CheckoutButton";
 
 interface StreakInfo {
   currentStreak: number;
   longestStreak: number;
   lastSignIn: string;
 }
+
 const StreakVisualizer = ({
   daysLeft,
   userImageUrl = "",
@@ -25,10 +27,7 @@ const StreakVisualizer = ({
 
   return (
     <div className='flex items-center justify-center space-x-4 my-4'>
-      {/* Basic user image */}
       <img src={userImageUrl} alt='User' className='w-10 h-10 rounded-full' />
-
-      {/* Streak visualization */}
       <div className='flex space-x-1'>
         {[...Array(totalDays)].map((_, index) => (
           <div
@@ -39,8 +38,6 @@ const StreakVisualizer = ({
             title={`Day ${index + 1}`}></div>
         ))}
       </div>
-
-      {/* Premium user image with SVG and animation */}
       <svg
         width='40'
         height='40'
@@ -66,11 +63,11 @@ const StreakVisualizer = ({
           strokeWidth='2'
           className={`${animate ? "animate-pulse" : ""}`}
         />
-
       </svg>
     </div>
   );
 };
+
 export default function ExplorePage() {
   const router = useRouter();
   const { slug } = router.query;
@@ -86,66 +83,66 @@ export default function ExplorePage() {
   });
 
   useEffect(() => {
-    if (isLoaded && user) {
-      const userCourses = (user.publicMetadata.courses as string[]) || [];
-      setHasAccess(userCourses.includes(slug as string));
+    if (!isLoaded || !user || !slug) return;
 
-      const today = new Date();
-      const todayString = today.toISOString().split("T")[0];
+    const userCourses = (user.publicMetadata.courses as string[]) || [];
+    setHasAccess(userCourses.includes(slug as string));
 
-      // General sign-in streak
-      const storedStreakInfo = localStorage.getItem(`${user.id}_streakInfo`);
-      let currentStreakInfo: StreakInfo = storedStreakInfo
-        ? JSON.parse(storedStreakInfo)
-        : { currentStreak: 0, longestStreak: 0, lastSignIn: "" };
+    const today = new Date();
+    const todayString = today.toISOString().split("T")[0];
 
-      if (currentStreakInfo.lastSignIn !== todayString) {
-        if (isConsecutiveDay(currentStreakInfo.lastSignIn, todayString)) {
-          currentStreakInfo.currentStreak++;
-          currentStreakInfo.longestStreak = Math.max(
-            currentStreakInfo.longestStreak,
-            currentStreakInfo.currentStreak
-          );
-        } else {
-          currentStreakInfo.currentStreak = 1;
-        }
-        currentStreakInfo.lastSignIn = todayString;
-        localStorage.setItem(
-          `${user.id}_streakInfo`,
-          JSON.stringify(currentStreakInfo)
+    // General sign-in streak
+    const storedStreakInfo = localStorage.getItem(`${user.id}_streakInfo`);
+    let currentStreakInfo: StreakInfo = storedStreakInfo
+      ? JSON.parse(storedStreakInfo)
+      : { currentStreak: 0, longestStreak: 0, lastSignIn: "" };
+
+    if (currentStreakInfo.lastSignIn !== todayString) {
+      if (isConsecutiveDay(currentStreakInfo.lastSignIn, todayString)) {
+        currentStreakInfo.currentStreak++;
+        currentStreakInfo.longestStreak = Math.max(
+          currentStreakInfo.longestStreak,
+          currentStreakInfo.currentStreak
         );
-      }
-      setStreakInfo(currentStreakInfo);
-
-      // 14-day challenge tracking
-      const savedStartDate = localStorage.getItem(`${slug}_startDate`);
-      if (savedStartDate) {
-        setStartDate(new Date(savedStartDate));
       } else {
-        const newStartDate = new Date();
-        setStartDate(newStartDate);
-        localStorage.setItem(`${slug}_startDate`, newStartDate.toISOString());
+        currentStreakInfo.currentStreak = 1;
       }
+      currentStreakInfo.lastSignIn = todayString;
+      localStorage.setItem(
+        `${user.id}_streakInfo`,
+        JSON.stringify(currentStreakInfo)
+      );
+    }
+    setStreakInfo(currentStreakInfo);
 
-      const lastVisit = localStorage.getItem(`${slug}_lastVisit`);
-      if (lastVisit) {
-        const daysSinceLastVisit = Math.floor(
-          (today.getTime() - new Date(lastVisit).getTime()) /
-            (1000 * 60 * 60 * 24)
-        );
-        if (daysSinceLastVisit > 1) {
-          setMissedDays((prev) => prev + daysSinceLastVisit - 1);
-        }
-      }
-      localStorage.setItem(`${slug}_lastVisit`, today.toISOString());
+    // 14-day challenge tracking
+    const savedStartDate = localStorage.getItem(`${slug}_startDate`);
+    if (savedStartDate) {
+      setStartDate(new Date(savedStartDate));
+    } else {
+      const newStartDate = new Date();
+      setStartDate(newStartDate);
+      localStorage.setItem(`${slug}_startDate`, newStartDate.toISOString());
+    }
 
-      // Update days left
-      if (startDate) {
-        const elapsedDays = Math.floor(
-          (today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
-        );
-        setDaysLeft(Math.max(0, 14 - elapsedDays));
+    const lastVisit = localStorage.getItem(`${slug}_lastVisit`);
+    if (lastVisit) {
+      const daysSinceLastVisit = Math.floor(
+        (today.getTime() - new Date(lastVisit).getTime()) /
+          (1000 * 60 * 60 * 24)
+      );
+      if (daysSinceLastVisit > 1) {
+        setMissedDays((prev) => prev + daysSinceLastVisit - 1);
       }
+    }
+    localStorage.setItem(`${slug}_lastVisit`, today.toISOString());
+
+    // Update days left
+    if (startDate) {
+      const elapsedDays = Math.floor(
+        (today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+      );
+      setDaysLeft(Math.max(0, 14 - elapsedDays));
     }
   }, [isLoaded, user, slug, startDate]);
 
@@ -156,12 +153,6 @@ export default function ExplorePage() {
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays === 1;
   };
-
-  if (!isLoaded) return <div>Loading...</div>;
-
-  if (!hasAccess) {
-    return <div>You don't have access to this course.</div>;
-  }
 
   const getMotivationSentence = () => {
     const motivationSentences = [
@@ -194,6 +185,48 @@ export default function ExplorePage() {
     localStorage.setItem(`${slug}_startDate`, newStartDate.toISOString());
     localStorage.setItem(`${slug}_lastVisit`, newStartDate.toISOString());
   };
+
+  if (!isLoaded || !slug) {
+    return (
+      <div
+        id='global-bg'
+        className='hero relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
+        <div className='container mx-auto pt-[120px] md:pt-[140px] flex flex-col justify-between gap-9 items-center px-4'>
+          <div className='content flex flex-col gap-12'>
+            <h1 className='md:text-2xl grid place-items-center text-xl md:text-center text-start font-medium text-gray-50/70 capitalize'>
+              Loading...
+            </h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!hasAccess) {
+    return (
+      <div
+        id='global-bg'
+        className='hero relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
+        <div className='container mx-auto pt-[120px] md:pt-[140px] flex flex-col justify-between gap-9 items-center px-4'>
+          <div className='content flex flex-col gap-12'>
+            <div
+              style={{ fontFamily: "interV" }}
+              className='text-3xl md:text-6xl capitalize content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+              Hi {user?.firstName}! You don't have access to this course yet 🚧
+            </div>
+            <h1 className='md:text-2xl grid place-items-center text-xl md:text-center text-start font-medium text-gray-50/70 capitalize'>
+              To gain access, please purchase the course or contact support.
+            </h1>
+            <CheckoutButton
+              CTAtext='Buy Now'
+              className='!h-fit'
+              createCheckoutSession='/api/Checkout-DragonsSprint'
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -251,7 +284,7 @@ export default function ExplorePage() {
           </div>
         </div>
       </div>
-      <CardNavOptions/>
+      <CardNavOptions />
     </div>
   );
 }
