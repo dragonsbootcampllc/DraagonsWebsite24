@@ -114,7 +114,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 };
 
-export default function CourseDetailPage({ pageData }: { pageData: PageData }) {
+function CourseDetailPage({ pageData }: { pageData: PageData }) {
   const router = useRouter();
   const { slug } = router.query;
   const { user, isLoaded } = useUser();
@@ -197,4 +197,8 @@ export default function CourseDetailPage({ pageData }: { pageData: PageData }) {
       </div>
     </div>
   );
+
 }
+
+export default CourseDetailPage;
+  

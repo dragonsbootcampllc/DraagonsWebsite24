@@ -5,12 +5,29 @@ import { Stripe } from 'stripe';
 import { clerkClient } from '@clerk/nextjs/server';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-04-10', // Updated to a current version
+  apiVersion: '2024-04-10',
 });
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+// Middleware to ensure req.body is parsed
+const parseBodyMiddleware = async (req: NextApiRequest, res: NextApiResponse, next: () => void) => {
+  if (req.method === 'POST' && !req.body) {
+    try {
+      const chunks: Buffer[] = [];
+      for await (const chunk of req) {
+        chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
+      }
+      req.body = JSON.parse(Buffer.concat(chunks).toString('utf-8'));
+    } catch (err) {
+      console.error('Error parsing request body:', err);
+      return res.status(400).json({ error: 'Invalid JSON' });
+    }
+  }
+  next();
+};
+
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
       // Read the JSON data file CareerSprint.json
@@ -25,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         price: jsonData.price
       };
 
-      // Get the user ID from the request body
+      // Extract the userId and courseSlug from the request body
       const { userId, courseSlug } = req.body;
 
       if (!userId || !courseSlug) {
@@ -62,13 +79,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(200).json({ sessionId: session.id });
     } catch (err: any) {
       console.error("Checkout error:", err);
-      res.status(500).json({ error: "An error occurred during checkout" });
+      res.status(500).json({ error: `An error occurred during checkout: ${err.message}` });
     }
   } else {
     res.setHeader("Allow", "POST");
     res.status(405).end("Method Not Allowed");
   }
-}
+};
+
+// Wrap the handler with the middleware
+const middlewareHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+  await parseBodyMiddleware(req, res, () => handler(req, res));
+};
+
+export default middlewareHandler;
 
 // Webhook handler
 export const config = {

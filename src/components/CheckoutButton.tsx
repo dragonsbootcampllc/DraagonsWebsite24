@@ -1,8 +1,7 @@
 import React from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { useUser, useClerk } from "@clerk/nextjs";
+import { useUser, SignedIn, SignedOut, useClerk } from "@clerk/nextjs";
 import { useRouter } from 'next/router';
-import axios from "axios";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || "");
 
@@ -19,9 +18,6 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = React.memo(
     const { slug } = router.query;
     const { openSignIn } = useClerk();
 
-    const userId = user?.id;
-    const courseSlug = slug as string;
-
     const handleCheckout = async () => {
       if (!isSignedIn) {
         // If not signed in, open the sign-in modal
@@ -34,31 +30,39 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = React.memo(
       const stripe = await stripePromise;
       if (!stripe) {
         console.error("Stripe failed to initialize");
-        alert("An error occurred during checkout. Please try again or contact support.");
         return;
       }
 
       try {
-        console.log("Initiating checkout for user:", userId, "course:", courseSlug);
-        const response = await axios.post(createCheckoutSession, { userId, courseSlug });
-
-        if (response.status !== 200) {
+        const response = await fetch(createCheckoutSession, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            //open cors
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify({
+            userId: user.id,
+            courseSlug: slug,
+          }),
+        });
+      
+        if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-
-        const session = response.data;
-        console.log("Checkout session created:", session.sessionId);
-
+      
+        const session = await response.json();
+      
         const result = await stripe.redirectToCheckout({
           sessionId: session.sessionId,
         });
-
+      
         if (result.error) {
           throw new Error(result.error.message);
         }
       } catch (error) {
         console.error("Error during checkout:", error);
-        alert("An error occurred during checkout. Please try again or contact support if the issue persists.");
+        alert("An error occurred during checkout. Please try again.");
       }
     };
 
