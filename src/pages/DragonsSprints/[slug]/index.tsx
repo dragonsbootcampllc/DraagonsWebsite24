@@ -1,16 +1,22 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from "next";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { useUser } from '@clerk/nextjs';
-import Link from 'next/link';
+import { useUser } from "@clerk/nextjs";
+import Link from "next/link";
 import ButtonComponent from "@/components/Micros/Button";
 import { Correct_1, Document_1, Time_1 } from "@/components/Icons";
 import CourseHeasder from "@/pages/DragonsSprints/Components/Header/CourseHeader";
 import OverViewComponent from "@/pages/DragonsSprints/Components/OverView";
 import TopicsComponent from "../Components/Topics";
+
 import CoverImage from "@/../public/45f.png";
 import Transformation from "../Components/Transformation";
 import CheckOutButton from "@/components/CheckoutButton";
+// topics images
+import Topic1 from "@/../public/images/DragonsSprint-CarrerSprint/IntroductionPoster-Dragons.png";
+import Topic2 from "@/../public/images/DragonsSprint-CarrerSprint/WhyitsalotPoster.png";
+import Topic3 from "@/../public/images/DragonsSprint-CarrerSprint/Positionbattleposter.png";
+import Topic4 from "@/../public/images/DragonsSprint-CarrerSprint/theMaze.jpeg";
 
 interface Coupon {
   name: string;
@@ -39,22 +45,23 @@ interface PageData {
 export const getStaticPaths: GetStaticPaths = async () => {
   // Fetch all possible course slugs
   // This is a placeholder. Replace with your actual data fetching logic
-  const slugs = ['CareerSprint', 'OtherCourse1', 'OtherCourse2'];
+  const slugs = ["CareerSprint", "OtherCourse1", "OtherCourse2"];
 
   return {
-    paths: slugs.map(slug => ({ params: { slug } })),
-    fallback: 'blocking'
+    paths: slugs.map((slug) => ({ params: { slug } })),
+    fallback: "blocking",
   };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
-  
+
   // Fetch the necessary data for the page
   // This is a placeholder. Replace with your actual data fetching logic
   const pageData: PageData = {
     minisprint_name: "The Developer's Quest with Real-World Scenarios",
-    description: '"The Developer\'s Quest With Real-World Scenarios" is an intensive 2-week program designed to guide aspiring developers through various technical career paths. This comprehensive course covers a wide range of topics, from front-end and back-end development to DevOps, full-stack applications, mobile development, and emerging technologies like blockchain and IoT. Through hands-on experience with real-world scenarios, daily mentorship, and industry insights, participants gain practical skills and knowledge to make informed career decisions. The program includes building responsive web applications, creating RESTful APIs, implementing CI/CD pipelines, and exploring data science and machine learning. By the end, participants will have a clear understanding of different tech career paths, hands-on experience with diverse technologies, and valuable connections in the industry.',
+    description:
+      '"The Developer\'s Quest With Real-World Scenarios" is an intensive 2-week program designed to guide aspiring developers through various technical career paths. This comprehensive course covers a wide range of topics, from front-end and back-end development to DevOps, full-stack applications, mobile development, and emerging technologies like blockchain and IoT. Through hands-on experience with real-world scenarios, daily mentorship, and industry insights, participants gain practical skills and knowledge to make informed career decisions. The program includes building responsive web applications, creating RESTful APIs, implementing CI/CD pipelines, and exploring data science and machine learning. By the end, participants will have a clear understanding of different tech career paths, hands-on experience with diverse technologies, and valuable connections in the industry.',
     content: {
       duration: "70 hours / 2 weeks",
       assignments: "",
@@ -85,33 +92,33 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     Topics: [
       {
         title: "Introduction",
-        image: CoverImage.src,
+        image: Topic1.src,
       },
       {
         title: "Why it's A lot?!",
-        image: CoverImage.src,
+        image: Topic2.src,
       },
       {
         title: "Positions Battle",
-        image: CoverImage.src,
+        image: Topic3.src,
       },
       {
         title: "The Golden RoadMap",
-        image: CoverImage.src,
+        image: Topic4.src,
       },
     ],
   };
-  
+
   if (!pageData) {
     return {
       notFound: true,
-    }
+    };
   }
-  
+
   return {
     props: { pageData },
-    revalidate: 60 // Revalidate every 60 seconds
-  }
+    revalidate: 60, // Revalidate every 60 seconds
+  };
 };
 
 function CourseDetailPage({ pageData }: { pageData: PageData }) {
@@ -123,7 +130,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
 
   useEffect(() => {
     if (isLoaded && user) {
-      const userCourses = user.publicMetadata.courses as string[] || [];
+      const userCourses = (user.publicMetadata.courses as string[]) || [];
       setHasAccess(userCourses.includes(slug as string));
     }
   }, [isLoaded, user, slug]);
@@ -174,17 +181,25 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
                         </span>
                         {isLoaded && hasAccess ? (
                           <Link href={`/DragonsSprints/${slug}/Explore`}>
-                            <ButtonComponent
-                              CTAtext='Go to Course'
-                              className='!h-fit'
-                            />
+                            <div className='lg:flex gap-4  hidden mt-4 justify-center'>
+                              <div className='h-16 w-64  '>
+                                <ButtonComponent
+                                  CTAtext='Go to Course'
+                                  className='!h-fit'
+                                />
+                              </div>
+                            </div>
                           </Link>
                         ) : (
-                          <CheckOutButton
-                            CTAtext='Buy Now'
-                            className='!h-fit'
-                            createCheckoutSession='/api/Checkout-DragonsSprint'
-                          />
+                          <div className='lg:flex gap-4  hidden mt-4 justify-center'>
+                            <div className='h-16 w-64  '>
+                              <CheckOutButton
+                                CTAtext='Buy Now'
+                                className='h-full'
+                                createCheckoutSession='/api/Checkout-DragonsSprint'
+                              />
+                            </div>
+                          </div>
                         )}
                       </div>
                     </div>
@@ -197,8 +212,6 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
       </div>
     </div>
   );
-
 }
 
 export default CourseDetailPage;
-  
