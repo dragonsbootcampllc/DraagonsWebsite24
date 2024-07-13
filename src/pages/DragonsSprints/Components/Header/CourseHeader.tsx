@@ -43,13 +43,18 @@ function CourseHeader({
         <div className='flex gap-8 w-full max-w-2xl flex-row-reverse'>
           <div className='hidden md:flex w-full max-w-28  '>
             <div className='text-base max-w-24 relative w-full h-16 grid bg-slate-500/20 place-items-center p-0 m-0 border-l-4 px-2  py-2 lg:text-lg font-medium text-gray-200 '>
-              <p className='absolute pl-1 w-full grid place-items-center h-full'> Dragons's Advisors</p>
+              <p className='absolute pl-1 w-full grid place-items-center h-full'>
+                {" "}
+                Dragons's Advisors
+              </p>
             </div>
           </div>
           <div className='flex-row overflow-hidden   w-full hidden md:flex relative h-16 mb-10 '>
-<div className="absolute w-full h-full z-10  backdrop-blur-md  overflow-hidden">
-  <div className="w-full h-full bg-gradient-to-t text-2xl font-medium  grid place-items-center from-black to-transparent">Announced Soon</div>
-</div>
+            <div className='absolute w-full h-full z-10  backdrop-blur-md  overflow-hidden'>
+              <div className='w-full h-full bg-gradient-to-t text-2xl font-medium  grid place-items-center from-black to-transparent'>
+                Announced Soon
+              </div>
+            </div>
             <AnimatedTooltip
               items={
                 transformedTalents as {
@@ -71,7 +76,6 @@ function CourseHeader({
         Language={Language}
         HasCertificate={HasCertificate}
       />
- 
     </div>
   );
 }
