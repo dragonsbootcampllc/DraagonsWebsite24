@@ -5,15 +5,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import ButtonComponent from "../Micros/ButtonLite";
 
-export default function MovieCard({
-  movie,
-  exploreUrl,
-  expandImage,
-}: {
+export default function MovieCard(props: {
   movie: any;
   exploreUrl: string;
   expandImage: any;
 }) {
+  const { movie, exploreUrl, expandImage } = props;
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
   const currentURL = router.route;

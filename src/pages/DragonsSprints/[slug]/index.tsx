@@ -12,7 +12,7 @@ import TopicsComponent from "../Components/Topics";
 import CoverImage from "@/../public/45f.png";
 import Transformation from "../Components/Transformation";
 import CheckOutButton from "@/components/CheckoutButton";
-// topics images 
+// topics images
 import Topic1 from "@/../public/images/DragonsSprint-CarrerSprint/IntroductionPoster-Dragons.png";
 import Topic2 from "@/../public/images/DragonsSprint-CarrerSprint/WhyitsalotPoster.png";
 import Topic3 from "@/../public/images/DragonsSprint-CarrerSprint/Positionbattleposter.png";
