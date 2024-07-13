@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import CoverImage from "@/../public/45f.png";
+import CoverImage from "@/../public/images/DragonsSprint-CarrerSprint/Positionbattleheader.png";
 import CheckoutButton from "@/components/CheckoutButton";
 
 function VideoComponenet({
@@ -76,10 +76,10 @@ function VideoComponenet({
 
           {/* Buttons (remove on mobile) */}
           <div className='lg:flex gap-4 hidden mt-4 justify-left md:justify-start'>
-            <div className='h-16 w-64'>
+            <div className='h-16 w-64 '>
               <CheckoutButton
                 CTAtext='Buy Now'
-                className='!h-fit'
+                className='h-fit'
                 createCheckoutSession='/api/Checkout-DragonsSprint'
               />
             </div>

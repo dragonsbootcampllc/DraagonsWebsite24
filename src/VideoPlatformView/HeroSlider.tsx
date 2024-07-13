@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { use } from "react";
-import CoverImage from "@/../public/45f.png";
+import CoverImage from "@/../public/images/DragonsSprint-CarrerSprint/Dragonswebsiteheader.png";
 import ButtonComponent from "@/components/Micros/Button";
 import ButtonComponentLite from "@/components/Micros/ButtonLite";
 import Link from "next/link";
@@ -17,7 +17,7 @@ export default function HeroSlider(props: { exploreUrl: string }) {
       <div className='w-full xl:min-h-[600px] lg:min-h-[350px] md:min-h-[300px] sm:min-h-[250px]  h-[170px] relative rounded-3xl overflow-hidden'>
         <Image
           src={CoverImage}
-          className='scale-110'
+          className=''
           alt='hero'
           layout='fill'
           objectFit='cover'
