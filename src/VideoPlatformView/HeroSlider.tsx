@@ -35,11 +35,9 @@ export default function HeroSlider(props: { exploreUrl: string }) {
             {/* Buttons (remove on mobile) */}
             <div className='lg:flex gap-4 hidden mt-4 justify-left md:justify-start'>
               <Link href={CurrentURL+"/"+exploreUrl} className='h-16 w-64' passHref>
-                <ButtonComponent CTAtext='Explore courses' />
+                <ButtonComponent CTAtext='Take The Challenge' />
               </Link>
-              <div className='h-16 w-64'>
-                <ButtonComponentLite CTAtext='Buy Now' />
-              </div>
+             
             </div>
           </div>
         </div>

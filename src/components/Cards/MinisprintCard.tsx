@@ -1,92 +1,55 @@
-import React from "react";
-import ButtonComponent from "../Micros/Button";
-import ButtonLite from "../Micros/ButtonLite";
-import { Date_1, Time_1 } from "../Icons";
 import Image from "next/image";
+import React, { useState } from "react";
+import CoverImage from "@/../public/images/DragonsSprint-CarrerSprint/Dragonswebsiteheader.png";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import ButtonComponent from "../Micros/ButtonLite";
 
-export interface MinisprintCardProps {
-  price: string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  duration: string;
-  startDate: string;
-  exploreUrl: string;
-}
-
-const truncateDescription = (description: string, maxLength: number) => {
-  if (description.length > maxLength) {
-    return description.substring(0, maxLength) + "...";
-  }
-  return description;
-};
-
-const MinisprintCard: React.FC<MinisprintCardProps> = ({
-  price,
-  title,
-  description,
-  imageUrl,
-  duration,
-  startDate,
+export default function MovieCard({
+  movie,
   exploreUrl,
-}) => {
-  const maxDescriptionLength = 100;
-  const BASE_URL = "/DragonsSprints";
+  expandImage,
+}: {
+  movie: any;
+  exploreUrl: string;
+  expandImage: any;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
+  const currentURL = router.route;
 
   return (
     <div
-      className='max-w-sm rounded-3xl relative overflow-hidden shadow-lg cursor-pointer bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all group'
-      style={{ transformOrigin: "left top" }}>
-      <div className='w-full  rounded-3xl relative h-64 flex justify-center items-center overflow-hidden'>
+      className={`relative transition-all duration-300 ease-in-out ${
+        isHovered ? "aspect-video  h-96" : "aspect-[2/3] h-96"
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}>
+      <div className='w-full h-full relative rounded-3xl overflow-hidden'>
         <Image
+          src={isHovered ? movie.expandImage : movie.posterImage || CoverImage}
+          alt={movie.title}
           layout='fill'
           objectFit='cover'
-          className='min-w-full rounded-3xl min-h-full object-cover hover:scale-[1.8] scale-[1.7] transition-all'
-          src={imageUrl}
-          alt={title}
-          style={{ transformOrigin: "right center" }}
         />
-      </div>
-      <div className='p-4 flex flex-col gap-4'>
-        <div>
-          <div className='font-bold text-3xl capitalize mb-2'>{title}</div>
-          <p className='text-base py-2 lg:text-lg font-medium text-gray-200/70 hidden md:block'>
-            {truncateDescription(description, maxDescriptionLength)}
-          </p>
-        </div>
-        <div>
-          <p className='text-slate-100  font-semibold rotate-45 absolute top-2 -right-11 py-1 bg-yellow-500 border-y border-yellow-500/40 w-[150px] text-center text-lg shadow-lg'>
-            {price}
-            <span className='absolute inset-0 overflow-hidden rounded-full'>
-              <span className='absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] transition-opacity duration-500 opacity-100 rotate-180 group-hover:animate-pulse' />
-            </span>
-          </p>
-          <p className='text-slate-300 font-medium text-xl flex'>
-            <span className='mr-1 w-5  aspect-square'>
-              <Time_1 />
-            </span>{" "}
-            Duration: {duration}
-          </p>
-          <p className='text-slate-300 font-medium text-xl flex'>
-            <span className='mr-1 w-5 aspect-square'>
-              <Date_1 />
-            </span>{" "}
-            Start Date: {startDate}
-          </p>
-        </div>
-        <div className='flex justify-center w-full'>
-          <div className='h-16  w-64'>
-            <ButtonComponent
-              CTAtext='Explore'
-          
-              type='link'
-              href={`${BASE_URL}/${exploreUrl}`}
-            />
+        {isHovered && (
+          <div className='absolute inset-0  shadow-inner bg-black/10 flex flex-col justify-end p-4'>
+            <div className="absolute inset-0     flex flex-col justify-end p-4 max-w-96">
+            <h2 className='text-white text-lg font-bold  mb-2'>{movie.title}</h2>
+            <p className='text-gray-300 text-sm mb-2 '>{movie.duration}</p>
+            <p className='text-gray-300 text-xs mb-4 line-clamp-3'>
+              {movie.description}
+            </p>
+            <Link href={`${currentURL}/${exploreUrl}`} passHref>
+              <div className='lg:flex gap-4  hidden mt-4 justify-left'>
+                <div className='h-16 w-64  '>
+                  <ButtonComponent CTAtext='Watch Now' className='!h-fit' />
+                </div>
+              </div>
+            </Link></div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
-};
-
-export default MinisprintCard;
+}

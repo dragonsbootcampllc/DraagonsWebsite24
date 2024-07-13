@@ -3,7 +3,9 @@ import MinisprintCard, {
 } from "@/components/Cards/MinisprintCard";
 import Hero_2 from "@/components/Hero/Hero_2";
 import HeroSlider from "@/VideoPlatformView/HeroSlider";
-import CoverImage from "@/../public/images/DragonsSprint-CarrerSprint/Positionbattleheader.png";
+import CoverImage from "@/../public/images/DragonsSprint-CarrerSprint/theMaze.jpeg";
+import expandCoverImage from "@/../public/images/DragonsSprint-CarrerSprint/theMazewide.png";
+
 
 import React from "react";
 const heroObj = {
@@ -27,6 +29,7 @@ const minisprintData = [
     description:
       "Understand career technical paths, with real-world scenarios and intensive 2 weeks of learning, practice, and mentorship.",
     imageUrl: CoverImage.src,
+    expandImage: expandCoverImage.src,
     duration: "2 weeks",
     startDate: "2024-07-20",
     exploreUrl: "CareerSprint",
@@ -40,7 +43,16 @@ export default function index() {
       <div className='flex justify-center min-h-[400px] items-center flex-wrap w-11/12 gap-12'>
         {minisprintData.length !== 0 ? (
           minisprintData.map((minisprint, i) => (
-            <MinisprintCard key={i} {...minisprint} />
+            <MinisprintCard
+              movie={{
+                title: "The 14 Day Developer's Quest Career Sprint Challenge",
+                duration: "2h 15m",
+                description: "Understand career technical paths, with real-world scenarios and intensive 2 weeks of learning, practice, and mentorship.",
+                posterImage: CoverImage,
+                expandImage: minisprint.expandImage,
+              }}
+              exploreUrl={minisprint.exploreUrl}
+              key={i} />
           ))
         ) : (
           <div className='flex flex-col items-center justify-center w-full h-[500px] text-center text-5xl font-semibold text-purple-400/50'>
