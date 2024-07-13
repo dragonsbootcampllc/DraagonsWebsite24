@@ -5,7 +5,7 @@ import { Stripe } from 'stripe';
 import { clerkClient } from '@clerk/nextjs/server';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-04-10',
+  apiVersion: '2024-04-10', // Updated to a current version
 });
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -48,20 +48,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         mode: "payment",
         success_url: isDevelopment
           ? `http://localhost:3000/DragonsSprints/${courseSlug}?success=true`
-          : `https://dragons.divzoon.com//DragonsSprints/${courseSlug}?success=true`,
+          : `https://dragons.divzoon.com/DragonsSprints/${courseSlug}?success=true`,
         cancel_url: isDevelopment
           ? `http://localhost:3000/DragonsSprints/${courseSlug}?canceled=true`
-          : `https://dragons.divzoon.com//DragonsSprints/${courseSlug}?canceled=true`,
+          : `https://dragons.divzoon.com/DragonsSprints/${courseSlug}?canceled=true`,
         metadata: {
           userId: userId,
           courseSlug: courseSlug,
         },
       });
 
-      console.log(session.url);
+      console.log("Checkout session created:", session.id);
       res.status(200).json({ sessionId: session.id });
     } catch (err: any) {
-      res.status(err.statusCode || 500).json(err.message);
+      console.error("Checkout error:", err);
+      res.status(500).json({ error: "An error occurred during checkout" });
     }
   } else {
     res.setHeader("Allow", "POST");
@@ -93,6 +94,7 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
   try {
     event = stripe.webhooks.constructEvent(buf, sig, process.env.STRIPE_WEBHOOK_SECRET!);
   } catch (err: any) {
+    console.error("Webhook signature verification failed:", err.message);
     res.status(400).send(`Webhook Error: ${err.message}`);
     return;
   }
