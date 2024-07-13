@@ -10,7 +10,24 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+// Middleware to ensure req.body is parsed
+const parseBodyMiddleware = async (req: NextApiRequest, res: NextApiResponse, next: () => void) => {
+  if (req.method === 'POST' && !req.body) {
+    try {
+      const chunks: Buffer[] = [];
+      for await (const chunk of req) {
+        chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
+      }
+      req.body = JSON.parse(Buffer.concat(chunks).toString('utf-8'));
+    } catch (err) {
+      console.error('Error parsing request body:', err);
+      return res.status(400).json({ error: 'Invalid JSON' });
+    }
+  }
+  next();
+};
+
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
       // Read the JSON data file CareerSprint.json
@@ -25,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         price: jsonData.price
       };
 
-      // Get the user ID from the request body
+      // Extract the userId and courseSlug from the request body
       const { userId, courseSlug } = req.body;
 
       if (!userId || !courseSlug) {
@@ -48,26 +65,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         mode: "payment",
         success_url: isDevelopment
           ? `http://localhost:3000/DragonsSprints/${courseSlug}?success=true`
-          : `https://dragons.divzoon.com//DragonsSprints/${courseSlug}?success=true`,
+          : `https://dragons.divzoon.com/DragonsSprints/${courseSlug}?success=true`,
         cancel_url: isDevelopment
           ? `http://localhost:3000/DragonsSprints/${courseSlug}?canceled=true`
-          : `https://dragons.divzoon.com//DragonsSprints/${courseSlug}?canceled=true`,
+          : `https://dragons.divzoon.com/DragonsSprints/${courseSlug}?canceled=true`,
         metadata: {
           userId: userId,
           courseSlug: courseSlug,
         },
       });
 
-      console.log(session.url);
+      console.log("Checkout session created:", session.id);
       res.status(200).json({ sessionId: session.id });
     } catch (err: any) {
-      res.status(err.statusCode || 500).json(err.message);
+      console.error("Checkout error:", err);
+      res.status(500).json({ error: `An error occurred during checkout: ${err.message}` });
     }
   } else {
     res.setHeader("Allow", "POST");
     res.status(405).end("Method Not Allowed");
   }
-}
+};
+
+// Wrap the handler with the middleware
+const middlewareHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+  await parseBodyMiddleware(req, res, () => handler(req, res));
+};
+
+export default middlewareHandler;
 
 // Webhook handler
 export const config = {
@@ -93,6 +118,7 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
   try {
     event = stripe.webhooks.constructEvent(buf, sig, process.env.STRIPE_WEBHOOK_SECRET!);
   } catch (err: any) {
+    console.error("Webhook signature verification failed:", err.message);
     res.status(400).send(`Webhook Error: ${err.message}`);
     return;
   }

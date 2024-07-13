@@ -38,23 +38,25 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = React.memo(
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            //open cors
+            "Access-Control-Allow-Origin": "*",
           },
           body: JSON.stringify({
-            plan: 1,
-            course: slug,
+            userId: user.id,
+            courseSlug: slug,
           }),
         });
-
+      
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-
+      
         const session = await response.json();
-
+      
         const result = await stripe.redirectToCheckout({
           sessionId: session.sessionId,
         });
-
+      
         if (result.error) {
           throw new Error(result.error.message);
         }
