@@ -42,18 +42,18 @@ const Comments: React.FC<CommentsProps> = ({ comments }) => {
         <FaComments className="text-xl text-white mr-2" />
         <h2 className="text-xl font-bold text-white">Comments</h2>
       </div>
-      <div className="h-96 overflow-y-auto mb-4">
+      <div className="h-96 overflow-y-auto mb-2">
         {commentList.map(({ id, name, img, comment }) => (
           <div key={id} className="flex mb-4">
             <img src={img} alt={name} className="w-12 h-12 rounded-full mr-4" />
-            <div className="flex-1 p-2 bg-white rounded-lg shadow-md">
+            <div className="flex-1 mr-2 p-2 bg-white rounded-lg shadow-md">
               <h4 className="font-semibold text-black">{name}</h4>
-              <p className="text-gray-700">{comment}</p>
+              <p className="text-gray-700 break-words w-[229px]">{comment}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className=" w-full flex items-center p-4">
+      <div className="w-full flex items-center p-2">
         <input
           type="text"
           className="flex-1 p-2 rounded-l-md border text-black focus:outline-none focus:ring-2 focus:ring-purple-500"

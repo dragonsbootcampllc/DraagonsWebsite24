@@ -9,9 +9,9 @@ const LiveVideo: React.FC = () => {
   const dummyComments = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Dragons Team",
       img: "https://via.placeholder.com/50",
-      comment: "This is a great video!"
+      comment: "Feel free to ask any questions!"
     },
     {
       id: 2,
