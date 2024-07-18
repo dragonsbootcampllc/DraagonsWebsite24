@@ -1,55 +1,97 @@
-import React from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import { useUser, SignedIn, SignedOut, useClerk } from "@clerk/nextjs";
 import Video from "@/components/LiveVideo/Video";
 import VideoInfo from "@/components/LiveVideo/VideoInfo";
 import Transcription from "@/components/LiveVideo/Transcription";
 import Comments from "@/components/LiveVideo/Comments";
+import ViewerCount from "@/components/LiveVideo/ViewerCount";
+import Gamification from "@/components/LiveVideo/Gamification";
+import { useWebSocket } from "./useWebSocket";
 import DragonsImage from "@/../public/Identity/Images/2023/sd.png";
+import Image from "next/image";
+import { useRouter } from 'next/router';
+
+interface UserMetadata {
+  courses?: string[];
+}
 
 const LiveVideo: React.FC = () => {
+  const { user, isLoaded, isSignedIn } = useUser();
+  const clerk = useClerk();
+  const router = useRouter();
+  const [socketUrl, setSocketUrl] = useState<string>("");
+  const [hasAccess, setHasAccess] = useState<boolean>(false);
 
-  const dummyComments = [
-    {
-      id: 1,
-      name: "Dragons Team",
-      img: "https://via.placeholder.com/50",
-      comment: "Feel free to ask any questions!"
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      img: "https://via.placeholder.com/50",
-      comment: "Loving the content!"
-    },
-    {
-      id: 3,
-      name: "Alice Johnson",
-      img: "https://via.placeholder.com/50",
-      comment: "Very informative, thanks!"
+  const checkAccess = useCallback(() => {
+    if (user) {
+      const userMetadata = user.publicMetadata as UserMetadata;
+      const hasAccessToLiveStream = userMetadata.courses?.includes("CareerSprintLive") || false;
+      setHasAccess(hasAccessToLiveStream);
+      if (hasAccessToLiveStream && typeof window !== "undefined") {
+        setSocketUrl(`wss://${window.location.host}/ws`);
+      }
     }
-  ];
+  }, [user]);
+
+  useEffect(() => {
+    checkAccess();
+  }, [checkAccess]);
+
+  useEffect(() => {
+    if (isLoaded && !isSignedIn) {
+      clerk.openSignIn({
+        redirectUrl: router.asPath,
+      });
+    }
+  }, [isLoaded, isSignedIn, clerk, router.asPath]);
+
+  const { socket, isConnected, sendMessage, addListener, removeListener } = useWebSocket(socketUrl);
+
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
+
+  if (!isSignedIn) {
+    return <div>Redirecting to sign in...</div>;
+  }
+
+  if (!hasAccess) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Access Denied</h2>
+          <p>You do not have access to this live stream.</p>
+          <p>Please contact support if you believe this is an error.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-   <div className="flex justify-center">
-     <div className="flex max-xl:flex-col max-w-[1400px] justify-center">
-      <div className="md:w-[900px]">
-<div className="bg-purple-800/20 my-5 rounded-3xl">
-<Video link="https://www.youtube.com/embed/1y_kfWUCFDQ" />
+    <div className='flex justify-center'>
+      <div className='flex max-xl:flex-col max-w-[1400px] justify-center'>
+        <div className='md:w-[900px]'>
+          <div className='bg-purple-800/20 my-5 rounded-3xl'>
+            <Video link='https://www.youtube.com/embed/1y_kfWUCFDQ' />
+          </div>
+          <ViewerCount socket={socket! as WebSocket} />
+          <VideoInfo
+            imgUrl={DragonsImage.src}
+            Title='Master Development with Our Dragons Bootcamp'
+            Hash='Frontend'
+          />
+                    <Gamification  socket={socket! as WebSocket} />
 
-</div>
-        <VideoInfo
-          imgUrl={DragonsImage.src}
-          Title="Master Development with Our Dragons Bootcamp"
-          Hash="Frontend"
-        />
-        <Transcription Text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nam laborum aliquam nulla, repudiandae eaque culpa! Dolor, eius incidunt vero facilis veritatis pariatur, minima laborum deserunt libero nihil harum ipsum? Sit, modi facere provident iusto eaque accusamus nam reiciendis placeat doloremque vitae iste quo non rerum deserunt officia laborum rem. Modi sequi, ex magni libero corrupti molestias error molestiae! Exercitationem, soluta. Incidunt error nam fugit, ut est dolorem maxime rem unde ipsum delectus quidem, et voluptates vitae dolore qui sapiente tempora exercitationem debitis aspernatur praesentium quo dolorum! Iste assumenda esse quam omnis ratione, autem perferendis. Quo deleniti culpa veniam est eius blanditiis rem quos, debitis, explicabo porro libero iusto optio ipsum nihil neque quidem laboriosam tempore quas totam. Soluta reiciendis autem praesentium molestias, similique aliquam incidunt illum amet molestiae temporibus ipsum laborum. Voluptas neque tenetur quibusdam, minus molestiae error assumenda omnis adipisci vero enim. Quam non quia, perspiciatis magni ipsa incidunt itaque fugiat eius saepe vitae sequi impedit adipisci doloribus blanditiis id. Asperiores ab quasi illum esse quaerat, nam possimus? Ex error voluptatum facere quaerat aut mollitia neque voluptatibus accusamus deleniti? Perspiciatis repellat totam tempora! Ducimus cumque repellat illo, nisi, hic similique, illum harum nobis facere commodi amet beatae laudantium quod doloremque necessitatibus. Repellat soluta nostrum ipsam autem error, facilis excepturi ducimus dolores consectetur, molestiae id quam assumenda cupiditate obcaecati exercitationem saepe eos quisquam iure iste voluptatum. Suscipit provident ad magni, repellendus dolorum necessitatibus veritatis qui consectetur eveniet impedit? Aliquam officiis esse quo cupiditate autem incidunt, commodi in itaque aliquid recusandae sapiente unde amet nemo iure omnis vero soluta. Possimus, voluptates qui hic tenetur facilis ut officiis quasi veritatis, iusto, at voluptatibus eum esse ratione unde officia corrupti sit repellat aliquid. Possimus sequi deserunt rem, ipsa modi ea, perspiciatis consequuntur recusandae voluptates esse quae, minima consectetur dolorem aperiam facilis magni?" />
-      </div>
-      <div>
-        <Comments 
-          comments={dummyComments}
-        />
+          <Transcription Text='Lorem ipsum dolor sit, amet consectetur adipisicing elit...' />
+        </div>
+        <div className="w-full md:w-1/4 p-4">
+          <Comments comments={[]} 
+          socket={socket! as WebSocket}
+          />
+        </div>
+        
       </div>
     </div>
-   </div>
   );
 };
 
