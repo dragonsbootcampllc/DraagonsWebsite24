@@ -3,6 +3,7 @@ import Video from "@/components/LiveVideo/Video";
 import VideoInfo from "@/components/LiveVideo/VideoInfo";
 import Transcription from "@/components/LiveVideo/Transcription";
 import Comments from "@/components/LiveVideo/Comments";
+import DragonsImage from "@/../public/Identity/Images/2023/sd.png";
 
 const LiveVideo: React.FC = () => {
 
@@ -28,11 +29,15 @@ const LiveVideo: React.FC = () => {
   ];
 
   return (
-    <div className="flex max-md:flex-col max-w-[1400px] justify-center">
+   <div className="flex justify-center">
+     <div className="flex max-xl:flex-col max-w-[1400px] justify-center">
       <div className="md:w-[900px]">
-        <Video link="https://www.youtube.com/embed/1y_kfWUCFDQ" />
+<div className="bg-purple-800/20 my-5 rounded-3xl">
+<Video link="https://www.youtube.com/embed/1y_kfWUCFDQ" />
+
+</div>
         <VideoInfo
-          imgUrl="https://placehold.jp/100x100.png"
+          imgUrl={DragonsImage.src}
           Title="Master Development with Our Dragons Bootcamp"
           Hash="Frontend"
         />
@@ -44,6 +49,7 @@ const LiveVideo: React.FC = () => {
         />
       </div>
     </div>
+   </div>
   );
 };
 
