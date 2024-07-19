@@ -36,13 +36,13 @@ const PathwaysGrid = () => {
   };
 
   return (
-    <div className='p-20'>
-      <h1 className='text-center font-bold text-5xl mb-10'>Pathways Recommended by Dragons Bootcamp</h1>
-      <p className='text-xl mb-6 max-w-3xl text-center mx-auto'>
+    <div className='md:p-16'>
+      <h1 className='text-center font-bold text-3xl md:text-5xl max-md:mt-10 mb-10'>Developer Pathways</h1>
+      <p className='text-xl mb-6 max-w-3xl text-center mx-auto max-md:px-4'>
         Dragons Bootcamp offers a variety of pathways to help you learn the skills you need to succeed in the tech
         industry. Choose a pathway below to learn more about it.
       </p>
-      <div className="grid grid-cols-4 gap-4 px-20">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 mb-10 gap-4 max-md:px-4 md:px-20">
         {pathways.map((pathway) => (
           <div
             key={pathway.id}

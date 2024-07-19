@@ -29,9 +29,9 @@ interface PathwayData {
 type PathwayKey = keyof typeof pathwaysData;
 
 const pathways: Record<PathwayKey, string> = {
-  frontend: 'Frontend Development',
-  backend: 'Backend Development',
-  fullstack: 'Fullstack Development',
+  frontend: 'Frontend',
+  backend: 'Backend',
+  fullstack: 'Fullstack',
   data: 'Data Science',
   mobile: 'Mobile Development',
   uiux: 'UI/UX Design',
@@ -68,9 +68,9 @@ const PathwayDetail = ({ pathwayData }: { pathwayData: PathwayData | null }) => 
   }
 
   return (
-    <div className="p-20">
-      <h1 className="text-center font-bold text-6xl mb-10">{pathways[id as PathwayKey]}</h1>
-      <p className="text-center text-2xl">Details about {pathways[id as PathwayKey]}</p>
+    <div className="md:p-20">
+      <h1 className="text-center font-bold max-md:my-10 text-6xl max-md:text-5xl mb-10">{pathways[id as PathwayKey]}</h1>
+      <p className="text-center max-md:mb-4 max-md:px-4 text-2xl">Details about {pathways[id as PathwayKey]} Pathway offered by Dragons Bootcamp for you</p>
       <div className='w-full mx-auto mb-5'>
         <Flow initialNodes={pathwayData.nodes} initialEdges={pathwayData.edges} />
       </div>

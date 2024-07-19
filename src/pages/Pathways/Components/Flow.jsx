@@ -20,7 +20,7 @@ export default function Flow({ initialNodes, initialEdges }) {
   );
 
   return (
-    <div style={{ width: "100%", height: "90vh", margin: "auto", padding: "40px" }}>
+    <div className="w-full h-[90vh] m-auto md:p-10 p-4">
       <ReactFlow
         nodes={nodes}
         edges={edges}
