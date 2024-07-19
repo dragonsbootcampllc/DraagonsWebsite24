@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import {
   ReactFlow,
-  MiniMap,
   Controls,
   Background,
   useNodesState,
@@ -27,7 +26,7 @@ export default function Flow({ initialNodes, initialEdges }) {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        className="react-flow text-black"
+        className="text-black"
       >
         <Controls />
         <Background variant="dots" gap={12} size={1} />
