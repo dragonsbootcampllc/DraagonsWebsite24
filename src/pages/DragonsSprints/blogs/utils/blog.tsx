@@ -47,7 +47,7 @@ const importIcon = async (iconName: string) => {
 };
 
 function useCategories() {
-    const { data, error } = useSWR<CategorySummary[]>('/api/blogSystem/categories', getFetcher);
+    const { data, error } = useSWR<CategorySummary[]>(`/api/blogSystem/categories?private_key=careerSprint`, getFetcher);
 
     return {
         categories: data,

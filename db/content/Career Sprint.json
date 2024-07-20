@@ -1,0 +1,11 @@
+{
+    "icon": "df",
+    "category": "Career Sprint",
+    "description": "Boost your career in just 14 days with focused mini sprints. Access practical tips, goals, and community support for quick, impactful progress. Start now!",
+    "blogs": [
+        "Overview",
+        "Mysteries of Tech Roles",
+        "All Possible Roles"
+    ],
+    "private_key": "careerSprint"
+}

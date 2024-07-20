@@ -14,8 +14,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     if (req.method == "GET") {
+        let { private_key } = req.query;
+        private_key ||= undefined;
+
         const categories = fs.readdirSync(contentPath).filter((file) => {
             return fs.statSync(path.join(contentPath, file)).isFile() && file.endsWith('.json');
+        }).filter((file) => {
+            if (private_key) {
+                return JSON.parse(fs.readFileSync(path.join(contentPath, file), 'utf8')).private_key == private_key;
+            } else {
+                return !(JSON.parse(fs.readFileSync(path.join(contentPath, file), 'utf8')).private_key);
+            }
         }).map((file) => {
             const filePath = path.join(contentPath, file);
             return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
