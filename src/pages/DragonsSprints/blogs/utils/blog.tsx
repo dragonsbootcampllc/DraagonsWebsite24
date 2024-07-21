@@ -18,7 +18,6 @@ interface BlogSummary {
     description: string;
 }
 
-
 interface Quiz {
     question: string;
     options: string[];
@@ -29,7 +28,7 @@ interface BlogDetails {
     icon: string; // SVG HTML string
     description: string;
     content: string;
-    quiz: Quiz[]
+    quiz: Quiz[];
 }
 
 interface Category {
@@ -52,8 +51,9 @@ const importIcon = async (iconName: string) => {
     }
 };
 
+// Hook to fetch all categories
 function useCategories() {
-    const { data, error } = useSWR<CategorySummary[]>(`/api/blogSystem/categories?private_key=careerSprint`, getFetcher);
+    const { data, error } = useSWR<CategorySummary[]>(`${BASE_URL}/categories?private_key=careerSprint`, getFetcher);
 
     return {
         categories: data,
@@ -62,8 +62,9 @@ function useCategories() {
     };
 }
 
+// Hook to fetch a specific category
 function useCategory(categoryName: string) {
-    const { data, error } = useSWR<Category>(`/api/blogSystem/category?category=${categoryName}`, getFetcher);
+    const { data, error } = useSWR<Category>(`${BASE_URL}/category?category=${categoryName}`, getFetcher);
 
     return { 
         data, 
@@ -72,9 +73,10 @@ function useCategory(categoryName: string) {
     };
 }
 
+// Hook to fetch a specific blog
 function useBlog(categoryName: string, blogName: string) {
     const { data, error } = useSWR<BlogDetails>(
-        `/api/blogSystem/blog?category=${categoryName}&blog=${blogName}`,
+        `${BASE_URL}/blog?category=${categoryName}&blog=${blogName}`,
         getFetcher
     );
 
@@ -85,9 +87,10 @@ function useBlog(categoryName: string, blogName: string) {
     };
 }
 
+// Uncomment if quiz functionality is needed
 // function useQuiz(categoryName: string, blogName: string) {
 //     const { data, error } = useSWR<BlogDetails>(
-//         `/api/blogSystem/blog?category=${categoryName}&blog=${blogName}`,
+//         `${BASE_URL}/blog?category=${categoryName}&blog=${blogName}`,
 //         getFetcher
 //     );
 

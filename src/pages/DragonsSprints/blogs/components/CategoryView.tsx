@@ -12,7 +12,7 @@ interface CategoryViewProps {
     blogs: Blog[];
 }
 
-export function CategoryView({ title, description, blogs }: CategoryViewProps) {
+ function CategoryView({ title, description, blogs }: CategoryViewProps) {
     return (
         <div className="pl-10 pt-10 gap-10 flex flex-col justify-center items-center text-center h-full w-full overflow-hidden overflow-y-auto pb-24">
             <h1 className="text-7xl font-bold capitalize">{title}</h1>
@@ -30,3 +30,5 @@ export function CategoryView({ title, description, blogs }: CategoryViewProps) {
         </div>
     );
 }
+export default CategoryView;
+  
