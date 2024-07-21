@@ -80,7 +80,7 @@ export function CardHoverEffectDemo() {
     {
       title: "Learn",
       description: "Access course materials, videos, and assignments to enhance your learning.",
-      link: "/learn",
+      link: "/DragonsSprints/blogs",
       icon: <Shapes className='h-32 w-32 opacity-10 hover:opacity-100'/>,
     },
     {
