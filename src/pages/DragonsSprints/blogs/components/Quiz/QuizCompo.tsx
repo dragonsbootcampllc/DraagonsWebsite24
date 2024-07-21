@@ -4,6 +4,7 @@ import axios from 'axios';
 export interface Question {
   question: string;
   choices: string[];
+  correctAnswer: string;
 }
 
 interface QuizCompoProps {
@@ -13,7 +14,9 @@ interface QuizCompoProps {
 }
 
 const QuizCompo: React.FC<QuizCompoProps> = ({ questions, category, blog }) => {
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string | null>>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string | null>>(
+    questions.reduce((acc, question) => ({ ...acc, [question.question]: null }), {})
+  );
 
   const handleSelect = (questionText: string, choice: string) => {
     setSelectedAnswers(prev => ({
@@ -24,10 +27,18 @@ const QuizCompo: React.FC<QuizCompoProps> = ({ questions, category, blog }) => {
 
   const handleSubmit = async () => {
     try {
-      const answers = Object.entries(selectedAnswers).map(([question, answer]) => ({
-        question,
-        answer,
-      }));
+      const answers = questions.map(question => {
+        const selectedAnswer = selectedAnswers[question.question];
+        const answerArray = question.choices.map(choice =>
+          choice === selectedAnswer ? question.correctAnswer : ""
+        );
+        
+        return {
+          question: question.question,
+          answer: answerArray,
+          correctAnswer: question.correctAnswer,
+        };
+      });
 
       const response = await axios.post('/api/blogSystem/validate-answers', {
         category,
