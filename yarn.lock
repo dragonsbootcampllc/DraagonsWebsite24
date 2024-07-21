@@ -289,10 +289,32 @@
     std-env "^3.7.0"
     swr "^2.2.0"
 
+<<<<<<< HEAD
 "@clerk/types@4.8.0":
   version "4.8.0"
   resolved "https://registry.npmjs.org/@clerk/types/-/types-4.8.0.tgz"
   integrity sha512-UjirfALJOWeuRSz+SvTujexlvIXvMC1VzvYlcNmSF0E9wcAcPJnzboLM+SlNTG7p1JMlL4bd0dipsFyWTJsq5A==
+=======
+"@clerk/themes@^2.1.10":
+  version "2.1.10"
+  resolved "https://registry.npmjs.org/@clerk/themes/-/themes-2.1.10.tgz"
+  integrity sha512-1XlXVt+AhkiFJ4CXLSmnL7UFCLRLtHe6HV/2haabKpBuLgmleVYXf6dveTJnc8ZnHadGH91bbOz0le4Dl3wByw==
+  dependencies:
+    "@clerk/types" "4.6.1"
+    tslib "2.4.1"
+
+"@clerk/types@4.6.1":
+  version "4.6.1"
+  resolved "https://registry.npmjs.org/@clerk/types/-/types-4.6.1.tgz"
+  integrity sha512-QFeNKPYDmTJ88l5QYG0SPwbABk42wRMalW3M/wAtr+wnQxBCXyX2XRZe9h4g2rH1VF+wG4Xe56abeeD+xE4iEw==
+  dependencies:
+    csstype "3.1.1"
+
+"@clerk/types@4.7.0":
+  version "4.7.0"
+  resolved "https://registry.npmjs.org/@clerk/types/-/types-4.7.0.tgz"
+  integrity sha512-Gg4zEZLE7wgByMhgHMU69tkIEwfiFKNSbtRwdtAwrW+Pg0blpVpw7XuN0wHNAYFM2COrrKEUaGt8KWZmmdTFbg==
+>>>>>>> e4269dd3cee5b4745adc4a591d08e90b11a71099
   dependencies:
     csstype "3.1.1"
 
