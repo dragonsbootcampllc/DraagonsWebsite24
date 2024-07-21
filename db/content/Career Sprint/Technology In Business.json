@@ -3,9 +3,94 @@
   "description": "Understanding how technology intersects with business operations is crucial for sustainable growth and competitive advantage.",
   "quiz": [
     {
-        "question": "",
-        "options": []
+      "question": "Which area of technology involves managing networks, servers, and cloud computing services?",
+      "options": [
+        "A) IT Infrastructure",
+        "B) Business Intelligence",
+        "C) Cybersecurity"
+      ],
+      "_answer": "A) IT Infrastructure"
+    },
+    {
+      "question": "What does operations management focus on improving?",
+      "options": [
+        "A) Productivity and Cost Reduction",
+        "B) Data Analysis",
+        "C) Cybersecurity Measures"
+      ],
+      "_answer": "A) Productivity and Cost Reduction"
+    },
+    {
+      "question": "Which field uses analytical tools to derive actionable insights from data?",
+      "options": [
+        "A) Business Intelligence and Analytics",
+        "B) CRM Systems",
+        "C) Virtual Collaboration"
+      ],
+      "_answer": "A) Business Intelligence and Analytics"
+    },
+    {
+      "question": "What technologies support communication within and outside organizations?",
+      "options": [
+        "A) Communication Technologies",
+        "B) Data Collection",
+        "C) IT Support"
+      ],
+      "_answer": "A) Communication Technologies"
+    },
+    {
+      "question": "Which systems help businesses manage customer relationships by tracking interactions and personalizing marketing efforts?",
+      "options": [
+        "A) CRM Systems",
+        "B) Cybersecurity Measures",
+        "C) Virtual Collaboration Tools"
+      ],
+      "_answer": "A) CRM Systems"
+    },
+    {
+      "question": "What is the purpose of implementing cybersecurity measures?",
+      "options": [
+        "A) Protect digital assets and sensitive information from cyber threats",
+        "B) Improve supply chain efficiency",
+        "C) Manage customer interactions"
+      ],
+      "_answer": "A) Protect digital assets and sensitive information from cyber threats"
+    },
+    {
+      "question": "Which technology facilitates real-time project work and collaboration among distributed teams?",
+      "options": [
+        "A) Virtual Collaboration Tools",
+        "B) Data Storage Solutions",
+        "C) Risk Assessment Tools"
+      ],
+      "_answer": "A) Virtual Collaboration Tools"
+    },
+    {
+      "question": "What does risk assessment and mitigation technology help with?",
+      "options": [
+        "A) Identifying threats and implementing risk management strategies",
+        "B) Analyzing market trends",
+        "C) Enhancing customer relationships"
+      ],
+      "_answer": "A) Identifying threats and implementing risk management strategies"
+    },
+    {
+      "question": "Which aspect of data management involves capturing and storing data from various sources?",
+      "options": [
+        "A) Data Collection and Storage",
+        "B) Business Intelligence",
+        "C) Operations Management"
+      ],
+      "_answer": "A) Data Collection and Storage"
+    },
+    {
+      "question": "What area of technology focuses on using data to forecast performance and make strategic decisions?",
+      "options": [
+        "A) Business Intelligence and Analytics",
+        "B) IT Infrastructure",
+        "C) Communication Technologies"
+      ],
+      "_answer": "A) Business Intelligence and Analytics"
     }
-]
-
+  ]
 }

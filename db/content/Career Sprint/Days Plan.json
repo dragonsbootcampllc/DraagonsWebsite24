@@ -1,10 +1,132 @@
 {
-    "title": "Days Plan",
-    "description": "This blog guides your 14 days journey.",
-    "quiz": [
-        {
-            "question": "",
-            "options": []
-        }
-    ]
+  "title": "Days Plan",
+  "description": "This blog guides your 14 days journey.",
+  "quiz": [
+    {
+      "question": "What is covered on Day 1 of the tech industry introduction?",
+      "options": [
+        "A) Tech startup culture",
+        "B) History and evolution of technology",
+        "C) Different programming languages"
+      ],
+      "_answer": "B) History and evolution of technology"
+    },
+    {
+      "question": "What is a major topic on Day 2: Understanding Tech Ecosystem?",
+      "options": [
+        "A) Roles in data science",
+        "B) Tech startup culture and major tech hubs",
+        "C) Basics of networking"
+      ],
+      "_answer": "B) Tech startup culture and major tech hubs"
+    },
+    {
+      "question": "What is a key focus on Day 3: Software Development?",
+      "options": [
+        "A) Real-life scenario: Analyzing a dataset",
+        "B) Different programming languages and their use cases",
+        "C) Introduction to AI and ML"
+      ],
+      "_answer": "B) Different programming languages and their use cases"
+    },
+    {
+      "question": "What topic is discussed on Day 4: Data Science and Analytics?",
+      "options": [
+        "A) Common threats and vulnerabilities",
+        "B) Data collection, cleaning, and analysis",
+        "C) Cloud service models"
+      ],
+      "_answer": "B) Data collection, cleaning, and analysis"
+    },
+    {
+      "question": "Which of the following is covered on Day 5: Cybersecurity?",
+      "options": [
+        "A) Introduction to data science",
+        "B) Real-life scenario: Migrating an on-premises application to the cloud",
+        "C) Importance of cybersecurity in the tech industry"
+      ],
+      "_answer": "C) Importance of cybersecurity in the tech industry"
+    },
+    {
+      "question": "What is a key topic on Day 6: Cloud Computing?",
+      "options": [
+        "A) Introduction to cloud computing",
+        "B) Basics of networking",
+        "C) Real-life scenario: Designing a user-friendly interface"
+      ],
+      "_answer": "A) Introduction to cloud computing"
+    },
+    {
+      "question": "Which topic is discussed on Day 7: Networking and Infrastructure?",
+      "options": [
+        "A) Key concepts in AI and ML",
+        "B) Basics of networking and internet infrastructure",
+        "C) Product lifecycle and development process"
+      ],
+      "_answer": "B) Basics of networking and internet infrastructure"
+    },
+    {
+      "question": "What is covered on Day 8: Artificial Intelligence and Machine Learning?",
+      "options": [
+        "A) Introduction to AI and ML",
+        "B) Roles in UI/UX design",
+        "C) Marketing strategies in tech"
+      ],
+      "_answer": "A) Introduction to AI and ML"
+    },
+    {
+      "question": "What is a focus on Day 9: Product Management?",
+      "options": [
+        "A) Building a simple ML model for prediction",
+        "B) Real-life scenario: Creating a marketing plan",
+        "C) Role of a product manager in tech companies"
+      ],
+      "_answer": "C) Role of a product manager in tech companies"
+    },
+    {
+      "question": "What is discussed on Day 10: UI/UX Design?",
+      "options": [
+        "A) Principles of good design and usability",
+        "B) Importance of network security",
+        "C) Introduction to emerging technologies"
+      ],
+      "_answer": "A) Principles of good design and usability"
+    },
+    {
+      "question": "What is covered on Day 11: Tech Marketing and Sales?",
+      "options": [
+        "A) Key legal issues in tech",
+        "B) Marketing strategies in the tech industry",
+        "C) Introduction to cloud computing"
+      ],
+      "_answer": "B) Marketing strategies in the tech industry"
+    },
+    {
+      "question": "What topic is discussed on Day 12: Emerging Technologies?",
+      "options": [
+        "A) Overview of emerging technologies like Blockchain and IoT",
+        "B) Basics of networking",
+        "C) Data collection and analysis"
+      ],
+      "_answer": "A) Overview of emerging technologies like Blockchain and IoT"
+    },
+    {
+      "question": "What is covered on Day 13: Ethics and Legal Considerations in Tech?",
+      "options": [
+        "A) Roles in cloud computing",
+        "B) Key legal issues like data privacy and compliance",
+        "C) Creating a personal career development plan"
+      ],
+      "_answer": "B) Key legal issues like data privacy and compliance"
+    },
+    {
+      "question": "What is a key focus on Day 14: Career Pathways and Professional Development?",
+      "options": [
+        "A) Importance of continuous learning and upskilling",
+        "B) Real-life scenario: Migrating an on-premises application",
+        "C) Creating a marketing plan for a tech product"
+      ],
+      "_answer": "A) Importance of continuous learning and upskilling"
+    }
+  ]
 }

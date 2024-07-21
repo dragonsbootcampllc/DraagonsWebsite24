@@ -2,9 +2,95 @@
   "title": "Career Guidance",
   "description": "This blog guides your career guidance journey.",
   "quiz": [
-      {
-          "question": "",
-          "options": []
-      }
+    {
+      "question": "What is the first step in identifying your interests and strengths for a tech career?",
+      "options": [
+        "A) Career Exploration",
+        "B) Skills Development",
+        "C) Self-Assessment"
+      ],
+      "_answer": "C) Self-Assessment"
+    },
+    {
+      "question": "Which of the following is a key skill for a career in software development?",
+      "options": [
+        "A) Data manipulation (SQL)",
+        "B) Network security",
+        "C) Programming languages (JavaScript, Python, Java)"
+      ],
+      "_answer": "C) Programming languages (JavaScript, Python, Java)"
+    },
+    {
+      "question": "What does a data scientist primarily focus on?",
+      "options": [
+        "A) Designing user-friendly interfaces",
+        "B) Protecting systems from cyber threats",
+        "C) Extracting insights from data"
+      ],
+      "_answer": "C) Extracting insights from data"
+    },
+    {
+      "question": "Which key skill is essential for a career in cybersecurity?",
+      "options": [
+        "A) User research",
+        "B) Network security",
+        "C) Data visualization"
+      ],
+      "_answer": "B) Network security"
+    },
+    {
+      "question": "What is a primary responsibility of someone in UX/UI design?",
+      "options": [
+        "A) Coding software applications",
+        "B) Providing technical support",
+        "C) Creating user-friendly interfaces"
+      ],
+      "_answer": "C) Creating user-friendly interfaces"
+    },
+    {
+      "question": "Which skill is crucial for IT support and administration?",
+      "options": [
+        "A) Machine learning",
+        "B) Network administration",
+        "C) Ethical hacking"
+      ],
+      "_answer": "B) Network administration"
+    },
+    {
+      "question": "What should you focus on to stay updated with the latest technologies and industry trends?",
+      "options": [
+        "A) Networking",
+        "B) Continuous Learning",
+        "C) Practical Experience"
+      ],
+      "_answer": "B) Continuous Learning"
+    },
+    {
+      "question": "How can you build a professional network in the tech industry?",
+      "options": [
+        "A) Attending industry events and joining online communities",
+        "B) Working in isolation on personal projects",
+        "C) Avoiding social interactions"
+      ],
+      "_answer": "A) Attending industry events and joining online communities"
+    },
+    {
+      "question": "Which activity helps gain hands-on experience in tech?",
+      "options": [
+        "A) Reading tech blogs",
+        "B) Gaining leadership experience",
+        "C) Participating in open-source contributions"
+      ],
+      "_answer": "C) Participating in open-source contributions"
+    },
+    {
+      "question": "What can help you advance to advanced roles in your tech career?",
+      "options": [
+        "A) Acquiring specialized skills and gaining leadership experience",
+        "B) Avoiding additional certifications",
+        "C) Focusing solely on entry-level tasks"
+      ],
+      "_answer": "A) Acquiring specialized skills and gaining leadership experience"
+    }
   ]
 }

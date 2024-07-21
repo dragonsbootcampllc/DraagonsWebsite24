@@ -2,9 +2,95 @@
   "title": "Scenario Analysis",
   "description": "This blog guides your scenario analysis journey.",
   "quiz": [
-      {
-          "question": "",
-          "options": []
-      }
+    {
+      "question": "What is the primary purpose of scenario analysis in strategic planning?",
+      "options": [
+        "A) To create rigid long-term plans",
+        "B) To anticipate and prepare for future uncertainties",
+        "C) To ignore potential future uncertainties"
+      ],
+      "_answer": "B) To anticipate and prepare for future uncertainties"
+    },
+    {
+      "question": "What is the first step in scenario analysis?",
+      "options": [
+        "A) Gather Data",
+        "B) Identify Objectives",
+        "C) Develop Scenarios"
+      ],
+      "_answer": "B) Identify Objectives"
+    },
+    {
+      "question": "What should you do after gathering data in scenario analysis?",
+      "options": [
+        "A) Analyze Impact",
+        "B) Develop Scenarios",
+        "C) Formulate Strategies"
+      ],
+      "_answer": "B) Develop Scenarios"
+    },
+    {
+      "question": "Which scenario represents the most optimistic outcome?",
+      "options": [
+        "A) Best-Case Scenario",
+        "B) Worst-Case Scenario",
+        "C) Most Likely Scenario"
+      ],
+      "_answer": "A) Best-Case Scenario"
+    },
+    {
+      "question": "What does the Worst-Case Scenario represent?",
+      "options": [
+        "A) The most likely outcome based on trends",
+        "B) The most optimistic outcome",
+        "C) The most pessimistic outcome"
+      ],
+      "_answer": "C) The most pessimistic outcome"
+    },
+    {
+      "question": "In scenario analysis, what is analyzed to assess the impact of each scenario?",
+      "options": [
+        "A) Objectives and strategies",
+        "B) Financial, operational, and strategic impacts",
+        "C) Competitor analysis"
+      ],
+      "_answer": "B) Financial, operational, and strategic impacts"
+    },
+    {
+      "question": "What type of scenario is most likely to occur considering current trends and data?",
+      "options": [
+        "A) Best-Case Scenario",
+        "B) Worst-Case Scenario",
+        "C) Most Likely Scenario"
+      ],
+      "_answer": "C) Most Likely Scenario"
+    },
+    {
+      "question": "Which step involves creating different plausible scenarios based on collected data?",
+      "options": [
+        "A) Identify Objectives",
+        "B) Develop Scenarios",
+        "C) Gather Data"
+      ],
+      "_answer": "B) Develop Scenarios"
+    },
+    {
+      "question": "What should be formulated to address each scenario's risks and opportunities?",
+      "options": [
+        "A) Budget Allocations",
+        "B) Strategies",
+        "C) Market Research"
+      ],
+      "_answer": "B) Strategies"
+    },
+    {
+      "question": "In the context of launching a new product, what data should be gathered for scenario analysis?",
+      "options": [
+        "A) Market Research and Financial Projections",
+        "B) Employee Feedback",
+        "C) Competitor Job Titles"
+      ],
+      "_answer": "A) Market Research and Financial Projections"
+    }
   ]
 }

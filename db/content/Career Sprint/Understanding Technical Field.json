@@ -3,8 +3,70 @@
   "description": "Understand the technical field and make a decision regarding your interest in this field by the end of the program.",
   "quiz": [
     {
-        "question": "",
-        "options": []
+      "question": "At which stage should you start familiarizing yourself with basic concepts and terminology of the field?",
+      "options": ["A) Get Exposure", "B) Get Familiar", "C) Get Comfortable"],
+      "_answer": "A) Get Exposure"
+    },
+    {
+      "question": "Which stage involves understanding foundational principles and common practices in the field?",
+      "options": ["A) Get Innovative", "B) Get Familiar", "C) Get Exposure"],
+      "_answer": "B) Get Familiar"
+    },
+    {
+      "question": "What is the focus of the 'Get Comfortable' stage in your learning journey?",
+      "options": [
+        "A) Practicing applying knowledge and skills through projects and challenges",
+        "B) Familiarizing yourself with basic concepts",
+        "C) Thinking creatively and innovating"
+      ],
+      "_answer": "A) Practicing applying knowledge and skills through projects and challenges"
+    },
+    {
+      "question": "Which stage involves thinking creatively and innovating within the field?",
+      "options": ["A) Get Innovative", "B) Get Comfortable", "C) Get Familiar"],
+      "_answer": "A) Get Innovative"
+    },
+    {
+      "question": "What should you focus on during the 'Get Exposure' stage?",
+      "options": [
+        "A) Understanding different programming languages and their applications",
+        "B) Mastering algorithms and data structures",
+        "C) Building practical projects"
+      ],
+      "_answer": "A) Understanding different programming languages and their applications"
+    },
+    {
+      "question": "At which stage should you focus on mastering algorithms and data structures?",
+      "options": ["A) Get Innovative", "B) Get Familiar", "C) Get Comfortable"],
+      "_answer": "B) Get Familiar"
+    },
+    {
+      "question": "What type of activities should you engage in during the 'Get Comfortable' stage?",
+      "options": [
+        "A) Building practical projects or participating in coding challenges",
+        "B) Exploring cutting-edge technologies",
+        "C) Familiarizing yourself with terminology"
+      ],
+      "_answer": "A) Building practical projects or participating in coding challenges"
+    },
+    {
+      "question": "Which stage involves developing new software solutions and exploring cutting-edge technologies?",
+      "options": ["A) Get Innovative", "B) Get Familiar", "C) Get Comfortable"],
+      "_answer": "A) Get Innovative"
+    },
+    {
+      "question": "When should you focus on contributing to open-source projects?",
+      "options": [
+        "A) During the 'Get Innovative' stage",
+        "B) During the 'Get Exposure' stage",
+        "C) During the 'Get Familiar' stage"
+      ],
+      "_answer": "A) During the 'Get Innovative' stage"
+    },
+    {
+      "question": "Which stage is primarily about gaining confidence through practice and application?",
+      "options": ["A) Get Comfortable", "B) Get Familiar", "C) Get Exposure"],
+      "_answer": "A) Get Comfortable"
     }
-]
+  ]
 }
