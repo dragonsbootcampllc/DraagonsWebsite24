@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import React from "react";
 import Layout from "./layout";
-import { CategoryView, Blog as BlogType } from "./components/CategoryView";
+import CategoryView from "./components/CategoryView";
+import { Blog as BlogType } from "./components/CategoryView";
 import {
   BASE_URL,
   useBlog,
