@@ -3,10 +3,17 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import slugify from "slugify";
+import QuizCompo, { Question } from "./Quiz/QuizCompo";
+
+interface Quiz {
+  question: string;
+  options: string[];
+}
 
 interface BlogViewProps {
   title: string;
   markdownContent: string;
+  quiz: Quiz[] 
 }
 
 interface DocumentHeader {
@@ -15,7 +22,7 @@ interface DocumentHeader {
   type: string;
 }
 
-export default function BlogView({ title, markdownContent }: BlogViewProps) {
+export default function BlogView({ title, markdownContent, quiz }: BlogViewProps) {
   const [activeSectionId, setActiveSectionId] = useState<string>("");
   const [documentHeaders, setDocumentHeaders] = useState<DocumentHeader[]>([]);
   const router = useRouter();
@@ -138,6 +145,12 @@ return (
                 }}>
                 {markdownContent}
             </ReactMarkdown>
+            {
+              0 != quiz.length ?
+              <div className="flex flex-col gap-4">              
+                <QuizCompo questions={quiz.map(({question, options}) => {return {question, choices: options}})} />
+              </div> : <></>
+            }
         </div>
         {/*
         <div className='max-w-[300px]  w-full hidden top-28 sticky h-auto  overflow-y-auto items-start justify-start text-start text-md font-semibold md:flex flex-col '>

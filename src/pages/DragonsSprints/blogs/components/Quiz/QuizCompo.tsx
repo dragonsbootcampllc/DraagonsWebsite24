@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-interface Question {
+export interface Question {
   question: string;
   choices: string[];
 }

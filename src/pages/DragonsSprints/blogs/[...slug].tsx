@@ -74,7 +74,7 @@ export default function View() {
 
     return blog ? (
       <div className="w-full min-h-screen grid place-items-center">
-        <BlogView markdownContent={blog.content} title={blog.title} />
+        <BlogView markdownContent={blog.content} title={blog.title} quiz={blog.quiz} />
       </div>
     ) : (
       <div className="w-full min-h-screen grid capitalize place-items-center">
