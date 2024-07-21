@@ -164,17 +164,17 @@ const LINKS = [
 ];
 const SocialMediaLinks = [
   {
-    url: "https://www.youtube.com/@Neferdata",
+    url: "https://www.youtube.com/@dragonsbootcampllc",
     title: "YouTube",
     icon: YouTubeIcon,
   },
   {
-    url: "https://github.com/neferdata",
+    url: "https://github.com/dragonsbootcampllc",
     title: "GitHub",
     icon: GitHubIcon,
   },
   {
-    url: "https://www.linkedin.com/company/neferdata/",
+    url: "https://www.linkedin.com/company/dragonsbootcampllc/",
     title: "LinkedIn",
     icon: LinkedInIcon,
   },

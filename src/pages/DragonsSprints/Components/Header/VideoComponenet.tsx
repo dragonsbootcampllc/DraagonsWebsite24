@@ -97,28 +97,28 @@ function VideoComponenet({
           {/* Buttons (remove on mobile) */}
           <div className='flex gap-4 w-full mt-4 justify-left md:justify-start'>
             <div className='h-16 max-w-64 w-full min-w-32 '>
-              {isLoaded && hasAccess ? (
-                <Link href={`/DragonsSprints/${slug}/Explore`}>
-                  <div className='flex gap-4  w-full  mt-4 justify-center'>
-                    <div className='h-16 max-w-64 w-full min-w-20  '>
-                      <ButtonComponent
-                        CTAtext='Go to Course'
-                        className='!h-fit'
-                      />
-                    </div>
-                  </div>
-                </Link>
-              ) : (
-                <div className=' gap-4 w-full   my-4 justify-center'>
-                  <div className='lg:h-16 md:hidden lg:flex max-w-64 w-full min-w-20   '>
-                    <CheckoutButton
-                      CTAtext='Buy Now'
-                      className='h-full !w-full'
-                      createCheckoutSession='/api/Checkout-DragonsSprint'
-                    />
-                  </div>
-                </div>
-              )}
+            {isLoaded && hasAccess ? (
+                          <Link href={`/DragonsSprints/${slug}/Explore`}>
+                            <div className='flex gap-4  w-full  mt-4 justify-center'>
+                              <div className='h-16 max-w-64 w-full min-w-20  '>
+                                <ButtonComponent
+                                  CTAtext='Go to Course'
+                                  className='!h-fit'
+                                />
+                              </div>
+                            </div>
+                          </Link>
+                        ) : (
+                          <div className=' gap-4 w-full   my-4 justify-center'>
+                            <div className='lg:h-16 md:hidden lg:flex max-w-64 w-full min-w-20   '>
+                              <CheckoutButton
+                                CTAtext='Buy Now'
+                                className='h-full !w-full'
+                                createCheckoutSession='/api/Checkout-DragonsSprint'
+                              />
+                            </div>
+                          </div>
+                        )}
             </div>
           </div>
         </div>
