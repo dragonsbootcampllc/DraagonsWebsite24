@@ -1,7 +1,11 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CoverImage from "@/../public/images/DragonsSprint-CarrerSprint/Positionbattleheader.png";
 import CheckoutButton from "@/components/CheckoutButton";
+import ButtonComponent from "@/components/Micros/Button";
+import { useUser } from "@clerk/nextjs";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 function VideoComponenet({
   duration,
@@ -16,6 +20,22 @@ function VideoComponenet({
   Language?: string[];
   HasCertificate?: boolean;
 }) {
+  const router = useRouter();
+  const { slug } = router.query;
+  const { user, isLoaded } = useUser();
+  const [hasAccess, setHasAccess] = useState(false);
+
+  useEffect(() => {
+    if (isLoaded && user) {
+      const userCourses = (user.publicMetadata.courses as string[]) || [];
+      setHasAccess(userCourses.includes(slug as string));
+    }
+  }, [isLoaded, user, slug]);
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   const renderInfoItem = (text: string) => (
     <div
       className='border-r-4 bg-gray-400/20 rounded-md aspect-auto p-2 h-full grid place-items-center'
@@ -75,13 +95,30 @@ function VideoComponenet({
           </p>
 
           {/* Buttons (remove on mobile) */}
-          <div className='lg:flex gap-4 hidden mt-4 justify-left md:justify-start'>
-            <div className='h-16 w-64 '>
-              <CheckoutButton
-                CTAtext='Buy Now'
-                className='h-fit'
-                createCheckoutSession='/api/Checkout-DragonsSprint'
-              />
+          <div className='flex gap-4 w-full mt-4 justify-left md:justify-start'>
+            <div className='h-16 max-w-64 w-full min-w-32 '>
+              {isLoaded && hasAccess ? (
+                <Link href={`/DragonsSprints/${slug}/Explore`}>
+                  <div className='flex gap-4  w-full  mt-4 justify-center'>
+                    <div className='h-16 max-w-64 w-full min-w-20  '>
+                      <ButtonComponent
+                        CTAtext='Go to Course'
+                        className='!h-fit'
+                      />
+                    </div>
+                  </div>
+                </Link>
+              ) : (
+                <div className=' gap-4 w-full   my-4 justify-center'>
+                  <div className='lg:h-16 md:hidden lg:flex max-w-64 w-full min-w-20   '>
+                    <CheckoutButton
+                      CTAtext='Buy Now'
+                      className='h-full !w-full'
+                      createCheckoutSession='/api/Checkout-DragonsSprint'
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
