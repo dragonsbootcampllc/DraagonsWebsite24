@@ -3,11 +3,11 @@
     "category": "Career Sprint",
     "description": "Boost your career in 14 days with focused tips and community support.",
     "blogs": [
+        "Introduction",
         "Tech Career Guide",
         "Technical tracks",
         "Days Plan",
         "Understanding Technical Field",
-        "Introduction",
         "Business Technology Integration",
         "Technology in Business",
         "Career Guidance",
@@ -17,7 +17,11 @@
         "Industry Demands And Trends",
         "Specialization And Diversification",
         "Startup Culture",
-        "Job Title Inflation And Market Differentiation"
+        "Job Title Inflation And Market Differentiation",
+        "The Art Of Burger Creation And Software Development",
+        "Frontend Development The Art Of Presentation",
+        "DevOps Ensuring a Seamless and Efficient Software Lifecycle",
+        "Backend Development The Heart of Functionality"
     ],
     "private_key": "careerSprint"
 }
