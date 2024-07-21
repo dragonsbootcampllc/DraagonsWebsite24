@@ -79,5 +79,18 @@ function useBlog(categoryName: string, blogName: string) {
     };
 }
 
+// function useQuiz(categoryName: string, blogName: string) {
+//     const { data, error } = useSWR<BlogDetails>(
+//         `/api/blogSystem/blog?category=${categoryName}&blog=${blogName}`,
+//         getFetcher
+//     );
+
+//     return { 
+//         blog: data, 
+//         error,
+//         isLoading: !error && !data,
+//     };
+// }
+
 export { useCategories, useCategory, useBlog, BASE_URL, importIcon };
 export type { CategorySummary, BlogSummary, BlogDetails, Category };

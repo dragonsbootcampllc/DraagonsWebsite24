@@ -1,15 +1,12 @@
 {
     "icon": "df",
     "category": "Career Sprint",
-    "description": "Boost your career in just 14 days with focused mini sprints. Access practical tips, goals, and community support for quick, impactful progress. Start now!",
+    "description": "Boost your career in 14 days with focused tips and community support.",
     "blogs": [
-        "Overview",
-        "Mysteries of Tech Roles",
-        "All Possible Roles",
-        "Introduction",
-        "Business Technology Integration",
-        "Technology in Business",
-        "Understanding Technical Field"
+        "Tech Career Guide",
+        "Technical tracks",
+        "Days Plan",
+        "Kitchen Code"
     ],
     "private_key": "careerSprint"
 }

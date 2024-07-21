@@ -1,0 +1,406 @@
+{
+    "title": "Tech Career Guide",
+    "description": "This blog guides your tech journey, from basics to business.",
+    "quiz": [
+        {
+            "question": "Scenario: A startup developing quantum computing solutions",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online marketplace for handmade crafts",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A cryptocurrency exchange platform",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company creating advanced AI chatbots",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An app for buying and selling used textbooks",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A robo-advisor for automated investing",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A platform for streaming video content",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online bank with no physical branches",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company developing self-driving car technology",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A subscription box service for organic snacks",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A peer-to-peer lending platform",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A virtual reality gaming company",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An app for instant money transfers between friends",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online store selling digital art as NFTs",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A startup working on brain-computer interfaces",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A platform for buying and selling domain names",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A mobile payment system using QR codes",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company developing lab-grown meat alternatives",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online auction site for collectibles",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A blockchain-based smart contract platform",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A startup creating augmented reality glasses",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An app for comparing and applying for credit cards",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online marketplace for freelance services",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company developing advanced battery technology",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A platform for crowdfunding startup investments",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An AI-powered personal finance management app",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An e-book self-publishing and distribution platform",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company creating biodegradable plastics",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A digital wallet for storing multiple cryptocurrencies",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online course platform for professional skills",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A startup developing fusion energy technology",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A stock trading app with zero commission fees",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online pharmacy with prescription delivery",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company creating synthetic DNA for data storage",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A platform for buying and selling used smartphones",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A service for automated tax preparation and filing",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A startup developing flying car prototypes",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online marketplace for luxury fashion items",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A platform for fractional real estate investing",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company creating advanced prosthetic limbs",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A subscription service for streaming music",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A digital insurance comparison and purchasing platform",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online platform for renting designer clothing",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A startup developing 3D-printed organs for transplants",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A peer-to-peer car sharing marketplace",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A platform for algorithmic cryptocurrency trading",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A company developing next-generation solar panels",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An app for buying and selling in-game virtual items",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: A biometric authentication system for mobile payments",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        },
+        {
+            "question": "Scenario: An online marketplace for sustainable and eco-friendly products",
+            "options": [
+                "A) Innovative (cutting-edge technology and new tech)",
+                "B) E-commerce (buy and sell)",
+                "C) Fintech (anything money related)"
+            ]
+        }
+    ]
+}
