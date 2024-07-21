@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 export interface Question {
   question: string;
@@ -7,19 +8,38 @@ export interface Question {
 
 interface QuizCompoProps {
   questions: Question[];
+  category: string;
+  blog: string;
 }
 
-const QuizCompo: React.FC<QuizCompoProps> = ({ questions }) => {
-  const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null));
+const QuizCompo: React.FC<QuizCompoProps> = ({ questions, category, blog }) => {
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string | null>>({});
 
-  const handleSelect = (questionIndex: number, choiceIndex: number) => {
-    const newSelectedAnswers = [...selectedAnswers];
-    newSelectedAnswers[questionIndex] = choiceIndex;
-    setSelectedAnswers(newSelectedAnswers);
+  const handleSelect = (questionText: string, choice: string) => {
+    setSelectedAnswers(prev => ({
+      ...prev,
+      [questionText]: choice,
+    }));
   };
 
-  const handleSubmit = () => {
-    console.log('Selected answers:', selectedAnswers);
+  const handleSubmit = async () => {
+    try {
+      const answers = Object.entries(selectedAnswers).map(([question, answer]) => ({
+        question,
+        answer,
+      }));
+
+      const response = await axios.post('/api/blogSystem/validate-answers', {
+        category,
+        blog,
+        answers,
+      });
+
+      const validationResults = response.data;
+      console.log('Validation results:', validationResults);
+    } catch (error) {
+      console.error('Error validating answers:', error);
+    }
   };
 
   return (
@@ -32,9 +52,9 @@ const QuizCompo: React.FC<QuizCompoProps> = ({ questions }) => {
               <div
                 key={cIndex}
                 className={`p-2 text-black text-lg rounded text-center cursor-pointer ${
-                  selectedAnswers[qIndex] === cIndex ? 'bg-purple-700 text-white' : 'bg-white hover:bg-purple-100'
+                  selectedAnswers[question.question] === choice ? 'bg-purple-700 text-white' : 'bg-white hover:bg-purple-100'
                 }`}
-                onClick={() => handleSelect(qIndex, cIndex)}
+                onClick={() => handleSelect(question.question, choice)}
               >
                 {choice}
               </div>
