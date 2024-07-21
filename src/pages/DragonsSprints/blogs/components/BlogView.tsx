@@ -139,7 +139,7 @@ return (
                 {markdownContent}
             </ReactMarkdown>
         </div>
-        <div className=''>
+        {/*
         <div className='max-w-[300px]  w-full hidden top-28 sticky h-auto  overflow-y-auto items-start justify-start text-start text-md font-semibold md:flex flex-col '>
       
                 <h4 className='text-white text-sm select-none'>ON THIS PAGE</h4>
@@ -166,7 +166,7 @@ return (
 
                 </ul>
             </div>
-            </div>
+             */}
         </div>
 );
 }
