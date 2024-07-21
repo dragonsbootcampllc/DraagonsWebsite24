@@ -33,7 +33,7 @@ const HoverEffect = ({
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
           style={
-            item.title === "PathWays" && !isPathwayOpen ? { opacity: 0.5 } : {}
+            0 === item.link.length && !isPathwayOpen ? { opacity: 0.5 } : {}
           }>
           <AnimatePresence>
             {hoveredIndex === idx && (
