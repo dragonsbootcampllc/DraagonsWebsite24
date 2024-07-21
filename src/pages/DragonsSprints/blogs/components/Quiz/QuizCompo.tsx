@@ -27,7 +27,7 @@ const QuizCompo: React.FC<QuizCompoProps> = ({ questions }) => {
       {questions.map((question, qIndex) => (
         <div key={qIndex} className="mb-6">
           <h1 className="text-2xl mb-4">{question.question}</h1>
-          <div className="space-y-2">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4">
             {question.choices.map((choice, cIndex) => (
               <div
                 key={cIndex}
