@@ -1,5 +1,6 @@
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HoverEffect = ({
@@ -23,59 +24,49 @@ const HoverEffect = ({
       className={cn(
         "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 cursor-pointer py-10",
         className
-      )}
-    >
-      {items && items.length > 0
-        ? items.map((item, idx) => (
-            <div
-              key={item?.title}
-              className="relative group block p-2 h-full w-full"
-              onMouseEnter={() => setHoveredIndex(idx)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              style={
-                item.title === "PathWays" && !isPathwayOpen
-                  ? { opacity: 0.5 }
-                  : item.title === "Live"
-                  ? { opacity: 0.2 }
-                  : {}
-              }
-            >
-              <AnimatePresence>
-                {hoveredIndex === idx && (
-                  <motion.span
-                    className="absolute inset-0 h-full w-full bg-slate-800/[0.8] block  rounded-3xl"
-                    layoutId="hoverBackground"
-                    initial={{ opacity: 0 }}
-                    animate={{
-                      opacity: 1,
-                      transition: { duration: 0.15 },
-                    }}
-                    exit={{
-                      opacity: 0,
-                      transition: { duration: 0.15, delay: 0.2 },
-                    }}
-                  />
-                )}
-              </AnimatePresence>
-              <Card icon={item.icon}>
-                <div className="flex relative  items-center">
-                  <div className=" relative  grid place-items-center p-0 m-0 ">
-                    <CardTitle>{item.title}</CardTitle>
-                  </div>
-                </div>
-                <CardDescription>{item.description}</CardDescription>
-                {item.title === "PathWays" && !isPathwayOpen && (
-                  <p className="text-red-500 mt-2">
-                    This will be open after 10 days of the 14-day challenge.
-                  </p>
-                )}
-                {item.title === "Live" && (
-                  <p className="text-red-500 mt-2">No Live Sessions Now</p>
-                )}
-              </Card>
+      )}>
+      {items && items.length > 0 ? items.map((item, idx) => (
+        <Link
+          href={item.link}
+          key={item?.title}
+          className='relative group block p-2 h-full w-full'
+          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseLeave={() => setHoveredIndex(null)}
+          style={
+            item.title === "PathWays" && !isPathwayOpen ? { opacity: 0.5 } : {}
+          }>
+          <AnimatePresence>
+            {hoveredIndex === idx && (
+              <motion.span
+                className='absolute inset-0 h-full w-full bg-slate-800/[0.8] block  rounded-3xl'
+                layoutId='hoverBackground'
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.15 },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.15, delay: 0.2 },
+                }}
+              />
+            )}
+          </AnimatePresence>
+          <Card icon={item.icon}>
+            <div className='flex relative  items-center'>
+              <div className=' relative  grid place-items-center p-0 m-0 '>
+                <CardTitle>{item.title}</CardTitle>
+              </div>
             </div>
-          ))
-        : null}
+            <CardDescription>{item.description}</CardDescription>
+            {item.title === "PathWays" && !isPathwayOpen && (
+              <p className='text-red-500 mt-2'>
+                This will be open after 10 days of the 14-day challenge.
+              </p>
+            )}
+          </Card>
+        </Link>
+      )) : null}
     </div>
   );
 };

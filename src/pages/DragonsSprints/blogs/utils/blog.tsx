@@ -53,7 +53,7 @@ const importIcon = async (iconName: string) => {
 
 // Hook to fetch all categories
 function useCategories() {
-    const { data, error } = useSWR<CategorySummary[]>(`${BASE_URL}/categories?private_key=careerSprint`, getFetcher);
+    const { data, error } = useSWR<CategorySummary[]>(`/api/blogSystem/categories?private_key=careerSprint`, getFetcher);
 
     return {
         categories: data,
@@ -64,7 +64,7 @@ function useCategories() {
 
 // Hook to fetch a specific category
 function useCategory(categoryName: string) {
-    const { data, error } = useSWR<Category>(`${BASE_URL}/category?category=${categoryName}`, getFetcher);
+    const { data, error } = useSWR<Category>(`/api/blogSystem/category?category=${categoryName}`, getFetcher);
 
     return { 
         data, 
@@ -76,7 +76,7 @@ function useCategory(categoryName: string) {
 // Hook to fetch a specific blog
 function useBlog(categoryName: string, blogName: string) {
     const { data, error } = useSWR<BlogDetails>(
-        `${BASE_URL}/blog?category=${categoryName}&blog=${blogName}`,
+        `/api/blogSystem/blog?category=${categoryName}&blog=${blogName}`,
         getFetcher
     );
 
