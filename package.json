@@ -10,8 +10,12 @@
     "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
   },
   "dependencies": {
+<<<<<<< HEAD
+    "@clerk/nextjs": "^5.2.4",
+=======
     "@clerk/nextjs": "^5.2.2",
     "@clerk/themes": "^2.1.10",
+>>>>>>> e4269dd3cee5b4745adc4a591d08e90b11a71099
     "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -34,7 +38,7 @@
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.390.0",
     "next": "^14.2.3",
-    "next-optimized-images": "^2.6.2",
+    "next-optimized-images": "^2.0.2",
     "npm": "^10.8.1",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
