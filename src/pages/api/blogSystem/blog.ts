@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import saveDetailsToFile from '../utils/saveBlogDetailsToFile';
 import { Details } from '@/types';
+import { removeUnderscoreKeys } from '../utils/utils';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -96,7 +97,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             return res.status(404).json({ error: 'Blog not found' });
         }
 
-        const details = JSON.parse(fs.readFileSync(blogJsonPath, 'utf-8'));
+        const details = removeUnderscoreKeys(JSON.parse(fs.readFileSync(blogJsonPath, 'utf-8')));
         const content = fs.readFileSync(blogContentPath, 'utf-8');
 
         res.status(200).json({ ...details, content });
