@@ -61,7 +61,7 @@ export default function QuizCompo({ questions: questionsProp, category, blog }: 
   };
 
   return (
-    <div className="p-4">
+    <div className="p-2">
       {questions.map(({ question, choices, correct, userAnswer, correctAnswer }, qIndex) => (
         <div key={qIndex} className="mb-6">
           <h1 className="text-2xl mb-4">{question}</h1>
