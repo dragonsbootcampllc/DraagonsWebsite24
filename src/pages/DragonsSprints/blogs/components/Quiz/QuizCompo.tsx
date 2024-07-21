@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export interface Question {
   question: string;
   choices: string[];
-  correctAnswer: string;
+  correctAnswer?: string;
+  userAnswer?: string;
+  correct?: boolean
 }
 
 interface QuizCompoProps {
@@ -13,41 +15,42 @@ interface QuizCompoProps {
   blog: string;
 }
 
-const QuizCompo: React.FC<QuizCompoProps> = ({ questions, category, blog }) => {
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string | null>>(
-    questions.reduce((acc, question) => ({ ...acc, [question.question]: null }), {})
+interface ValidateResponse {
+  correct: boolean
+  rightAnswer: string
+}
+
+export default function QuizCompo({ questions: questionsProp, category, blog }: QuizCompoProps) {
+  const [questions, setQuestions] = useState(
+    questionsProp.map((question) => ({ ...question, userAnswer: "" }))
   );
 
-  const handleSelect = (questionText: string, choice: string) => {
-    setSelectedAnswers(prev => ({
-      ...prev,
-      [questionText]: choice,
-    }));
+  const handleSelect = (index: number, choice: string) => {
+    setQuestions((prev) => {
+      const newQuestions = [...prev];
+      newQuestions[index].userAnswer = choice;
+      return newQuestions;
+    });
   };
+
+  useEffect(() => {
+    console.log(JSON.stringify(questions.map(({ question, userAnswer }) => ({ question, userAnswer })), null, 4));
+  }, [questions]);
 
   const handleSubmit = async () => {
     try {
-      const answers = questions.map(question => {
-        const selectedAnswer = selectedAnswers[question.question];
-        const answerArray = question.choices.map(choice =>
-          choice === selectedAnswer ? selectedAnswer : ""
-        );
-        
-        return {
-          question: question.question,
-          answer: answerArray,
-          correctAnswer: question.correctAnswer,
-        };
-      });
-
       const response = await axios.post('/api/blogSystem/validate-answers', {
         category,
         blog,
-        answers,
+        answers: questions.map(({ question, userAnswer }) => ({ question, answer: userAnswer })),
       });
 
       const validationResults = response.data;
-      console.log('Validation results:', validationResults);
+      setQuestions(validationResults.map(({correct, rightAnswer}: ValidateResponse, index: number) => ({
+        ...questions[index],
+        correct: correct,
+        correctAnswer: rightAnswer
+      })))
     } catch (error) {
       console.error('Error validating answers:', error);
     }
@@ -55,21 +58,36 @@ const QuizCompo: React.FC<QuizCompoProps> = ({ questions, category, blog }) => {
 
   return (
     <div className="p-4">
-      {questions.map((question, qIndex) => (
+      {questions.map(({ question, choices, correct, userAnswer, correctAnswer }, qIndex) => (
         <div key={qIndex} className="mb-6">
-          <h1 className="text-2xl mb-4">{question.question}</h1>
+          <h1 className="text-2xl mb-4">{question}</h1>
           <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4">
-            {question.choices.map((choice, cIndex) => (
-              <div
-                key={cIndex}
-                className={`p-2 text-black text-lg rounded text-center cursor-pointer ${
-                  selectedAnswers[question.question] === choice ? 'bg-purple-700 text-white' : 'bg-white hover:bg-purple-100'
-                }`}
-                onClick={() => handleSelect(question.question, choice)}
-              >
-                {choice}
-              </div>
-            ))}
+            {choices.map((choice, cIndex) => {
+              let bgColor = 'bg-white hover:bg-purple-100';
+              if (correct !== undefined) {
+                if (correct && userAnswer === choice) {
+                  bgColor = 'bg-green-600 text-white';
+                } else if (!correct) {
+                  if (userAnswer === choice) {
+                    bgColor = 'bg-red-600 text-white';
+                  } else if (correctAnswer === choice) {
+                    bgColor = 'bg-yellow-600 text-white';
+                  }
+                }
+              } else if (userAnswer === choice) {
+                bgColor = 'bg-purple-700 text-white';
+              }
+
+              return (
+                <div
+                  key={cIndex}
+                  className={`p-2 text-black text-lg rounded text-center cursor-pointer transition-all ${bgColor}`}
+                  onClick={() => handleSelect(qIndex, choice)}
+                >
+                  {choice}
+                </div>
+              );
+            })}
           </div>
         </div>
       ))}
@@ -81,6 +99,4 @@ const QuizCompo: React.FC<QuizCompoProps> = ({ questions, category, blog }) => {
       </button>
     </div>
   );
-};
-
-export default QuizCompo;
+}
