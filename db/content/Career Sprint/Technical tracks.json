@@ -1,10 +1,98 @@
 {
-    "title": "Technical tracks",
-    "description": "This blog guides your techical tracks journey.",
-    "quiz": [
-        {
-            "question": "",
-            "options": []
-        }
+  "title": "Technical tracks",
+  "description": "This blog guides your techical tracks journey.",
+  "quiz": [
+    [
+      {
+        "question": "Scenario: A company is developing new software for real-time collaborative tools.",
+        "options": [
+          "A) Digital Marketing (SEO, SEM, etc.)",
+          "B) Software Development and Engineering (Frontend, Backend, etc.)",
+          "C) Cloud Computing (Cloud Architecture, Cloud Migration, etc.)"
+        ],
+        "_answer": "B) Software Development and Engineering (Frontend, Backend, etc.)"
+      },
+      {
+        "question": "Scenario: An organization is focusing on improving network security and threat detection.",
+        "options": [
+          "A) Cybersecurity (Network Security, Incident Response, etc.)",
+          "B) Data Science (Machine Learning, Deep Learning, etc.)",
+          "C) IT Support (Help Desk, Technical Support, etc.)"
+        ],
+        "_answer": "A) Cybersecurity (Network Security, Incident Response, etc.)"
+      },
+      {
+        "question": "Scenario: A startup is specializing in creating mobile applications for both iOS and Android platforms.",
+        "options": [
+          "A) Mobile App Development (iOS Development, Android Development)",
+          "B) Data Engineering (Data Pipeline, ETL, etc.)",
+          "C) Business Intelligence (Data Reporting, Dashboarding, etc.)"
+        ],
+        "_answer": "A) Mobile App Development (iOS Development, Android Development)"
+      },
+      {
+        "question": "Scenario: A company is implementing a strategy to handle big data and perform complex data analysis.",
+        "options": [
+          "A) Data Analysis (Big Data Analytics, Data Visualization, etc.)",
+          "B) Cloud Computing (Cloud Security, Cloud Architecture, etc.)",
+          "C) IT Infrastructure (Network Administration, Systems Administration, etc.)"
+        ],
+        "_answer": "A) Data Analysis (Big Data Analytics, Data Visualization, etc.)"
+      },
+      {
+        "question": "Scenario: A tech firm is integrating AI technology to enhance its customer service operations.",
+        "options": [
+          "A) Artificial Intelligence (AI Research, AI Implementation, etc.)",
+          "B) E-commerce (E-commerce Platform Development, Analytics, etc.)",
+          "C) Telecommunications (Network Engineering, Wireless Communication, etc.)"
+        ],
+        "_answer": "A) Artificial Intelligence (AI Research, AI Implementation, etc.)"
+      },
+      {
+        "question": "Scenario: A new platform is designed to facilitate secure digital payments and transactions.",
+        "options": [
+          "A) FinTech (Digital Banking, Payment Systems, etc.)",
+          "B) Cybersecurity (Application Security, Digital Forensics, etc.)",
+          "C) Robotics (Robot Design, Programming, etc.)"
+        ],
+        "_answer": "A) FinTech (Digital Banking, Payment Systems, etc.)"
+      },
+      {
+        "question": "Scenario: A startup is working on developing IoT devices and managing their connectivity.",
+        "options": [
+          "A) Internet of Things (IoT Device Development, IoT Network Management)",
+          "B) Data Science (Natural Language Processing, Machine Learning)",
+          "C) Hardware Engineering (Computer Hardware Design, Circuit Design)"
+        ],
+        "_answer": "A) Internet of Things (IoT Device Development, IoT Network Management)"
+      },
+      {
+        "question": "Scenario: A company is focusing on creating software that aids in medical diagnostics and patient care.",
+        "options": [
+          "A) HealthTech (Medical Software Development, Health Informatics)",
+          "B) Digital Marketing (Social Media Marketing, Content Marketing)",
+          "C) Infrastructure and Networks (Telecommunications, Cloud Computing)"
+        ],
+        "_answer": "A) HealthTech (Medical Software Development, Health Informatics)"
+      },
+      {
+        "question": "Scenario: A tech organization is using predictive analytics to forecast market trends and consumer behavior.",
+        "options": [
+          "A) Data Science (Predictive Analytics, Deep Learning)",
+          "B) Quality Assurance and Testing (Manual Testing, Automated Testing)",
+          "C) Specialization and Diversification (Interdisciplinary Roles, Niche Specializations)"
+        ],
+        "_answer": "A) Data Science (Predictive Analytics, Deep Learning)"
+      },
+      {
+        "question": "Scenario: A new company is focused on sustainable technology solutions and environmental monitoring.",
+        "options": [
+          "A) Environmental Technology (GreenTech) (Renewable Energy Systems, Sustainable Technology Design)",
+          "B) Hardware Engineering (Semiconductor Design, Circuit Design)",
+          "C) Tech Management and Consulting (IT Strategy, Business Analysis)"
+        ],
+        "_answer": "A) Environmental Technology (GreenTech) (Renewable Energy Systems, Sustainable Technology Design)"
+      }
     ]
+  ]
 }
