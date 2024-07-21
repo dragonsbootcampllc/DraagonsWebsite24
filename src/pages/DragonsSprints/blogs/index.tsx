@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaQuestion } from "react-icons/fa";
 import Layout from "./layout";
 import { BASE_URL, useCategories, CategorySummary } from "./utils/blog";
+import Home from "./components/Quiz/index";
 
 export function BlogDiscovery() {
   const { categories, error, isLoading } = useCategories();
@@ -60,6 +61,9 @@ export function BlogDiscovery() {
                 </Link>
               )
             )}
+        </div>
+        <div className='flex justify-center  pt-12 relative items-center gap-4 flex-wrap  cursor-pointer'>
+          <Home />
         </div>
       </div>
     </Layout>
