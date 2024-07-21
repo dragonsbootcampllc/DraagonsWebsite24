@@ -95,12 +95,12 @@ function VideoComponenet({
           </p>
 
           {/* Buttons (remove on mobile) */}
-          <div className='lg:flex gap-4 hidden mt-4 justify-left md:justify-start'>
-            <div className='h-16 w-64 '>
+          <div className='flex gap-4 w-full mt-4 justify-left md:justify-start'>
+            <div className='h-16 max-w-64 w-full min-w-32 '>
             {isLoaded && hasAccess ? (
                           <Link href={`/DragonsSprints/${slug}/Explore`}>
-                            <div className='lg:flex gap-4  hidden mt-4 justify-center'>
-                              <div className='h-16 w-64  '>
+                            <div className='flex gap-4  w-full  mt-4 justify-center'>
+                              <div className='h-16 max-w-64 w-full min-w-20  '>
                                 <ButtonComponent
                                   CTAtext='Go to Course'
                                   className='!h-fit'
@@ -109,11 +109,11 @@ function VideoComponenet({
                             </div>
                           </Link>
                         ) : (
-                          <div className='flex gap-4   mt-4 justify-center'>
-                            <div className='h-16 max-w-64 w-full min-w-32  '>
+                          <div className=' gap-4 w-full   my-4 justify-center'>
+                            <div className='lg:h-16 md:hidden lg:flex max-w-64 w-full min-w-20   '>
                               <CheckoutButton
                                 CTAtext='Buy Now'
-                                className='h-full'
+                                className='h-full !w-full'
                                 createCheckoutSession='/api/Checkout-DragonsSprint'
                               />
                             </div>
