@@ -6,7 +6,7 @@ export interface Question {
   choices: string[];
   correctAnswer?: string;
   userAnswer?: string;
-  correct?: boolean
+  correct?: boolean;
 }
 
 interface QuizCompoProps {
@@ -16,16 +16,19 @@ interface QuizCompoProps {
 }
 
 interface ValidateResponse {
-  correct: boolean
-  rightAnswer: string
+  correct: boolean;
+  rightAnswer: string;
 }
 
 export default function QuizCompo({ questions: questionsProp, category, blog }: QuizCompoProps) {
   const [questions, setQuestions] = useState(
     questionsProp.map((question) => ({ ...question, userAnswer: "" }))
   );
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSelect = (index: number, choice: string) => {
+    if (submitted) return; // Prevent modification if submitted
+
     setQuestions((prev) => {
       const newQuestions = [...prev];
       newQuestions[index].userAnswer = choice;
@@ -46,11 +49,12 @@ export default function QuizCompo({ questions: questionsProp, category, blog }: 
       });
 
       const validationResults = response.data;
-      setQuestions(validationResults.map(({correct, rightAnswer}: ValidateResponse, index: number) => ({
+      setQuestions(validationResults.map(({ correct, rightAnswer }: ValidateResponse, index: number) => ({
         ...questions[index],
         correct: correct,
         correctAnswer: rightAnswer
-      })))
+      })));
+      setSubmitted(true); // Mark quiz as submitted
     } catch (error) {
       console.error('Error validating answers:', error);
     }
@@ -83,6 +87,7 @@ export default function QuizCompo({ questions: questionsProp, category, blog }: 
                   key={cIndex}
                   className={`p-2 text-black text-lg rounded text-center cursor-pointer transition-all ${bgColor}`}
                   onClick={() => handleSelect(qIndex, choice)}
+                  style={{ pointerEvents: submitted ? 'none' : 'auto' }} // Disable choice selection after submission
                 >
                   {choice}
                 </div>
@@ -91,12 +96,14 @@ export default function QuizCompo({ questions: questionsProp, category, blog }: 
           </div>
         </div>
       ))}
-      <button
-        className="mt-4 px-2 py-1 text-lg font-medium w-full bg-purple-700 hover:bg-purple-500 text-white rounded-full"
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
+      {!submitted && (
+        <button
+          className="mt-4 px-2 py-1 text-lg font-medium w-full bg-purple-700 hover:bg-purple-500 text-white rounded-full"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+      )}
     </div>
   );
 }

@@ -19,7 +19,7 @@ const questions = [
 const Quiz: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
-      <QuizCompo questions={questions} />
+      <QuizCompo questions={questions} category={''} blog={''} />
     </div>
   );
 };
