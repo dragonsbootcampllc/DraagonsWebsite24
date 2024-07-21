@@ -3,17 +3,15 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import slugify from "slugify";
-import QuizCompo, { Question } from "./Quiz/QuizCompo";
-
-interface Quiz {
-  question: string;
-  options: string[];
-}
+import QuizCompo from "./Quiz/QuizCompo";
+import { Quiz } from "../utils/blog";
 
 interface BlogViewProps {
   title: string;
   markdownContent: string;
-  quiz: Quiz[] 
+  quiz: Quiz[];
+  category: string;
+  blog: string;
 }
 
 interface DocumentHeader {
@@ -22,10 +20,11 @@ interface DocumentHeader {
   type: string;
 }
 
-export default function BlogView({ title, markdownContent, quiz }: BlogViewProps) {
+export default function BlogView({ title, markdownContent, quiz, category, blog }: BlogViewProps) {
   const [activeSectionId, setActiveSectionId] = useState<string>("");
   const [documentHeaders, setDocumentHeaders] = useState<DocumentHeader[]>([]);
   const router = useRouter();
+  
 
   const handleId = (type: string, text: string) => {
     const id = slugify(text, { lower: true });
@@ -146,10 +145,10 @@ return (
                 {markdownContent}
             </ReactMarkdown>
             {
-              0 != quiz.length ?
-              <div className="flex flex-col gap-4">              
-                <QuizCompo questions={quiz.map(({question, options}) => {return {question, choices: options}})} />
-              </div> : <></>
+              quiz && 0 != quiz.length ?
+              (<div className="flex flex-col gap-4">              
+                <QuizCompo questions={Object.values(quiz).map(({question, options}) => {return {question, choices: Object.values(options)}})} category={category} blog={blog} />
+              </div>) : (<></>)
             }
         </div>
         {/*

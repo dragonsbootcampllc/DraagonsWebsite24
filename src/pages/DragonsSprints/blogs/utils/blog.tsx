@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import axios from 'axios';
 import useSWR from 'swr';
 
@@ -19,11 +18,18 @@ interface BlogSummary {
     description: string;
 }
 
+
+interface Quiz {
+    question: string;
+    options: string[];
+}
+
 interface BlogDetails {
     title: string;
     icon: string; // SVG HTML string
     description: string;
     content: string;
+    quiz: Quiz[]
 }
 
 interface Category {
@@ -93,4 +99,4 @@ function useBlog(categoryName: string, blogName: string) {
 // }
 
 export { useCategories, useCategory, useBlog, BASE_URL, importIcon };
-export type { CategorySummary, BlogSummary, BlogDetails, Category };
+export type { CategorySummary, BlogSummary, BlogDetails, Category, Quiz };
