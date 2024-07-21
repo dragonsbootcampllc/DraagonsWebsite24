@@ -30,7 +30,7 @@ const QuizCompo: React.FC<QuizCompoProps> = ({ questions, category, blog }) => {
       const answers = questions.map(question => {
         const selectedAnswer = selectedAnswers[question.question];
         const answerArray = question.choices.map(choice =>
-          choice === selectedAnswer ? question.correctAnswer : ""
+          choice === selectedAnswer ? selectedAnswer : ""
         );
         
         return {
