@@ -1,0 +1,96 @@
+{
+    "title": "Tech Role",
+    "description": "Technology's role in business operations.",
+    "quiz": [
+        {
+            "question": "What supports day-to-day operations and secure communication?",
+            "options": [
+                "IT infrastructure",
+                "Manual systems",
+                "Physical files"
+            ],
+            "_answer": "IT infrastructure"
+        },
+        {
+            "question": "How does technology enhance operations management?",
+            "options": [
+                "Through inventory control tools",
+                "By ignoring logistics",
+                "With manual scheduling"
+            ],
+            "_answer": "Through inventory control tools"
+        },
+        {
+            "question": "What optimizes customer relationship management?",
+            "options": [
+                "CRM software",
+                "Handwritten notes",
+                "Ignoring customer data"
+            ],
+            "_answer": "CRM software"
+        },
+        {
+            "question": "How does technology support marketing?",
+            "options": [
+                "Digital marketing tools",
+                "Ignoring social media",
+                "Avoiding SEO"
+            ],
+            "_answer": "Digital marketing tools"
+        },
+        {
+            "question": "What streamlines operations management?",
+            "options": [
+                "ERP systems",
+                "Manual processes",
+                "Disjointed software"
+            ],
+            "_answer": "ERP systems"
+        },
+        {
+            "question": "How does technology affect logistics?",
+            "options": [
+                "Improves it",
+                "Hinders it",
+                "No impact"
+            ],
+            "_answer": "Improves it"
+        },
+        {
+            "question": "What enhances financial management?",
+            "options": [
+                "Ignoring data",
+                "Accounting software",
+                "Manual calculations"
+            ],
+            "_answer": "Accounting software"
+        },
+        {
+            "question": "What is essential for secure business communication?",
+            "options": [
+                "IT infrastructure",
+                "Ignoring cybersecurity",
+                "Physical letters"
+            ],
+            "_answer": "IT infrastructure"
+        },
+        {
+            "question": "How does CRM software benefit businesses?",
+            "options": [
+                "By managing customer relationships",
+                "By ignoring customer data",
+                "By complicating processes"
+            ],
+            "_answer": "By managing customer relationships"
+        },
+        {
+            "question": "What role does digital marketing play in modern business?",
+            "options": [
+                "Enhances brand visibility",
+                "Has no impact",
+                "Reduces online presence"
+            ],
+            "_answer": "Enhances brand visibility"
+        }
+    ]
+}
