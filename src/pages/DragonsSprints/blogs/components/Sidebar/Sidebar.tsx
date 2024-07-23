@@ -32,13 +32,13 @@ const CollapsedLink = ({
                     <button
                         onClick={onClick}
                         className='cursor-pointer relative flex justify-center place-items-center items-center font-semibold w-full box-border text-start h-8 '>
-                        <span
-                            className={`h-full  aspect-square hover:bg-[#1b1731] flex justify-center items-center rounded-lg  `}>
+                        <div
+                            className={`h-full aspect-square hover:bg-[#1b1731] flex justify-center items-center rounded-lg  `}>
                             <span
                                 className={` ${isCollapsed ? "rotate-0" : "rotate-90"}`}>
                                 <IoIosArrowForward />
                             </span>
-                        </span>
+                        </div>
 
                         <span className='h-full w-full grid place-items-center relative'>
                             <Link
@@ -92,7 +92,7 @@ export default function Sidebar() {
     if (isLoading) return <div>Loading...</div>;
 
     return (
-        <div className=' h-full hidden  relative min-h-screen md:flex flex-col gap-4 '>
+        <div className=' h-full hidden  relative min-h-screen  md:flex flex-col gap-4 '>
             <div className='sticky z-20 top-20'>
                 <Link
                     href={BASE_URL || ""}

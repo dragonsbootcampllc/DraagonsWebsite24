@@ -12,7 +12,7 @@ export function BlogDiscovery() {
 
   return (
     <Layout>
-      <div className='relative w-full min-h-screen h-full items-center flex flex-col text-slate-200 p-4'>
+      <div className='relative w-full h-fit items-center flex flex-col text-slate-200 p-4'>
         <div className='text-center max-w-4xl z-10 mb-3'>
           <div className='w-full flex justify-center'>
             <div className='bg-purple-700 relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 p-2 shadow-2xl shadow-blue-700/40 rounded-2xl'>
