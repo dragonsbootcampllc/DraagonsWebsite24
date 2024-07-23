@@ -34,7 +34,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
 
   return (
     <div className="relative container mx-auto z-20 min-h-screen">
-      <div className="flex flex-col items-start  md:flex-row gap-5">
+      <div className="flex flex-col  md:flex-row gap-5">
         {/* Mobile sidebar toggle */}
         <div className="md:hidden fixed top-4 left-4 z-50">
           <button
@@ -48,7 +48,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
         {/* Sidebar */}
         <div
           className={`fixed inset-y-0 left-0 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-            } md:relative md:translate-x-0 transition duration-200 ease-in-out z-30 w-[350px]  overflow-y-auto`}
+            } md:relative md:translate-x-0 transition duration-200 ease-in-out z-30 w-[350px] overflow-y-auto`}
         >
           <div className="max-h-screen pb-5">
             <BlogSidebar />
