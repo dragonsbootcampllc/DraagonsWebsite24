@@ -26,14 +26,14 @@ const CollapsedLink = ({
     onClick,
 }: CollapsedLinkProps) => {
     return (
-        <div className='flex flex-col max-w-[250px] w-full text-slate-100'>
+        <div className='flex flex-col w-full text-slate-100'>
             {blogs && blogs.length !== 0 ? (
                 <>
                     <button
                         onClick={onClick}
                         className='cursor-pointer relative flex justify-center place-items-center items-center font-semibold w-full box-border text-start h-8 '>
                         <span
-                            className={`h-full  aspect-square hover:bg-[#1b1731] py-3 px-3 flex   justify-center items-center rounded-lg  `}>
+                            className={`h-full  aspect-square hover:bg-[#1b1731] flex justify-center items-center rounded-lg  `}>
                             <span
                                 className={` ${isCollapsed ? "rotate-0" : "rotate-90"}`}>
                                 <IoIosArrowForward />
@@ -43,7 +43,7 @@ const CollapsedLink = ({
                         <span className='h-full w-full grid place-items-center relative'>
                             <Link
                                 href={url || ""}
-                                className=' py-[4px] px-3 hover:bg-[#1b1731] rounded-md w-full transition-all h-full '>
+                                className=' py-[4px] px-3  rounded-md w-full transition-all h-full '>
                                 {title}
                             </Link>
                         </span>
@@ -55,8 +55,8 @@ const CollapsedLink = ({
                             <Link
                                 href={`${url}/${blog_name}`}
                                 key={index}
-                                className='inline-block border-l py-1 group border-l-slate-400 ml-4 w-full transition-all h-full'>
-                                <span className='inline-block group-hover:bg-[#1b1731] rounded-md w-[calc(100%-2rem)] transition-all h-full pl-1 ml-4'>
+                                className='inline-block border-l py-2 group border-l-white/40 w-full hover:border-l-[#36b5ee] transition-all h-full'>
+                                <span className='inline-block text-white/70 group-hover:text-[#36b5ee] rounded-md w-[calc(100%-2rem)] transition-all h-full pl-1 ml-4'>
                                     {blog_name}
                                 </span>
                             </Link>
@@ -92,11 +92,11 @@ export default function Sidebar() {
     if (isLoading) return <div>Loading...</div>;
 
     return (
-        <div className='border-r-2 h-full hidden border-r-slate-200/20 w-[22rem]  relative min-h-screen md:flex flex-col gap-4 '>
+        <div className=' h-full hidden  relative min-h-screen md:flex flex-col gap-4 '>
             <div className='sticky z-20 top-20'>
                 <Link
                     href={BASE_URL || ""}
-                    className='w-full hover:bg-purple-800/20 p-2 rounded-2xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center'>
+                    className='w-full hover:bg-purple-800/20 mt-5  rounded-2xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center'>
                     <span className='text-2xl bg-purple-800 p-[6px] rounded-xl '>
                         <FaRegNewspaper className='h-5 w-5' />
                     </span>
