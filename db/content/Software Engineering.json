@@ -1,0 +1,11 @@
+{
+    "icon": "w",
+    "category": "Software Engineering",
+    "description": "Stay updated with the latest trends and best practices in software engineering.",
+    "private_key": "careerSprint",
+    "blogs": [
+        "Career Leader",
+        "Job Level Differences",
+        "Software Roles"
+    ]
+}

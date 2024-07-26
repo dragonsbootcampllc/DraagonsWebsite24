@@ -1,0 +1,106 @@
+{
+    "title": "Job Level Differences",
+    "description": "Understand why job titles vary and how to navigate career paths.",
+    "quiz": [
+        {
+            "question": "Why might job titles and levels differ from one company to another?",
+            "options": [
+                "Due to company size",
+                "Due to industry standards",
+                "Because of the company's project types",
+                "All of the above"
+            ],
+            "_answer": "All of the above"
+        },
+        {
+            "question": "In which type of company do engineers often have fewer levels and handle many different tasks?",
+            "options": [
+                "Big Companies",
+                "Non-Tech Companies",
+                "Small Companies and Startups",
+                "Tech-Focused Companies"
+            ],
+            "_answer": "Small Companies and Startups"
+        },
+        {
+            "question": "What kind of company might use creative job titles like 'Coding Ninja'?",
+            "options": [
+                "Traditional Companies",
+                "Innovation-Focused Companies",
+                "Big Companies",
+                "Non-Tech Companies"
+            ],
+            "_answer": "Innovation-Focused Companies"
+        },
+        {
+            "question": "Which role is more likely to be found in a big company?",
+            "options": [
+                "General Software Engineer",
+                "Junior Front-End Developer",
+                "Tech Guru",
+                "Coding Ninja"
+            ],
+            "_answer": "Junior Front-End Developer"
+        },
+        {
+            "question": "Why might some companies create more job levels?",
+            "options": [
+                "To confuse employees",
+                "To offer clear career paths",
+                "To reduce the number of roles",
+                "To avoid hiring new employees"
+            ],
+            "_answer": "To offer clear career paths"
+        },
+        {
+            "question": "Which industry influence can impact how companies structure their teams?",
+            "options": [
+                "Local food industry",
+                "Tech hubs like Silicon Valley",
+                "Textile industry",
+                "Agricultural industry"
+            ],
+            "_answer": "Tech hubs like Silicon Valley"
+        },
+        {
+            "question": "What should beginners focus on when job hunting?",
+            "options": [
+                "Job titles",
+                "Company logo",
+                "Job description",
+                "Office location"
+            ],
+            "_answer": "Job description"
+        },
+        {
+            "question": "How can understanding job levels help beginners?",
+            "options": [
+                "By navigating job searches",
+                "By planning career paths",
+                "Both A and B",
+                "Neither A nor B"
+            ],
+            "_answer": "Both A and B"
+        },
+        {
+            "question": "What type of project might require more specialized roles like 'Database Engineer'?",
+            "options": [
+                "Simple Projects",
+                "Small Projects",
+                "Complex Projects",
+                "Personal Projects"
+            ],
+            "_answer": "Complex Projects"
+        },
+        {
+            "question": "What should you ask about during job interviews to understand career progression?",
+            "options": [
+                "Company name",
+                "Growth opportunities",
+                "Office decor",
+                "Job title"
+            ],
+            "_answer": "Growth opportunities"
+        }
+    ]
+}
