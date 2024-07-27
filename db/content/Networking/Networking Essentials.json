@@ -10,7 +10,7 @@
                 "Cisco",
                 "IBM"
             ],
-            "answer": "Cisco"
+            "_answer": "Cisco"
         },
         {
             "question": "What is the primary function of an IP address?",
@@ -20,7 +20,7 @@
                 "Compress data for transmission",
                 "Block malicious traffic"
             ],
-            "answer": "Uniquely identify devices on a network"
+            "_answer": "Uniquely identify devices on a network"
         },
         {
             "question": "Which networking concept is responsible for directing data traffic across networks?",
@@ -30,7 +30,7 @@
                 "Wireless networking",
                 "Routing and switching"
             ],
-            "answer": "Routing and switching"
+            "_answer": "Routing and switching"
         },
         {
             "question": "What is the main purpose of network protocols?",
@@ -40,7 +40,7 @@
                 "To increase internet speed",
                 "To block unauthorized access"
             ],
-            "answer": "To allow devices to communicate effectively"
+            "_answer": "To allow devices to communicate effectively"
         },
         {
             "question": "Which networking technology allows devices to connect without physical cables?",
@@ -50,7 +50,7 @@
                 "Wireless networking",
                 "Token ring"
             ],
-            "answer": "Wireless networking"
+            "_answer": "Wireless networking"
         }
     ]
 }

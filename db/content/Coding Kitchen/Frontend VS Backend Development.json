@@ -10,7 +10,7 @@
                 "Database management",
                 "Server-side logic"
             ],
-            "answer": "User interface and experience"
+            "_answer": "User interface and experience"
         },
         {
             "question": "In the restaurant analogy, what does the 'kitchen' represent in backend development?",
@@ -20,7 +20,7 @@
                 "The server-side logic",
                 "The deployment environment"
             ],
-            "answer": "The server-side logic"
+            "_answer": "The server-side logic"
         },
         {
             "question": "Which frontend responsibility is similar to ensuring a burger tastes great regardless of where it's eaten?",
@@ -30,7 +30,7 @@
                 "Cross-Browser Compatibility",
                 "UI Design"
             ],
-            "answer": "Cross-Browser Compatibility"
+            "_answer": "Cross-Browser Compatibility"
         },
         {
             "question": "In UX design, what does 'Information Architecture' correspond to in a restaurant?",
@@ -40,7 +40,7 @@
                 "Gathering customer feedback",
                 "Designing interactive elements"
             ],
-            "answer": "Organizing ingredients in the kitchen"
+            "_answer": "Organizing ingredients in the kitchen"
         },
         {
             "question": "What does 'Visual Hierarchy' in UI design relate to in the restaurant analogy?",
@@ -50,7 +50,7 @@
                 "Choosing kitchen tools",
                 "Serving the burger"
             ],
-            "answer": "Layering and presentation of the burger"
+            "_answer": "Layering and presentation of the burger"
         },
         {
             "question": "Which DevOps stage corresponds to setting up development environments in the restaurant analogy?",
@@ -60,7 +60,7 @@
                 "Preparation and Mise en Place",
                 "Cooking the Patty"
             ],
-            "answer": "Preparation and Mise en Place"
+            "_answer": "Preparation and Mise en Place"
         },
         {
             "question": "What does 'API Integration' in backend development relate to in the restaurant analogy?",
@@ -70,7 +70,7 @@
                 "Managing user access",
                 "Designing server-side logic"
             ],
-            "answer": "Coordinating with suppliers"
+            "_answer": "Coordinating with suppliers"
         },
         {
             "question": "In backend development, what is the purpose of 'Data Backup and Recovery'?",
@@ -80,7 +80,7 @@
                 "To ensure data can be restored in case of failure",
                 "To optimize API integrations"
             ],
-            "answer": "To ensure data can be restored in case of failure"
+            "_answer": "To ensure data can be restored in case of failure"
         },
         {
             "question": "Which concept involves making sure the application runs smoothly across various devices?",
@@ -90,7 +90,7 @@
                 "Responsive Design",
                 "Database Management"
             ],
-            "answer": "Responsive Design"
+            "_answer": "Responsive Design"
         },
         {
             "question": "In UX design, what does 'Usability Testing' relate to in the restaurant context?",
@@ -100,7 +100,7 @@
                 "Choosing the right ingredients",
                 "Designing interactive elements"
             ],
-            "answer": "Checking the burger quality before serving"
+            "_answer": "Checking the burger quality before serving"
         },
         {
             "question": "What is the role of 'Authentication' in backend development?",
@@ -110,7 +110,7 @@
                 "Managing API interactions",
                 "Optimizing database performance"
             ],
-            "answer": "Verifying user identities"
+            "_answer": "Verifying user identities"
         },
         {
             "question": "Which frontend responsibility ensures that users have a positive experience regardless of their device?",
@@ -120,7 +120,7 @@
                 "Performance Optimization",
                 "Responsive Design"
             ],
-            "answer": "Responsive Design"
+            "_answer": "Responsive Design"
         },
         {
             "question": "In the restaurant analogy, what does 'Server-Side Logic' equate to in backend development?",
@@ -130,7 +130,7 @@
                 "Managing ingredients",
                 "Handling user sessions"
             ],
-            "answer": "Following recipes to create dishes"
+            "_answer": "Following recipes to create dishes"
         },
         {
             "question": "What does 'Visual Design' in UI development focus on?",
@@ -140,7 +140,7 @@
                 "Interactive elements",
                 "User research"
             ],
-            "answer": "Aesthetic appeal and consistency"
+            "_answer": "Aesthetic appeal and consistency"
         },
         {
             "question": "In backend development, what does 'Load Balancing' help achieve?",
@@ -150,7 +150,7 @@
                 "Managing user access",
                 "Designing user interfaces"
             ],
-            "answer": "Distributing traffic to prevent server overload"
+            "_answer": "Distributing traffic to prevent server overload"
         },
         {
             "question": "What does 'Data Transformation' involve in backend processing?",
@@ -160,7 +160,7 @@
                 "Organizing development environments",
                 "Designing visual hierarchies"
             ],
-            "answer": "Changing raw data into meaningful information"
+            "_answer": "Changing raw data into meaningful information"
         },
         {
             "question": "Which frontend aspect is analogous to ensuring a burger is visually appealing?",
@@ -170,7 +170,7 @@
                 "Performance Optimization",
                 "Cross-Browser Compatibility"
             ],
-            "answer": "UI Design"
+            "_answer": "UI Design"
         },
         {
             "question": "What does 'Error Handling' in backend development ensure?",
@@ -180,7 +180,7 @@
                 "That the database is optimized",
                 "That APIs are integrated properly"
             ],
-            "answer": "That server errors are managed and the app remains stable"
+            "_answer": "That server errors are managed and the app remains stable"
         }
     ]
 }
