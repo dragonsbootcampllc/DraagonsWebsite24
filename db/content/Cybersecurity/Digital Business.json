@@ -1,0 +1,17 @@
+{
+    "icon": "df",
+    "category": "Digital Business",
+    "description": "Exploring the intersection of technology and business",
+    "private_key": "careerSprint",
+    "blogs": [
+        "Content Marketing",
+        "Digital Business",
+        "E-commerce Analytics",
+        "E-commerce Platform Development",
+        "Email Marketing",
+        "Introduction to Digital Marketing",
+        "Search Engine Marketing (SEM)",
+        "Search Engine Optimization (SEO)",
+        "Social Media Marketing"
+    ]
+}

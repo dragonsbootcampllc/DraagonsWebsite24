@@ -10,6 +10,8 @@
     "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.2.2",
+    "@clerk/themes": "^2.1.10",
     "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -25,11 +27,14 @@
     "chart.js": "^4.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.11",
+    "framer-motion": "^11.3.2",
     "i": "^0.3.7",
+    "joe": "^2.0.2",
+    "joi": "^17.13.3",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.390.0",
     "next": "^14.2.3",
+    "next-optimized-images": "^2.6.2",
     "npm": "^10.8.1",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
@@ -39,6 +44,7 @@
     "react-lottie": "^1.2.4",
     "react-markdown": "^9.0.1",
     "react-player": "^2.16.0",
+    "react-responsive": "^10.0.0",
     "react-router-dom": "^6.24.0",
     "react-slick": "^0.30.2",
     "remark-gfm": "^4.0.0",
@@ -48,7 +54,7 @@
     "stripe": "^15.12.0",
     "swiper": "^11.1.4",
     "swr": "^2.2.5",
-    "tailwind-merge": "^2.3.0",
+    "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.165.0",
     "ts-node": "^10.9.2"
@@ -62,7 +68,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

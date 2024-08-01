@@ -1,21 +1,52 @@
 [
   {
-    "name": "Dragons Bootcamp Program",
+    "program": "Front-End",
+    "name": "Dragons Bootcamp Program for Front-End",
     "id": "0",
     "href": "/apply",
-    "price": {
-      "1": 499,
-      "2": 499,
-      "3": 699,
-      "4": 799
-    },
-    "discountPrice": {
-      "1": "$399.20",
-      "2": "$399.20",
-      "3": "$559.20",
-      "4": "$639.20"
-    },
-    "description": "Our 6-month Bootcamp is tailored to make you job-ready.",
+    "price": { "1": "499", "2": "599", "3": "699", "4": "799" },
+    "discountPrice": { "1": "$399", "2": "$399", "3": "$559", "4": "$639" },
+    "description": "Master the craft of building beautiful and interactive user interfaces, breathing life into web applications.",
+    "features": [
+      "Learn what companies are looking for",
+      "Become a Thought Leader",
+      "Level Up, Get Seen",
+      "Strong Industry Connections",
+      "Supportive Community"
+    ],
+    "featured": false,
+    "highlighted": false,
+    "soldOut": false,
+    "cta": "Apply Now"
+  },
+  {
+    "program": "Back-End",
+    "name": "Dragons Bootcamp Program for Back-End",
+    "id": "1",
+    "href": "/apply",
+    "price": { "1": "499", "2": "599", "3": "699", "4": "799" },
+    "discountPrice": { "1": "$399", "2": "$399", "3": "$559", "4": "$639" },
+    "description": " Become the architect behind the scenes, wielding the power of servers and databases to fuel complex applications.",
+    "features": [
+      "Learn what companies are looking for",
+      "Become a Thought Leader",
+      "Level Up, Get Seen",
+      "Strong Industry Connections",
+      "Supportive Community"
+    ],
+    "featured": false,
+    "highlighted": false,
+    "soldOut": false,
+    "cta": "Apply Now"
+  },
+  {
+    "program": "Data Analysis",
+    "name": "Dragons Bootcamp Program for Data Analysis",
+    "id": "2",
+    "href": "/apply",
+    "price": { "1": "499", "2": "599", "3": "699", "4": "799" },
+    "discountPrice": { "1": "$399", "2": "$399", "3": "$559", "4": "$639" },
+    "description": "Uncover the secrets hidden within data, transforming it into insights that drive informed decisions.",
     "features": [
       "Learn what companies are looking for",
       "Become a Thought Leader",

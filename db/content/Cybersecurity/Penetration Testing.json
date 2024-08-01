@@ -1,0 +1,96 @@
+{
+  "title": "Application Security",
+  "description": "Master the essentials of protecting cloud environments. Learn strategies for securing cloud-based systems from threats.",
+  "quiz": [
+    {
+      "question": "What is the primary goal of penetration testing?",
+      "options": [
+        "To identify and exploit vulnerabilities before malicious actors do",
+        "To improve network performance",
+        "To develop new software applications",
+        "To train employees on security best practices"
+      ],
+      "_answer": "To identify and exploit vulnerabilities before malicious actors do"
+    },
+    {
+      "question": "What is the purpose of the planning and reconnaissance phase in penetration testing?",
+      "options": [
+        "To gather information about the target system and identify potential entry points",
+        "To exploit identified vulnerabilities",
+        "To document findings and provide remediation recommendations",
+        "To scan for active systems and open ports"
+      ],
+      "_answer": "To gather information about the target system and identify potential entry points"
+    },
+    {
+      "question": "Which tool is commonly used for network scanning in penetration testing?",
+      "options": ["Nmap", "Metasploit", "Burp Suite", "Nessus"],
+      "_answer": "Nmap"
+    },
+    {
+      "question": "What is the objective of the gaining access phase?",
+      "options": [
+        "To exploit identified vulnerabilities and gain unauthorized access",
+        "To establish a persistent presence on the target system",
+        "To scan for open ports",
+        "To gather information about the target system"
+      ],
+      "_answer": "To exploit identified vulnerabilities and gain unauthorized access"
+    },
+    {
+      "question": "What type of penetration testing involves no prior knowledge of the target system?",
+      "options": [
+        "Black Box Testing",
+        "White Box Testing",
+        "Gray Box Testing",
+        "Red Team Testing"
+      ],
+      "_answer": "Black Box Testing"
+    },
+    {
+      "question": "What is the purpose of maintaining access during a penetration test?",
+      "options": [
+        "To simulate prolonged unauthorized access and establish persistence",
+        "To scan for vulnerabilities",
+        "To document findings",
+        "To gather initial information about the target"
+      ],
+      "_answer": "To simulate prolonged unauthorized access and establish persistence"
+    },
+    {
+      "question": "Which phase includes documenting findings and providing remediation recommendations?",
+      "options": [
+        "Analysis and Reporting",
+        "Planning and Reconnaissance",
+        "Scanning",
+        "Gaining Access"
+      ],
+      "_answer": "Analysis and Reporting"
+    },
+    {
+      "question": "What is a benefit of white box testing?",
+      "options": [
+        "Allows for a comprehensive assessment of internal security",
+        "Simulates an external attack from an outsider's perspective",
+        "Provides partial knowledge of the target system",
+        "Focuses on exploiting vulnerabilities without prior knowledge"
+      ],
+      "_answer": "Allows for a comprehensive assessment of internal security"
+    },
+    {
+      "question": "Which tool is used for vulnerability scanning in penetration testing?",
+      "options": ["Nessus", "Nmap", "Metasploit", "Burp Suite"],
+      "_answer": "Nessus"
+    },
+    {
+      "question": "What is a best practice for penetration testing?",
+      "options": [
+        "Define clear objectives and obtain proper authorization",
+        "Conduct testing without authorization",
+        "Avoid regular testing",
+        "Ignore findings from automated tools"
+      ],
+      "_answer": "Define clear objectives and obtain proper authorization"
+    }
+  ]
+}

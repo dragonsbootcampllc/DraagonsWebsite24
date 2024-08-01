@@ -17,7 +17,7 @@ const heroObj = {
         id: 2,
         date: "2020-01-01",
         content: "New Season just landed💯",
-        link: "/blog/news",
+        link: "#",
     },
     hero_heading: "Master Data Analysis: ",
     sub_heading_text: "Your Path to Proficiency and ",

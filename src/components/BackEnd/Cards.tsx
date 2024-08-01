@@ -1,12 +1,21 @@
 import { GlareCard } from "@/components/ui/glare-card";
-import Button from "@/components/Micros/Button";
 import Link from "next/link";
+import ButtonComponent from "@/components/Micros/Button";
 
 interface DataObj {
     title: string;
     description: string;
     link: string;
 };
+
+interface ButtonComponentProps {
+    CTAtext: string;
+    className?: string;
+    type?: 'button' | 'link'; // Specify possible types
+    href?: string; // href is required if type is 'link'
+    props?: any; // Add the optional 'props' property
+  }
+
 interface HeadTextProps {
     heroHighlightedText: string;
     headlineText: string;
@@ -58,7 +67,7 @@ export default function Cards({ DataObj ,headText }: BackEndProps) {
                                 <p className="mt-4 text-gray-400">{BackEndCard.description}</p>
 
                                 <span className="mt-4  text-white/80 hover:text-white">
-                                    Read more &rarr;
+                                    {" "}
                                 </span>
 
                             </div>
@@ -68,7 +77,10 @@ export default function Cards({ DataObj ,headText }: BackEndProps) {
                 <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                     <Link href="/Pricing" passHref>
                         <div className="h-12 w-48 md:h-16 md:w-64">
-                            <Button CTAtext={CTA.ctaApplyText} />
+                            <ButtonComponent 
+                                CTAtext={CTA.ctaApplyText}
+                            />
+                        
                         </div>
                     </Link>
                 </div>

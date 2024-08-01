@@ -11,7 +11,7 @@ function Hero() {
     id: 1,
     date: "2020-01-01",
     content: "New Season landed!",
-    link: "/blog/news",
+    link: "#",
   };
 
   return (

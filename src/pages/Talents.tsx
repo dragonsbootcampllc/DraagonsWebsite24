@@ -50,7 +50,7 @@ function Talents(props: TalentsProps) {
       .then(
         (result) => {
           console.log(result.text);
-          router.push("/Done");
+          router.push("/Talents");
         },
         (error) => {
           console.log(error.text);
@@ -65,7 +65,7 @@ function Talents(props: TalentsProps) {
   return (
     <div className={"w-full min-h-[900px] "}>
       <div>
-        <div className="w-full min-h-[900px]  pt-20">
+        <div className="w-full min-h-[900px]">
           <div className="bg-slate-900/10">
             <div className="bg-gradient-to-b from-violet-600/[.15] via-transparent">
               <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
@@ -122,7 +122,7 @@ function Talents(props: TalentsProps) {
                     >
                       <div
                         className={
-                          " max-w-4xl w-full flex text-left relative right-2"
+                          " max-w-4xl w-full flex text-left relative right-0"
                         }
                       >
                         <input
@@ -143,7 +143,7 @@ function Talents(props: TalentsProps) {
                           value={
                             EmailIsValid(Email) ? "Send" : "Enter a valid email"
                           }
-                          className="inline-flex w-36  cursor-pointer absolute select-none top-[5px] right-[5px]  justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800"
+                          className="flex w-36  cursor-pointer absolute select-none top-[5px] right-[5px]  justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 dark:focus:ring-offset-gray-800"
                           disabled={EmailIsValid(Email) ? false : true}
                           type="submit"
                         />

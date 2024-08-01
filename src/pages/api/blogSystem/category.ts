@@ -14,7 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     if (req.method == "POST") {
-        const { category, description, icon } = req.body;
+        const { category, description, icon, private_key } = req.body;
 
         // category didn't provided error
         if (!category) {
@@ -41,7 +41,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const categoryDetails = {
             icon,
             category,
-            description
+            description,
+            private_key: private_key || null
         };
 
         fs.mkdirSync(categoryPath);

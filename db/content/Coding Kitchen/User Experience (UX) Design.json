@@ -1,0 +1,86 @@
+{
+  "title": "Frontend & Backend Development",
+  "description": "Explore frontend and backend roles using restaurant analogies for clarity.",
+  "quiz": [
+    {
+      "question": "What is the main focus of User Experience (UX) Design?",
+      "options": [
+        "Creating visually appealing graphics",
+        "Improving usability and user satisfaction",
+        "Increasing website traffic through SEO",
+        "Developing backend functionality"
+      ],
+      "_answer": "Improving usability and user satisfaction"
+    },
+    {
+      "question": "What does usability testing involve?",
+      "options": [
+        "Designing the visual elements of a product",
+        "Evaluating a product by testing it with real users",
+        "Creating preliminary designs",
+        "Conducting market research"
+      ],
+      "_answer": "Evaluating a product by testing it with real users"
+    },
+    {
+      "question": "Which of the following is a key aspect of usability testing?",
+      "options": [
+        "Visual Hierarchy",
+        "Task Performance",
+        "Consistency",
+        "Persona Creation"
+      ],
+      "_answer": "Task Performance"
+    },
+    {
+      "question": "What is the purpose of interface design in UX?",
+      "options": [
+        "To conduct user interviews",
+        "To create layouts and visual elements",
+        "To gather user feedback",
+        "To perform usability testing"
+      ],
+      "_answer": "To create layouts and visual elements"
+    },
+    {
+      "question": "What is a wireframe in UX design?",
+      "options": [
+        "An interactive model of a product",
+        "A basic, low-fidelity sketch showing page structure",
+        "A detailed user profile",
+        "A set of visual guidelines for consistency"
+      ],
+      "_answer": "A basic, low-fidelity sketch showing page structure"
+    },
+    {
+      "question": "Which tool is commonly used for wireframing and prototyping?",
+      "options": [
+        "Balsamiq",
+        "Google Analytics",
+        "Adobe Photoshop",
+        "Mailchimp"
+      ],
+      "_answer": "Balsamiq"
+    },
+    {
+      "question": "What is the purpose of user research in UX design?",
+      "options": [
+        "To design user interfaces",
+        "To understand users' needs, behaviors, and motivations",
+        "To create marketing campaigns",
+        "To test the visual appeal of a product"
+      ],
+      "_answer": "To understand users' needs, behaviors, and motivations"
+    },
+    {
+      "question": "Which method is used to gather quantitative data in user research?",
+      "options": [
+        "Interviews",
+        "Surveys",
+        "Persona Creation",
+        "Usability Testing"
+      ],
+      "_answer": "Surveys"
+    }
+  ]
+}

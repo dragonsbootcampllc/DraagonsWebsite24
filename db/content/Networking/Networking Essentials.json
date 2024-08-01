@@ -1,0 +1,56 @@
+{
+    "title": "Networking Essentials",
+    "description": "Get a solid grasp of networking essentials with this guide. Understand protocols, routing, and network security in tech.",
+    "quiz": [
+        {
+            "question": "Which company played a crucial role in developing internet infrastructure through routers and switches?",
+            "options": [
+                "Microsoft",
+                "Apple",
+                "Cisco",
+                "IBM"
+            ],
+            "_answer": "Cisco"
+        },
+        {
+            "question": "What is the primary function of an IP address?",
+            "options": [
+                "Encrypt data",
+                "Uniquely identify devices on a network",
+                "Compress data for transmission",
+                "Block malicious traffic"
+            ],
+            "_answer": "Uniquely identify devices on a network"
+        },
+        {
+            "question": "Which networking concept is responsible for directing data traffic across networks?",
+            "options": [
+                "IP addressing",
+                "Cloud computing",
+                "Wireless networking",
+                "Routing and switching"
+            ],
+            "_answer": "Routing and switching"
+        },
+        {
+            "question": "What is the main purpose of network protocols?",
+            "options": [
+                "To encrypt all network traffic",
+                "To allow devices to communicate effectively",
+                "To increase internet speed",
+                "To block unauthorized access"
+            ],
+            "_answer": "To allow devices to communicate effectively"
+        },
+        {
+            "question": "Which networking technology allows devices to connect without physical cables?",
+            "options": [
+                "Ethernet",
+                "Fiber optic",
+                "Wireless networking",
+                "Token ring"
+            ],
+            "_answer": "Wireless networking"
+        }
+    ]
+}

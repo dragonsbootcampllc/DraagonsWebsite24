@@ -1,14 +1,11 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { AnimatedTooltip } from "../ui/animated-tooltip";
-import talents from "@/pages/json/Team2023.json";
-import { Talent } from "../HOOKs/useTransformTalentData";
+
 import DragonsLogo3D from "@/../public/Identity/hero2023Glass.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 
-import useTransformTalentData from "../HOOKs/useTransformTalentData";
 import ButtonComponent from "../Micros/Button";
 import ButtonLiteComponent from "../Micros/ButtonLite";
 import Image from "next/image";

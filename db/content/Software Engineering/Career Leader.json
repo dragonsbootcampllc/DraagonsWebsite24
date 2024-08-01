@@ -1,0 +1,106 @@
+{
+    "title": "Career Leader",
+    "description": "Explore the path from entry-level to executive roles in software engineering.",
+    "quiz": [
+        {
+            "question": "What is the main goal of understanding the software engineering career ladder?",
+            "options": [
+                "To plan your path in the field",
+                "To learn coding languages",
+                "To understand company policies",
+                "To improve soft skills"
+            ],
+            "_answer": "To plan your path in the field"
+        },
+        {
+            "question": "What type of tasks might an intern be asked to do?",
+            "options": [
+                "Designing new features",
+                "Fixing small bugs and helping with simple coding tasks",
+                "Leading a team project",
+                "Managing multiple teams"
+            ],
+            "_answer": "Fixing small bugs and helping with simple coding tasks"
+        },
+        {
+            "question": "What role comes after Junior Software Engineer?",
+            "options": [
+                "Intern",
+                "Software Engineer I",
+                "Senior Software Engineer",
+                "Tech Lead"
+            ],
+            "_answer": "Software Engineer I"
+        },
+        {
+            "question": "In the role of Software Engineer II, what kind of project might you handle?",
+            "options": [
+                "Simple bug fixes",
+                "Building a new app feature",
+                "Overseeing several teams",
+                "Setting the technology vision"
+            ],
+            "_answer": "Building a new app feature"
+        },
+        {
+            "question": "What is the main responsibility of a Tech Lead?",
+            "options": [
+                "Fixing bugs",
+                "Guiding a team working on a specific project",
+                "Overseeing the entire engineering department",
+                "Providing expert advice on high-impact projects"
+            ],
+            "_answer": "Guiding a team working on a specific project"
+        },
+        {
+            "question": "Which role is responsible for overseeing several teams and handling team management?",
+            "options": [
+                "Tech Lead",
+                "Principal Engineer",
+                "Engineering Manager",
+                "Director of Engineering"
+            ],
+            "_answer": "Engineering Manager"
+        },
+        {
+            "question": "What is the focus of a Principal Engineer?",
+            "options": [
+                "Managing multiple engineering teams",
+                "Providing expert advice on high-impact projects",
+                "Setting long-term goals",
+                "Fixing simple coding tasks"
+            ],
+            "_answer": "Providing expert advice on high-impact projects"
+        },
+        {
+            "question": "Who is responsible for managing several engineering teams and planning the overall technical strategy?",
+            "options": [
+                "Principal Engineer",
+                "Director of Engineering",
+                "Senior Software Engineer",
+                "Junior Software Engineer"
+            ],
+            "_answer": "Director of Engineering"
+        },
+        {
+            "question": "What role does the VP of Engineering play?",
+            "options": [
+                "Overseeing the entire engineering department",
+                "Managing a single team",
+                "Writing basic code",
+                "Setting the technology vision"
+            ],
+            "_answer": "Overseeing the entire engineering department"
+        },
+        {
+            "question": "What is the main responsibility of the Chief Technology Officer (CTO)?",
+            "options": [
+                "Fixing bugs",
+                "Managing multiple engineering teams",
+                "Setting the technology vision and strategy",
+                "Providing expert advice on difficult technical challenges"
+            ],
+            "_answer": "Setting the technology vision and strategy"
+        }
+    ]
+}
