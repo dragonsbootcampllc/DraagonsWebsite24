@@ -1,0 +1,86 @@
+{
+    "title": "Application Security",
+    "description": "Gain comprehensive knowledge of safeguarding applications with this guide. Explore techniques and practices to protect software from threats.",
+    "quiz": [
+        {
+            "question": "What is the primary purpose of Email Marketing?",
+            "options": [
+                "Build relationships with your audience",
+                "Design website layouts",
+                "Manage social media accounts",
+                "Analyze website traffic"
+            ],
+            "_answer": "Build relationships with your audience"
+        },
+        {
+            "question": "Which type of email is used to provide updates and valuable content to subscribers?",
+            "options": [
+                "Promotional Emails",
+                "Automated Emails",
+                "Newsletters",
+                "Transactional Emails"
+            ],
+            "_answer": "Newsletters"
+        },
+        {
+            "question": "What is a key benefit of promotional emails?",
+            "options": [
+                "Build brand awareness",
+                "Encourage recipients to take action",
+                "Provide customer support",
+                "Analyze user behavior"
+            ],
+            "_answer": "Encourage recipients to take action"
+        },
+        {
+            "question": "Which metric measures the percentage of recipients who open your emails?",
+            "options": [
+                "Click-Through Rate (CTR)",
+                "Conversion Rate",
+                "Open Rate",
+                "Bounce Rate"
+            ],
+            "_answer": "Open Rate"
+        },
+        {
+            "question": "What is the main advantage of automated emails?",
+            "options": [
+                "They are manually sent to each recipient",
+                "They are triggered by specific actions or events",
+                "They include random content",
+                "They require daily updates"
+            ],
+            "_answer": "They are triggered by specific actions or events"
+        },
+        {
+            "question": "Which type of email marketing tool is used to track and analyze email performance metrics?",
+            "options": [
+                "CRM Systems",
+                "E-commerce Platforms",
+                "Email Analytics Tools",
+                "Social Media Management Tools"
+            ],
+            "_answer": "Email Analytics Tools"
+        },
+        {
+            "question": "What should you ensure about the design of newsletters?",
+            "options": [
+                "It should be visually appealing and mobile-friendly",
+                "It should include only text content",
+                "It should not have any images",
+                "It should be identical to promotional emails"
+            ],
+            "_answer": "It should be visually appealing and mobile-friendly"
+        },
+        {
+            "question": "Which metric helps you understand how often recipients click on links within your emails?",
+            "options": [
+                "Open Rate",
+                "Click-Through Rate (CTR)",
+                "Conversion Rate",
+                "Unsubscribe Rate"
+            ],
+            "_answer": "Click-Through Rate (CTR)"
+        }
+    ]
+}
