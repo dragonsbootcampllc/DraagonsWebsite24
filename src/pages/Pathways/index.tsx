@@ -5,27 +5,23 @@ import { useRouter } from 'next/router';
 const pathways = [
   { id: 'frontend', name: 'Frontend Development' },
   { id: 'backend', name: 'Backend Development' },
-  { id: 'fullstack', name: 'Fullstack Development' },
-  { id: 'data', name: 'Data Science' },
-  { id: 'mobile', name: 'Mobile Development' },
-  { id: 'uiux', name: 'UI/UX Design' },
-  { id: 'cybersecurity', name: 'Cybersecurity' },
-  { id: 'cloud', name: 'Cloud Computing' },
   { id: 'devops', name: 'DevOps' },
+  { id: 'fullstack', name: 'Fullstack Development' },
+  { id: 'aidata', name: 'AI and Data Science' },
+  { id: 'dataanalysis', name: 'Data Analyst' },
+  { id: 'android', name: 'Android' },
+  { id: 'ios', name: 'iOS' },
+  { id: 'ux', name: 'UX Design' },
+  { id: 'cybersecurity', name: 'Cybersecurity' },
   { id: 'blockchain', name: 'Blockchain' },
-  { id: 'iot', name: 'Internet of Things' },
-  { id: 'arvr', name: 'AR/VR Development' },
-  { id: 'robotics', name: 'Robotics' },
-  { id: 'ai', name: 'Artificial Intelligence' },
-  { id: 'quantum', name: 'Quantum Computing' },
+  { id: 'techwrite', name: 'Technical Writer' },
   { id: 'game', name: 'Game Development' },
-  { id: 'digitalmarketing', name: 'Digital Marketing' },
-  { id: 'sales', name: 'Sales' },
-  { id: 'hr', name: 'Human Resources' },
-  { id: 'finance', name: 'Finance' },
-  { id: 'management', name: 'Management' },
-  { id: 'entrepreneurship', name: 'Entrepreneurship' },
-  { id: 'productmanagement', name: 'Product Management' },
+  { id: 'mlops', name: 'MLOps' },
+  { id: 'productmanager', name: 'Product Manager' },
+  { id: 'qa', name: 'Quality Assurance' },
+  { id: 'devrelations', name: 'Developer Relations' },
+  { id: 'softwarearch', name: 'Software Architect' },
+  { id: 'postgresql', name: 'PostgreSQL' },
 ];
 
 const PathwaysGrid = () => {
@@ -46,7 +42,7 @@ const PathwaysGrid = () => {
         {pathways.map((pathway) => (
           <div
             key={pathway.id}
-            className="p-4 border hover:border-purple-500 text-center rounded cursor-pointer hover:text-purple-500 duration-300"
+            className="p-4 border hover:border-purple-500 text-center rounded-lg cursor-pointer hover:text-purple-500 duration-300"
             onClick={() => handlePathwayClick(pathway.id)}
           >
             {pathway.name}

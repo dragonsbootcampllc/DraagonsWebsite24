@@ -26,7 +26,7 @@ export default function Flow({ initialNodes, initialEdges }) {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        className="text-black max-md:touch-flow"
+        className="text-black font-medium max-md:touch-flow"
       >
         <Controls />
         <Background variant="dots" gap={12} size={1} />
