@@ -34,6 +34,7 @@ const pathways: Record<PathwayKey, string> = {
   fullstack: "Fullstack",
   data: "Data Science",
   AndroidDeveloper: "Android Developer",
+  IOSDeveloper: "IOS Developer",
   uiux: "UI/UX Design",
   cybersecurity: "Cybersecurity",
   cloud: "Cloud Computing",

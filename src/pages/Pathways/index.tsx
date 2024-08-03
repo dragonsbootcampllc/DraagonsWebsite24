@@ -8,6 +8,7 @@ const pathways = [
   { id: "fullstack", name: "Fullstack Development" },
   { id: "data", name: "Data Science" },
   { id: "AndroidDeveloper", name: "Android Developer" },
+  { id: "IOSDeveloper", name: "IOS Developer" },
   { id: "uiux", name: "UI/UX Design" },
   { id: "cybersecurity", name: "Cybersecurity" },
   { id: "cloud", name: "Cloud Computing" },
