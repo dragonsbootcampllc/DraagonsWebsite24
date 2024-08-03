@@ -42,7 +42,6 @@ const pathways: Record<PathwayKey, string> = {
   cybersecurity: "Cybersecurity",
   cloud: "Cloud Computing",
   devops: "DevOps",
-  blockchain: "Blockchain",
   iot: "Internet of Things",
   arvr: "AR/VR Development",
   robotics: "Robotics",

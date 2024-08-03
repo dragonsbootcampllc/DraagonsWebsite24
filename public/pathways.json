@@ -820,43 +820,6 @@
       { "id": "e15-16", "source": "15", "target": "16" }
     ]
   },
-  "blockchain": {
-    "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Ethereum" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "Hyperledger" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Corda" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "Quorum" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "R3" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "Stellar" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "EOS" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Tron" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "IOTA" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "VeChain" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Tezos" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "Algorand" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Zcash" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Dash" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Monero" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Bitcoin" } }
-    ],
-    "edges": [
-      { "id": "e1-2", "source": "1", "target": "2" },
-      { "id": "e2-3", "source": "2", "target": "3" },
-      { "id": "e3-4", "source": "3", "target": "4" },
-      { "id": "e4-5", "source": "4", "target": "5" },
-      { "id": "e5-6", "source": "5", "target": "6" },
-      { "id": "e6-7", "source": "6", "target": "7" },
-      { "id": "e7-8", "source": "7", "target": "8" },
-      { "id": "e8-9", "source": "8", "target": "9" },
-      { "id": "e9-10", "source": "9", "target": "10" },
-      { "id": "e10-11", "source": "10", "target": "11" },
-      { "id": "e11-12", "source": "11", "target": "12" },
-      { "id": "e12-13", "source": "12", "target": "13" },
-      { "id": "e13-14", "source": "13", "target": "14" },
-      { "id": "e14-15", "source": "14", "target": "15" },
-      { "id": "e15-16", "source": "15", "target": "16" }
-    ]
-  },
   "iot": {
     "nodes": [
       { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Raspberry Pi" } },

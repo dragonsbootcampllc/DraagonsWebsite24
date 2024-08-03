@@ -16,7 +16,6 @@ const pathways = [
   { id: "cybersecurity", name: "Cybersecurity" },
   { id: "cloud", name: "Cloud Computing" },
   { id: "devops", name: "DevOps" },
-  { id: "blockchain", name: "Blockchain" },
   { id: "iot", name: "Internet of Things" },
   { id: "arvr", name: "AR/VR Development" },
   { id: "robotics", name: "Robotics" },
