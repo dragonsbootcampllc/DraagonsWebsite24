@@ -38,6 +38,7 @@ const pathways: Record<PathwayKey, string> = {
   PostgreSQLDBA: "PostgreSQL DBA",
   BlockchainDeveloper: "Blockchain Developer",
   QAEngineer: "QA Engineer",
+  SoftwareArchitect: "Software Architect",
   uiux: "UI/UX Design",
   cybersecurity: "Cybersecurity",
   cloud: "Cloud Computing",
