@@ -519,6 +519,85 @@
         { "id": "e7-7.3", "source": "7", "target": "7.3", "type": "smoothstep", "animated": true }
       ]
   },
+
+    "QAEngineer": {
+      "nodes": [
+        { "id": "1", "position": { "x": 600, "y": 50 }, "data": { "label": "Prerequisites" } },
+        { "id": "1.1", "position": { "x": 800, "y": 100 }, "data": { "label": "Basic Programming (e.g., Python, JavaScript)" } },
+        { "id": "1.2", "position": { "x": 800, "y": 150 }, "data": { "label": "Understanding of SDLC & STLC" } },
+        { "id": "1.3", "position": { "x": 800, "y": 200 }, "data": { "label": "Version Control (e.g., Git)" } },
+  
+        { "id": "2", "position": { "x": 600, "y": 250 }, "data": { "label": "Manual Testing" } },
+        { "id": "2.1", "position": { "x": 400, "y": 300 }, "data": { "label": "Types of Testing (e.g., Functional, Non-Functional)" } },
+        { "id": "2.2", "position": { "x": 400, "y": 350 }, "data": { "label": "Test Case Development" } },
+        { "id": "2.3", "position": { "x": 400, "y": 400 }, "data": { "label": "Test Plan Creation" } },
+        { "id": "2.4", "position": { "x": 400, "y": 450 }, "data": { "label": "Bug Reporting & Tracking (e.g., Jira)" } },
+  
+        { "id": "3", "position": { "x": 600, "y": 500 }, "data": { "label": "Automation Testing" } },
+        { "id": "3.1", "position": { "x": 800, "y": 550 }, "data": { "label": "Scripting Languages for Automation (e.g., Python, JavaScript)" } },
+        { "id": "3.2", "position": { "x": 800, "y": 600 }, "data": { "label": "Automation Tools (e.g., Selenium, Cypress)" } },
+        { "id": "3.3", "position": { "x": 800, "y": 650 }, "data": { "label": "API Testing Tools (e.g., Postman, RestAssured)" } },
+        { "id": "3.4", "position": { "x": 800, "y": 700 }, "data": { "label": "Continuous Integration Tools (e.g., Jenkins)" } },
+  
+        { "id": "4", "position": { "x": 600, "y": 750 }, "data": { "label": "Performance Testing" } },
+        { "id": "4.1", "position": { "x": 400, "y": 800 }, "data": { "label": "Load Testing (e.g., JMeter)" } },
+        { "id": "4.2", "position": { "x": 400, "y": 850 }, "data": { "label": "Stress Testing" } },
+        { "id": "4.3", "position": { "x": 400, "y": 900 }, "data": { "label": "Scalability Testing" } },
+  
+        { "id": "5", "position": { "x": 600, "y": 950 }, "data": { "label": "Security Testing" } },
+        { "id": "5.1", "position": { "x": 800, "y": 1000 }, "data": { "label": "Basic Security Concepts" } },
+        { "id": "5.2", "position": { "x": 800, "y": 1050 }, "data": { "label": "Vulnerability Scanning Tools (e.g., OWASP ZAP)" } },
+        { "id": "5.3", "position": { "x": 800, "y": 1100 }, "data": { "label": "Penetration Testing Basics" } },
+  
+        { "id": "6", "position": { "x": 600, "y": 1150 }, "data": { "label": "Mobile Testing" } },
+        { "id": "6.1", "position": { "x": 400, "y": 1200 }, "data": { "label": "Mobile App Testing Tools (e.g., Appium)" } },
+        { "id": "6.2", "position": { "x": 400, "y": 1250 }, "data": { "label": "Cross-platform Testing" } },
+  
+        { "id": "7", "position": { "x": 600, "y": 1300 }, "data": { "label": "DevOps and Agile" } },
+        { "id": "7.1", "position": { "x": 800, "y": 1350 }, "data": { "label": "Understanding Agile Methodologies" } },
+        { "id": "7.2", "position": { "x": 800, "y": 1400 }, "data": { "label": "Collaboration with DevOps Teams" } },
+        { "id": "7.3", "position": { "x": 800, "y": 1450 }, "data": { "label": "Test Automation in CI/CD Pipeline" } },
+  
+        { "id": "8", "position": { "x": 600, "y": 1500 }, "data": { "label": "Explore & Stay Updated" } },
+        { "id": "8.1", "position": { "x": 800, "y": 1550 }, "data": { "label": "Follow QA Communities" } },
+        { "id": "8.2", "position": { "x": 800, "y": 1600 }, "data": { "label": "Contribute to Open Source Projects" } },
+        { "id": "8.3", "position": { "x": 800, "y": 1650 }, "data": { "label": "Participate in Conferences & Workshops" } }
+      ],
+      "edges": [
+        { "id": "e1-2", "source": "1", "target": "2" },
+        { "id": "e2-3", "source": "2", "target": "3" },
+        { "id": "e3-4", "source": "3", "target": "4" },
+        { "id": "e4-5", "source": "4", "target": "5" },
+        { "id": "e5-6", "source": "5", "target": "6" },
+        { "id": "e6-7", "source": "6", "target": "7" },
+        { "id": "e7-8", "source": "7", "target": "8" },
+        { "id": "e1-1.1", "source": "1", "target": "1.1", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.2", "source": "1", "target": "1.2", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.3", "source": "1", "target": "1.3", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.1", "source": "2", "target": "2.1", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.2", "source": "2", "target": "2.2", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.3", "source": "2", "target": "2.3", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.4", "source": "2", "target": "2.4", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.1", "source": "3", "target": "3.1", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.2", "source": "3", "target": "3.2", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.3", "source": "3", "target": "3.3", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.4", "source": "3", "target": "3.4", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.1", "source": "4", "target": "4.1", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.2", "source": "4", "target": "4.2", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.3", "source": "4", "target": "4.3", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.1", "source": "5", "target": "5.1", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.2", "source": "5", "target": "5.2", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.3", "source": "5", "target": "5.3", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.4", "source": "5", "target": "5.4", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.1", "source": "6", "target": "6.1", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.2", "source": "6", "target": "6.2", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.3", "source": "6", "target": "6.3", "type": "smoothstep", "animated": true },
+        { "id": "e7-7.1", "source": "7", "target": "7.1", "type": "smoothstep", "animated": true },
+        { "id": "e7-7.2", "source": "7", "target": "7.2", "type": "smoothstep", "animated": true },
+        { "id": "e7-7.3", "source": "7", "target": "7.3", "type": "smoothstep", "animated": true }
+      ]
+    },
+  
   "design": {
     "nodes": [
       { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Figma" } },
