@@ -368,6 +368,78 @@
 
     ]
   },
+  
+    "PostgreSQLDBA": {
+      "nodes": [
+        { "id": "1", "position": { "x": 600, "y": 50 }, "data": { "label": "PostgreSQL Fundamentals" } },
+        { "id": "1.1", "position": { "x": 800, "y": 100 }, "data": { "label": "SQL Basics" } },
+        { "id": "1.2", "position": { "x": 800, "y": 150 }, "data": { "label": "PostgreSQL Architecture" } },
+        { "id": "1.3", "position": { "x": 800, "y": 200 }, "data": { "label": "Installation & Configuration" } },
+        { "id": "1.4", "position": { "x": 800, "y": 250 }, "data": { "label": "Data Types and Functions" } },
+  
+        { "id": "2", "position": { "x": 600, "y": 300 }, "data": { "label": "Database Administration" } },
+        { "id": "2.1", "position": { "x": 400, "y": 350 }, "data": { "label": "User Management" } },
+        { "id": "2.2", "position": { "x": 400, "y": 400 }, "data": { "label": "Database Security" } },
+        { "id": "2.3", "position": { "x": 400, "y": 450 }, "data": { "label": "Backup and Recovery" } },
+        { "id": "2.4", "position": { "x": 400, "y": 500 }, "data": { "label": "Monitoring and Maintenance" } },
+  
+        { "id": "3", "position": { "x": 600, "y": 550 }, "data": { "label": "Performance Tuning" } },
+        { "id": "3.1", "position": { "x": 800, "y": 600 }, "data": { "label": "Query Optimization" } },
+        { "id": "3.2", "position": { "x": 800, "y": 650 }, "data": { "label": "Indexing Strategies" } },
+        { "id": "3.3", "position": { "x": 800, "y": 700 }, "data": { "label": "Memory Management" } },
+        { "id": "3.4", "position": { "x": 800, "y": 750 }, "data": { "label": "Parameter Tuning" } },
+  
+        { "id": "4", "position": { "x": 600, "y": 800 }, "data": { "label": "Advanced Topics" } },
+        { "id": "4.1", "position": { "x": 400, "y": 850 }, "data": { "label": "Replication & Clustering" } },
+        { "id": "4.2", "position": { "x": 400, "y": 900 }, "data": { "label": "High Availability" } },
+        { "id": "4.3", "position": { "x": 400, "y": 950 }, "data": { "label": "Partitioning & Sharding" } },
+        { "id": "4.4", "position": { "x": 400, "y": 1000 }, "data": { "label": "Upgrading PostgreSQL" } },
+  
+        { "id": "5", "position": { "x": 600, "y": 1050 }, "data": { "label": "Tools and Utilities" } },
+        { "id": "5.1", "position": { "x": 800, "y": 1100 }, "data": { "label": "pgAdmin" } },
+        { "id": "5.2", "position": { "x": 800, "y": 1150 }, "data": { "label": "psql" } },
+        { "id": "5.3", "position": { "x": 800, "y": 1200 }, "data": { "label": "pg_dump & pg_restore" } },
+        { "id": "5.4", "position": { "x": 800, "y": 1250 }, "data": { "label": "pg_stat_statements" } },
+        { "id": "5.5", "position": { "x": 800, "y": 1300 }, "data": { "label": "pgBouncer & pgpool-II" } },
+  
+        { "id": "6", "position": { "x": 600, "y": 1350 }, "data": { "label": "Stay Updated & Community" } },
+        { "id": "6.1", "position": { "x": 800, "y": 1400 }, "data": { "label": "Follow PostgreSQL Updates" } },
+        { "id": "6.2", "position": { "x": 800, "y": 1450 }, "data": { "label": "Participate in Forums & Conferences" } },
+        { "id": "6.3", "position": { "x": 800, "y": 1500 }, "data": { "label": "Contribute to Open Source" } }
+      ],
+      "edges": [
+        { "id": "e1-2", "source": "1", "target": "2" },
+        { "id": "e2-3", "source": "2", "target": "3" },
+        { "id": "e3-4", "source": "3", "target": "4" },
+        { "id": "e4-5", "source": "4", "target": "5" },
+        { "id": "e5-6", "source": "5", "target": "6" },
+        { "id": "e1-1.1", "source": "1", "target": "1.1", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.2", "source": "1", "target": "1.2", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.3", "source": "1", "target": "1.3", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.4", "source": "1", "target": "1.4", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.1", "source": "2", "target": "2.1", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.2", "source": "2", "target": "2.2", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.3", "source": "2", "target": "2.3", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.4", "source": "2", "target": "2.4", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.1", "source": "3", "target": "3.1", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.2", "source": "3", "target": "3.2", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.3", "source": "3", "target": "3.3", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.4", "source": "3", "target": "3.4", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.1", "source": "4", "target": "4.1", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.2", "source": "4", "target": "4.2", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.3", "source": "4", "target": "4.3", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.4", "source": "4", "target": "4.4", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.1", "source": "5", "target": "5.1", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.2", "source": "5", "target": "5.2", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.3", "source": "5", "target": "5.3", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.4", "source": "5", "target": "5.4", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.5", "source": "5", "target": "5.5", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.1", "source": "6", "target": "6.1", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.2", "source": "6", "target": "6.2", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.3", "source": "6", "target": "6.3", "type": "smoothstep", "animated": true }
+      ]
+    },
+  
   "design": {
     "nodes": [
       { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Figma" } },
