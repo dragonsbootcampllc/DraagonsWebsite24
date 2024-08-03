@@ -31,6 +31,7 @@ type PathwayKey = keyof typeof pathwaysData;
 const pathways: Record<PathwayKey, string> = {
   frontend: 'Frontend',
   backend: 'Backend',
+  devops: 'DevOps',
   fullstack: 'Fullstack',
   aidata: 'Data Science',
   dataanalysis: 'Data Analysis',
@@ -45,8 +46,9 @@ const pathways: Record<PathwayKey, string> = {
   productmanager: 'Product Management',
   qa: 'Quality Assurance',
   devrelations: 'Developer Relations',
+  softwarearch: 'Software Architecture',
+  postgresql: 'PostgreSQL',
 };
-
 const PathwayDetail = ({ pathwayData }: { pathwayData: PathwayData | null }) => {
   const router = useRouter();
   const { id } = router.query;

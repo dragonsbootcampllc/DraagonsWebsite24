@@ -49,6 +49,7 @@ const PathwaysGrid = () => {
           </div>
         ))}
       </div>
+      <p className='font-semibold text-2xl text-center pt-5'>More Soon</p>
     </div>
   );
 };
