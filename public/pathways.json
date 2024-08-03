@@ -1,228 +1,1108 @@
 {
   "frontend": {
     "nodes": [
-      { "id": "1", "position": { "x": 600, "y": 50 }, "data": { "label": "HTML" } },
-      { "id": "2", "position": { "x": 600, "y": 100 }, "data": { "label": "CSS" } },
-      { "id": "3", "position": { "x": 600, "y": 150 }, "data": { "label": "JavaScript" } },
-      { "id": "4", "position": { "x": 600, "y": 200 }, "data": { "label": "Git & GitHub" } },
-      { "id": "5", "position": { "x": 600, "y": 300 }, "data": { "label": "Package Manager" } },
-      { "id": "6", "position": { "x": 300, "y": 200 }, "data": { "label": "npm" } },
-      { "id": "7", "position": { "x": 300, "y": 250 }, "data": { "label": "yarn" } },
-      { "id": "8", "position": { "x": 300, "y": 300 }, "data": { "label": "pnpm" } },
-      { "id": "9", "position": { "x": 600, "y": 400 }, "data": { "label": "Framework" } },
-      { "id": "10", "position": { "x": 900, "y": 300 }, "data": { "label": "React" } },
-      { "id": "11", "position": { "x": 900, "y": 350 }, "data": { "label": "Vue.js" } },
-      { "id": "12", "position": { "x": 900, "y": 400 }, "data": { "label": "Angular" } },
-      { "id": "13", "position": { "x": 600, "y": 500 }, "data": { "label": "Tailwind CSS" } },
-      { "id": "14", "position": { "x": 600, "y": 550}, "data": { "label": "Testing"}},
-      { "id": "15", "position": { "x": 300, "y": 500}, "data": { "label": "Jest"}},
-      { "id": "16", "position": { "x": 300, "y": 550}, "data": { "label": "Vitest"}},
-      { "id": "17", "position": { "x": 300, "y": 600}, "data": { "label": "Playwrite"}},
-      { "id": "18", "position": { "x": 300, "y": 650}, "data": { "label": "Cypress"}},
-      { "id": "19", "position": { "x": 600, "y": 650}, "data": { "label": "TypeScript"}},
-      { "id": "20", "position": { "x": 600, "y": 700}, "data": { "label": "Server Side Rendering"}},
-      { "id": "21", "position": { "x": 150, "y": 800}, "data": { "label": "React"}},
-      { "id": "22", "position": { "x": 450, "y": 800}, "data": { "label": "Angular"}},
-      { "id": "23", "position": { "x": 750, "y": 800}, "data": { "label": "Vue.js"}},
-      { "id": "24", "position": { "x": 1050, "y": 800}, "data": { "label": "Svelte"}},
-      { "id": "25", "position": { "x": 100, "y": 900}, "data": { "label": "Next"}},
-      { "id": "26", "position": { "x": 250, "y": 950}, "data": { "label": "Astro"}},
-      { "id": "27", "position": { "x": 400, "y": 1000}, "data": { "label": "React Router"}},
-      { "id": "28", "position": { "x": 750, "y": 900}, "data": { "label": "Nuxt.js"}},
-      { "id": "29", "position": { "x": 1050, "y": 900}, "data": { "label": "Svelte Kit"}},
-      { "id": "30", "position": { "x": 600, "y": 1100}, "data": { "label": "Mobile App"}},
-      { "id": "31", "position": { "x": 900, "y": 1050}, "data": { "label": "React Native"}},
-      { "id": "32", "position": { "x": 900, "y": 1100}, "data": { "label": "Flutter"}},
-      { "id": "33", "position": { "x": 900, "y": 1150}, "data": { "label": "Ionic"}},
-      { "id": "34", "position": { "x": 600, "y": 1200}, "data": { "label": "Desktop App"}},
-      { "id": "35", "position": { "x": 300, "y": 1150}, "data": { "label": "Tauri"}},
-      { "id": "36", "position": { "x": 300, "y": 1200}, "data": { "label": "Flutter"}},
-      { "id": "37", "position": { "x": 300, "y": 1250}, "data": { "label": "Electron"}},
-      { "id": "38", "position": { "x": 600, "y": 1300}, "data": { "label": "Ready for Job"}}
+      {
+        "id": "1",
+        "position": { "x": 600, "y": 50 },
+        "data": { "label": "HTML" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 600, "y": 100 },
+        "data": { "label": "CSS" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 600, "y": 150 },
+        "data": { "label": "JavaScript" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 600, "y": 200 },
+        "data": { "label": "Git & GitHub" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 300 },
+        "data": { "label": "Package Manager" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "npm" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 300, "y": 250 },
+        "data": { "label": "yarn" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 300, "y": 300 },
+        "data": { "label": "pnpm" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "Framework" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 900, "y": 300 },
+        "data": { "label": "React" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 900, "y": 350 },
+        "data": { "label": "Vue.js" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 900, "y": 400 },
+        "data": { "label": "Angular" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 600, "y": 500 },
+        "data": { "label": "Tailwind CSS" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 600, "y": 550 },
+        "data": { "label": "Testing" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 300, "y": 500 },
+        "data": { "label": "Jest" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 300, "y": 550 },
+        "data": { "label": "Vitest" }
+      },
+      {
+        "id": "17",
+        "position": { "x": 300, "y": 600 },
+        "data": { "label": "Playwrite" }
+      },
+      {
+        "id": "18",
+        "position": { "x": 300, "y": 650 },
+        "data": { "label": "Cypress" }
+      },
+      {
+        "id": "19",
+        "position": { "x": 600, "y": 650 },
+        "data": { "label": "TypeScript" }
+      },
+      {
+        "id": "20",
+        "position": { "x": 600, "y": 700 },
+        "data": { "label": "Server Side Rendering" }
+      },
+      {
+        "id": "21",
+        "position": { "x": 150, "y": 800 },
+        "data": { "label": "React" }
+      },
+      {
+        "id": "22",
+        "position": { "x": 450, "y": 800 },
+        "data": { "label": "Angular" }
+      },
+      {
+        "id": "23",
+        "position": { "x": 750, "y": 800 },
+        "data": { "label": "Vue.js" }
+      },
+      {
+        "id": "24",
+        "position": { "x": 1050, "y": 800 },
+        "data": { "label": "Svelte" }
+      },
+      {
+        "id": "25",
+        "position": { "x": 100, "y": 900 },
+        "data": { "label": "Next" }
+      },
+      {
+        "id": "26",
+        "position": { "x": 250, "y": 950 },
+        "data": { "label": "Astro" }
+      },
+      {
+        "id": "27",
+        "position": { "x": 400, "y": 1000 },
+        "data": { "label": "React Router" }
+      },
+      {
+        "id": "28",
+        "position": { "x": 750, "y": 900 },
+        "data": { "label": "Nuxt.js" }
+      },
+      {
+        "id": "29",
+        "position": { "x": 1050, "y": 900 },
+        "data": { "label": "Svelte Kit" }
+      },
+      {
+        "id": "30",
+        "position": { "x": 600, "y": 1100 },
+        "data": { "label": "Mobile App" }
+      },
+      {
+        "id": "31",
+        "position": { "x": 900, "y": 1050 },
+        "data": { "label": "React Native" }
+      },
+      {
+        "id": "32",
+        "position": { "x": 900, "y": 1100 },
+        "data": { "label": "Flutter" }
+      },
+      {
+        "id": "33",
+        "position": { "x": 900, "y": 1150 },
+        "data": { "label": "Ionic" }
+      },
+      {
+        "id": "34",
+        "position": { "x": 600, "y": 1200 },
+        "data": { "label": "Desktop App" }
+      },
+      {
+        "id": "35",
+        "position": { "x": 300, "y": 1150 },
+        "data": { "label": "Tauri" }
+      },
+      {
+        "id": "36",
+        "position": { "x": 300, "y": 1200 },
+        "data": { "label": "Flutter" }
+      },
+      {
+        "id": "37",
+        "position": { "x": 300, "y": 1250 },
+        "data": { "label": "Electron" }
+      },
+      {
+        "id": "38",
+        "position": { "x": 600, "y": 1300 },
+        "data": { "label": "Ready for Job" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
       { "id": "e2-3", "source": "2", "target": "3" },
       { "id": "e3-4", "source": "3", "target": "4" },
       { "id": "e4-5", "source": "4", "target": "5" },
-      { "id": "e5-6", "source": "5", "target": "6", "type": "smoothstep", "animated": true },
-      { "id": "e6-7", "source": "5", "target": "7", "type": "smoothstep", "animated": true },
-      { "id": "e7-8", "source": "5", "target": "8", "type": "smoothstep", "animated": true },
+      {
+        "id": "e5-6",
+        "source": "5",
+        "target": "6",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e6-7",
+        "source": "5",
+        "target": "7",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e7-8",
+        "source": "5",
+        "target": "8",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e8-9", "source": "5", "target": "9" },
-      { "id": "e9-10", "source": "9", "target": "10", "type": "smoothstep", "animated": true },
-      { "id": "e10-11", "source": "9", "target": "11", "type": "smoothstep", "animated": true },
-      { "id": "e11-12", "source": "9", "target": "12", "type": "smoothstep", "animated": true },
-      { "id": "e12-13", "source": "3", "target": "13" },
+      {
+        "id": "e9-10",
+        "source": "9",
+        "target": "10",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e10-11",
+        "source": "3",
+        "target": "11",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e11-12",
+        "source": "3",
+        "target": "12",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e12-13",
+        "source": "3",
+        "target": "13",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e13-14", "source": "13", "target": "14" },
-      { "id": "e14-15", "source": "14", "target": "15", "type": "smoothstep", "animated": true },
-      { "id": "e15-16", "source": "14", "target": "16", "type": "smoothstep", "animated": true },
-      { "id": "e16-17", "source": "14", "target": "17", "type": "smoothstep", "animated": true },
-      { "id": "e17-18", "source": "14", "target": "18", "type": "smoothstep", "animated": true },
+      {
+        "id": "e14-15",
+        "source": "14",
+        "target": "15",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e15-16",
+        "source": "14",
+        "target": "16",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e16-17",
+        "source": "14",
+        "target": "17",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e17-18",
+        "source": "14",
+        "target": "18",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e18-19", "source": "3", "target": "19" },
       { "id": "e19-20", "source": "3", "target": "20" },
-      { "id": "e20-21", "source": "20", "target": "21", "type": "smoothstep", "animated": true },
-      { "id": "e21-22", "source": "20", "target": "22", "type": "smoothstep", "animated": true },
-      { "id": "e22-23", "source": "20", "target": "23", "type": "smoothstep", "animated": true },
-      { "id": "e23-24", "source": "20", "target": "24", "type": "smoothstep", "animated": true },
-      { "id": "e24-25", "source": "21", "target": "25", "type": "smoothstep", "animated": true },
-      { "id": "e25-26", "source": "21", "target": "26", "type": "smoothstep", "animated": true },
-      { "id": "e26-27", "source": "21", "target": "27", "type": "smoothstep", "animated": true },
-      { "id": "e27-28", "source": "23", "target": "28", "type": "smoothstep", "animated": true },
-      { "id": "e28-29", "source": "24", "target": "29", "type": "smoothstep", "animated": true },
+      {
+        "id": "e20-21",
+        "source": "20",
+        "target": "21",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e21-22",
+        "source": "20",
+        "target": "22",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e22-23",
+        "source": "20",
+        "target": "23",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e23-24",
+        "source": "20",
+        "target": "24",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e24-25",
+        "source": "21",
+        "target": "25",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e25-26",
+        "source": "21",
+        "target": "26",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e26-27",
+        "source": "21",
+        "target": "27",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e27-28",
+        "source": "23",
+        "target": "28",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e28-29",
+        "source": "24",
+        "target": "29",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e29-30", "source": "20", "target": "30" },
-      { "id": "e30-31", "source": "30", "target": "31", "type": "smoothstep", "animated": true },
-      { "id": "e31-32", "source": "30", "target": "32", "type": "smoothstep", "animated": true },
-      { "id": "e32-33", "source": "30", "target": "33", "type": "smoothstep", "animated": true },
+      {
+        "id": "e30-31",
+        "source": "30",
+        "target": "31",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e31-32",
+        "source": "30",
+        "target": "32",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e32-33",
+        "source": "30",
+        "target": "33",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e33-34", "source": "20", "target": "34" },
-      { "id": "e34-35", "source": "34", "target": "35", "type": "smoothstep", "animated": true },
-      { "id": "e35-36", "source": "34", "target": "36", "type": "smoothstep", "animated": true },
-      { "id": "e36-37", "source": "34", "target": "37", "type": "smoothstep", "animated": true },
+      {
+        "id": "e34-35",
+        "source": "34",
+        "target": "35",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e35-36",
+        "source": "34",
+        "target": "36",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e36-37",
+        "source": "34",
+        "target": "37",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e37-38", "source": "20", "target": "38" }
     ]
   },
   "backend": {
     "nodes": [
-      { "id": "1", "position": { "x": 600, "y": 50 }, "data": { "label": "Learn Language" } },
-      { "id": "2", "position": { "x": 100, "y": 100 }, "data": { "label": "Python" } },
-      { "id": "3", "position": { "x": 200, "y": 150 }, "data": { "label": "JavaScript" } },
-      { "id": "4", "position": { "x": 300, "y": 200 }, "data": { "label": "GO" } },
-      { "id": "5", "position": { "x": 400, "y": 250 }, "data": { "label": "Rust" } },
-      { "id": "6", "position": { "x": 800, "y": 250 }, "data": { "label": "PHP" } },
-      { "id": "7", "position": { "x": 900, "y": 200 }, "data": { "label": "Ruby" } },
-      { "id": "8", "position": { "x": 1000, "y": 150 }, "data": { "label": "C#" } },
-      { "id": "9", "position": { "x": 1100, "y": 100 }, "data": { "label": "Java" } },
-      { "id": "10", "position": { "x": 600, "y": 300 }, "data": { "label": "Git & GitHub" } },
-      { "id": "11", "position": { "x": 600, "y": 350 }, "data": { "label": "Database" } },
-      { "id": "12", "position": { "x": 400, "y": 400 }, "data": { "label": "MySQL" } },
-      { "id": "13", "position": { "x": 300, "y": 450 }, "data": { "label": "MariaDB" } },
-      { "id": "14", "position": { "x": 200, "y": 500 }, "data": { "label": "MS SQL" } },
-      { "id": "15", "position": { "x": 800, "y": 400 }, "data": { "label": "Oracle" } },
-      { "id": "16", "position": { "x": 900, "y": 450 }, "data": { "label": "SQLite" } },
-      { "id": "17", "position": { "x": 1000, "y": 500 }, "data": { "label": "PostgreSQL" } },
-      { "id": "18", "position": { "x": 600, "y": 600 }, "data": { "label": "APIs" } },
-      { "id": "19", "position": { "x": 300, "y": 600 }, "data": { "label": "REST" } },
-      { "id": "20", "position": { "x": 300, "y": 650 }, "data": { "label": "JSON API" } },
-      { "id": "21", "position": { "x": 300, "y": 700 }, "data": { "label": "GraphQL" } },
-      { "id": "22", "position": { "x": 1000, "y": 600 }, "data": { "label": "Authentication" } },
-      { "id": "23", "position": { "x": 900, "y": 650 }, "data": { "label": "OAuth" } },
-      { "id": "24", "position": { "x": 850, "y": 700 }, "data": { "label": "JWT" } },
-      { "id": "25", "position": { "x": 1100, "y": 650 }, "data": { "label": "Basic Authentication" } },
-      { "id": "26", "position": { "x": 1150, "y": 700 }, "data": { "label": "Token Authentication" } },
-      { "id": "27", "position": { "x": 600, "y": 800 }, "data": { "label": "Caching" } },
-      { "id": "28", "position": { "x": 300, "y": 800 }, "data": { "label": "Server Side" } },
-      { "id": "29", "position": { "x": 300, "y": 850 }, "data": { "label": "CDN" } },
-      { "id": "30", "position": { "x": 300, "y": 900 }, "data": { "label": "Clint Side" } },
-      { "id": "31", "position": { "x": 600, "y": 975 }, "data": { "label": "Web Security" } },
-      { "id": "32", "position": { "x": 900, "y": 900 }, "data": { "label": "MD5" } },
-      { "id": "33", "position": { "x": 900, "y": 950 }, "data": { "label": "SHA" } },
-      { "id": "34", "position": { "x": 900, "y": 1000 }, "data": { "label": "scrypt" } },
-      { "id": "35", "position": { "x": 900, "y": 1050 }, "data": { "label": "bcrypt" } },
-      { "id": "36", "position": { "x": 600, "y": 1100 }, "data": { "label": "Testing" } },
-      { "id": "37", "position": { "x": 300, "y": 1050 }, "data": { "label": "Integration Testing" } },
-      { "id": "38", "position": { "x": 300, "y": 1100 }, "data": { "label": "Unit Testing" } },
-      { "id": "39", "position": { "x": 300, "y": 1150 }, "data": { "label": "Functional Testing" } },
-      { "id": "40", "position": { "x": 600, "y": 1200 }, "data": { "label": "CI/CD" } },
-      { "id": "41", "position": { "x": 600, "y": 1250 }, "data": { "label": "Docker" } },
-      { "id": "42", "position": { "x": 600, "y": 1300 }, "data": { "label": "Web Servers" } },
-      { "id": "43", "position": { "x": 900, "y": 1275 }, "data": { "label": "Nginx" } },
-      { "id": "44", "position": { "x": 900, "y": 1325 }, "data": { "label": "Apache" } },
-      { "id": "45", "position": { "x": 600, "y": 1400 }, "data": { "label": "GraphQL" } },
-      { "id": "46", "position": { "x": 600, "y": 1450 }, "data": { "label": "NoSQL" } },
-      { "id": "47", "position": { "x": 300, "y": 1400 }, "data": { "label": "Redis" } },
-      { "id": "48", "position": { "x": 300, "y": 1450 }, "data": { "label": "MongoDB" } },
-      { "id": "49", "position": { "x": 300, "y": 1500 }, "data": { "label": "Firebase" } },
-      { "id": "50", "position": { "x": 600, "y": 1550 }, "data": { "label": "Ready for Job" } }
+      {
+        "id": "1",
+        "position": { "x": 600, "y": 50 },
+        "data": { "label": "Learn Language" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 100, "y": 100 },
+        "data": { "label": "Python" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 200, "y": 150 },
+        "data": { "label": "JavaScript" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "GO" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 400, "y": 250 },
+        "data": { "label": "Rust" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 800, "y": 250 },
+        "data": { "label": "PHP" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 200 },
+        "data": { "label": "Ruby" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1000, "y": 150 },
+        "data": { "label": "C#" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1100, "y": 100 },
+        "data": { "label": "Java" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 600, "y": 300 },
+        "data": { "label": "Git & GitHub" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 600, "y": 350 },
+        "data": { "label": "Database" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 400, "y": 400 },
+        "data": { "label": "MySQL" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 300, "y": 450 },
+        "data": { "label": "MariaDB" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 200, "y": 500 },
+        "data": { "label": "MS SQL" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 800, "y": 400 },
+        "data": { "label": "Oracle" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 900, "y": 450 },
+        "data": { "label": "SQLite" }
+      },
+      {
+        "id": "17",
+        "position": { "x": 1000, "y": 500 },
+        "data": { "label": "PostgreSQL" }
+      },
+      {
+        "id": "18",
+        "position": { "x": 600, "y": 600 },
+        "data": { "label": "APIs" }
+      },
+      {
+        "id": "19",
+        "position": { "x": 300, "y": 600 },
+        "data": { "label": "REST" }
+      },
+      {
+        "id": "20",
+        "position": { "x": 300, "y": 650 },
+        "data": { "label": "JSON API" }
+      },
+      {
+        "id": "21",
+        "position": { "x": 300, "y": 700 },
+        "data": { "label": "GraphQL" }
+      },
+      {
+        "id": "22",
+        "position": { "x": 1000, "y": 600 },
+        "data": { "label": "Authentication" }
+      },
+      {
+        "id": "23",
+        "position": { "x": 900, "y": 650 },
+        "data": { "label": "OAuth" }
+      },
+      {
+        "id": "24",
+        "position": { "x": 850, "y": 700 },
+        "data": { "label": "JWT" }
+      },
+      {
+        "id": "25",
+        "position": { "x": 1100, "y": 650 },
+        "data": { "label": "Basic Authentication" }
+      },
+      {
+        "id": "26",
+        "position": { "x": 1150, "y": 700 },
+        "data": { "label": "Token Authentication" }
+      },
+      {
+        "id": "27",
+        "position": { "x": 600, "y": 800 },
+        "data": { "label": "Caching" }
+      },
+      {
+        "id": "28",
+        "position": { "x": 300, "y": 800 },
+        "data": { "label": "Server Side" }
+      },
+      {
+        "id": "29",
+        "position": { "x": 300, "y": 850 },
+        "data": { "label": "CDN" }
+      },
+      {
+        "id": "30",
+        "position": { "x": 300, "y": 900 },
+        "data": { "label": "Clint Side" }
+      },
+      {
+        "id": "31",
+        "position": { "x": 600, "y": 975 },
+        "data": { "label": "Web Security" }
+      },
+      {
+        "id": "32",
+        "position": { "x": 900, "y": 900 },
+        "data": { "label": "MD5" }
+      },
+      {
+        "id": "33",
+        "position": { "x": 900, "y": 950 },
+        "data": { "label": "SHA" }
+      },
+      {
+        "id": "34",
+        "position": { "x": 900, "y": 1000 },
+        "data": { "label": "scrypt" }
+      },
+      {
+        "id": "35",
+        "position": { "x": 900, "y": 1050 },
+        "data": { "label": "bcrypt" }
+      },
+      {
+        "id": "36",
+        "position": { "x": 600, "y": 1100 },
+        "data": { "label": "Testing" }
+      },
+      {
+        "id": "37",
+        "position": { "x": 300, "y": 1050 },
+        "data": { "label": "Integration Testing" }
+      },
+      {
+        "id": "38",
+        "position": { "x": 300, "y": 1100 },
+        "data": { "label": "Unit Testing" }
+      },
+      {
+        "id": "39",
+        "position": { "x": 300, "y": 1150 },
+        "data": { "label": "Functional Testing" }
+      },
+      {
+        "id": "40",
+        "position": { "x": 600, "y": 1200 },
+        "data": { "label": "CI/CD" }
+      },
+      {
+        "id": "41",
+        "position": { "x": 600, "y": 1250 },
+        "data": { "label": "Docker" }
+      },
+      {
+        "id": "42",
+        "position": { "x": 600, "y": 1300 },
+        "data": { "label": "Web Servers" }
+      },
+      {
+        "id": "43",
+        "position": { "x": 900, "y": 1275 },
+        "data": { "label": "Nginx" }
+      },
+      {
+        "id": "44",
+        "position": { "x": 900, "y": 1325 },
+        "data": { "label": "Apache" }
+      },
+      {
+        "id": "45",
+        "position": { "x": 600, "y": 1400 },
+        "data": { "label": "GraphQL" }
+      },
+      {
+        "id": "46",
+        "position": { "x": 600, "y": 1450 },
+        "data": { "label": "NoSQL" }
+      },
+      {
+        "id": "47",
+        "position": { "x": 300, "y": 1400 },
+        "data": { "label": "Redis" }
+      },
+      {
+        "id": "48",
+        "position": { "x": 300, "y": 1450 },
+        "data": { "label": "MongoDB" }
+      },
+      {
+        "id": "49",
+        "position": { "x": 300, "y": 1500 },
+        "data": { "label": "Firebase" }
+      },
+      {
+        "id": "50",
+        "position": { "x": 600, "y": 1550 },
+        "data": { "label": "Ready for Job" }
+      }
     ],
     "edges": [
-      { "id": "e1-2", "source": "1", "target": "2", "type": "smoothstep", "animated": true },
-      { "id": "e2-3", "source": "1", "target": "3", "type": "smoothstep", "animated": true },
-      { "id": "e3-4", "source": "1", "target": "4", "type": "smoothstep", "animated": true },
-      { "id": "e4-5", "source": "1", "target": "5", "type": "smoothstep", "animated": true },
-      { "id": "e5-6", "source": "1", "target": "6", "type": "smoothstep", "animated": true },
-      { "id": "e6-7", "source": "1", "target": "7", "type": "smoothstep", "animated": true },
-      { "id": "e7-8", "source": "1", "target": "8", "type": "smoothstep", "animated": true },
-      { "id": "e8-9", "source": "1", "target": "9", "type": "smoothstep", "animated": true },
-      { "id": "e9-10", "source": "1", "target": "10"},
-      { "id": "e10-11", "source": "10", "target": "11"},
-      { "id": "e11-12", "source": "11", "target": "12", "type": "smoothstep", "animated": true },
-      { "id": "e12-13", "source": "11", "target": "13", "type": "smoothstep", "animated": true },
-      { "id": "e13-14", "source": "11", "target": "14", "type": "smoothstep", "animated": true },
-      { "id": "e14-15", "source": "11", "target": "15", "type": "smoothstep", "animated": true },
-      { "id": "e15-16", "source": "11", "target": "16", "type": "smoothstep", "animated": true },
-      { "id": "e16-17", "source": "11", "target": "17", "type": "smoothstep", "animated": true },
-      { "id": "e17-18", "source": "11", "target": "18"},
-      { "id": "e18-19", "source": "18", "target": "19", "type": "smoothstep", "animated": true },
-      { "id": "e19-20", "source": "18", "target": "20", "type": "smoothstep", "animated": true },
-      { "id": "e20-21", "source": "18", "target": "21", "type": "smoothstep", "animated": true },
-      { "id": "e21-22", "source": "18", "target": "22", "type": "smoothstep", "animated": true },
-      { "id": "e22-23", "source": "22", "target": "23", "type": "smoothstep", "animated": true },
-      { "id": "e23-24", "source": "22", "target": "24", "type": "smoothstep", "animated": true },
-      { "id": "e24-25", "source": "22", "target": "25", "type": "smoothstep", "animated": true },
-      { "id": "e25-26", "source": "22", "target": "26", "type": "smoothstep", "animated": true },
+      {
+        "id": "e1-2",
+        "source": "1",
+        "target": "2",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e2-3",
+        "source": "1",
+        "target": "3",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e3-4",
+        "source": "1",
+        "target": "4",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e4-5",
+        "source": "1",
+        "target": "5",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e5-6",
+        "source": "1",
+        "target": "6",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e6-7",
+        "source": "1",
+        "target": "7",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e7-8",
+        "source": "1",
+        "target": "8",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e8-9",
+        "source": "1",
+        "target": "9",
+        "type": "smoothstep",
+        "animated": true
+      },
+      { "id": "e9-10", "source": "1", "target": "10" },
+      { "id": "e10-11", "source": "10", "target": "11" },
+      {
+        "id": "e11-12",
+        "source": "11",
+        "target": "12",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e12-13",
+        "source": "11",
+        "target": "13",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e13-14",
+        "source": "11",
+        "target": "14",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e14-15",
+        "source": "11",
+        "target": "15",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e15-16",
+        "source": "11",
+        "target": "16",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e16-17",
+        "source": "11",
+        "target": "17",
+        "type": "smoothstep",
+        "animated": true
+      },
+      { "id": "e17-18", "source": "11", "target": "18" },
+      {
+        "id": "e18-19",
+        "source": "18",
+        "target": "19",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e19-20",
+        "source": "18",
+        "target": "20",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e20-21",
+        "source": "18",
+        "target": "21",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e21-22",
+        "source": "18",
+        "target": "22",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e22-23",
+        "source": "22",
+        "target": "23",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e23-24",
+        "source": "22",
+        "target": "24",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e24-25",
+        "source": "22",
+        "target": "25",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e25-26",
+        "source": "22",
+        "target": "26",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e26-27", "source": "18", "target": "27" },
-      { "id": "e27-28", "source": "27", "target": "28", "type": "smoothstep", "animated": true },
-      { "id": "e28-29", "source": "27", "target": "29", "type": "smoothstep", "animated": true },
-      { "id": "e29-30", "source": "27", "target": "30", "type": "smoothstep", "animated": true },
+      {
+        "id": "e27-28",
+        "source": "27",
+        "target": "28",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e28-29",
+        "source": "27",
+        "target": "29",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e29-30",
+        "source": "27",
+        "target": "30",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e30-31", "source": "27", "target": "31" },
-      { "id": "e31-32", "source": "31", "target": "32", "type": "smoothstep", "animated": true },
-      { "id": "e32-33", "source": "31", "target": "33", "type": "smoothstep", "animated": true },
-      { "id": "e33-34", "source": "31", "target": "34", "type": "smoothstep", "animated": true },
-      { "id": "e34-35", "source": "31", "target": "35", "type": "smoothstep", "animated": true },
+      {
+        "id": "e31-32",
+        "source": "31",
+        "target": "32",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e32-33",
+        "source": "31",
+        "target": "33",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e33-34",
+        "source": "31",
+        "target": "34",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e34-35",
+        "source": "31",
+        "target": "35",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e35-36", "source": "31", "target": "36" },
-      { "id": "e36-37", "source": "36", "target": "37", "type": "smoothstep", "animated": true },
-      { "id": "e37-38", "source": "36", "target": "38", "type": "smoothstep", "animated": true },
-      { "id": "e38-39", "source": "36", "target": "39", "type": "smoothstep", "animated": true },
+      {
+        "id": "e36-37",
+        "source": "36",
+        "target": "37",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e37-38",
+        "source": "36",
+        "target": "38",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e38-39",
+        "source": "36",
+        "target": "39",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e39-40", "source": "36", "target": "40" },
       { "id": "e40-41", "source": "40", "target": "41" },
       { "id": "e41-42", "source": "41", "target": "42" },
-      { "id": "e42-43", "source": "42", "target": "43", "type": "smoothstep", "animated": true },
-      { "id": "e43-44", "source": "42", "target": "44", "type": "smoothstep", "animated": true },
+      {
+        "id": "e42-43",
+        "source": "42",
+        "target": "43",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e43-44",
+        "source": "42",
+        "target": "44",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e44-45", "source": "42", "target": "45" },
       { "id": "e45-46", "source": "45", "target": "46" },
-      { "id": "e46-47", "source": "46", "target": "47", "type": "smoothstep", "animated": true },
-      { "id": "e47-48", "source": "46", "target": "48", "type": "smoothstep", "animated": true },
-      { "id": "e48-49", "source": "46", "target": "49", "type": "smoothstep", "animated": true },
+      {
+        "id": "e46-47",
+        "source": "46",
+        "target": "47",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e47-48",
+        "source": "46",
+        "target": "48",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e48-49",
+        "source": "46",
+        "target": "49",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e49-50", "source": "46", "target": "50" }
     ]
   },
   "devops": {
     "nodes": [
-      { "id": "1", "position": { "x": 600, "y": 50 }, "data": { "label": "Learn Language" } },
-      { "id": "2", "position": { "x": 300, "y": 50 }, "data": { "label": "Python" } },
-      { "id": "3", "position": { "x": 300, "y": 100 }, "data": { "label": "JavaScript" } },
-      { "id": "4", "position": { "x": 300, "y": 150 }, "data": { "label": "GO" } },
-      { "id": "5", "position": { "x": 300, "y": 200 }, "data": { "label": "Rust" } },
-      { "id": "6", "position": { "x": 300, "y": 250 }, "data": { "label": "Ruby" } },
-      { "id": "7", "position": { "x": 600, "y": 300 }, "data": { "label": "OS" } },
-      { "id": "8", "position": { "x": 900, "y": 250 }, "data": { "label": "Windows" } },
-      { "id": "9", "position": { "x": 900, "y": 300 }, "data": { "label": "Linux" } },
-      { "id": "11", "position": { "x": 900, "y": 350 }, "data": { "label": "Unix" } },
-      { "id": "12", "position": { "x": 600, "y": 400 }, "data": { "label": "Terminal" } },
-      { "id": "13", "position": { "x": 300, "y": 350 }, "data": { "label": "Bash" } },
-      { "id": "14", "position": { "x": 300, "y": 400 }, "data": { "label": "Powershell" } },
-      { "id": "15", "position": { "x": 600, "y": 450 }, "data": { "label": "Git & GitHub" } },
-      { "id": "16", "position": { "x": 600, "y": 500 }, "data": { "label": "Docker" } },
-      { "id": "17", "position": { "x": 600, "y": 550 }, "data": { "label": "Learn ..." } },
-      { "id": "18", "position": { "x": 900, "y": 450 }, "data": { "label": "Nginx" } },
-      { "id": "19", "position": { "x": 900, "y": 500 }, "data": { "label": "Load Balancer" } },
-      { "id": "20", "position": { "x": 900, "y": 550 }, "data": { "label": "Firewall" } },
-      { "id": "21", "position": { "x": 900, "y": 600 }, "data": { "label": "Caching Server" } },
-      { "id": "22", "position": { "x": 900, "y": 650 }, "data": { "label": "Forward Proxy" } }
+      {
+        "id": "1",
+        "position": { "x": 600, "y": 50 },
+        "data": { "label": "Learn Language" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 300, "y": 50 },
+        "data": { "label": "Python" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 100 },
+        "data": { "label": "JavaScript" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 300, "y": 150 },
+        "data": { "label": "GO" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "Rust" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 300, "y": 250 },
+        "data": { "label": "Ruby" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 600, "y": 300 },
+        "data": { "label": "OS" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 900, "y": 250 },
+        "data": { "label": "Windows" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 900, "y": 300 },
+        "data": { "label": "Linux" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 900, "y": 350 },
+        "data": { "label": "Unix" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "Terminal" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 300, "y": 350 },
+        "data": { "label": "Bash" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 300, "y": 400 },
+        "data": { "label": "Powershell" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 600, "y": 450 },
+        "data": { "label": "Git & GitHub" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 600, "y": 500 },
+        "data": { "label": "Docker" }
+      },
+      {
+        "id": "17",
+        "position": { "x": 600, "y": 550 },
+        "data": { "label": "Learn ..." }
+      },
+      {
+        "id": "18",
+        "position": { "x": 900, "y": 450 },
+        "data": { "label": "Nginx" }
+      },
+      {
+        "id": "19",
+        "position": { "x": 900, "y": 500 },
+        "data": { "label": "Load Balancer" }
+      },
+      {
+        "id": "20",
+        "position": { "x": 900, "y": 550 },
+        "data": { "label": "Firewall" }
+      },
+      {
+        "id": "21",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "Caching Server" }
+      },
+      {
+        "id": "22",
+        "position": { "x": 900, "y": 650 },
+        "data": { "label": "Forward Proxy" }
+      }
     ],
     "edges": [
-      { "id": "e1-2", "source": "1", "target": "2", "type": "smoothstep", "animated": true },
-      { "id": "e2-3", "source": "1", "target": "3", "type": "smoothstep", "animated": true },
-      { "id": "e3-4", "source": "1", "target": "4", "type": "smoothstep", "animated": true },
-      { "id": "e4-5", "source": "1", "target": "5", "type": "smoothstep", "animated": true },
-      { "id": "e5-6", "source": "1", "target": "6", "type": "smoothstep", "animated": true },
+      {
+        "id": "e1-2",
+        "source": "1",
+        "target": "2",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e2-3",
+        "source": "1",
+        "target": "3",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e3-4",
+        "source": "1",
+        "target": "4",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e4-5",
+        "source": "1",
+        "target": "5",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e5-6",
+        "source": "1",
+        "target": "6",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e6-7", "source": "1", "target": "7" },
-      { "id": "e7-8", "source": "7", "target": "8", "type": "smoothstep", "animated": true },
-      { "id": "e8-9", "source": "7", "target": "9", "type": "smoothstep", "animated": true },
-      { "id": "e9-10", "source": "7", "target": "10", "type": "smoothstep", "animated": true },
-      { "id": "e10-11", "source": "7", "target": "11", "type": "smoothstep", "animated": true },
+      {
+        "id": "e7-8",
+        "source": "7",
+        "target": "8",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e8-9",
+        "source": "7",
+        "target": "9",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e9-10",
+        "source": "7",
+        "target": "10",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e10-11",
+        "source": "7",
+        "target": "11",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e11-12", "source": "7", "target": "12" },
-      { "id": "e12-13", "source": "12", "target": "13", "type": "smoothstep", "animated": true },
-      { "id": "e13-14", "source": "12", "target": "14", "type": "smoothstep", "animated": true },
+      {
+        "id": "e12-13",
+        "source": "12",
+        "target": "13",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e13-14",
+        "source": "12",
+        "target": "14",
+        "type": "smoothstep",
+        "animated": true
+      },
       { "id": "e14-15", "source": "12", "target": "15" },
       { "id": "e15-16", "source": "15", "target": "16" },
       { "id": "e16-17", "source": "16", "target": "17" },
@@ -235,22 +1115,86 @@
   },
   "fullstack": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "HTML" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "CSS" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Node.js" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "Express" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "React" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "MongoDB" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "GraphQL" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Apollo" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "TypeScript" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "Webpack" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Babel" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "ESLint" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Prettier" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Jest" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Cypress" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Storybook" } }
+      {
+        "id": "1",
+        "position": { "x": 0, "y": 0 },
+        "data": { "label": "HTML" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "CSS" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "Node.js" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "Express" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "React" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "MongoDB" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "GraphQL" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "Apollo" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "TypeScript" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "Webpack" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Babel" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "ESLint" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "Prettier" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "Jest" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "Cypress" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "Storybook" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -273,21 +1217,81 @@
   "aidata": {
     "nodes": [
       { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "SQL" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "NoSQL" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "MongoDB" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "PostgreSQL" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "MySQL" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "SQLite" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "Redis" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Cassandra" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "DynamoDB" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "Bigtable" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Hive" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "HBase" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Neo4j" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "ArangoDB" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Couchbase" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Elasticsearch" } }
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "NoSQL" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "MongoDB" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "PostgreSQL" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "MySQL" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "SQLite" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "Redis" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "Cassandra" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "DynamoDB" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "Bigtable" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Hive" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "HBase" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "Neo4j" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "ArangoDB" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "Couchbase" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "Elasticsearch" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -310,21 +1314,81 @@
   "dataanalysis": {
     "nodes": [
       { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "SQL" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "NoSQL" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "MongoDB" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "PostgreSQL" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "MySQL" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "SQLite" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "Redis" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Cassandra" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "DynamoDB" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "Bigtable" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Hive" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "HBase" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Neo4j" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "ArangoDB" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Couchbase" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Elasticsearch" } }
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "NoSQL" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "MongoDB" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "PostgreSQL" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "MySQL" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "SQLite" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "Redis" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "Cassandra" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "DynamoDB" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "Bigtable" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Hive" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "HBase" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "Neo4j" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "ArangoDB" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "Couchbase" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "Elasticsearch" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -346,59 +1410,597 @@
   },
   "cybersecurity": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "OWASP" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "Nmap" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Metasploit" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "Wireshark" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "Snort" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "Kali Linux" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "Burp Suite" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Acunetix" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "Nessus" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "OpenVAS" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Snort" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "Kali Linux" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Burp Suite" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Acunetix" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Nessus" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "OpenVAS" } }
+      {
+        "id": "1",
+        "position": { "x": 600, "y": 50 },
+        "data": { "label": "Fundemental IT Skills" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 600, "y": 150 },
+        "data": { "label": "Computer Hardware Components" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 600, "y": 200 },
+        "data": { "label": "connection type and their functionality" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 600, "y": 300 },
+        "data": { "label": "Understand Basics of popular suites" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 350 },
+        "data": { "label": "Basics of Computer Networking" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "OS Independant Trouble shooting" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 300, "y": 50 },
+        "data": { "label": "NFC" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 300, "y": 100 },
+        "data": { "label": "WIFI" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 300, "y": 150 },
+        "data": { "label": "Bluetooth" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "Infrared" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 900, "y": 50 },
+        "data": { "label": "icloud" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 900, "y": 100 },
+        "data": { "label": "MSoffice suite" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 900, "y": 150 },
+        "data": { "label": "google suite" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 600, "y": 500 },
+        "data": { "label": "Operating System" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 950, "y": 250 },
+        "data": { "label": "Windows" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 950, "y": 300 },
+        "data": { "label": "Linux" }
+      },
+      {
+        "id": "17",
+        "position": { "x": 950, "y": 350 },
+        "data": { "label": "MacOS" }
+      },
+      {
+        "id": "18",
+        "position": { "x": 600, "y": 550 },
+        "data": { "label": "Networking Knowledge" }
+      },
+      {
+        "id": "19",
+        "position": { "x": 250, "y": 300 },
+        "data": { "label": "Understand the OSI Model" }
+      },
+      {
+        "id": "20",
+        "position": { "x": 250, "y": 350 },
+        "data": { "label": "Common protocols and their uses" }
+      },
+      {
+        "id": "21",
+        "position": { "x": 250, "y": 400 },
+        "data": { "label": "Common ports and their uses" }
+      },
+      {
+        "id": "22",
+        "position": { "x": 250, "y": 450 },
+        "data": { "label": "SSLand TLS Basics" }
+      },
+      {
+        "id": "23",
+        "position": { "x": 250, "y": 500 },
+        "data": { "label": "Basic of NAS and SAN" }
+      },
+      {
+        "id": "24",
+        "position": { "x": 600, "y": 650 },
+        "data": { "label": "Security skills and knowledge" }
+      },
+      {
+        "id": "26",
+        "position": { "x": 600, "y": 750 },
+        "data": { "label": "Core concepts of Zero trust" }
+      },
+      {
+        "id": "27",
+        "position": { "x": 350, "y": 750 },
+        "data": { "label": "Understand Common Hacking Tools" }
+      },
+      {
+        "id": "28",
+        "position": { "x": 900, "y": 750 },
+        "data": { "label": "Purple/Red/Blue Teams" }
+      },
+      {
+        "id": "29",
+        "position": { "x": 900, "y": 850 },
+        "data": { "label": "Attacks types and diffrences" }
+      },
+      {
+        "id": "30",
+        "position": { "x": 600, "y": 850 },
+        "data": { "label": "Basic of cryptography" }
+      },
+      {
+        "id": "31",
+        "position": { "x": 350, "y": 850 },
+        "data": { "label": "Tools of incident response and Discovery" }
+      },
+      {
+        "id": "32",
+        "position": { "x": 650, "y": 950 },
+        "data": { "label": "Cloud skills and knowledge" }
+      },
+      {
+        "id": "33",
+        "position": { "x": 950, "y": 1000 },
+        "data": { "label": "understadn the concept of security in the cloud" }
+      },
+      {
+        "id": "34",
+        "position": { "x": 950, "y": 1050 },
+        "data": {
+          "label": "Understand the differneces between cloud and on-premises"
+        }
+      },
+      {
+        "id": "35",
+        "position": { "x": 950, "y": 1100 },
+        "data": { "label": "understand the concept of infrastructure as cloud" }
+      },
+      {
+        "id": "36",
+        "position": { "x": 950, "y": 1150 },
+        "data": { "label": "understand the concept of serverless" }
+      },
+      {
+        "id": "37",
+        "position": { "x": 950, "y": 1200 },
+        "data": {
+          "label": "understand the basic and general flow of deploying in the cloud"
+        }
+      },
+      {
+        "id": "38",
+        "position": { "x": 500, "y": 1100 },
+        "data": { "label": "Programming skills" }
+      },
+      {
+        "id": "39",
+        "position": { "x": 300, "y": 1000 },
+        "data": { "label": "Python" }
+      },
+      {
+        "id": "40",
+        "position": { "x": 300, "y": 1050 },
+        "data": { "label": "Go" }
+      },
+      {
+        "id": "41",
+        "position": { "x": 300, "y": 1100 },
+        "data": { "label": "JavaScript" }
+      },
+      {
+        "id": "42",
+        "position": { "x": 300, "y": 1150 },
+        "data": { "label": "C++" }
+      },
+      {
+        "id": "43",
+        "position": { "x": 300, "y": 1200 },
+        "data": { "label": "Bash" }
+      },
+      {
+        "id": "44",
+        "position": { "x": 300, "y": 1250 },
+        "data": { "label": "Powershell" }
+      }
     ],
     "edges": [
-      { "id": "e1-2", "source": "1", "target": "2" },
-      { "id": "e2-3", "source": "2", "target": "3" },
-      { "id": "e3-4", "source": "3", "target": "4" },
-      { "id": "e4-5", "source": "4", "target": "5" },
-      { "id": "e5-6", "source": "5", "target": "6" },
-      { "id": "e6-7", "source": "6", "target": "7" },
-      { "id": "e7-8", "source": "7", "target": "8" },
-      { "id": "e8-9", "source": "8", "target": "9" },
-      { "id": "e9-10", "source": "9", "target": "10" },
-      { "id": "e10-11", "source": "10", "target": "11" },
-      { "id": "e11-12", "source": "11", "target": "12" },
-      { "id": "e12-13", "source": "12", "target": "13" },
-      { "id": "e13-14", "source": "13", "target": "14" },
-      { "id": "e14-15", "source": "14", "target": "15" },
-      { "id": "e15-16", "source": "15", "target": "16" }
+      {
+        "id": "e1-2",
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "id": "e2-3",
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "id": "e3-4",
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "id": "e4-5",
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "id": "e5-6",
+        "source": "5",
+        "target": "6"
+      },
+      {
+        "id": "e6-7",
+        "source": "6",
+        "target": "7",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e7-8",
+        "source": "6",
+        "target": "8",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e8-9",
+        "source": "6",
+        "target": "9",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e9-10",
+        "source": "6",
+        "target": "10",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e10-11",
+        "source": "6",
+        "target": "10",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e11-12",
+        "source": "3",
+        "target": "11",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e12-13",
+        "source": "3",
+        "target": "12",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e13-14",
+        "source": "3",
+        "target": "13",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e14-15",
+        "source": "6",
+        "target": "14"
+      },
+      {
+        "id": "e15-16",
+        "source": "14",
+        "target": "15",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e16-17",
+        "source": "14",
+        "target": "16",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e17-18",
+        "source": "14",
+        "target": "17",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e18-19",
+        "source": "14",
+        "target": "18"
+      },
+      {
+        "id": "e19-20",
+        "source": "18",
+        "target": "19",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e20-21",
+        "source": "18",
+        "target": "20",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e21-22",
+        "source": "18",
+        "target": "21",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e22-23",
+        "source": "18",
+        "target": "22",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e23-24",
+        "source": "18",
+        "target": "23",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e24-25",
+        "source": "18",
+        "target": "24",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e25-26",
+        "source": "24",
+        "target": "25",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e25-26",
+        "source": "24",
+        "target": "26",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e26-27",
+        "source": "24",
+        "target": "27",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e27-28",
+        "source": "24",
+        "target": "28",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e28-29",
+        "source": "28",
+        "target": "29",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e29-30",
+        "source": "26",
+        "target": "30",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e30-31",
+        "source": "27",
+        "target": "31",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e31-32",
+        "source": "24",
+        "target": "32"
+      },
+      {
+        "id": "e32-33",
+        "source": "32",
+        "target": "33",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e33-34",
+        "source": "32",
+        "target": "32",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e34-35",
+        "source": "32",
+        "target": "35",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e35-36",
+        "source": "32",
+        "target": "36",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e36-37",
+        "source": "32",
+        "target": "37",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e37-38",
+        "source": "32",
+        "target": "38"
+      },
+      {
+        "id": "e38-39",
+        "source": "28",
+        "target": "29",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e39-40",
+        "source": "38",
+        "target": "40",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e40-41",
+        "source": "38",
+        "target": "41",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e41-42",
+        "source": "38",
+        "target": "42",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e42-43",
+        "source": "38",
+        "target": "43",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e43-44",
+        "source": "38",
+        "target": "44",
+        "type": "smoothstep",
+        "animated": true
+      }
     ]
   },
   "ux": {
     "nodes": [
       { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "UI" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "UX" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Adobe XD" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "Sketch" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "Figma" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "InVision" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "Zeplin" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Marvel" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "Adobe Photoshop" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "Adobe Illustrator" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Adobe InDesign" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "Adobe After Effects" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Adobe Premiere Pro" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "CorelDRAW" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "GIMP" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Inkscape" } }
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "UX" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "Adobe XD" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "Sketch" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "Figma" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "InVision" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "Zeplin" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "Marvel" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "Adobe Photoshop" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "Adobe Illustrator" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Adobe InDesign" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "Adobe After Effects" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "Adobe Premiere Pro" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "CorelDRAW" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "GIMP" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "Inkscape" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -420,22 +2022,86 @@
   },
   "blockchain": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Ethereum" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "Hyperledger" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Corda" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "Quorum" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "R3" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "Stellar" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "EOS" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Tron" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "IOTA" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "VeChain" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Tezos" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "Algorand" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Zcash" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Dash" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Monero" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Bitcoin" } }
+      {
+        "id": "1",
+        "position": { "x": 0, "y": 0 },
+        "data": { "label": "Ethereum" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "Hyperledger" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "Corda" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "Quorum" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "R3" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "Stellar" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "EOS" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "Tron" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "IOTA" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "VeChain" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Tezos" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "Algorand" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "Zcash" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "Dash" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "Monero" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "Bitcoin" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -455,61 +2121,395 @@
       { "id": "e15-16", "source": "15", "target": "16" }
     ]
   },
-  "cyberphysicalsystems": {
+  "mlops": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "PLC" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "SCADA" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "DCS" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "MES" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "HMI" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "SCS" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "ICS" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "IoT" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "IIoT" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "CPS" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "M2M" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "AIoT" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Digital Twin" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Smart Factory" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Industry 4.0" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Cyber-Physical Production System" } }
+      {
+        "id": "1",
+        "position": { "x": 600, "y": 50 },
+        "data": { "label": "Dev Ops RoadMap" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 600, "y": 100 },
+        "data": { "label": "Programming fundementals" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 50 },
+        "data": { "label": "Python" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 300, "y": 100 },
+        "data": { "label": "Go" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 300, "y": 150 },
+        "data": { "label": "Bash" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 600, "y": 200 },
+        "data": { "label": "Version Control System" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 50 },
+        "data": { "label": "Git" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 900, "y": 150 },
+        "data": { "label": "Github" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 600, "y": 350 },
+        "data": { "label": "Cloud Computing" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 300, "y": 300 },
+        "data": { "label": "AWS/Azure/GCP" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 300, "y": 350 },
+        "data": { "label": "Cloud Native ML services" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 600, "y": 450 },
+        "data": { "label": "Containerization" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 900, "y": 200 },
+        "data": { "label": "Docker" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 900, "y": 250 },
+        "data": { "label": "Kubernetes" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "Machine Learning Fundementals" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 600, "y": 450 },
+        "data": { "label": "Data Engineering Fundementals" }
+      },
+      {
+        "id": "17",
+        "position": { "x": 300, "y": 500 },
+        "data": { "label": "Spark" }
+      },
+      {
+        "id": "18",
+        "position": { "x": 300, "y": 500 },
+        "data": { "label": "Kafka" }
+      },
+      {
+        "id": "19",
+        "position": { "x": 300, "y": 500 },
+        "data": { "label": "Flink" }
+      },
+      {
+        "id": "20",
+        "position": { "x": 900, "y": 500 },
+        "data": { "label": "Data piplelines" }
+      },
+      {
+        "id": "21",
+        "position": { "x": 900, "y": 500 },
+        "data": { "label": "Data lakes and warehouse" }
+      },
+      {
+        "id": "22",
+        "position": { "x": 900, "y": 500 },
+        "data": { "label": "Data Ingestion Architecture" }
+      },
+      {
+        "id": "23",
+        "position": { "x": 500, "y": 550 },
+        "data": { "label": "MLOPS Principles" }
+      },
+      {
+        "id": "24",
+        "position": { "x": 700, "y": 550 },
+        "data": { "label": "MLOPS Components " }
+      },
+      {
+        "id": "25",
+        "position": { "x": 950, "y": 600 },
+        "data": { "label": "Experiment tRacking & Model Registry" }
+      },
+      {
+        "id": "26",
+        "position": { "x": 950, "y": 600 },
+        "data": { "label": "Data Lineage" }
+      },
+      {
+        "id": "27",
+        "position": { "x": 950, "y": 600 },
+        "data": { "label": "Data lakes and warehouse" }
+      },
+      {
+        "id": "28",
+        "position": { "x": 950, "y": 600 },
+        "data": { "label": "Model Training and serving" }
+      },
+      {
+        "id": "29",
+        "position": { "x": 950, "y": 600 },
+        "data": { "label": "Monitoring and observability" }
+      },
+      {
+        "id": "30",
+        "position": { "x": 950, "y": 600 },
+        "data": { "label": "Infrastructrre of code" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
-      { "id": "e2-3", "source": "2", "target": "3" },
-      { "id": "e3-4", "source": "3", "target": "4" },
-      { "id": "e4-5", "source": "4", "target": "5" },
-      { "id": "e5-6", "source": "5", "target": "6" },
-      { "id": "e6-7", "source": "6", "target": "7" },
-      { "id": "e7-8", "source": "7", "target": "8" },
-      { "id": "e8-9", "source": "8", "target": "9" },
-      { "id": "e9-10", "source": "9", "target": "10" },
-      { "id": "e10-11", "source": "10", "target": "11" },
-      { "id": "e11-12", "source": "11", "target": "12" },
-      { "id": "e12-13", "source": "12", "target": "13" },
-      { "id": "e13-14", "source": "13", "target": "14" },
-      { "id": "e14-15", "source": "14", "target": "15" },
-      { "id": "e15-16", "source": "15", "target": "16" }
+      {
+        "id": "e2-3",
+        "source": "2",
+        "target": "3",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e3-4",
+        "source": "2",
+        "target": "4",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e4-5",
+        "source": "2",
+        "target": "5",
+        "type": "smoothstep",
+        "animated": true
+      },
+      { "id": "e5-6", "source": "2", "target": "6" },
+      {
+        "id": "e6-7",
+        "source": "6",
+        "target": "7",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e7-8",
+        "source": "6",
+        "target": "8",
+        "type": "smoothstep",
+        "animated": true
+      },
+      { "id": "e8-9", "source": "6", "target": "9" },
+      {
+        "id": "e9-10",
+        "source": "9",
+        "target": "10",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e10-11",
+        "source": "9",
+        "target": "11",
+        "type": "smoothstep",
+        "animated": true
+      },
+      { "id": "e11-12", "source": "9", "target": "12" },
+      {
+        "id": "e12-13",
+        "source": "12",
+        "target": "13",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e13-14",
+        "source": "12",
+        "target": "14",
+        "type": "smoothstep",
+        "animated": true
+      },
+      { "id": "e14-15", "source": "12", "target": "15" },
+      { "id": "e15-16", "source": "15", "target": "16" },
+      {
+        "id": "e16-17",
+        "source": "16",
+        "target": "17",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e17-18",
+        "source": "16",
+        "target": "18",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e18-19",
+        "source": "16",
+        "target": "19",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e19-20",
+        "source": "16",
+        "target": "20",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e20-21",
+        "source": "16",
+        "target": "21",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e21-22",
+        "source": "16",
+        "target": "22",
+        "type": "smoothstep",
+        "animated": true
+      },
+      { "id": "e22-23", "source": "16", "target": "23" },
+      { "id": "e23-24", "source": "16", "target": "24" },
+      {
+        "id": "e23-24",
+        "source": "24",
+        "target": "25",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e23-24",
+        "source": "24",
+        "target": "27",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e23-24",
+        "source": "24",
+        "target": "28",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e23-24",
+        "source": "24",
+        "target": "29",
+        "type": "smoothstep",
+        "animated": true
+      },
+      {
+        "id": "e23-24",
+        "source": "24",
+        "target": "30"
+      },
+      {
+        "id": "e23-24",
+        "source": "23",
+        "target": "30"
+      }
     ]
   },
   "game": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Unity" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "Unreal Engine" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Godot" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "CryEngine" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "Lumberyard" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "GameMaker Studio" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "Construct" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "RPG Maker" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "Adventure Game Studio" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "Stencyl" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Twine" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "Ren'Py" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "PICO-8" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Bitsy" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "GameSalad" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Adventure Creator" } }
+      {
+        "id": "1",
+        "position": { "x": 0, "y": 0 },
+        "data": { "label": "Unity" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "Unreal Engine" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "Godot" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "CryEngine" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "Lumberyard" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "GameMaker Studio" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "Construct" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "RPG Maker" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "Adventure Game Studio" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "Stencyl" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Twine" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "Ren'Py" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "PICO-8" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "Bitsy" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "GameSalad" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "Adventure Creator" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -531,22 +2531,86 @@
   },
   "android": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Unity" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "Unreal Engine" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Godot" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "CryEngine" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "Lumberyard" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "GameMaker Studio" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "Construct" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "RPG Maker" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "Adventure Game Studio" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "Stencyl" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Twine" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "Ren'Py" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "PICO-8" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Bitsy" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "GameSalad" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Adventure Creator" } }
+      {
+        "id": "1",
+        "position": { "x": 0, "y": 0 },
+        "data": { "label": "Unity" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "Unreal Engine" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "Godot" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "CryEngine" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "Lumberyard" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "GameMaker Studio" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "Construct" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "RPG Maker" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "Adventure Game Studio" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "Stencyl" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Twine" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "Ren'Py" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "PICO-8" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "Bitsy" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "GameSalad" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "Adventure Creator" }
+      }
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -565,28 +2629,91 @@
       { "id": "e14-15", "source": "14", "target": "15" },
       { "id": "e15-16", "source": "15", "target": "16" }
     ]
-  
-},
+  },
   "ios": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Swift" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "Objective-C" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "React Native" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "Flutter" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "Xamarin" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "Cordova" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "Ionic" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "PhoneGap" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "NativeScript" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "React Native" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Flutter" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "Xamarin" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Cordova" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Ionic" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "PhoneGap" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "NativeScript" } }
-        ],
-        "edges": [
+      {
+        "id": "1",
+        "position": { "x": 0, "y": 0 },
+        "data": { "label": "Swift" }
+      },
+      {
+        "id": "2",
+        "position": { "x": 150, "y": 100 },
+        "data": { "label": "Objective-C" }
+      },
+      {
+        "id": "3",
+        "position": { "x": 300, "y": 200 },
+        "data": { "label": "React Native" }
+      },
+      {
+        "id": "4",
+        "position": { "x": 450, "y": 300 },
+        "data": { "label": "Flutter" }
+      },
+      {
+        "id": "5",
+        "position": { "x": 600, "y": 400 },
+        "data": { "label": "Xamarin" }
+      },
+      {
+        "id": "6",
+        "position": { "x": 750, "y": 500 },
+        "data": { "label": "Cordova" }
+      },
+      {
+        "id": "7",
+        "position": { "x": 900, "y": 600 },
+        "data": { "label": "Ionic" }
+      },
+      {
+        "id": "8",
+        "position": { "x": 1050, "y": 700 },
+        "data": { "label": "PhoneGap" }
+      },
+      {
+        "id": "9",
+        "position": { "x": 1200, "y": 800 },
+        "data": { "label": "NativeScript" }
+      },
+      {
+        "id": "10",
+        "position": { "x": 1350, "y": 900 },
+        "data": { "label": "React Native" }
+      },
+      {
+        "id": "11",
+        "position": { "x": 1500, "y": 1000 },
+        "data": { "label": "Flutter" }
+      },
+      {
+        "id": "12",
+        "position": { "x": 1650, "y": 1100 },
+        "data": { "label": "Xamarin" }
+      },
+      {
+        "id": "13",
+        "position": { "x": 1800, "y": 1200 },
+        "data": { "label": "Cordova" }
+      },
+      {
+        "id": "14",
+        "position": { "x": 1950, "y": 1300 },
+        "data": { "label": "Ionic" }
+      },
+      {
+        "id": "15",
+        "position": { "x": 2100, "y": 1400 },
+        "data": { "label": "PhoneGap" }
+      },
+      {
+        "id": "16",
+        "position": { "x": 2250, "y": 1500 },
+        "data": { "label": "NativeScript" }
+      }
+    ],
+    "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
       { "id": "e2-3", "source": "2", "target": "3" },
       { "id": "e3-4", "source": "3", "target": "4" },
@@ -602,6 +2729,6 @@
       { "id": "e13-14", "source": "13", "target": "14" },
       { "id": "e14-15", "source": "14", "target": "15" },
       { "id": "e15-16", "source": "15", "target": "16" }
-        ]
+    ]
   }
 }
