@@ -62,7 +62,6 @@ const pathways: Record<PathwayKey, string> = {
   bigdata: "Big Data",
   cyberphysicalsystems: "Cyber-Physical Systems",
 };
-
 const PathwayDetail = ({ pathwayData }: { pathwayData: PathwayData | null }) => {
   const router = useRouter();
   const { id } = router.query;

@@ -50,13 +50,14 @@ const PathwaysGrid = () => {
         {pathways.map((pathway) => (
           <div
             key={pathway.id}
-            className="p-4 border hover:border-purple-500 text-center rounded cursor-pointer hover:text-purple-500 duration-300"
+            className="p-4 border hover:border-purple-500 text-center rounded-lg cursor-pointer hover:text-purple-500 duration-300"
             onClick={() => handlePathwayClick(pathway.id)}
           >
             {pathway.name}
           </div>
         ))}
       </div>
+      <p className='font-semibold text-2xl text-center pt-5'>More Soon</p>
     </div>
   );
 };
