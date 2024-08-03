@@ -20,7 +20,7 @@ const pathways = [
   { id: "gamedev", name: "Game Development" },
   { id: "techwriter", name: "Technical Writer" },
   { id: "mlops", name: "MLOps" },
-  { id: "productmanagemer", name: "Product Managemer" },
+  { id: "productmanager", name: "Product Manager" },
   { id: "devrelations", name: "Developer Relations" },
 ];
 
