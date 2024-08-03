@@ -41,7 +41,7 @@ const pathways: Record<PathwayKey, string> = {
   cybersecurity: 'Cybersecurity',
   blockchain: 'Blockchain',
   techwrite: 'Technical Writing',
-  game: 'Game Development',
+  gamedev: 'Game Development',
   mlops: 'MLOps',
   productmanager: 'Product Management',
   qa: 'Quality Assurance',

@@ -15,7 +15,7 @@ const pathways = [
   { id: 'cybersecurity', name: 'Cybersecurity' },
   { id: 'blockchain', name: 'Blockchain' },
   { id: 'techwrite', name: 'Technical Writer' },
-  { id: 'game', name: 'Game Development' },
+  { id: 'gamedev', name: 'Game Development' },
   { id: 'mlops', name: 'MLOps' },
   { id: 'productmanager', name: 'Product Manager' },
   { id: 'qa', name: 'Quality Assurance' },
