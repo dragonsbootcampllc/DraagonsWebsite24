@@ -10,6 +10,7 @@ const pathways = [
   { id: "AndroidDeveloper", name: "Android Developer" },
   { id: "IOSDeveloper", name: "IOS Developer" },
   { id: "PostgreSQLDBA", name: "PostgreSQL DBA" },
+  { id: "BlockchainDeveloper", name: "Blockchain Developer" },
   { id: "uiux", name: "UI/UX Design" },
   { id: "cybersecurity", name: "Cybersecurity" },
   { id: "cloud", name: "Cloud Computing" },

@@ -369,7 +369,7 @@
     ]
   },
   
-    "PostgreSQLDBA": {
+  "PostgreSQLDBA": {
       "nodes": [
         { "id": "1", "position": { "x": 600, "y": 50 }, "data": { "label": "PostgreSQL Fundamentals" } },
         { "id": "1.1", "position": { "x": 800, "y": 100 }, "data": { "label": "SQL Basics" } },
@@ -438,8 +438,87 @@
         { "id": "e6-6.2", "source": "6", "target": "6.2", "type": "smoothstep", "animated": true },
         { "id": "e6-6.3", "source": "6", "target": "6.3", "type": "smoothstep", "animated": true }
       ]
-    },
+  },
   
+    "BlockchainDeveloper": {
+      "nodes": [
+        { "id": "1", "position": { "x": 600, "y": 50 }, "data": { "label": "Prerequisites" } },
+        { "id": "1.1", "position": { "x": 800, "y": 100 }, "data": { "label": "Cryptography Basics" } },
+        { "id": "1.2", "position": { "x": 800, "y": 150 }, "data": { "label": "Data Structures" } },
+        { "id": "1.3", "position": { "x": 800, "y": 200 }, "data": { "label": "Networking Concepts" } },
+        { "id": "1.4", "position": { "x": 800, "y": 250 }, "data": { "label": "Basic Programming (e.g., Python, JavaScript)" } },
+  
+        { "id": "2", "position": { "x": 600, "y": 300 }, "data": { "label": "Blockchain Fundamentals" } },
+        { "id": "2.1", "position": { "x": 800, "y": 350 }, "data": { "label": "How Blockchain Works" } },
+        { "id": "2.2", "position": { "x": 800, "y": 400 }, "data": { "label": "Consensus Algorithms" } },
+        { "id": "2.3", "position": { "x": 800, "y": 450 }, "data": { "label": "Smart Contracts" } },
+        { "id": "2.4", "position": { "x": 800, "y": 500 }, "data": { "label": "Cryptocurrencies" } },
+  
+        { "id": "3", "position": { "x": 600, "y": 550 }, "data": { "label": "Ethereum Development" } },
+        { "id": "3.1", "position": { "x": 300, "y": 600 }, "data": { "label": "Solidity Programming" } },
+        { "id": "3.2", "position": { "x": 300, "y": 650 }, "data": { "label": "Smart Contract Development" } },
+        { "id": "3.3", "position": { "x": 300, "y": 700 }, "data": { "label": "Truffle & Ganache" } },
+        { "id": "3.4", "position": { "x": 300, "y": 750 }, "data": { "label": "Ethereum Tools (e.g., Web3.js, Ethers.js)" } },
+  
+        { "id": "4", "position": { "x": 600, "y": 800 }, "data": { "label": "Advanced Blockchain Concepts" } },
+        { "id": "4.1", "position": { "x": 800, "y": 850 }, "data": { "label": "Layer 2 Scaling Solutions" } },
+        { "id": "4.2", "position": { "x": 800, "y": 900 }, "data": { "label": "Interoperability & Cross-chain Solutions" } },
+        { "id": "4.3", "position": { "x": 800, "y": 950 }, "data": { "label": "Security Best Practices" } },
+        { "id": "4.4", "position": { "x": 800, "y": 1000 }, "data": { "label": "Decentralized Finance (DeFi)" } },
+  
+        { "id": "5", "position": { "x": 600, "y": 1050 }, "data": { "label": "Blockchain Platforms & Ecosystems" } },
+        { "id": "5.1", "position": { "x": 300, "y": 1100 }, "data": { "label": "Hyperledger Fabric" } },
+        { "id": "5.2", "position": { "x": 300, "y": 1150 }, "data": { "label": "Polkadot" } },
+        { "id": "5.3", "position": { "x": 300, "y": 1200 }, "data": { "label": "Binance Smart Chain" } },
+        { "id": "5.4", "position": { "x": 300, "y": 1250 }, "data": { "label": "Cardano" } },
+  
+        { "id": "6", "position": { "x": 600, "y": 1300 }, "data": { "label": "Tools and Libraries" } },
+        { "id": "6.1", "position": { "x": 800, "y": 1350 }, "data": { "label": "Blockchain Development Tools (e.g., Remix, Hardhat)" } },
+        { "id": "6.2", "position": { "x": 800, "y": 1400 }, "data": { "label": "Testing & Debugging Tools" } },
+        { "id": "6.3", "position": { "x": 800, "y": 1450 }, "data": { "label": "Blockchain APIs" } },
+        { "id": "6.4", "position": { "x": 800, "y": 1500 }, "data": { "label": "Wallets & dApp Browsers" } },
+  
+        { "id": "7", "position": { "x": 600, "y": 1550 }, "data": { "label": "Explore & Stay Updated" } },
+        { "id": "7.1", "position": { "x": 800, "y": 1600 }, "data": { "label": "Follow Blockchain News" } },
+        { "id": "7.2", "position": { "x": 800, "y": 1650 }, "data": { "label": "Contribute to Open Source Projects" } },
+        { "id": "7.3", "position": { "x": 800, "y": 1700 }, "data": { "label": "Participate in Hackathons & Conferences" } }
+      ],
+      "edges": [
+        { "id": "e1-2", "source": "1", "target": "2" },
+        { "id": "e2-3", "source": "2", "target": "3" },
+        { "id": "e3-4", "source": "3", "target": "4" },
+        { "id": "e4-5", "source": "4", "target": "5" },
+        { "id": "e5-6", "source": "5", "target": "6" },
+        { "id": "e6-7", "source": "6", "target": "7" },
+        { "id": "e1-1.1", "source": "1", "target": "1.1", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.2", "source": "1", "target": "1.2", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.3", "source": "1", "target": "1.3", "type": "smoothstep", "animated": true },
+        { "id": "e1-1.4", "source": "1", "target": "1.4", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.1", "source": "2", "target": "2.1", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.2", "source": "2", "target": "2.2", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.3", "source": "2", "target": "2.3", "type": "smoothstep", "animated": true },
+        { "id": "e2-2.4", "source": "2", "target": "2.4", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.1", "source": "3", "target": "3.1", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.2", "source": "3", "target": "3.2", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.3", "source": "3", "target": "3.3", "type": "smoothstep", "animated": true },
+        { "id": "e3-3.4", "source": "3", "target": "3.4", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.1", "source": "4", "target": "4.1", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.2", "source": "4", "target": "4.2", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.3", "source": "4", "target": "4.3", "type": "smoothstep", "animated": true },
+        { "id": "e4-4.4", "source": "4", "target": "4.4", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.1", "source": "5", "target": "5.1", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.2", "source": "5", "target": "5.2", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.3", "source": "5", "target": "5.3", "type": "smoothstep", "animated": true },
+        { "id": "e5-5.4", "source": "5", "target": "5.4", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.1", "source": "6", "target": "6.1", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.2", "source": "6", "target": "6.2", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.3", "source": "6", "target": "6.3", "type": "smoothstep", "animated": true },
+        { "id": "e6-6.4", "source": "6", "target": "6.4", "type": "smoothstep", "animated": true },
+        { "id": "e7-7.1", "source": "7", "target": "7.1", "type": "smoothstep", "animated": true },
+        { "id": "e7-7.2", "source": "7", "target": "7.2", "type": "smoothstep", "animated": true },
+        { "id": "e7-7.3", "source": "7", "target": "7.3", "type": "smoothstep", "animated": true }
+      ]
+  },
   "design": {
     "nodes": [
       { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "Figma" } },

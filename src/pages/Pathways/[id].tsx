@@ -36,6 +36,7 @@ const pathways: Record<PathwayKey, string> = {
   AndroidDeveloper: "Android Developer",
   IOSDeveloper: "IOS Developer",
   PostgreSQLDBA: "PostgreSQL DBA",
+  BlockchainDeveloper: "Blockchain Developer",
   uiux: "UI/UX Design",
   cybersecurity: "Cybersecurity",
   cloud: "Cloud Computing",
