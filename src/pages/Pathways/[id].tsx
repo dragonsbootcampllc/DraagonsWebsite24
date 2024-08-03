@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import Flow from './Components/Flow'; // Adjust the import path as necessary
-import pathwaysData from '../../../public/pathways.json'; // Adjust the import path as necessary
+import Flow from './Components/Flow';
+import pathwaysData from '../../../public/pathways.json';
 
 interface NodeData {
   id: string;
@@ -31,37 +31,25 @@ type PathwayKey = keyof typeof pathwaysData;
 const pathways: Record<PathwayKey, string> = {
   frontend: "Frontend",
   backend: "Backend",
+  devops: "DevOps",
   fullstack: "Fullstack",
-  data: "Data Science",
+  aidata: "AI and Data Science",
+  dataanalysis: "Data Analyst",
   AndroidDeveloper: "Android Developer",
   IOSDeveloper: "IOS Developer",
   PostgreSQLDBA: "PostgreSQL DBA",
   BlockchainDeveloper: "Blockchain Developer",
   QAEngineer: "QA Engineer",
   SoftwareArchitect: "Software Architect",
-  uiux: "UI/UX Design",
   cybersecurity: "Cybersecurity",
-  cloud: "Cloud Computing",
-  devops: "DevOps",
-  iot: "Internet of Things",
-  arvr: "AR/VR Development",
-  robotics: "Robotics",
-  ai: "Artificial Intelligence",
-  quantum: "Quantum Computing",
-  game: "Game Development",
-  digitalmarketing: "Digital Marketing",
-  sales: "Sales",
-  hr: "Human Resources",
-  finance: "Finance",
-  management: "Management",
-  entrepreneurship: "Entrepreneurship",
-  productmanagement: "Product Management",
-  design: "Design",
-  testing: "Testing",
-  softskills: "Soft Skills",
-  bigdata: "Big Data",
-  cyberphysicalsystems: "Cyber-Physical Systems",
+  ux: "UI/UX Design",
+  gamedev: "Game Development",
+  techwriter: "Technical Writer",
+  mlops: "MLOps",
+  productmanager: "Product Manager",
+  devrelations: "Developer Relations",
 };
+
 const PathwayDetail = ({ pathwayData }: { pathwayData: PathwayData | null }) => {
   const router = useRouter();
   const { id } = router.query;
