@@ -1,5 +1,6 @@
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HoverEffect = ({
@@ -21,17 +22,18 @@ const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 cursor-pointer py-10",
         className
       )}>
       {items && items.length > 0 ? items.map((item, idx) => (
-        <div
+        <Link
+          href={item.link}
           key={item?.title}
           className='relative group block p-2 h-full w-full'
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
           style={
-            item.title === "PathWays" && !isPathwayOpen ? { opacity: 0.5 } : {}
+            0 === item.link.length && !isPathwayOpen ? { opacity: 0.5 } : {}
           }>
           <AnimatePresence>
             {hoveredIndex === idx && (
@@ -63,7 +65,7 @@ const HoverEffect = ({
               </p>
             )}
           </Card>
-        </div>
+        </Link>
       )) : null}
     </div>
   );

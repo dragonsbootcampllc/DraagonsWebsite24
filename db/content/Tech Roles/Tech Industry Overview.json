@@ -1,0 +1,206 @@
+{
+    "title": "Tech Industry Overview",
+    "description": "A comprehensive guide to tech roles and domains",
+    "quiz": [
+        {
+            "question": "What is a key area of focus within Software Development and Engineering?",
+            "options": [
+                "Data Engineering",
+                "Cloud Computing",
+                "Mobile App Development",
+                "Network Security"
+            ],
+            "_answer": "Mobile App Development"
+        },
+        {
+            "question": "Which of the following is NOT a subcategory of Web Development?",
+            "options": [
+                "Frontend Web Development",
+                "Backend Web Development",
+                "Data Visualization",
+                "Full-stack Web Development"
+            ],
+            "_answer": "Data Visualization"
+        },
+        {
+            "question": "What does DevOps primarily focus on?",
+            "options": [
+                "Network Administration",
+                "Continuous Integration/Continuous Deployment (CI/CD)",
+                "Machine Learning",
+                "Health Informatics"
+            ],
+            "_answer": "Continuous Integration/Continuous Deployment (CI/CD)"
+        },
+        {
+            "question": "Which category does Penetration Testing fall under?",
+            "options": [
+                "Data Science",
+                "Information Technology (IT) and Systems Administration",
+                "Cybersecurity",
+                "Digital Marketing"
+            ],
+            "_answer": "Cybersecurity"
+        },
+        {
+            "question": "What is a main focus area in Data Science?",
+            "options": [
+                "Cloud Architecture",
+                "Machine Learning",
+                "Robot Programming",
+                "Search Engine Optimization (SEO)"
+            ],
+            "_answer": "Machine Learning"
+        },
+        {
+            "question": "Which role involves creating strategies for managing technology?",
+            "options": [
+                "IT Project Management",
+                "Database Administration",
+                "Digital Banking",
+                "Robot Design"
+            ],
+            "_answer": "IT Project Management"
+        },
+        {
+            "question": "Which of the following is part of Infrastructure and Networks?",
+            "options": [
+                "Digital Banking",
+                "IoT Device Development",
+                "Natural Language Processing",
+                "Medical Software Development"
+            ],
+            "_answer": "IoT Device Development"
+        },
+        {
+            "question": "What does a role in Robotics typically include?",
+            "options": [
+                "Database Administration",
+                "Computer Vision for Robotics",
+                "E-commerce Analytics",
+                "Cloud Security"
+            ],
+            "_answer": "Computer Vision for Robotics"
+        },
+        {
+            "question": "Which field is concerned with Quantum Computing?",
+            "options": [
+                "Specialized Tech Domains",
+                "Digital Marketing",
+                "Data Visualization",
+                "Hardware Engineering"
+            ],
+            "_answer": "Specialized Tech Domains"
+        },
+        {
+            "question": "What does Business Intelligence primarily focus on?",
+            "options": [
+                "Managing Network Security",
+                "Analyzing and interpreting data",
+                "Developing Embedded Systems",
+                "Conducting Penetration Testing"
+            ],
+            "_answer": "Analyzing and interpreting data"
+        },
+        {
+            "question": "Which technology is related to Augmented and Virtual Reality?",
+            "options": [
+                "Environmental Monitoring",
+                "Cloud Migration",
+                "Emerging Technologies",
+                "Mobile App Development"
+            ],
+            "_answer": "Emerging Technologies"
+        },
+        {
+            "question": "What does Cloud Computing include?",
+            "options": [
+                "Blockchain Development",
+                "Cloud Security",
+                "Medical Device Engineering",
+                "Natural Language Processing"
+            ],
+            "_answer": "Cloud Security"
+        },
+        {
+            "question": "What role focuses on managing IT infrastructure?",
+            "options": [
+                "Information Security",
+                "IT Support",
+                "Deep Learning",
+                "User Experience (UX) Design"
+            ],
+            "_answer": "IT Support"
+        },
+        {
+            "question": "Which category does Financial Technology (FinTech) belong to?",
+            "options": [
+                "Data and Analytics",
+                "Digital Business",
+                "Hardware and Physical Systems",
+                "Cybersecurity"
+            ],
+            "_answer": "Digital Business"
+        },
+        {
+            "question": "What does the role of Data Engineering involve?",
+            "options": [
+                "Designing Cloud Architecture",
+                "Building and maintaining data pipelines",
+                "Managing Wireless Communication",
+                "Developing AI Ethics"
+            ],
+            "_answer": "Building and maintaining data pipelines"
+        },
+        {
+            "question": "What is a focus area within Artificial Intelligence?",
+            "options": [
+                "Quantum Computing",
+                "AI Research",
+                "Blockchain Development",
+                "Medical Software Development"
+            ],
+            "_answer": "AI Research"
+        },
+        {
+            "question": "Which field includes Semiconductor Design?",
+            "options": [
+                "Environmental Technology (GreenTech)",
+                "Hardware Engineering",
+                "Data Science",
+                "Digital Marketing"
+            ],
+            "_answer": "Hardware Engineering"
+        },
+        {
+            "question": "Which subfield focuses on User Experience (UX) Design?",
+            "options": [
+                "Financial Technology (FinTech)",
+                "Digital Marketing",
+                "E-commerce",
+                "Robotics"
+            ],
+            "_answer": "E-commerce"
+        },
+        {
+            "question": "What does Embedded Systems Development involve?",
+            "options": [
+                "Designing E-commerce Platforms",
+                "Developing Firmware",
+                "Conducting Network Forensics",
+                "Managing Big Data Analytics"
+            ],
+            "_answer": "Developing Firmware"
+        },
+        {
+            "question": "Which technology is concerned with Sustainable Technology Design?",
+            "options": [
+                "Environmental Technology (GreenTech)",
+                "Healthcare Technology (HealthTech)",
+                "Cloud Computing",
+                "Telemedicine Systems"
+            ],
+            "_answer": "Environmental Technology (GreenTech)"
+        }
+    ]
+}

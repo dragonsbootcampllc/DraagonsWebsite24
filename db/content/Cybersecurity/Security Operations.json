@@ -1,0 +1,106 @@
+{
+  "title": "Application Security",
+  "description": "Master the essentials of protecting cloud environments. Learn strategies for securing cloud-based systems from threats.",
+  "quiz": [
+    {
+      "question": "What is the primary goal of security operations?",
+      "options": [
+        "To detect, analyze, and respond to security incidents in real-time",
+        "To develop new software applications",
+        "To increase network performance",
+        "To enhance physical security measures"
+      ],
+      "_answer": "To detect, analyze, and respond to security incidents in real-time"
+    },
+    {
+      "question": "What is a Security Operations Center (SOC)?",
+      "options": [
+        "A centralized unit that deals with security issues on an organizational and technical level",
+        "A tool for scanning vulnerabilities",
+        "A software for managing security patches",
+        "A system for monitoring employee activities"
+      ],
+      "_answer": "A centralized unit that deals with security issues on an organizational and technical level"
+    },
+    {
+      "question": "Which phase of incident response involves developing policies and training?",
+      "options": [
+        "Preparation",
+        "Detection and Analysis",
+        "Containment, Eradication, and Recovery",
+        "Post-Incident Activity"
+      ],
+      "_answer": "Preparation"
+    },
+    {
+      "question": "What does Security Information and Event Management (SIEM) provide?",
+      "options": [
+        "Real-time analysis of security alerts",
+        "Data encryption for communications",
+        "Threat intelligence for proactive defense",
+        "Manual security assessments"
+      ],
+      "_answer": "Real-time analysis of security alerts"
+    },
+    {
+      "question": "What is the purpose of vulnerability scanning?",
+      "options": [
+        "Identifying vulnerabilities in systems and applications",
+        "Encrypting data during transmission",
+        "Monitoring network traffic for anomalies",
+        "Developing security policies"
+      ],
+      "_answer": "Identifying vulnerabilities in systems and applications"
+    },
+    {
+      "question": "What is a key step in the patch management process?",
+      "options": [
+        "Testing patches in a controlled environment before deployment",
+        "Implementing new security protocols",
+        "Conducting user training sessions",
+        "Performing regular audits"
+      ],
+      "_answer": "Testing patches in a controlled environment before deployment"
+    },
+    {
+      "question": "What is threat hunting?",
+      "options": [
+        "Proactively searching for cyber threats that may have bypassed existing security defenses",
+        "Implementing network segmentation",
+        "Reviewing compliance policies",
+        "Conducting vulnerability scans"
+      ],
+      "_answer": "Proactively searching for cyber threats that may have bypassed existing security defenses"
+    },
+    {
+      "question": "Which best practice involves incorporating external threat data into security operations?",
+      "options": [
+        "Threat Intelligence Integration",
+        "Continuous Monitoring",
+        "Patch Management",
+        "Vulnerability Scanning"
+      ],
+      "_answer": "Threat Intelligence Integration"
+    },
+    {
+      "question": "What should be included in a comprehensive incident response plan?",
+      "options": [
+        "Procedures for handling security incidents effectively",
+        "Detailed vulnerability scanning reports",
+        "Employee performance evaluations",
+        "Network performance metrics"
+      ],
+      "_answer": "Procedures for handling security incidents effectively"
+    },
+    {
+      "question": "Why is continuous monitoring important in security operations?",
+      "options": [
+        "To detect and respond to threats in real-time",
+        "To manage employee access controls",
+        "To conduct periodic compliance audits",
+        "To test new security technologies"
+      ],
+      "_answer": "To detect and respond to threats in real-time"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "title": "Goal Setting",
+    "description": "Understand tech field, make informed decisions.",
+    "quiz": [
+        {
+            "question": "What should your goal be by the end of the program?",
+            "options": [
+                "Understand the technical field",
+                "Make a decision regarding your interest in this field",
+                "Both of the above"
+            ],
+            "_answer": "Both of the above"
+        },
+        {
+            "question": "Why is it important to understand the 'why' behind the technical field?",
+            "options": [
+                "It helps in making informed decisions",
+                "It is not important",
+                "It makes learning easier"
+            ],
+            "_answer": "It helps in making informed decisions"
+        },
+        {
+            "question": "What is the first step in understanding the technical field?",
+            "options": [
+                "Setting a goal",
+                "Reading for 5 minutes",
+                "Understanding complex examples"
+            ],
+            "_answer": "Setting a goal"
+        },
+        {
+            "question": "Why is setting a goal important?",
+            "options": [
+                "It provides direction",
+                "It is not important",
+                "It is a formality"
+            ],
+            "_answer": "It provides direction"
+        }
+    ]
+}

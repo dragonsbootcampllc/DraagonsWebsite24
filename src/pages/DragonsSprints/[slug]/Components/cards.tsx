@@ -74,19 +74,19 @@ export function CardHoverEffectDemo() {
     {
       title: "Live",
       description: "Join live sessions and interact with instructors and peers in real-time.",
-      link: "/live",
+      link: "",
       icon: <Radio className='h-32 w-32 opacity-10 hover:opacity-100' />,
     },
     {
       title: "Learn",
       description: "Access course materials, videos, and assignments to enhance your learning.",
-      link: "/learn",
+      link: "/DragonsSprints/blogs",
       icon: <Shapes className='h-32 w-32 opacity-10 hover:opacity-100'/>,
     },
     {
       title: "PathWays",
       description: "Explore different learning paths for tracks and specialize your knowledge.",
-      link: "/pathways",
+      link: "",
       icon: <BrainCircuit className='h-32 w-32 opacity-10 hover:opacity-100'/>,
 
     },

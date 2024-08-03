@@ -1,0 +1,9 @@
+{
+    "icon": "w",
+    "category": "Hardware",
+    "description": "Discover the latest advancements and trends in hardware technology with our curated blogs.",
+    "private_key": "careerSprint",
+    "blogs": [
+        "Hardware Essentials"
+    ]
+}

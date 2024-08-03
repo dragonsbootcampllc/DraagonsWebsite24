@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export default function HeroSlider(props: { exploreUrl: string }) {
   const { exploreUrl } = props;
   const route = useRouter();
-  const  CurrentURL  = route.route;
+  const CurrentURL = route.route;
 
 
   return (
@@ -34,10 +34,10 @@ export default function HeroSlider(props: { exploreUrl: string }) {
             </p>
             {/* Buttons (remove on mobile) */}
             <div className='lg:flex gap-4 hidden mt-4 justify-left md:justify-start'>
-              <Link href={CurrentURL+"/"+exploreUrl} className='h-16 w-64' passHref>
+              <Link href={CurrentURL + "/" + exploreUrl} className='h-16 w-64' passHref>
                 <ButtonComponent CTAtext='Take The Challenge' />
               </Link>
-             
+
             </div>
           </div>
         </div>

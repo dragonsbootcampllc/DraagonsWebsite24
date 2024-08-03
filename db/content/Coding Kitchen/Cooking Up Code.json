@@ -1,0 +1,106 @@
+{
+    "title": "Cooking Up Code",
+    "description": "Test your understanding of the parallels between making a burger and developing software",
+    "quiz": [
+        {
+            "question": "In burger making, what is equivalent to choosing technologies in software development?",
+            "options": [
+                "Recipe Creation and Testing",
+                "Ingredient Selection",
+                "Preparation and Mise en Place",
+                "Cooking the Patty"
+            ],
+            "_answer": "Ingredient Selection"
+        },
+        {
+            "question": "What stage in burger making is similar to planning and prototyping in software development?",
+            "options": [
+                "Quality Control and Plating",
+                "Cooking the Patty",
+                "Recipe Creation and Testing",
+                "Assembly"
+            ],
+            "_answer": "Recipe Creation and Testing"
+        },
+        {
+            "question": "Which burger-making stage corresponds to setting up the development environment?",
+            "options": [
+                "Preparation and Mise en Place",
+                "Cooking the Patty",
+                "Assembly",
+                "Customer Feedback"
+            ],
+            "_answer": "Preparation and Mise en Place"
+        },
+        {
+            "question": "What software development stage is like integrating different burger components?",
+            "options": [
+                "Quality Control and Plating",
+                "Assembly",
+                "Core Development",
+                "Customer Feedback"
+            ],
+            "_answer": "Assembly"
+        },
+        {
+            "question": "Which stage in burger making is equivalent to testing and quality assurance in software development?",
+            "options": [
+                "Cooking the Patty",
+                "Quality Control and Plating",
+                "Recipe Creation and Testing",
+                "Customer Feedback"
+            ],
+            "_answer": "Quality Control and Plating"
+        },
+        {
+            "question": "In software development, what stage involves gathering user feedback similar to customer feedback in a restaurant?",
+            "options": [
+                "Core Development",
+                "Deployment and User Feedback Collection",
+                "Assembly",
+                "Preparation and Mise en Place"
+            ],
+            "_answer": "Deployment and User Feedback Collection"
+        },
+        {
+            "question": "Which stage of burger making focuses on cooking the patty to perfection?",
+            "options": [
+                "Preparation and Mise en Place",
+                "Cooking the Patty",
+                "Recipe Creation and Testing",
+                "Quality Control and Plating"
+            ],
+            "_answer": "Cooking the Patty"
+        },
+        {
+            "question": "What is the software development counterpart to mise en place in a restaurant?",
+            "options": [
+                "Setting Up Development Environment",
+                "Core Development",
+                "Testing and Quality Assurance",
+                "Integration"
+            ],
+            "_answer": "Setting Up Development Environment"
+        },
+        {
+            "question": "How does the role of recipe testing in burger making relate to planning in software development?",
+            "options": [
+                "Both are about refining core elements",
+                "Both focus on finalizing user interfaces",
+                "Both are concerned with deployment",
+                "Both involve customer feedback"
+            ],
+            "_answer": "Both are about refining core elements"
+        },
+        {
+            "question": "In what way does quality control and plating in burger making correspond to software development?",
+            "options": [
+                "Testing and Quality Assurance",
+                "Core Development",
+                "Integration",
+                "Deployment"
+            ],
+            "_answer": "Testing and Quality Assurance"
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+  "title": "Application Security",
+  "description": "Master the essentials of protecting cloud environments. Learn strategies for securing cloud-based systems from threats.",
+  "quiz": [
+    {
+      "question": "What is the primary goal of security compliance?",
+      "options": [
+        "To ensure organizations meet requirements set by regulatory bodies and avoid legal penalties",
+        "To increase network performance",
+        "To develop new software applications",
+        "To enhance physical security measures"
+      ],
+      "_answer": "To ensure organizations meet requirements set by regulatory bodies and avoid legal penalties"
+    },
+    {
+      "question": "Which regulation protects the privacy and personal data of EU citizens?",
+      "options": [
+        "General Data Protection Regulation (GDPR)",
+        "Health Insurance Portability and Accountability Act (HIPAA)",
+        "Payment Card Industry Data Security Standard (PCI DSS)",
+        "Sarbanes-Oxley Act (SOX)"
+      ],
+      "_answer": "General Data Protection Regulation (GDPR)"
+    },
+    {
+      "question": "What does HIPAA focus on protecting?",
+      "options": [
+        "Healthcare information in the US",
+        "Payment card information",
+        "EU citizens' personal data",
+        "Publicly available information"
+      ],
+      "_answer": "Healthcare information in the US"
+    },
+    {
+      "question": "Which standard is concerned with protecting payment card information?",
+      "options": [
+        "Payment Card Industry Data Security Standard (PCI DSS)",
+        "General Data Protection Regulation (GDPR)",
+        "Health Insurance Portability and Accountability Act (HIPAA)",
+        "ISO/IEC 27001"
+      ],
+      "_answer": "Payment Card Industry Data Security Standard (PCI DSS)"
+    },
+    {
+      "question": "What is the purpose of compliance audits?",
+      "options": [
+        "To assess whether an organization meets regulatory requirements",
+        "To develop new security technologies",
+        "To increase physical security",
+        "To enhance employee training"
+      ],
+      "_answer": "To assess whether an organization meets regulatory requirements"
+    },
+    {
+      "question": "What does the risk assessment process involve?",
+      "options": [
+        "Identifying, evaluating, and prioritizing risks to compliance",
+        "Installing firewalls and antivirus software",
+        "Implementing access control measures",
+        "Developing incident response plans"
+      ],
+      "_answer": "Identifying, evaluating, and prioritizing risks to compliance"
+    },
+    {
+      "question": "What is the purpose of data classification?",
+      "options": [
+        "To categorize data based on its sensitivity and criticality",
+        "To encrypt data during transmission",
+        "To monitor network traffic",
+        "To conduct penetration testing"
+      ],
+      "_answer": "To categorize data based on its sensitivity and criticality"
+    },
+    {
+      "question": "Which of the following is a component of access control policies?",
+      "options": [
+        "User Authentication",
+        "Network Scanning",
+        "Penetration Testing",
+        "Data Encryption"
+      ],
+      "_answer": "User Authentication"
+    },
+    {
+      "question": "What is a key best practice for maintaining security compliance?",
+      "options": [
+        "Develop clear policies and procedures",
+        "Avoid regular audits",
+        "Limit employee training",
+        "Ignore compliance updates"
+      ],
+      "_answer": "Develop clear policies and procedures"
+    },
+    {
+      "question": "What is the purpose of incident response policies?",
+      "options": [
+        "To define procedures for responding to security incidents",
+        "To conduct regular compliance audits",
+        "To implement network segmentation",
+        "To perform risk assessments"
+      ],
+      "_answer": "To define procedures for responding to security incidents"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+    "icon": "df",
+    "category": "Cybersecurity",
+    "description": "Protecting digital systems and data from unauthorized access or attacks",
+    "private_key": "careerSprint",
+    "blogs": [
+        "Application Security",
+        "Cloud Security",
+        "Information Security",
+        "Network Security",
+        "Penetration Testing",
+        "Security Compliance",
+        "Security Operations",
+        "Threat Intelligence"
+    ]
+}

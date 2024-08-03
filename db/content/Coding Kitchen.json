@@ -1,0 +1,11 @@
+{
+  "icon": "df",
+  "category": "Coding Kitchen",
+  "description": "A Real-World Journey Through Software Development in a Restaurant Kitchen",
+  "private_key": "careerSprint",
+  "blogs": [
+    "Cooking Up Code",
+    "Frontend VS Backend Development",
+    "User Experience (UX) Design"
+  ]
+}

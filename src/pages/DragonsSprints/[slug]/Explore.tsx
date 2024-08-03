@@ -193,7 +193,7 @@ export default function ExplorePage() {
         className='hero relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
         <div className='container mx-auto pt-[120px] md:pt-[140px] flex flex-col justify-between gap-9 items-center px-4'>
           <div className='content flex flex-col gap-12'>
-            <h1 className='md:text-2xl grid place-items-center text-xl md:text-center text-start font-medium text-gray-50/70 capitalize'>
+            <h1 className='md:text-2xl grid place-items-center text-xl text-center  font-medium text-gray-50/70 capitalize'>
               Loading...
             </h1>
           </div>

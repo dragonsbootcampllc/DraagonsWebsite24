@@ -191,8 +191,8 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
                             </div>
                           </Link>
                         ) : (
-                          <div className='lg:flex gap-4  hidden mt-4 justify-center'>
-                            <div className='h-16 w-64  '>
+                          <div className='flex gap-4   mt-4 justify-center'>
+                            <div className='h-16 max-w-64 w-full min-w-32  '>
                               <CheckOutButton
                                 CTAtext='Buy Now'
                                 className='h-full'

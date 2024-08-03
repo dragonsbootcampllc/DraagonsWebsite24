@@ -1,0 +1,96 @@
+{
+    "title": "AI and Data Science Intro",
+    "description": "Get to know AI and Data Science basics, their roles in software engineering, and how they transform technology.",
+    "quiz": [
+        {
+            "question": "What is Artificial Intelligence (AI)?",
+            "options": [
+                "A field focused on teaching computers to perform tasks without human intervention",
+                "A method for sorting data to build models",
+                "A type of programming language",
+                "A technique for manual data entry"
+            ],
+            "_answer": "A field focused on teaching computers to perform tasks without human intervention"
+        },
+        {
+            "question": "Which of the following is a typical application of Data Science?",
+            "options": [
+                "Creating a chatbot",
+                "Predicting customer buying behavior",
+                "Building a self-driving car",
+                "Designing a game"
+            ],
+            "_answer": "Predicting customer buying behavior"
+        },
+        {
+            "question": "What distinguishes Machine Learning (ML) from traditional AI?",
+            "options": [
+                "ML learns from data, while AI follows pre-programmed rules",
+                "ML requires detailed instructions, while AI adapts on its own",
+                "ML is used for simpler tasks, while AI handles complex problems",
+                "ML needs no human input, while AI does"
+            ],
+            "_answer": "ML learns from data, while AI follows pre-programmed rules"
+        },
+        {
+            "question": "What role does a Data Scientist typically perform?",
+            "options": [
+                "Building AI systems that can interact with users",
+                "Finding patterns in large datasets",
+                "Programming self-driving vehicles",
+                "Creating applications that recognize faces"
+            ],
+            "_answer": "Finding patterns in large datasets"
+        },
+        {
+            "question": "Which skill is most important for an AI Engineer?",
+            "options": [
+                "Good at coding and teaching computers to learn",
+                "Excellent at explaining complex statistics",
+                "Skilled in creating physical robots",
+                "Able to sort and analyze large datasets"
+            ],
+            "_answer": "Good at coding and teaching computers to learn"
+        },
+        {
+            "question": "Which of the following tasks is most suitable for AI?",
+            "options": [
+                "Playing chess by following a set of predefined rules",
+                "Learning from large amounts of data to predict outcomes",
+                "Detecting patterns in data without pre-defined rules",
+                "Improving decision-making through experience"
+            ],
+            "_answer": "Playing chess by following a set of predefined rules"
+        },
+        {
+            "question": "What is a common task for a Machine Learning Engineer?",
+            "options": [
+                "Ensuring AI systems can process and understand large datasets",
+                "Analyzing customer purchasing trends",
+                "Designing algorithms that follow fixed rules",
+                "Creating physical devices for AI"
+            ],
+            "_answer": "Ensuring AI systems can process and understand large datasets"
+        },
+        {
+            "question": "How does Machine Learning (ML) improve over time?",
+            "options": [
+                "By continuously learning from new data",
+                "By following pre-set instructions",
+                "By adhering strictly to programmed rules",
+                "By receiving detailed human guidance"
+            ],
+            "_answer": "By continuously learning from new data"
+        },
+        {
+            "question": "Which role is responsible for building systems that can learn from data and make decisions?",
+            "options": [
+                "AI Engineer",
+                "Data Scientist",
+                "Machine Learning Engineer",
+                "Software Developer"
+            ],
+            "_answer": "Machine Learning Engineer"
+        }
+    ]
+}

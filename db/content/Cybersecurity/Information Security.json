@@ -1,0 +1,96 @@
+{
+  "title": "Application Security",
+  "description": "Master the essentials of protecting cloud environments. Learn strategies for securing cloud-based systems from threats.",
+  "quiz": [
+    {
+      "question": "What is the primary objective of information security?",
+      "options": [
+        "To enhance system performance",
+        "To protect data and systems from unauthorized access, breaches, and cyber threats",
+        "To manage user identities",
+        "To optimize network traffic"
+      ],
+      "_answer": "To protect data and systems from unauthorized access, breaches, and cyber threats"
+    },
+    {
+      "question": "What does the principle of Confidentiality ensure?",
+      "options": [
+        "Information is accurate and unaltered",
+        "Information is only accessible to authorized individuals",
+        "Information is available when needed",
+        "Information is encrypted"
+      ],
+      "_answer": "Information is only accessible to authorized individuals"
+    },
+    {
+      "question": "What is the purpose of Data Loss Prevention (DLP)?",
+      "options": [
+        "Protecting data from being lost, stolen, or accidentally disclosed",
+        "Managing user access",
+        "Encrypting data",
+        "Creating security policies"
+      ],
+      "_answer": "Protecting data from being lost, stolen, or accidentally disclosed"
+    },
+    {
+      "question": "What is the difference between Symmetric and Asymmetric Encryption?",
+      "options": [
+        "Symmetric uses one key for both encryption and decryption, Asymmetric uses two different keys",
+        "Symmetric is for data in transit, Asymmetric is for data at rest",
+        "Symmetric is used for physical security, Asymmetric is used for logical security",
+        "Symmetric is simpler than Asymmetric"
+      ],
+      "_answer": "Symmetric uses one key for both encryption and decryption, Asymmetric uses two different keys"
+    },
+    {
+      "question": "What are Security Policies?",
+      "options": [
+        "Formalized rules and guidelines for managing and protecting information",
+        "Step-by-step instructions for implementing security measures",
+        "Tools for monitoring network traffic",
+        "Methods for encrypting data"
+      ],
+      "_answer": "Formalized rules and guidelines for managing and protecting information"
+    },
+    {
+      "question": "What is the purpose of Risk Assessment in Information Security?",
+      "options": [
+        "Identifying and evaluating risks to information and systems",
+        "Managing user access",
+        "Implementing data encryption",
+        "Creating security policies"
+      ],
+      "_answer": "Identifying and evaluating risks to information and systems"
+    },
+    {
+      "question": "What does the principle of Integrity ensure?",
+      "options": [
+        "Information remains accurate and unaltered",
+        "Information is only accessible to authorized individuals",
+        "Information is encrypted",
+        "Information is available when needed"
+      ],
+      "_answer": "Information remains accurate and unaltered"
+    },
+    {
+      "question": "What should an Incident Response Plan include?",
+      "options": [
+        "Preparation, detection and analysis, containment, eradication, and recovery",
+        "Data encryption methods",
+        "User education programs",
+        "Security policy creation"
+      ],
+      "_answer": "Preparation, detection and analysis, containment, eradication, and recovery"
+    },
+    {
+      "question": "Which of the following is a recommended best practice for Information Security?",
+      "options": [
+        "Regular Security Audits",
+        "Minimizing user education",
+        "Ignoring patch management",
+        "Reducing multi-factor authentication"
+      ],
+      "_answer": "Regular Security Audits"
+    }
+  ]
+}
