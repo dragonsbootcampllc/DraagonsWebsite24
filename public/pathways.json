@@ -313,22 +313,27 @@
   },
   "fullstack": {
     "nodes": [
-      { "id": "1", "position": { "x": 0, "y": 0 }, "data": { "label": "HTML" } },
-      { "id": "2", "position": { "x": 150, "y": 100 }, "data": { "label": "CSS" } },
-      { "id": "3", "position": { "x": 300, "y": 200 }, "data": { "label": "Node.js" } },
-      { "id": "4", "position": { "x": 450, "y": 300 }, "data": { "label": "Express" } },
-      { "id": "5", "position": { "x": 600, "y": 400 }, "data": { "label": "React" } },
-      { "id": "6", "position": { "x": 750, "y": 500 }, "data": { "label": "MongoDB" } },
-      { "id": "7", "position": { "x": 900, "y": 600 }, "data": { "label": "GraphQL" } },
-      { "id": "8", "position": { "x": 1050, "y": 700 }, "data": { "label": "Apollo" } },
-      { "id": "9", "position": { "x": 1200, "y": 800 }, "data": { "label": "TypeScript" } },
-      { "id": "10", "position": { "x": 1350, "y": 900 }, "data": { "label": "Webpack" } },
-      { "id": "11", "position": { "x": 1500, "y": 1000 }, "data": { "label": "Babel" } },
-      { "id": "12", "position": { "x": 1650, "y": 1100 }, "data": { "label": "ESLint" } },
-      { "id": "13", "position": { "x": 1800, "y": 1200 }, "data": { "label": "Prettier" } },
-      { "id": "14", "position": { "x": 1950, "y": 1300 }, "data": { "label": "Jest" } },
-      { "id": "15", "position": { "x": 2100, "y": 1400 }, "data": { "label": "Cypress" } },
-      { "id": "16", "position": { "x": 2250, "y": 1500 }, "data": { "label": "Storybook" } }
+      { "id": "1", "position": { "x": 600, "y": 100 }, "data": { "label": "HTML" } },
+      { "id": "2", "position": { "x": 600, "y": 200 }, "data": { "label": "CSS" } },
+      { "id": "3", "position": { "x": 600, "y": 300 }, "data": { "label": "JavaScript" } },
+      { "id": "4", "position": { "x": 600, "y": 400 }, "data": { "label": "npm" } },
+      { "id": "5", "position": { "x": 600, "y": 500 }, "data": { "label": "Git" } },
+      { "id": "6", "position": { "x": 600, "y": 600 }, "data": { "label": "GitHub" } },
+      { "id": "7", "position": { "x": 600, "y": 700 }, "data": { "label": "Tailwind CSS" } },
+      { "id": "8", "position": { "x": 600, "y": 800 }, "data": { "label": "React" } },
+      { "id": "9", "position": { "x": 600, "y": 900 }, "data": { "label": "Node.js" } },
+      { "id": "10", "position": { "x": 600, "y": 1000 }, "data": { "label": "PostgreSQL" } },
+      { "id": "11", "position": { "x": 600, "y": 1100 }, "data": { "label": "RESTfull APIs" } },
+      { "id": "12", "position": { "x":600, "y": 1200 }, "data": { "label": "JWT Auth" } },
+      { "id": "13", "position": { "x": 600, "y": 1300 }, "data": { "label": "Redis" } },
+      { "id": "14", "position": { "x": 600, "y": 1400 }, "data": { "label": "Linux Basics" } },
+      { "id": "15", "position": { "x": 600, "y": 1500 }, "data": { "label": "Basic AWS Services" } },
+      { "id": "16", "position": { "x": 600, "y": 1600 }, "data": { "label": "Monit" } },
+      { "id": "17", "position": { "x": 600, "y": 1700 }, "data": { "label": "GitHub Actions" } },
+      { "id": "18", "position": { "x": 600, "y": 1800 }, "data": { "label": "Ansible" } },
+      { "id": "19", "position": { "x": 600, "y": 1900 }, "data": { "label": "Terraform" } },
+      { "id": "20", "position": { "x": 600, "y": 2000 }, "data": { "label": "Ready for Job" } }
+
     ],
     "edges": [
       { "id": "e1-2", "source": "1", "target": "2" },
@@ -345,7 +350,11 @@
       { "id": "e12-13", "source": "12", "target": "13" },
       { "id": "e13-14", "source": "13", "target": "14" },
       { "id": "e14-15", "source": "14", "target": "15" },
-      { "id": "e15-16", "source": "15", "target": "16" }
+      { "id": "e15-16", "source": "15", "target": "16" },
+      { "id": "e16-17", "source": "16", "target": "17" },
+      { "id": "e17-18", "source": "17", "target": "18" },
+      { "id": "e18-19", "source": "18", "target": "19" },
+      { "id": "e19-20", "source": "19", "target": "20" }
     ]
   },
   "aidata": {
