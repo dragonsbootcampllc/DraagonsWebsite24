@@ -92,8 +92,6 @@ function HeroBlog() {
                 Latest Posts
               </Link>
             </div>
-
-
           </div>
 
           <div className="relative ml-4">

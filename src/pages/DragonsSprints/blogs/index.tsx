@@ -32,7 +32,7 @@ export function BlogDiscovery() {
           </p>
           <div className='w-full pt-5 relative'>
             <input
-              className='w-full text-base md:text-2xl box-border p-4 focus:outline-none bg-white/20 backdrop-blur-sm focus:border-blue-1 shadow translate-all cursor-text h-12 md:h-16 rounded-xl border border-slate-200'
+              className='w-full text-base md:text-2xl box-border p-4 focus:outline-none bg-transparent backdrop-blur-sm focus:border-blue-1 shadow translate-all cursor-text h-12 md:h-16 rounded-xl border border-purple-500'
               placeholder='Search help (e.g. use cases, step by step guides)'></input>
           </div>
         </div>
@@ -46,12 +46,12 @@ export function BlogDiscovery() {
               ) => (
                 <Link
                   href={`${BASE_URL}/${category}`}
-                  className='flex items-center box-border bg-white/20 backdrop-blur-sm p-4 md:p-7 gap-2 md:gap-4 text-lg md:text-xl font-semibold border border-slate-200 rounded-xl w-full md:w-96 h-32 md:h-40 hover:border-blue-1 shadow hover:shadow-md hover:scale-[1.02] transition-all'
+                  className='flex items-center box-border group backdrop-blur-sm p-4 md:p-7 gap-2 md:gap-4 text-lg md:text-xl font-semibold border border-purple-500 hover:border-purple-700 duration-300 rounded-xl w-full md:w-96 h-32 md:h-40 hover:border-blue-1 shadow hover:shadow-md transition-all'
                   key={index}>
                   <span className='text-6xl md:text-8xl text-white'>
                     <Icon />
                   </span>
-                  <span>
+                  <span className="text-purple-500 group-hover:text-purple-700 duration-300">
                     {category}
                     <span className='text-slate-400 break-all pl-2'>
                       {description}
