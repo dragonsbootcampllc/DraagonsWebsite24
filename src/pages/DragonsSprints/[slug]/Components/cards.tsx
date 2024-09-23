@@ -86,7 +86,7 @@ export function CardHoverEffectDemo() {
     {
       title: "PathWays",
       description: "Explore different learning paths for tracks and specialize your knowledge.",
-      link: "",
+      link: "/Pathways",
       icon: <BrainCircuit className='h-32 w-32 opacity-10 hover:opacity-100'/>,
 
     },
