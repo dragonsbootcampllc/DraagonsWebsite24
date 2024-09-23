@@ -1,11 +1,16 @@
 # Introduction to AI and Data Science in Software Engineering
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
-3. [What is Data Science?](#what-is-data-science)
-4. [AI and Data Science Roles](#ai-and-data-science-roles)
-5. [AI vs. Machine Learning](#ai-vs-machine-learning)
+
+- [Introduction to AI and Data Science in Software Engineering](#introduction-to-ai-and-data-science-in-software-engineering)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
+  - [What is Data Science?](#what-is-data-science)
+  - [AI and Data Science Roles](#ai-and-data-science-roles)
+  - [AI vs. Machine Learning](#ai-vs-machine-learning)
+    - [Artificial Intelligence (AI)](#artificial-intelligence-ai)
+    - [Machine Learning (ML)](#machine-learning-ml)
 
 ## Introduction
 
@@ -60,12 +65,14 @@ All these roles are like specialized builders in the world of software. They use
 
 Imagine you're teaching a robot to play a game:
 
-### Artificial Intelligence (AI):
+### Artificial Intelligence (AI)
+
 AI is like giving the robot a big instruction book on how to play the game. You tell it all the rules, what moves to make in different situations, and how to win. The robot follows these instructions to play.
 
 Example: You program a chess-playing computer with all the rules of chess and strategies for different situations.
 
-### Machine Learning (ML):
+### Machine Learning (ML)
+
 ML is like letting the robot learn the game by playing it many times. Instead of giving it all the instructions upfront, you let it figure out how to play well by practicing a lot.
 
 Example: You show a computer thousands of chess games, and it learns patterns and strategies on its own.
