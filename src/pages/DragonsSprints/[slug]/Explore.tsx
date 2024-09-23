@@ -231,7 +231,7 @@ export default function ExplorePage() {
   return (
     <div
       id='global-bg'
-      className='hero relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
+      className='hero font-sans relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
       <div className='container mx-auto pt-[120px] md:pt-[140px] flex flex-col justify-between gap-9 items-center px-4'>
         <div className='content flex flex-col gap-12'>
           <div>
@@ -241,8 +241,7 @@ export default function ExplorePage() {
             />
 
             <p
-              style={{ fontFamily: "interV" }}
-              className='text-white/50 text-lg md:text-base container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
+              className='text-white/50 font-sans text-lg md:text-base container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
               {daysLeft > 0
                 ? `You have ${daysLeft} days left in your challenge. Keep going!`
                 : "Congratulations! You've completed the 14-day challenge!"}

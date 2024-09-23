@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "interV";
-  font-weight: 300;
+  font-weight: 300, 400, 500, 600, 700, 800, 900;
   src: url("../../public/fonts/Inter-Light.ttf") format("truetype");
   font-display: fallback;
 
