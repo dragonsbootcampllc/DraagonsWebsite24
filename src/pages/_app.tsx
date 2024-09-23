@@ -2,21 +2,18 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import React from "react";
+import { GeistSans } from "geist/font/sans";
 const Footer = dynamic(() => import("@/components/Footer"));
 import { dark } from '@clerk/themes';
-
 import HeaderComp from "@/components/Navbar/Navbar";
 import Head from "next/head";
 import { ClerkProvider } from "@clerk/nextjs";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ClerkProvider
-          appearance={{
-            baseTheme: dark
-          }}
-      >
-        <div>
+      <ClerkProvider appearance={{ baseTheme: dark }}>
+        <div className={`${GeistSans.className}`}>
           <div className='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030014_40%,#63e_100%)]'></div>
           <HeadSEO />
           <HeaderComp />
