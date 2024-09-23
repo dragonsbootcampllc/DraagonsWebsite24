@@ -75,14 +75,14 @@ export default function BlogView({ title, markdownContent, quiz, category, blog 
   }, [documentHeaders]);
 
   return (
-    <div className='h-full relative max-w-[1400px]  w-full flex pt-24'>
+    <div className={`h-full font-sans relative max-w-[1400px] w-full flex pt-24`}>
       <div className='w-full h-full text-white px-4 box-border text-balance pb-28'>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
             h1: ({ node, ...props }) => (
               <h1
-                className='text-3xl md:text-5xl lg:text-6xl w-full max-w-full inline-block font-bold mb-4 mt-10'
+                className='text-3xl md:text-5xl lg:text-5xl w-full max-w-full inline-block font-bold mb-4 mt-10'
                 id={handleId("h1", String(props.children))}
                 {...props}
               />
