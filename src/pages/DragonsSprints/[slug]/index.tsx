@@ -4,12 +4,11 @@ import { useRouter } from "next/router";
 import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import ButtonComponent from "@/components/Micros/Button";
-import { Correct_1, Document_1, Time_1 } from "@/components/Icons";
-import CourseHeasder from "@/pages/DragonsSprints/Components/Header/CourseHeader";
+import ButtonComponentLite from "@/components/Micros/ButtonLite";
+import { Document_1, Time_1 } from "@/components/Icons";
+import CourseHeader from "@/pages/DragonsSprints/Components/Header/CourseHeader";
 import OverViewComponent from "@/pages/DragonsSprints/Components/OverView";
 import TopicsComponent from "../Components/Topics";
-
-import CoverImage from "@/../public/45f.png";
 import Transformation from "../Components/Transformation";
 import CheckOutButton from "@/components/CheckoutButton";
 // topics images
@@ -17,11 +16,6 @@ import Topic1 from "@/../public/images/DragonsSprint-CarrerSprint/IntroductionPo
 import Topic2 from "@/../public/images/DragonsSprint-CarrerSprint/WhyitsalotPoster.png";
 import Topic3 from "@/../public/images/DragonsSprint-CarrerSprint/Positionbattleposter.png";
 import Topic4 from "@/../public/images/DragonsSprint-CarrerSprint/theMaze.jpeg";
-
-interface Coupon {
-  name: string;
-  discount: number;
-}
 
 interface PageData {
   minisprint_name: string;
@@ -40,13 +34,11 @@ interface PageData {
   requirements: string[];
   Outcomes: string[];
   Topics: { title: string; image: string }[];
+  price: number;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Fetch all possible course slugs
-  // This is a placeholder. Replace with your actual data fetching logic
   const slugs = ["CareerSprint", "OtherCourse1", "OtherCourse2"];
-
   return {
     paths: slugs.map((slug) => ({ params: { slug } })),
     fallback: "blocking",
@@ -107,17 +99,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         image: Topic4.src,
       },
     ],
+    price: 30
   };
-
-  if (!pageData) {
-    return {
-      notFound: true,
-    };
-  }
 
   return {
     props: { pageData },
-    revalidate: 60, // Revalidate every 60 seconds
+    revalidate: 60,
   };
 };
 
@@ -126,7 +113,9 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
   const { slug } = router.query;
   const { user, isLoaded } = useUser();
   const [hasAccess, setHasAccess] = useState(false);
-  const [discountedPrice, setDiscountedPrice] = useState(30);
+  const [discountedPrice, setDiscountedPrice] = useState(pageData.price);
+  const [coupon, setCoupon] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (isLoaded && user) {
@@ -139,10 +128,53 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
     return <div>Loading...</div>;
   }
 
+  const handleApplyCoupon = () => {
+    fetch("/api/CouponSystem/validate-coupon", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ coupon, program: "Mini Sprint" }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to validate coupon");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.discount) {
+          if (data.discount === 100 && user) {
+            const updatedUserCourses = (user.publicMetadata.courses as string[]) || [];
+            updatedUserCourses.push(slug as string);
+
+            fetch("/api/public", {
+              method: "PUT",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ stripe: { courses: updatedUserCourses }, userId: user.id }),
+            }).catch(() => {
+              setError("An error occurred. Please try again.");
+            });
+          }
+          applyDiscount(data.discount);
+        } else {
+          setError(data.message || "Invalid coupon code");
+          setDiscountedPrice(pageData.price);
+        }
+      })
+      .catch(() => {
+        setError("An error occurred. Please try again.");
+      });
+  };
+
+  const applyDiscount = (discountPercentage: number) => {
+    const discountedPrice = pageData.price * (1 - discountPercentage / 100);
+    setDiscountedPrice(Math.floor(discountedPrice));
+    setError("");
+  };
+
   return (
-    <div className='grid place-items-center '>
-      <div className='h-full flex-col max-w-[1400px] w-full flex justify-center'>
-        <CourseHeasder
+    <div className="grid place-items-center">
+      <div className="h-full flex-col max-w-[1400px] w-full flex justify-center">
+        <CourseHeader
           title={pageData.minisprint_name}
           description={pageData.description}
           duration={pageData.content.duration}
@@ -152,60 +184,96 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
           Language={pageData.Language}
           HasCertificate={pageData.HasCertificate}
         />
-        <div className='w-full flex py-4 justify-center'>
-          <div className='flex md:flex-row gap-4 flex-col w-full max-w-[1300px] px-2'>
-            <div className='w-full md:w-2/3'>
-              <div className='flex-shrink  w-full flex flex-col gap-4 '>
+        <div className="w-full flex py-4 justify-center">
+          <div className="flex md:flex-row gap-4 flex-col w-full max-w-[1300px] px-2">
+            <div className="w-full md:w-2/3">
+              <div className="flex-shrink w-full flex flex-col gap-4">
                 <OverViewComponent
                   description={pageData.description}
-                  title={"Overview"}
+                  title="Overview"
                 />
-                <TopicsComponent Topics={pageData.Topics} title={"Topics"} />
+                <TopicsComponent Topics={pageData.Topics} title="Topics" />
                 <Transformation
-                  title={"Transformation"}
-                  Requirements={pageData.requirements}
+                  title="Transformation"
+                  Requirements={pageData.requirements}  
                   Outcomes={pageData.Outcomes}
                 />
               </div>
             </div>
-            <div className=' w-full md:w-1/3 h-full flex-shrink '>
-              <div className='w-full relative p-1 bg-purple-800/20 rounded-3xl'>
-                <div className='w-full relative aspect-square bg-purple-800 h-[200px] rounded-3xl cursor-pointer'>
-                  <div className='text-base  px-3 md:px-6 absolute  grid place-items-center   lg:text-3xl font-medium text-gray-200 h-full w-full '>
-                    <div className='w-full  flex justify-center items-center'>
-                      <div className='rounded-md h-4/5 w-full text-gray-300 text-4xl font-bold flex flex-col justify-end gap-5 p-4'>
-                        <span className='flex justify-center h-full items-center relative'>
-                          <span className='text-5xl font-bold relative'>
-                            ${discountedPrice.toFixed(2)}
-                          </span>
-                        </span>
-                        {isLoaded && hasAccess ? (
-                          <Link href={`/DragonsSprints/${slug}/Explore`}>
-                            <div className='lg:flex gap-4  hidden mt-4 justify-center'>
-                              <div className='h-16 w-64  '>
-                                <ButtonComponent
-                                  CTAtext='Go to Course'
-                                  className='!h-fit'
+            <div className="w-full md:w-1/3 h-full flex-shrink">
+              <div className="w-full relative p-1 bg-purple-800/20 rounded-3xl">
+                <div className="w-full relative aspect-square bg-purple-800 h-[400px] rounded-3xl cursor-pointer">
+                  <div className="text-base px-3 md:px-6 absolute grid place-items-center lg:text-3xl font-medium text-gray-200 h-full w-full">
+                    <div className="w-full flex justify-center items-center">
+                      <div className="rounded-md h-4/5 w-full text-gray-300 text-4xl font-bold flex flex-col justify-end gap-5 p-4">
+                        <div className="flex flex-col relative">
+                          <div className="flex flex-col gap-4">
+                            <span className="text-5xl font-bold relative text-center">
+                              ${discountedPrice.toFixed(2)}
+                            </span>
+                            {isLoaded && hasAccess ? (
+                              <Link href={`/DragonsSprints/${slug}/Explore`}>
+                                <div className="lg:flex gap-4 hidden mt-4 justify-center">
+                                  <ButtonComponent CTAtext="Go to Course" className="!h-fit" />
+                                </div>
+                              </Link>
+                            ) : (
+                              <div className="flex gap-4 mt-4 justify-center">
+                                <CheckOutButton
+                                  CTAtext="Buy Now"
+                                  className="h-full"
+                                  createCheckoutSession="/api/Checkout-DragonsSprint"
                                 />
                               </div>
-                            </div>
-                          </Link>
-                        ) : (
-                          <div className='flex gap-4   mt-4 justify-center'>
-                            <div className='h-16 max-w-64 w-full min-w-32  '>
-                              <CheckOutButton
-                                CTAtext='Buy Now'
-                                className='h-full'
-                                createCheckoutSession='/api/Checkout-DragonsSprint'
-                              />
+                            )}
+                          </div>
+                          <div className="mt-4 text-center grid place-items-center gap-4">
+                            <h1 className="text-2xl text-gray-400">Have a coupon code?</h1>
+                            <input
+                              type="text"
+                              className="mt-2 px-4 py-2 border text-2xl rounded-md focus:outline-none focus:ring-2 w-full h-16 focus:ring-blue-500 focus:border-transparent bg-gray-800 border-gray-600"
+                              placeholder="Enter coupon code"
+                              value={coupon}
+                              onChange={(e) => setCoupon(e.target.value)}
+                            />
+                            <div onClick={handleApplyCoupon} className="h-16 w-64">
+                              <ButtonComponentLite CTAtext="Apply Coupon" />
+                              {error && <p style={{ color: "red" }}>{error}</p>}
                             </div>
                           </div>
-                        )}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="w-full mt-4 bg-purple-800/20 rounded-3xl px-2 flex py-6 flex-col gap-4 justify-start">
+                <div className="flex-col flex items-center w-full">
+                  <p className="font-semibold text-lg text-white">
+                    What's included?
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 w-full">
+                  {[
+                    {
+                      Icon: Document_1,
+                      label: `${pageData.content.articles} articles`,
+                    },
+                    {
+                      Icon: Time_1,
+                      label: pageData.content.duration,
+                    },
+                  ].map(({ Icon, label }) => (
+                    <div className="w-full flex items-center justify-start gap-2">
+                      <Icon className="w-6 h-6 fill-gray-500" />
+                      <p className="font-medium text-lg text-gray-300">
+                        {label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="h-[400px] w-full"></div>
             </div>
           </div>
         </div>

@@ -34,6 +34,12 @@
       "usageLimit": 20,
       "used": 10
     }
-
+  },
+  "Mini Sprint": {
+    "DRAGONS_FREE_100": {
+      "discount": 100,
+      "usageLimit": 10000,
+      "used": 7
+    }
   }
 }
