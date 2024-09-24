@@ -1,4 +1,5 @@
 import { clerkClient } from '@clerk/nextjs/server'
+import { log } from 'console';
 import { NextApiRequest, NextApiResponse } from 'next'
 
 function handleOptions(res: NextApiResponse) {
@@ -13,7 +14,7 @@ async function handlePut(req: NextApiRequest, res: NextApiResponse) {
     try {
         // Retrieve the current user metadata
         const user = await clerkClient.users.getUser(userId)
-        const currentPublicMetadata = user?.publicMetadata || {}
+        const currentPublicMetadata = user?.publicMetadata || {};
 
         // Update user metadata
         await clerkClient.users.updateUserMetadata(userId, {
