@@ -75,48 +75,48 @@ export default function BlogView({ title, markdownContent, quiz, category, blog 
   }, [documentHeaders]);
 
   return (
-    <div className={`h-full font-sans relative max-w-[1400px] w-full flex pt-24`}>
+    <div className={`h-full font-sans relative max-w-[1400px] w-full flex pt-16`}>
       <div className='w-full h-full text-white px-4 box-border text-balance pb-28'>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
             h1: ({ node, ...props }) => (
               <h1
-                className='text-3xl md:text-5xl lg:text-5xl w-full max-w-full inline-block font-bold mb-4 mt-10'
+                className='text-3xl md:text-4xl lg:text-5xl inline-block font-bold mb-4 mt-10'
                 id={handleId("h1", String(props.children))}
                 {...props}
               />
             ),
             h2: ({ node, ...props }) => (
               <h2
-                className='text-xl md:text-3xl lg:text-4xl w-full max-w-full inline-block font-bold mb-4 mt-10'
+                className='text-xl md:text-3xl lg:text-4xl inline-block font-bold mb-4 mt-10'
                 id={handleId("h2", String(props.children))}
                 {...props}
               />
             ),
             h3: ({ node, ...props }) => (
               <h3
-                className='text-md md:text-2xl lg:text-3xl w-full max-w-full inline-block font-bold mb-4 mt-10'
+                className='text-md md:text-2xl lg:text-3xl inline-block font-bold mb-4 mt-10'
                 id={handleId("h3", String(props.children))}
                 {...props}
               />
             ),
             h4: ({ node, ...props }) => (
               <h4
-                className='text-base md:text-xl lg:text-2xl max-w-full inline-block font-bold mb-4 mt-10'
+                className='text-base md:text-xl lg:text-2xl inline-block font-bold mb-4 mt-10'
                 id={handleId("h4", String(props.children))}
                 {...props}
               />
             ),
             p: ({ node, ...props }) => (
               <p
-                className='text-sm md:text-lg lg:text-xl max-w-full inline-block font-semibold text-slate-200 my-2'
+                className='text-sm md:text-lg lg:text-xl font-semibold inline-block text-slate-200 my-2'
                 {...props}
               />
             ),
             a: ({ node, ...props }) => (
               <a
-                className='text-sm md:text-lg lg:text-xl max-w-full inline-block font-semibold underline text-blue-500 hover:text-blue-600'
+                className='text-sm md:text-lg lg:text-xl font-semibold inline-block underline text-blue-500 hover:text-blue-600'
                 {...props}
               />
             ),
@@ -128,7 +128,7 @@ export default function BlogView({ title, markdownContent, quiz, category, blog 
             ),
             li: ({ node, ...props }) => (
               <li
-                className='text-sm md:text-lg lg:text-xl my-1 max-w-full inline-block font-semibold list-decimal ml-6 md:ml-12 lg:ml-14 w-full'
+                className='text-sm md:text-lg lg:text-xl my-1 inline-block font-semibold list-decimal ml-2 md:ml-6 '
                 {...props}
               />
             ),
@@ -143,7 +143,7 @@ export default function BlogView({ title, markdownContent, quiz, category, blog 
         </ReactMarkdown>
 
         <div className="mt-20">
-          <h2 className="font-bold mb-4 max-md:font-bold text-6xl text-purple-600 max-md:text-3xl">Test your information</h2>
+          <h2 className="font-bold mb-4 max-md:font-bold text-6xl text-purple-500 max-md:text-3xl">Test your information</h2>
           {
             quiz && 0 != quiz.length ?
               (<div className="flex flex-col gap-4">
