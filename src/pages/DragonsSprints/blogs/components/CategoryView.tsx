@@ -14,9 +14,9 @@ interface CategoryViewProps {
 
 function CategoryView({ title, description, blogs }: CategoryViewProps) {
   return (
-    <div className="pl-10 pt-10 gap-10 flex flex-col justify-center items-center text-center h-full w-full overflow-hidden overflow-y-auto pb-24">
+    <div className="pt-4 gap-10 flex flex-col justify-center items-center text-center w-full overflow-hidden overflow-y-auto pb-24">
       <h1 className="2xl:text-7xl text-6xl font-bold capitalize">{title}</h1>
-      <p className="text-2xl text-slate-400 w-[900px]">{description}</p>
+      <p className="text-2xl text-slate-400 m-w-[900px]">{description}</p>
       <div className="flex gap-14 flex-wrap mt-12 justify-center">
         {blogs ? blogs.map(({ title, description, url }, index) => (
           <Link href={url || ""} key={index}>
