@@ -162,6 +162,9 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
       })
       .catch(() => {
         setError("An error occurred. Please try again.");
+        setTimeout(() => {
+          setError(""); // Clear the error after 3 seconds
+        }, 2000);
       });
   };
 
@@ -195,7 +198,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
                 <TopicsComponent Topics={pageData.Topics} title="Topics" />
                 <Transformation
                   title="Transformation"
-                  Requirements={pageData.requirements}  
+                  Requirements={pageData.requirements}
                   Outcomes={pageData.Outcomes}
                 />
               </div>
@@ -231,12 +234,12 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
                             <h1 className="text-2xl text-gray-400">Have a coupon code?</h1>
                             <input
                               type="text"
-                              className="mt-2 px-4 py-2 border text-2xl rounded-md focus:outline-none focus:ring-2 w-full h-16 focus:ring-blue-500 focus:border-transparent bg-gray-800 border-gray-600"
+                              className="mt-2 px-4 py-2 border text-2xl rounded-full focus:outline-none focus:ring-2 w-full h-12 focus:ring-[#18094e] focus:border-[#190d43] bg-[#0f062e] border-[#110736]"
                               placeholder="Enter coupon code"
                               value={coupon}
                               onChange={(e) => setCoupon(e.target.value)}
                             />
-                            <div onClick={handleApplyCoupon} className="h-16 w-64">
+                            <div onClick={handleApplyCoupon} className="h-14 w-64">
                               <ButtonComponentLite CTAtext="Apply Coupon" />
                               {error && <p style={{ color: "red" }}>{error}</p>}
                             </div>
@@ -247,7 +250,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
                   </div>
                 </div>
               </div>
-              <div className="w-full mt-4 bg-purple-800/20 rounded-3xl px-2 flex py-6 flex-col gap-4 justify-start">
+              <div className="w-full mt-4 bg-purple-800/20 rounded-3xl px-6 flex py-6 flex-col gap-4 justify-start">
                 <div className="flex-col flex items-center w-full">
                   <p className="font-semibold text-lg text-white">
                     What's included?
