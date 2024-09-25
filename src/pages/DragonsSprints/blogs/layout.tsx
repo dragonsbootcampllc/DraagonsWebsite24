@@ -62,7 +62,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
                 {currentUrlEnds().map(({ title, url }, index, arr) => (
                   <span key={index} className="flex items-center">
                     <Link href={url}>
-                      <span className={`cursor-pointer hover:text-blue-500 ${index + 1 === arr.length ? "text-slate-200" : "text-gray-500"}`}>
+                      <span className={`cursor-pointer hover:text-purple-500 ${index + 1 === arr.length ? "text-slate-200" : "text-gray-500"}`}>
                         {title}
                       </span>
                     </Link>
