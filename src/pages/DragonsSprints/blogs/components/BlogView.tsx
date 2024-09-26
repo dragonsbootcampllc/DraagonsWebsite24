@@ -4,6 +4,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import slugify from "slugify";
 import QuizCompo from "./Quiz/QuizCompo";
+import OverView from "./OverView/OverView";
+import Sidebar from "./Sidebar/Sidebar";
 import { Quiz } from "../utils/blog";
 
 interface BlogViewProps {
@@ -76,6 +78,13 @@ export default function BlogView({ title, markdownContent, quiz, category, blog 
 
   return (
     <div className={`h-full font-sans relative max-w-[1400px] w-full flex pt-16`}>
+
+    <div className="max-w-[20rem] w-full max-md:hidden sticky top-24 h-screen overflow-y-auto no-scrollbar">
+      <Sidebar />
+    </div>
+
+
+
       <div className='w-full h-full text-white px-4 box-border text-balance pb-28'>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
@@ -152,6 +161,49 @@ export default function BlogView({ title, markdownContent, quiz, category, blog 
           }
         </div>
       </div>
+
+
+
+
+
+
+
+
+        <div className="max-w-[20rem] w-full max-lg:hidden h-screen sticky top-24 no-scrollbar">
+          <OverView
+            Instructor="Dragons Team"
+            tags={["React", "JavaScript", "CSS"]}
+            Description="This is a brief description of the course."
+            LessonNum={5}
+            Topics={["Introduction", "Components", "State Management"]}
+          />
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/*
         <div className='max-w-[300px]  w-full hidden top-28 sticky h-auto  overflow-y-auto items-start justify-start text-start text-md font-semibold md:flex flex-col '>
       
