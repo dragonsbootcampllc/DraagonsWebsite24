@@ -106,7 +106,7 @@ const OverView: React.FC<OverViewProps> = ({
   };
 
   return (
-    <div className="max-w-[20rem] bg-purple-800/20 rounded-xl">
+    <div className="max-w-[20rem] bg-purple-800/20 rounded-3xl">
       {/* Tabs */}
       <div className="flex">
         <button

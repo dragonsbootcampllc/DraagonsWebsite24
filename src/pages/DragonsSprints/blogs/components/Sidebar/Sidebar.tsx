@@ -40,7 +40,7 @@ const CollapsedLink = ({
         <>
           <button
             onClick={onClick}
-            className="cursor-pointer hover:bg-[#1b1731] pl-2 rounded-md h-16 relative flex justify-center place-items-center items-center font-semibold w-full box-border text-start"
+            className="cursor-pointer hover:bg-[#1b1731] pl-2 rounded-3xl h-16 relative flex justify-center place-items-center items-center font-semibold w-full box-border text-start"
           >
             <div>
             <div className="h-12 w-12 flex justify-center items-center rounded-full bg-purple-800 text-white mr-2">
@@ -63,7 +63,7 @@ const CollapsedLink = ({
                 className='inline-block py-1 group w-full transition-all h-full cursor-pointer'
                 onClick={() => handleBlogClick(title, blog_name)}
               >
-                <span className='inline-flex items-center group-hover:bg-[#1b1731] rounded-md p-2 w-[calc(100%-2rem)] transition-all h-full'>
+                <span className='inline-flex items-center group-hover:bg-[#1b1731] rounded-3xl p-2 w-[calc(100%-2rem)] transition-all h-full'>
                   {completedBlogs.includes(blog_name) ? (
                     <FaCheck className='text-purple-500 mr-2' />
                   ) : (
@@ -105,10 +105,10 @@ export default function Sidebar() {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <div className="h-full bg-purple-800/20 rounded-xl px-6 max-w-[20rem] relative md:flex flex-col gap-4">
+    <div className="h-full bg-purple-800/20 rounded-3xl px-6 max-w-[20rem] relative md:flex flex-col gap-4">
       <Link
         href={BASE_URL || ''}
-        className="w-full mt-4 hover:bg-purple-800/20 p-2 rounded-md flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center"
+        className="w-full mt-4 hover:bg-purple-800/20 py-2 px-6 rounded-3xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center"
       >
         <span className="text-2xl bg-purple-800 p-[6px] rounded-xl ">
           <FaRegNewspaper className="h-5 w-5" />

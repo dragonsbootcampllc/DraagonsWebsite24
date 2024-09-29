@@ -81,7 +81,7 @@ export default function QuizCompo({ questions: questionsProp, category, blog }: 
               return (
                 <div
                   key={cIndex}
-                  className={`p-2 text-black text-lg rounded text-center cursor-pointer transition-all ${bgColor}`}
+                  className={`p-2 text-black text-lg rounded-md text-center cursor-pointer transition-all ${bgColor}`}
                   onClick={() => handleSelect(qIndex, choice)}
                   style={{ pointerEvents: submitted ? 'none' : 'auto' }} // Disable choice selection after submission
                 >

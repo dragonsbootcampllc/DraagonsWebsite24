@@ -85,7 +85,7 @@ export default function BlogView({ title, markdownContent, quiz, category, blog 
 
 
 
-      <div className='w-full h-full text-white px-4 box-border text-balance pb-28'>
+      <div className='w-full h-full text-white px-8 box-border text-balance pb-28'>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
