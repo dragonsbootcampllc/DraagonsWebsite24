@@ -106,12 +106,12 @@ const OverView: React.FC<OverViewProps> = ({
   };
 
   return (
-    <div className="max-w-[20rem]">
+    <div className="max-w-[20rem] bg-purple-800/20 rounded-xl">
       {/* Tabs */}
       <div className="flex">
         <button
           onClick={() => setActiveTab("overview")}
-          className={`flex-1 text-center py-2 font-semibold ${
+          className={`flex-1 text-center py-4 text-lg font-semibold ${
             activeTab === "overview"
               ? "border-b-2 border-purple-500 text-purple-500"
               : "text-gray-400"
@@ -121,7 +121,7 @@ const OverView: React.FC<OverViewProps> = ({
         </button>
         <button
           onClick={() => setActiveTab("Course Details")}
-          className={`flex-1 text-center py-2 font-semibold ${
+          className={`flex-1 text-center py-4 text-lg font-semibold ${
             activeTab === "Course Details"
               ? "border-b-2 border-purple-500 text-purple-500"
               : "text-gray-400"
@@ -132,7 +132,7 @@ const OverView: React.FC<OverViewProps> = ({
       </div>
 
       {/* Content */}
-      <div className="mt-4 shadow-md min-h-screen rounded-lg w-full">
+      <div className="mt-4 shadow-md min-h-screen rounded-lg w-full px-6">
         {renderContent()}
       </div>
     </div>

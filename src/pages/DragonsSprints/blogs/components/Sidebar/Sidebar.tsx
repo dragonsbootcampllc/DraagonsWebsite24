@@ -105,10 +105,10 @@ export default function Sidebar() {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <div className="h-full max-w-[20rem] relative md:flex flex-col gap-4">
+    <div className="h-full bg-purple-800/20 rounded-xl px-6 max-w-[20rem] relative md:flex flex-col gap-4">
       <Link
         href={BASE_URL || ''}
-        className="w-full hover:bg-purple-800/20 p-2 rounded-md flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center"
+        className="w-full mt-4 hover:bg-purple-800/20 p-2 rounded-md flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center"
       >
         <span className="text-2xl bg-purple-800 p-[6px] rounded-xl ">
           <FaRegNewspaper className="h-5 w-5" />
