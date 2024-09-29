@@ -5,7 +5,7 @@ import Layout from "./layout";
 import { BASE_URL, useCategories, CategorySummary } from "./utils/blog";
 
 export function BlogDiscovery() {
-  const { categories, error, isLoading } = useCategories();
+  const { categories, error, isLoading } = useCategories('careerSprint');
 
   if (error) return <div>Failed to load</div>;
   if (isLoading) return <div>Loading...</div>;

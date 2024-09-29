@@ -52,8 +52,8 @@ const importIcon = async (iconName: string) => {
 };
 
 // Hook to fetch all categories
-function useCategories() {
-    const { data, error } = useSWR<CategorySummary[]>(`/api/blogSystem/categories?private_key=careerSprint`, getFetcher);
+function useCategories(private_key: string) {
+    const { data, error } = useSWR<CategorySummary[]>(`/api/blogSystem/categories?private_key=${private_key}`, getFetcher);
 
     return {
         categories: data,

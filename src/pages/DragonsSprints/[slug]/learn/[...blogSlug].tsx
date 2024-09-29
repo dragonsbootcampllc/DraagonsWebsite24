@@ -14,24 +14,24 @@ import BlogView from "./components/BlogView";
 
 export default function View() {
   const router = useRouter();
-  const slug = router.query.slug as string[] | undefined;
+  const blogSlug = router.query.blogSlug as string[] | undefined;
 
   let categoryName = "";
   let blogName = "";
 
-  if (Array.isArray(slug)) {
-    if (slug.length === 1) {
-      categoryName = slug[0];
-    } else if (slug.length === 2) {
-      categoryName = slug[0];
-      blogName = slug[1];
+  if (Array.isArray(blogSlug)) {
+    if (blogSlug.length === 1) {
+      categoryName = blogSlug[0];
+    } else if (blogSlug.length === 2) {
+      categoryName = blogSlug[0];
+      blogName = blogSlug[1];
     }
   }
 
   const categoryResult = useCategory(categoryName);
   const blogResult = useBlog(categoryName, blogName);
 
-  if (slug?.length === 1) {
+  if (blogSlug?.length === 1) {
     const { error, data, isLoading } = categoryResult;
 
     if (isLoading) {
@@ -62,7 +62,7 @@ export default function View() {
     }
 
     return <div>404: Category not found</div>;
-  } else if (slug?.length === 2) {
+  } else if (blogSlug?.length === 2) {
     const { error, blog, isLoading } = blogResult;
 
     if (isLoading) {

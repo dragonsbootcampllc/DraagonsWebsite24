@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/router';
 import HoverEffect from "@/pages/DragonsSprints/[slug]/Components/card-hover-effectv2";
-import { log } from 'console';
 import { BrainCircuit, Radio, Shapes } from 'lucide-react';
 
 const isConsecutiveDay = (lastDate: string, currentDate: string): boolean => {
@@ -75,20 +74,19 @@ export function CardHoverEffectDemo() {
       title: "Community",
       description: "Join a community of like-minded and interact with instructors and peers in real-time.",
       link: "https://discord.gg/zScyN2xWj3",
-      icon: <Radio className='h-32 w-32 opacity-10 hover:opacity-100' />,
+      icon: <Radio className='h-32 w-32 opacity-10 group-hover:opacity-100 transition-all' />,
     },
     {
       title: "Learn",
       description: "Access course materials, videos, and assignments to enhance your learning.",
-      link: "/DragonsSprints/blogs",
-      icon: <Shapes className='h-32 w-32 opacity-10 hover:opacity-100'/>,
+      link: `/DragonsSprints/${slug}/learn`,
+      icon: <Shapes className='h-32 w-32 opacity-10 group-hover:opacity-100 transition-all'/>,
     },
     {
       title: "PathWays",
       description: "Explore different learning paths for tracks and specialize your knowledge.",
-      link: "/Pathways",
-      icon: <BrainCircuit className='h-32 w-32 opacity-10 hover:opacity-100'/>,
-
+      link: `/Pathways`,
+      icon: <BrainCircuit className='h-32 w-32 opacity-10 group-hover:opacity-100 transition-all'/>,
     },
   ];
 
