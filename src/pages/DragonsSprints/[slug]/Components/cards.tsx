@@ -72,9 +72,9 @@ export function CardHoverEffectDemo() {
 
   const projects = [
     {
-      title: "Live",
-      description: "Join live sessions and interact with instructors and peers in real-time.",
-      link: "",
+      title: "Community",
+      description: "Join a community of like-minded and interact with instructors and peers in real-time.",
+      link: "https://discord.gg/zScyN2xWj3",
       icon: <Radio className='h-32 w-32 opacity-10 hover:opacity-100' />,
     },
     {

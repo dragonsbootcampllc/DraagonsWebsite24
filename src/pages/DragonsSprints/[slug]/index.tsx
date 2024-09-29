@@ -161,7 +161,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
         }
       })
       .catch(() => {
-        setError("An error occurred. Please try again.");
+        setError("Invalid coupon");
         setTimeout(() => {
           setError(""); // Clear the error after 3 seconds
         }, 2000);
@@ -241,8 +241,10 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
                             />
                             <div onClick={handleApplyCoupon} className="h-14 w-64">
                               <ButtonComponentLite CTAtext="Apply Coupon" />
-                              {error && <p style={{ color: "red" }}>{error}</p>}
                             </div>
+                          </div>
+                          <div className="h-5 text-center grid place-items-center gap-4">
+                            {error && <p style={{ color: "red", fontSize: "20px" }}>{error}</p>}
                           </div>
                         </div>
                       </div>
