@@ -89,7 +89,7 @@ const CollapsedLink = ({
 };
 
 export default function Sidebar() {
-  const { categories, error, isLoading } = useCategories();
+  const { categories, error, isLoading } = useCategories('careerSprint');
   const [collapsed, setCollapsed] = useState<boolean[]>([]);
   const lessonStore = useLessonStore();
 
