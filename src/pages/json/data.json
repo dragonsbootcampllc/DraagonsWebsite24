@@ -19,6 +19,59 @@
     "isMaintainer": true
   },
   {
+    "Name": "Mohamed Ali",
+    "personal_photo": "/images/Founders/Managers_Images/Mohamed_Ali.jpg",
+    "tags": [
+      {
+        "position": "Front-End",
+        "city": "Fayoum",
+        "Food": "🍕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/devbn3li/",
+    "Link_profile_Github": "https://github.com/devbn3li",
+    "Link_profile_Discord": "devbn3li",
+    "isBoard": true,
+    "isRecomended": true,
+    "isMaintainer": true
+  },
+  {
+    "Name": "Ahmed Nageh",
+    "personal_photo": "/images/talant/Ahmed_Nageh.jpg",
+    "tags": [
+      {
+        "position": "Back-end",
+        "city": "Cairo",
+        "Food": "🍕",
+        "joinDate": "1/7/2023",
+        "JoinYear": 2
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/ahmed-nagh-a9a48b21b/",
+    "Link_profile_Github": "https://github.com/AhmedNagehAbdelrazek",
+    "Link_profile_Discord": "ahmedmedo1966",
+    "isRecomended": true
+  },
+  {
+    "Name": "Hazem Mohamed",
+    "personal_photo": "/images/talant/Hazem_Mohamed.jpg",
+    "tags": [
+      {
+        "position": "Front-end",
+        "city": "Fayoum",
+        "Food": "🍕",
+        "joinDate": "1/3/2024",
+        "JoinYear": 1
+      }
+    ],
+    "Link_profile_Linkedin": "https://www.linkedin.com/in/hazem-mohamed11/",
+    "Link_profile_Github": "https://github.com/hazem-moh",
+    "Link_profile_Discord": "hazem-moh",
+    "isRecomended": true
+  },
+  {
     "Name": "salaheldin Mohamed",
     "personal_photo": "/images/Founders/WEBP/salah.webp",
     "tags": [
@@ -52,25 +105,6 @@
     "Link_profile_Linkedin": "https://www.linkedin.com/in/eslam-mohamed-moawed/",
     "Link_profile_Github": "https://github.com/Crypt00o",
     "Link_profile_Discord": "",
-    "isBoard": true,
-    "isRecomended": true,
-    "isMaintainer": true
-  },
-  {
-    "Name": "Mohamed Ali",
-    "personal_photo": "/images/Founders/Managers_Images/Mohamed_Ali.jpg",
-    "tags": [
-      {
-        "position": "Front-End",
-        "city": "Fayoum",
-        "Food": "🍕",
-        "joinDate": "1/7/2023",
-        "JoinYear": 2
-      }
-    ],
-    "Link_profile_Linkedin": "https://www.linkedin.com/in/devbn3li/",
-    "Link_profile_Github": "https://github.com/devbn3li",
-    "Link_profile_Discord": "devbn3li",
     "isBoard": true,
     "isRecomended": true,
     "isMaintainer": true
