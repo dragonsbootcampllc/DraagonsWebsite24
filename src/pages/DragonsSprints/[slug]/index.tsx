@@ -53,11 +53,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const pageData: PageData = {
     minisprint_name: "The Developer's Quest with Real-World Scenarios",
     description:
-      '"The Developer\'s Quest With Real-World Scenarios" is an intensive 7 days program designed to guide aspiring developers through various technical career paths. This comprehensive course covers a wide range of topics, from front-end and back-end development to DevOps, full-stack applications, mobile development, and emerging technologies like blockchain and IoT. Through hands-on experience with real-world scenarios, daily mentorship, and industry insights, participants gain practical skills and knowledge to make informed career decisions. The program includes building responsive web applications, creating RESTful APIs, implementing CI/CD pipelines, and exploring data science and machine learning. By the end, participants will have a clear understanding of different tech career paths, hands-on experience with diverse technologies, and valuable connections in the industry.',
+      'The program is designed to provide an in-depth understanding of various tech roles and the industry as a whole, aimed at individuals seeking to explore technical fields, early-career professionals, or those considering a career switch. It kicks off by shifting perspectives, placing students in the shoes of a business owner to help them grasp tech concepts. Key principles like "Don\'t Repeat Yourself" and automation are introduced. Through a simulated SaaS company project, students tackle real-world challenges such as team management, scalability, and budgeting. Later chapters address the tech industry\'s complexity, role inflation, and market differentiation, offering insights into the vast array of positions and responsibilities involved in building a product. The program also provides a roadmap for those wishing to pursue specific tech tracks. By demystifying the tech landscape, it aims to equip students with a solid foundation to navigate the industry effectively.',
     content: {
       duration: "21 hours",
       assignments: "",
-      articles: "8",
+      articles: "50",
       resources: "5",
     },
     Instructors: ["General"],
@@ -75,11 +75,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       "not shy to ask questions. :)",
     ],
     Outcomes: [
-      "Understand the different technical career paths offered in the tech industry.",
-      "Acquire practical experience with real-world scenarios.",
-      "Make informed decisions about your career direction.",
-      "Build a network of peers and potential career connections.",
-      "Gain insights and networking opportunities with experienced mentors and industry professionals.",
+      "Gain a deep understanding of tech roles and their role in product building.",
+      "Develop problem-solving skills through challenges like team management.",
+      "Understand the mindset of tech pros, focusing on efficiency and automation.",
+      "Identify real opportunities by differentiating inflated job titles.",
+      "Build hands-on experience and create a roadmap for tech career paths.",
+      "Expand your network by connecting with peers, mentors, and industry experts.",
+      "Gain confidence in navigating the tech industry and planning your career path."
     ],
     Topics: [
       {
