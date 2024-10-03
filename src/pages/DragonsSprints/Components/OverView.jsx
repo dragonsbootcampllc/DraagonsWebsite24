@@ -17,7 +17,7 @@ function OverView({ description,title }) {
         <span className='w-full'>{title}</span>
         </div>
         <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-200 text-2xl">
-          {isExpanded ? '−' : '+'}
+          {isExpanded ? '-' : '+'}
         </div>
       </div>
       {isExpanded && (

@@ -37,7 +37,7 @@ function CourseHeader({
           {/* Remove description on mobile */}
           <p className='text-base py-2 lg:text-lg font-medium text-gray-200 hidden md:block'>
             Understand career technical paths, with real-world scenarios and
-            intensive 2 weeks of learning, practice, and mentorship.
+            intensive 7 days of learning, practice, and mentorship.
           </p>
         </div>
         <div className='flex gap-8 w-full max-w-2xl flex-row-reverse'>

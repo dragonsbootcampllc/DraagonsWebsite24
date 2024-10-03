@@ -61,11 +61,6 @@ const HoverEffect = ({
                   </div>
                 </div>
                 <CardDescription>{item.description}</CardDescription>
-                {item.title === "PathWays" && !isPathwayOpen && (
-                  <p className="text-red-500 mt-2">
-                    This will be open after 10 days of the 14-day challenge.
-                  </p>
-                )}
               </Card>
             </div>
           ))

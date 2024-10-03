@@ -53,9 +53,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const pageData: PageData = {
     minisprint_name: "The Developer's Quest with Real-World Scenarios",
     description:
-      '"The Developer\'s Quest With Real-World Scenarios" is an intensive 2-week program designed to guide aspiring developers through various technical career paths. This comprehensive course covers a wide range of topics, from front-end and back-end development to DevOps, full-stack applications, mobile development, and emerging technologies like blockchain and IoT. Through hands-on experience with real-world scenarios, daily mentorship, and industry insights, participants gain practical skills and knowledge to make informed career decisions. The program includes building responsive web applications, creating RESTful APIs, implementing CI/CD pipelines, and exploring data science and machine learning. By the end, participants will have a clear understanding of different tech career paths, hands-on experience with diverse technologies, and valuable connections in the industry.',
+      '"The Developer\'s Quest With Real-World Scenarios" is an intensive 7 days program designed to guide aspiring developers through various technical career paths. This comprehensive course covers a wide range of topics, from front-end and back-end development to DevOps, full-stack applications, mobile development, and emerging technologies like blockchain and IoT. Through hands-on experience with real-world scenarios, daily mentorship, and industry insights, participants gain practical skills and knowledge to make informed career decisions. The program includes building responsive web applications, creating RESTful APIs, implementing CI/CD pipelines, and exploring data science and machine learning. By the end, participants will have a clear understanding of different tech career paths, hands-on experience with diverse technologies, and valuable connections in the industry.',
     content: {
-      duration: "70 hours / 2 weeks",
+      duration: "21 hours",
       assignments: "",
       articles: "8",
       resources: "5",
@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     Instructors: ["General"],
     Category: ["General"],
     Level: ["Beginner"],
-    Language: ["Arabic", "English"],
+    Language: ["Arabic"],
     HasCertificate: true,
     requirements: [
       "Basic understanding of programming concepts.",
@@ -163,7 +163,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
       .catch(() => {
         setError("Invalid coupon");
         setTimeout(() => {
-          setError(""); // Clear the error after 3 seconds
+          setError(""); // Clear the error after 2 seconds
         }, 2000);
       });
   };

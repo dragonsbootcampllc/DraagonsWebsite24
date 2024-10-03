@@ -24,10 +24,10 @@ const minisprintData = [
     price: "$30",
     title: "Career Sprint real-world scenarios",
     description:
-      "Understand career technical paths, with real-world scenarios and intensive 2 weeks of learning, practice, and mentorship.",
+      "Understand career technical paths, with real-world scenarios and intensive 7 days of learning, practice, and mentorship.",
     imageUrl: CoverImage.src,
     expandImage: expandCoverImage.src,
-    duration: "2 weeks",
+    duration: "7 days",
     startDate: "2024-07-20",
     exploreUrl: "CareerSprint",
   },
@@ -42,10 +42,10 @@ export default function index() {
           minisprintData.map((minisprint, i) => (
             <MinisprintCard
               movie={{
-                title: "The 14 Day Developer's Quest Career Sprint Challenge",
-                duration: "2h 15m",
+                title: "The 7 Days Developer's Quest Career Sprint Challenge",
+                duration: "21 hours",
                 description:
-                  "Understand career technical paths, with real-world scenarios and intensive 2 weeks of learning, practice, and mentorship.",
+                  "Understand career technical paths, with real-world scenarios and intensive 7 days of learning, practice, and mentorship.",
                 posterImage: CoverImage,
                 expandImage: minisprint.expandImage,
               }}

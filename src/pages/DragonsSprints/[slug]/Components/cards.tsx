@@ -63,7 +63,7 @@ export function CardHoverEffectDemo() {
     if (isLoaded && user) {
       const { elapsedDays } = initializeOrUpdateProgress(user.id, slug);
       setElapsedDays(elapsedDays);
-      setIsPathwayOpen(elapsedDays >= 10);
+      setIsPathwayOpen(elapsedDays >= 0);
       console.log("isPathwayOpen out", isPathwayOpen);
 
     }

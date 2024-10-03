@@ -17,7 +17,7 @@ const StreakVisualizer = ({
   daysLeft: number;
   userImageUrl?: string;
 }) => {
-  const totalDays = 14;
+  const totalDays = 7;
   const completedDays = totalDays - daysLeft;
   const [animate, setAnimate] = useState(false);
 
@@ -74,7 +74,7 @@ export default function ExplorePage() {
   const { user, isLoaded } = useUser();
   const [hasAccess, setHasAccess] = useState(false);
   const [startDate, setStartDate] = useState<Date | null>(null);
-  const [daysLeft, setDaysLeft] = useState(14);
+  const [daysLeft, setDaysLeft] = useState(7);
   const [missedDays, setMissedDays] = useState(0);
   const [streakInfo, setStreakInfo] = useState<StreakInfo>({
     currentStreak: 0,
@@ -115,7 +115,7 @@ export default function ExplorePage() {
     }
     setStreakInfo(currentStreakInfo);
 
-    // 14-day challenge tracking
+    // 7-day challenge tracking
     const savedStartDate = localStorage.getItem(`${slug}_startDate`);
     if (savedStartDate) {
       setStartDate(new Date(savedStartDate));
@@ -142,7 +142,7 @@ export default function ExplorePage() {
       const elapsedDays = Math.floor(
         (today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
       );
-      setDaysLeft(Math.max(0, 14 - elapsedDays));
+      setDaysLeft(Math.max(0, 7 - elapsedDays));
     }
   }, [isLoaded, user, slug, startDate]);
 
@@ -180,7 +180,7 @@ export default function ExplorePage() {
   const resetChallenge = () => {
     const newStartDate = new Date();
     setStartDate(newStartDate);
-    setDaysLeft(14);
+    setDaysLeft(7);
     setMissedDays(0);
     localStorage.setItem(`${slug}_startDate`, newStartDate.toISOString());
     localStorage.setItem(`${slug}_lastVisit`, newStartDate.toISOString());
@@ -244,13 +244,13 @@ export default function ExplorePage() {
               className='text-white/50 font-sans text-lg md:text-base container mx-auto flex flex-col gap-7 justify-center text-center max-w-[800px] pt-5'>
               {daysLeft > 0
                 ? `You have ${daysLeft} days left in your challenge. Keep going!`
-                : "Congratulations! You've completed the 14-day challenge!"}
+                : "Congratulations! You've completed the 7-day challenge!"}
             </p>
 
             <div
               style={{ fontFamily: "interV" }}
               className='text-3xl md:text-6xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
-              Hi {user?.firstName}! Welcome to Your 14-Day Challenge
+              Hi {user?.firstName}! Welcome to Your 7-Day Challenge
             </div>
 
             <p className='text-green-400 text-lg md:text-base text-center pt-3'>
