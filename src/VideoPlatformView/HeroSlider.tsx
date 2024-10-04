@@ -30,7 +30,7 @@ export default function HeroSlider(props: { exploreUrl: string }) {
             {/* Remove description on mobile */}
             <p className='text-base py-2 lg:text-lg font-medium text-gray-200 hidden md:block'>
               Understand career technical paths, with real-world scenarios and
-              intensive 2 weeks of learning, practice, and mentorship.
+              intensive 7 days of learning, practice, and mentorship.
             </p>
             {/* Buttons (remove on mobile) */}
             <div className='lg:flex gap-4 hidden mt-4 justify-left md:justify-start'>
