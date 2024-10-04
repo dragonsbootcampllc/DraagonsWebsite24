@@ -106,7 +106,7 @@ const OverView: React.FC<OverViewProps> = ({
   };
 
   return (
-    <div className="max-w-[20rem] bg-purple-800/20 rounded-3xl">
+    <div className="max-w-[20rem] h-full bg-purple-800/20 rounded-3xl">
       {/* Tabs */}
       <div className="flex">
         <button
@@ -132,7 +132,7 @@ const OverView: React.FC<OverViewProps> = ({
       </div>
 
       {/* Content */}
-      <div className="mt-4 shadow-md min-h-screen rounded-lg w-full px-6">
+      <div className="mt-4 shadow-md rounded-lg w-full px-6">
         {renderContent()}
       </div>
     </div>

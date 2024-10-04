@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/pricing.module.css";
 import ButtonComponent from "../Micros/Button";
 import ButtonComponentlite from "../Micros/ButtonLite";
@@ -27,7 +27,7 @@ export interface PricingTier {
 }
 
 interface PricingTierCardProps {
-    tier: PricingTier;
+  tier: PricingTier;
   frequency: PricingTierFrequency;
 }
 
@@ -38,6 +38,15 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
   const [coupon, setCoupon] = useState<string>("");
   const [discount, setDiscount] = useState<number>(0);
   const [error, setError] = useState<string>("");
+
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => {
+        setError("");
+      }, 2000); // Hide error after 2 seconds
+      return () => clearTimeout(timer); // Clear timeout if error changes
+    }
+  }, [error]);
 
   // Function to handle applying coupon
   const handleApplyCoupon = () => {
@@ -63,7 +72,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
         }
       })
       .catch((err) => {
-        setError("An error occurred. Please try again.");
+        setError("Invalid coupon code");
         setDiscount(0);
       });
   };
@@ -107,7 +116,7 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
           <div className="h-px flex-auto bg-gray-700" />
         </div>
         {/* Coupon code section */}
-        <div className="mt-4 text-center grid place-items-center gap-4">
+        <div className="mt-4 text-center grid place-items-center gap-3">
           <h1 className="text-2xl text-gray-400">Have a coupon code?</h1>
           <input
             type="text"
@@ -116,9 +125,11 @@ const PricingTierCard: React.FC<PricingTierCardProps> = ({
             value={coupon}
             onChange={handleCouponChange}
           />
-          <div onClick={handleApplyCoupon} className="h-16 w-64">
+          <div className="h-4">
+            {error && <p style={{ color: "red", fontSize: "20px" }}>{error}</p>}
+          </div>
+          <div onClick={handleApplyCoupon} className="h-14 w-60">
             <ButtonComponentlite CTAtext="Apply Coupon" />
-            {error && <p style={{ color: "red" }}>{error}</p>}
           </div>
         </div>
       </div>
