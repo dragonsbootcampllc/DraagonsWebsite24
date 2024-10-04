@@ -2,7 +2,7 @@ import axios from 'axios';
 import useSWR from 'swr';
 
 // Define Constants
-const BASE_URL = '/DragonsSprints/blogs';
+const BASE_URL = '/DragonsSprints/CareerSprint/learn';
 
 // Define types/interfaces
 interface CategorySummary {
@@ -100,12 +100,6 @@ function useBlog(categoryName: string, blogName: string) {
 //         isLoading: !error && !data,
 //     };
 // }
-
-export default function NULL () {
-    return (
-        <></>
-    );
-}
 
 export { useCategories, useCategory, useBlog, BASE_URL, importIcon };
 export type { CategorySummary, BlogSummary, BlogDetails, Category, Quiz };
