@@ -23,7 +23,7 @@ interface Quiz {
     options: string[];
 }
 
-interface BlogDetails {
+interface BlogDetails { 
     title: string;
     icon: string; // SVG HTML string
     description: string;
