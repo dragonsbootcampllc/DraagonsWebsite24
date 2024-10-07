@@ -28,7 +28,6 @@ const OverView: React.FC<OverViewProps> = ({
   const limitedTags = Array.isArray(tags) ? tags.slice(0, Math.max(3, Math.min(tags.length, 6))) : [];
   const limitedDescription = Description.slice(0, 150);
 
-  // Function to render content based on the active tab
   const renderContent = () => {
     if (activeTab === "overview") {
       return (
@@ -40,7 +39,7 @@ const OverView: React.FC<OverViewProps> = ({
             </span>
           </p>
           <h2 className="mt-2 text-4xl max-md:text-3xl font-bold text-white">
-            Mini Sprint
+            Developer Quest
           </h2>
           <div className="mt-4">
             {limitedTags.map((tag, index) => (
@@ -91,14 +90,14 @@ const OverView: React.FC<OverViewProps> = ({
               <FaRegClock size={20} />
               <p className="text-lg font-semibold">Duration</p>
             </div>
-            <p className="text-lg text-gray-400">20 hours</p>
+            <p className="text-lg text-gray-400">21 hours</p>
           </div>
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <CgMediaLive size={20} />
               <p className="text-lg font-semibold">Live Sessions</p>
             </div>
-            <p className="text-lg text-gray-400">Weekly</p>
+            <p className="text-lg text-gray-400">Daily</p>
           </div>
         </div>
       );

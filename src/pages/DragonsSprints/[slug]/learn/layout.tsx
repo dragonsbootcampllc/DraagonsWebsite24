@@ -84,10 +84,10 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
           <div className="max-w-[20rem] w-full max-lg:hidden h-screen sticky top-24 no-scrollbar">
             <OverView
               Instructor="Dragons Team"
-              tags={["React", "JavaScript", "CSS"]}
-              Description="This is a brief description of the course."
+              // tags={["React", "JavaScript", "CSS"]}
+              Description="Understand career technical paths, with real-world scenarios and intensive 7 days of learning, practice, and mentorship."
               LessonNum={5}
-              Topics={["Introduction", "Components", "State Management"]}
+              Topics={["Introduction", "Why it's A lot?!", "Positions Battle", "The Golden RoadMap"]}
             />
           </div>
         </div>
