@@ -101,5 +101,9 @@ function useBlog(categoryName: string, blogName: string) {
 //     };
 // }
 
+export default function Null() {
+    return (<></>)
+}
+
 export { useCategories, useCategory, useBlog, BASE_URL, importIcon };
 export type { CategorySummary, BlogSummary, BlogDetails, Category, Quiz };
