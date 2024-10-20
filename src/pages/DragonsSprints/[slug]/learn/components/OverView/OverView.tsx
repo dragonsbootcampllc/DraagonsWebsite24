@@ -32,13 +32,13 @@ const OverView: React.FC<OverViewProps> = ({
     if (activeTab === "overview") {
       return (
         <div>
-          <p className="text-lg text-gray-400">
+          <p lang="en" dir="ltr" className="text-lg text-gray-400">
             Course By{" "}
             <span className="text-purple-500 hover:text-purple-600 cursor-pointer font-medium">
               {Instructor}
             </span>
           </p>
-          <h2 className="mt-2 text-4xl max-md:text-3xl font-bold text-white">
+          <h2 lang="en" dir="ltr" className="mt-2 text-4xl max-md:text-3xl font-bold text-white">
             Developer Quest
           </h2>
           <div className="mt-4">
@@ -55,7 +55,7 @@ const OverView: React.FC<OverViewProps> = ({
             <p className="text-lg text-gray-400">{limitedDescription}</p>
           </div>
           <div className="mt-4">
-            <h3 className="text-2xl font-semibold">
+            <h3 lang="en" dir="ltr" className="text-2xl font-semibold">
               This course will have {LessonNum} Topics
             </h3>
             <ol>
@@ -105,7 +105,7 @@ const OverView: React.FC<OverViewProps> = ({
   };
 
   return (
-    <div className="max-w-[20rem] h-full bg-purple-800/20 rounded-3xl">
+    <div className="max-w-[20rem] h-[80%] bg-purple-800/20 rounded-3xl">
       {/* Tabs */}
       <div className="flex">
         <button

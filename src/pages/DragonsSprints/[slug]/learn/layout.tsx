@@ -32,7 +32,7 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <div className="grid font-sans px-[5%] mb-20 relative z-20 place-items-center">
+    <div dir="rtl" lang="ar" className="grid font-sans px-[5%] mb-20 relative z-20 place-items-center">
       <div className="w-full relative grid pt-20 max-w-[1600px]">
         <div className="w-full flex relative">
           {/* Sidebar - fixed */}
@@ -70,18 +70,19 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
 
           {/* Overview section - fixed */}
           <div className="max-w-[20rem] w-full max-lg:hidden h-screen sticky top-24 no-scrollbar">
-            <OverView
+          <OverView
               Instructor="Dragons Team"
               // tags={["React", "JavaScript", "CSS"]}
-              Description="Understand career technical paths, with real-world scenarios and intensive 7 days of learning, practice, and mentorship."
+              Description="فهم المسارات الفنية المهنية مع سيناريوهات من الواقع الفعلي وتعلم مكثف لمدة 7 أيام من الممارسة والإرشاد."
               LessonNum={5}
               Topics={[
-                "Introduction",
-                "Why it's A lot?!",
-                "Positions Battle",
-                "The Golden RoadMap",
+                "مقدمة",
+                "لماذا هذا كثير؟!",
+                "معركة المناصب",
+                "خريطة الطريق الذهبية",
               ]}
             />
+
           </div>
         </div>
       </div>

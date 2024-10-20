@@ -106,8 +106,10 @@ export default function Sidebar() {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="h-full bg-purple-800/20 rounded-3xl px-6 max-w-[20rem] relative md:flex flex-col gap-4">
+    <div className="h-[80%] bg-purple-800/20 rounded-3xl px-6 max-w-[20rem] relative md:flex flex-col gap-4">
       <Link
+        dir='ltr'
+        lang='en'
         href={BASE_URL || ''}
         className="w-full mt-4 hover:bg-purple-800/20 py-2 px-6 rounded-3xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center"
       >
