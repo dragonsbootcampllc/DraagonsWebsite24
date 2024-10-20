@@ -6,6 +6,7 @@ import ButtonComponent from "@/components/Micros/Button";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Loading from "@/components/Loading";
 
 function VideoComponenet({
   duration,
@@ -33,7 +34,7 @@ function VideoComponenet({
   }, [isLoaded, user, slug]);
 
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   const renderInfoItem = (text: string) => (

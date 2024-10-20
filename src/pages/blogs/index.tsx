@@ -3,12 +3,13 @@ import Link from "next/link";
 import { FaQuestion } from "react-icons/fa";
 import Layout from "./layout";
 import { BASE_URL, useCategories, CategorySummary } from "@/utils/blog";
+import Loading from "@/components/Loading";
 
 export function BlogDiscovery() {
   const { categories, error, isLoading } = useCategories();
 
   if (error) return <div>Failed to load</div>;
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loading />;
 
   return (
     <Layout>

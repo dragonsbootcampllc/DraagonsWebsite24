@@ -32,7 +32,7 @@ const TopicCard = memo(({ topic }: TopicCardProps) => (
 
 TopicCard.displayName = 'TopicCard';
 
-function Topics({ Topics, title }: { Topics: any[], title: string }) {
+function Topics({ topics, title }: { topics: any[], title: string }) {
   const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleExpand = useCallback(() => {
@@ -54,7 +54,7 @@ function Topics({ Topics, title }: { Topics: any[], title: string }) {
       {isExpanded && (
         <div className='px-3 md:px-6 relative py-3'>
           <div className='grid grid-cols-1 relative sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-            {Topics && Topics.map((topic, index) => (
+            {topics && topics.map((topic, index) => (
               <TopicCard key={topic.id || index} topic={topic} />
             ))}
           </div>

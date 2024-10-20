@@ -11,6 +11,7 @@ import {
   BlogDetails,
 } from "./utils/blog";
 import BlogView from "./components/BlogView";
+import Loading from "@/components/Loading";
 
 export default function View() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function View() {
     const { error, data, isLoading } = categoryResult;
 
     if (isLoading) {
-      return <div>Loading...</div>;
+      return <Loading />;
     }
 
     if (error) {
@@ -66,7 +67,7 @@ export default function View() {
     const { error, blog, isLoading } = blogResult;
 
     if (isLoading) {
-      return <div className="w-full min-h-screen grid place-items-center">Loading...</div>;
+      return <Loading />
     }
 
     if (error) {

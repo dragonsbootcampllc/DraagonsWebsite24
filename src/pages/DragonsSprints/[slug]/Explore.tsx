@@ -3,6 +3,7 @@ import { useUser } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
 import CardNavOptions from "@/pages/DragonsSprints/[slug]/Components/cards";
 import CheckoutButton from "@/components/CheckoutButton";
+import Loading from "@/components/Loading";
 
 interface StreakInfo {
   currentStreak: number;
@@ -187,19 +188,7 @@ export default function ExplorePage() {
   };
 
   if (!isLoaded || !slug) {
-    return (
-      <div
-        id='global-bg'
-        className='hero relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
-        <div className='container mx-auto pt-[120px] md:pt-[140px] flex flex-col justify-between gap-9 items-center px-4'>
-          <div className='content flex flex-col gap-12'>
-            <h1 className='md:text-2xl grid place-items-center text-xl text-center  font-medium text-gray-50/70 capitalize'>
-              Loading...
-            </h1>
-          </div>
-        </div>
-      </div>
-    );
+    return (<Loading />);
   }
 
   if (!hasAccess) {

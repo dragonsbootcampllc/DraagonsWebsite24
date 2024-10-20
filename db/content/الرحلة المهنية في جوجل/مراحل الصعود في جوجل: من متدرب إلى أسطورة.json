@@ -1,0 +1,56 @@
+{
+    "title": "مراحل الصعود في جوجل: من متدرب إلى أسطورة",
+    "description": "اكتشف المراحل المختلفة في مسيرة مهندسي البرمجيات في جوجل، من مستوى المتدرب وصولاً إلى أعلى المستويات التقنية.",
+    "quiz": [
+        {
+            "question": "ما هو المستوى الأول في السلم الوظيفي لجوجل؟",
+            "options": [
+                "Software Engineer I",
+                "Intern",
+                "Staff Software Engineer",
+                "Senior Software Engineer"
+            ],
+            "_answer": "Intern"
+        },
+        {
+            "question": "في أي مستوى يبدأ المهندس بتحمل مسؤوليات أكبر؟",
+            "options": [
+                "Software Engineer I",
+                "Software Engineer III",
+                "Staff Software Engineer",
+                "Principal Engineer"
+            ],
+            "_answer": "Software Engineer II"
+        },
+        {
+            "question": "ماذا يحصل في مستوى Senior Software Engineer؟",
+            "options": [
+                "تحمل مسؤوليات كبيرة",
+                "الانتقال إلى Google Fellow",
+                "قيادة فريق",
+                "العمل على مشاريع صغيرة"
+            ],
+            "_answer": "تحمل مسؤوليات كبيرة"
+        },
+        {
+            "question": "ما هو أعلى مستوى تقني في جوجل؟",
+            "options": [
+                "Google Fellow",
+                "Principal Engineer",
+                "Distinguished Engineer",
+                "Senior Google Fellow"
+            ],
+            "_answer": "Senior Google Fellow"
+        },
+        {
+            "question": "ماذا يُميز مستوى Google Fellow؟",
+            "options": [
+                "القيادة التقنية",
+                "المسؤولية عن رؤية الشركة",
+                "التأثير على مستقبل البشرية",
+                "كل ما سبق"
+            ],
+            "_answer": "كل ما سبق"
+        }
+    ]
+}

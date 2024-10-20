@@ -8,6 +8,7 @@ import {
     CategorySummary,
     useCategories,
 } from "../../../utils/blog";
+import Loading from "@/components/Loading";
 
 // Define the CollapsedLinkProps interface
 interface CollapsedLinkProps {
@@ -90,7 +91,7 @@ export default function Sidebar() {
     };
 
     if (error) return <div>Failed to load</div>;
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <Loading />;
 
     return (
         <div className='border-r-2 h-full hidden border-r-slate-200/20 w-[22rem]  relative min-h-screen md:flex flex-col gap-4 '>

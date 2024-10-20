@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { BASE_URL, CategorySummary, useCategories } from '../../utils/blog';
 import useLessonStore from '@/stores/useLessonStore';
+import Loading from "@/components/Loading";
 
 interface CollapsedLinkProps {
   title: string;
@@ -43,11 +44,11 @@ const CollapsedLink = ({
             className="cursor-pointer hover:bg-[#1b1731] pl-2 rounded-3xl h-16 relative flex justify-center place-items-center items-center font-semibold w-full box-border text-start"
           >
             <div>
-            <div className="h-12 w-12 flex justify-center items-center rounded-full bg-purple-800 text-white mr-2">
-              {progress}%
+              <div className="h-12 w-12 flex justify-center items-center rounded-full bg-purple-800 text-white mx-2">
+                {progress}%
+              </div>
             </div>
-            </div>
-            <p className="w-full place-items-center text-xl relative">{title}</p>
+            <p className="w-full place-items-center text-xl relative" lang='ar' dir='rtl'>{title}</p>
             <span className="h-full py-3 px-3 flex justify-center items-center">
               <span className={`${isCollapsed ? 'rotate-0' : 'rotate-90'}`}>
                 <IoIosArrowForward />
@@ -63,11 +64,11 @@ const CollapsedLink = ({
                 className='inline-block py-1 group w-full transition-all h-full cursor-pointer'
                 onClick={() => handleBlogClick(title, blog_name)}
               >
-                <span className='inline-flex items-center group-hover:bg-[#1b1731] rounded-3xl p-2 w-[calc(100%-2rem)] transition-all h-full'>
+                <span className='inline-flex items-center group-hover:bg-[#1b1731] rounded-3xl p-2 w-[calc(100%-2rem)] transition-all h-full' lang='ar' dir='rtl'>
                   {completedBlogs.includes(blog_name) ? (
-                    <FaCheck className='text-purple-500 mr-2' />
+                    <FaCheck className='text-purple-500 mx-2' />
                   ) : (
-                    <span className='w-6 h-6 mr-2 border rounded-full border-purple-500'>
+                    <span className='w-6 h-6 mx-2 border rounded-full border-purple-500'>
                       <span className='w-5 h-5 rounded-full'></span>
                     </span>
                   )}
@@ -102,7 +103,7 @@ export default function Sidebar() {
   };
 
   if (error) return <div>Failed to load</div>;
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loading />;
 
   return (
     <div className="h-full bg-purple-800/20 rounded-3xl px-6 max-w-[20rem] relative md:flex flex-col gap-4">

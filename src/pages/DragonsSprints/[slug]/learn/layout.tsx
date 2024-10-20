@@ -24,45 +24,33 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
     let currentUrl = "";
     return titles.map((title) => {
       currentUrl += "/" + title;
-      return { title: formatTitles(decodeURIComponent(title)), url: currentUrl };
+      return {
+        title: formatTitles(decodeURIComponent(title)),
+        url: currentUrl,
+      };
     });
   };
 
   return (
     <div className="grid font-sans px-[5%] mb-20 relative z-20 place-items-center">
-      <div className="w-full relative grid pt-20 max-w-[1400px]">
+      <div className="w-full relative grid pt-20 max-w-[1600px]">
         <div className="w-full flex relative">
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           {/* Sidebar - fixed */}
           <div className="max-w-[20rem] w-full max-md:hidden sticky top-24 h-screen overflow-y-auto no-scrollbar">
             <BlogSidebar />
           </div>
 
           {/* Main Content Area */}
-          <div className="w-full max-w-[750px] relative px-2 md:px-10 flex flex-col">
+          <div className="w-full max-w-[950px] relative px-2 md:px-10 flex flex-col">
             {/* Breadcrumb navigation */}
             <div className="w-full min-h-12 select-none text-gray-400 box-border flex items-center md:text-2xl mb-10 md:m-0 gap-4 font-semibold">
               <div className="flex items-center gap-2">
                 {currentUrlEnds().map(({ title, url }, index, arr) => (
                   <span key={index} className="flex items-center">
                     <Link href={url}>
-                      <span className={`cursor-pointer hover:text-purple-500 ${index + 1 === arr.length ? "text-slate-200" : "text-gray-500"}`}>
+                      <span
+                        className={`cursor-pointer hover:text-purple-500 ${index + 1 === arr.length ? "text-slate-200" : "text-gray-500"}`}
+                      >
                         {title}
                       </span>
                     </Link>
@@ -87,7 +75,12 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
               // tags={["React", "JavaScript", "CSS"]}
               Description="Understand career technical paths, with real-world scenarios and intensive 7 days of learning, practice, and mentorship."
               LessonNum={5}
-              Topics={["Introduction", "Why it's A lot?!", "Positions Battle", "The Golden RoadMap"]}
+              Topics={[
+                "Introduction",
+                "Why it's A lot?!",
+                "Positions Battle",
+                "The Golden RoadMap",
+              ]}
             />
           </div>
         </div>

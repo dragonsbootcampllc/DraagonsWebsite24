@@ -3,12 +3,13 @@ import Link from "next/link";
 import { FaQuestion } from "react-icons/fa";
 import Layout from "./layout";
 import { BASE_URL, useCategories, CategorySummary } from "./utils/blog";
+import Loading from "@/components/Loading";
 
 export function BlogDiscovery() {
   const { categories, error, isLoading } = useCategories('careerSprint');
 
   if (error) return <div>Failed to load</div>;
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loading />;
 
   return (
     <Layout>
@@ -51,9 +52,9 @@ export function BlogDiscovery() {
                   <span className='text-6xl md:text-8xl text-white'>
                     <Icon />
                   </span>
-                  <span className="text-purple-500 group-hover:text-purple-700 duration-300">
+                  <span className="text-purple-500 group-hover:text-purple-700 duration-300" lang="ar" dir="rtl">
                     {category}
-                    <span className='text-slate-400 break-all pl-2'>
+                    <span className='text-slate-400 break-all px-2'>
                       {description}
                     </span>
                   </span>

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import ButtonComponent from "@/components/Micros/Button";
+import Loading from "@/components/Loading";
 import ButtonComponentLite from "@/components/Micros/ButtonLite";
 import { Document_1, Time_1 } from "@/components/Icons";
 import CourseHeader from "@/pages/DragonsSprints/Components/Header/CourseHeader";
@@ -152,12 +153,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
 
   if (router.isFallback || (!isLoaded && !user) || loading) {
     return (
-      <div className="min-w-full min-h-screen flex justify-center items-center">
-        <div className="flex flex-col items-center">
-          <img src="/images/loading.svg" alt="loading..." />
-          <p className="text-2xl font-semibold">Loading...</p>
-        </div>
-      </div>
+      <Loading />
     );
   }
 
