@@ -152,9 +152,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
   };
 
   if (router.isFallback || (!isLoaded && !user) || loading) {
-    return (
-      <Loading />
-    );
+    return <Loading />;
   }
 
   return (
@@ -175,7 +173,7 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
             <div className="w-full md:w-2/3">
               <div className="flex-shrink w-full flex flex-col gap-4">
                 <OverViewComponent description={pageData.description} title="Overview" />
-                <TopicsComponent Topics={pageData.Topics} title="Topics" />
+                <TopicsComponent topics={pageData.Topics} title="Topics" />
                 <Transformation
                   title="Transformation"
                   Requirements={pageData.requirements}

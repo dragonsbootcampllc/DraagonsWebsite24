@@ -127,31 +127,50 @@ export default function BlogView({
             ),
             img: ({ node, ...props }) => {
               const { alt, src } = props;
-              if (src.endsWith('.video')) {
-                  const videoSrc = src.slice(0, src.length - 6);
-                  return (
-                      <video autoPlay className="my-4 block max-h-[700px] aspect-video max-w-[700px] w-full m-auto rounded-3xl shadow transition-all" {...props} src={videoSrc} alt={alt}></video>
-                  );
-              } else if (src.endsWith('.iframe')) {
-                  const videoSrc = src.slice(0, src.length - 7);
-                  return (<iframe className="my-4 block max-h-[700px] max-w-[700px] aspect-video w-full m-auto rounded-3xl shadow transition-all" src={videoSrc} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" {...props} allowfullscreen></iframe>)
-              } else if (src.endsWith('.logo')) {
-                  const logoSrc = src.slice(0, src.length - 5);
+              if (!src) return null;  // Add this check for undefined src
 
-                  return (
-                      <img
-                          className="my-4 block max-h-[200px] max-w-[200px] w-full rounded-sm active:shadow-xl active:z-50 transition-all select-none"
-                          {...props}
-                          src={logoSrc}
-                      />
-                  );
+              if (src.endsWith('.video')) {
+                const videoSrc = src.slice(0, src.length - 6);
+                return (
+                  <video 
+                    autoPlay 
+                    className="my-4 block max-h-[700px] aspect-video max-w-[700px] w-full m-auto rounded-3xl shadow transition-all" 
+                    {...(props as React.VideoHTMLAttributes<HTMLVideoElement>)} 
+                    src={videoSrc} 
+                  />
+                );
+              } else if (src.endsWith('.iframe')) {
+                const videoSrc = src.slice(0, src.length - 7);
+                return (
+                  <iframe 
+                    className="my-4 block max-h-[700px] max-w-[700px] aspect-video w-full m-auto rounded-3xl shadow transition-all" 
+                    src={videoSrc} 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    {...(props as React.IframeHTMLAttributes<HTMLIFrameElement>)} 
+                    allowFullScreen
+                  />
+                );
+              } else if (src.endsWith('.logo')) {
+                const logoSrc = src.slice(0, src.length - 5);
+                return (
+                  <img
+                    className="my-4 block max-h-[200px] max-w-[200px] w-full rounded-sm active:shadow-xl active:z-50 transition-all select-none"
+                    {...props}
+                    src={logoSrc}
+                    alt={alt}
+                  />
+                );
               } else {
-                  return (
-                      <img
-                          className="my-4 inline-block max-h-[700px] max-w-[700px] m-auto cursor-zoom-in w-full rounded-3xl active:scale-150 active:shadow-xl shadow active:z-50 transition-all select-none"
-                          {...props}
-                      />
-                  );
+                return (
+                  <img
+                    className="my-4 inline-block max-h-[700px] max-w-[700px] m-auto cursor-zoom-in w-full rounded-3xl active:scale-150 active:shadow-xl shadow active:z-50 transition-all select-none"
+                    {...props}
+                    alt={alt}
+                  />
+                );
               }
             },
             li: ({ node, ...props }) => (
@@ -174,7 +193,7 @@ export default function BlogView({
           {markdownContent}
         </ReactMarkdown>
 
-        {quiz && 0 != quiz.length ? (
+        {quiz && quiz.length !== 0 ? (
           <div className="mt-20">
             <h2 className="font-bold mb-4 max-md:font-bold text-6xl text-purple-500 max-md:text-3xl">
               اختبر معلوماتك
@@ -190,9 +209,7 @@ export default function BlogView({
               />
             </div>
           </div>
-        ) : (
-          <></>
-        )}
+        ) : null}
       </div>
 
       <div
@@ -202,7 +219,6 @@ export default function BlogView({
       >
         <OverView
           Instructor="Dragons Team"
-          // tags={["React", "JavaScript", "CSS"]}
           Description="Understand career technical paths, with real-world scenarios and intensive 7 days of learning, practice, and mentorship."
           LessonNum={5}
           Topics={[
