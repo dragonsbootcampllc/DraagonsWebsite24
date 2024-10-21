@@ -17,6 +17,7 @@ import Topic1 from "@/../public/images/DragonsSprint-CarrerSprint/IntroductionPo
 import Topic2 from "@/../public/images/DragonsSprint-CarrerSprint/WhyitsalotPoster.png";
 import Topic3 from "@/../public/images/DragonsSprint-CarrerSprint/Positionbattleposter.png";
 import Topic4 from "@/../public/images/DragonsSprint-CarrerSprint/theMaze.jpeg";
+import CheckoutButton from "@/components/CheckoutButton";
 
 interface PageData {
   minisprint_name: string;
@@ -153,6 +154,29 @@ function CourseDetailPage({ pageData }: { pageData: PageData }) {
 
   if (router.isFallback || (!isLoaded && !user) || loading) {
     return <Loading />;
+  }
+
+  if (!user) {
+    return (
+      <div
+        id='global-bg'
+        className='hero relative min-h-[700px] md:min-h-[calc(100vh-12rem)]'>
+        <div className='container mx-auto pt-[120px] md:pt-[140px] flex flex-col justify-between gap-9 items-center px-4'>
+          <div className='content flex flex-col gap-12'>
+            <div
+              style={{ fontFamily: "interV" }}
+              className='text-3xl md:text-6xl capitalize content-center max-w-4xl text-center z-10 flex justify-center m-auto relative mb-3 text-gray-200 font-semibold'>
+              Sorry! You have to login 🚧
+            </div>
+            <CheckoutButton
+              CTAtext='Login'
+              className='!h-fit'
+              createCheckoutSession='/api/Checkout-DragonsSprint'
+            />
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

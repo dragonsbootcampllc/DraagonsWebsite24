@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { BASE_URL, CategorySummary, useCategories } from '../../utils/blog';
 import useLessonStore from '@/stores/useLessonStore';
+import { Circle } from 'rc-progress';
 import Loading from "@/components/Loading";
 
 interface CollapsedLinkProps {
@@ -41,12 +42,11 @@ const CollapsedLink = ({
         <>
           <button
             onClick={onClick}
-            className="cursor-pointer hover:bg-[#1b1731] pl-2 rounded-3xl h-16 relative flex justify-center place-items-center items-center font-semibold w-full box-border text-start"
+            className="cursor-pointer transition-all hover:bg-[#1b1731] px-0.5 rounded-[32px] h-16 relative flex justify-center place-items-center items-center font-semibold w-full box-border text-start"
           >
-            <div>
-              <div className="h-12 w-12 flex justify-center items-center rounded-full bg-purple-800 text-white mx-2">
-                {progress}%
-              </div>
+            <div className="h-12 relative aspect-square flex-shrink-0 text-sm font-semibold flex justify-center items-center rounded-full bg-black/10 text-white mx-2">
+              <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[9px]'>{progress}%</span>
+              <Circle percent={progress} strokeWidth={4} strokeColor="#6b21a8" /> 
             </div>
             <p className="w-full place-items-center text-xl relative" lang='ar' dir='rtl'>{title}</p>
             <span className="h-full py-3 px-3 flex justify-center items-center">
@@ -64,15 +64,13 @@ const CollapsedLink = ({
                 className='inline-block py-1 group w-full transition-all h-full cursor-pointer'
                 onClick={() => handleBlogClick(title, blog_name)}
               >
-                <span className='inline-flex items-center group-hover:bg-[#1b1731] rounded-3xl p-2 w-[calc(100%-2rem)] transition-all h-full' lang='ar' dir='rtl'>
+                <span className='inline-flex gap-2 items-center group-hover:bg-[#1b1731] rounded-3xl p-2 w-[calc(100%-2rem)] transition-all h-full' lang='ar' dir='rtl'>
                   {completedBlogs.includes(blog_name) ? (
-                    <FaCheck className='text-purple-500 mx-2' />
+                    <FaCheck className='text-purple-500 flex-shrink-0' />
                   ) : (
-                    <span className='w-6 h-6 mx-2 border rounded-full border-purple-500'>
-                      <span className='w-5 h-5 rounded-full'></span>
-                    </span>
+                    <span className='w-6 inline-block flex-shrink-0 aspect-square border rounded-full border-purple-500'></span>
                   )}
-                  {blog_name}
+                  <span>{blog_name}</span>
                 </span>
               </span>
             ))}
@@ -106,19 +104,17 @@ export default function Sidebar() {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="h-[80%] bg-purple-800/20 rounded-3xl px-6 max-w-[20rem] relative md:flex flex-col gap-4">
+    <div className="h-[80%] bg-purple-800/20 rounded-[26px] px-2 max-w-[20rem] relative md:flex flex-col gap-4">
       <Link
-        dir='ltr'
-        lang='en'
         href={BASE_URL || ''}
-        className="w-full mt-4 hover:bg-purple-800/20 py-2 px-6 rounded-3xl flex gap-3 text-slate-100 font-semibold mb-3 text-xl items-center"
+        className="w-full mt-2 hover:bg-purple-800/20 py-2 px-6 rounded-3xl flex gap-3 text-slate-100 font-semibold text-2xl items-center"
       >
-        <span className="text-2xl bg-purple-800 p-[6px] rounded-xl ">
-          <FaRegNewspaper className="h-5 w-5" />
+        <span className="text-4xl bg-purple-800 p-[6px] rounded-xl ">
+          <FaRegNewspaper className="h-6 w-6" />
         </span>
-        <span>Start Guides</span>
+        <span>اكتشف المحتوى</span>
       </Link>
-      <div className="flex flex-col gap-2 h-screen pt-4 overflow-y-auto no-scrollbar">
+      <div className="flex flex-col gap-2 h-screen overflow-y-auto no-scrollbar">
         {categories &&
           categories.map(
             ({ blogs, category }: CategorySummary, index: number) => {

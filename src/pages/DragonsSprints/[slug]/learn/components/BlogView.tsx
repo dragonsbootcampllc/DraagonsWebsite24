@@ -75,6 +75,7 @@ export default function BlogView({
   return (
     <div
       dir="rtl"
+      lang="ar"
       className={`h-full font-sans relative max-w-[1600px] w-full flex pt-16`}
     >
       <div className="max-w-[20rem] w-full max-md:hidden sticky top-24 h-screen overflow-y-auto no-scrollbar">
@@ -127,33 +128,33 @@ export default function BlogView({
             ),
             img: ({ node, ...props }) => {
               const { alt, src } = props;
-              if (!src) return null;  // Add this check for undefined src
+              if (!src) return null; // Add this check for undefined src
 
-              if (src.endsWith('.video')) {
+              if (src.endsWith(".video")) {
                 const videoSrc = src.slice(0, src.length - 6);
                 return (
-                  <video 
-                    autoPlay 
-                    className="my-4 block max-h-[700px] aspect-video max-w-[700px] w-full m-auto rounded-3xl shadow transition-all" 
-                    {...(props as React.VideoHTMLAttributes<HTMLVideoElement>)} 
-                    src={videoSrc} 
+                  <video
+                    autoPlay
+                    className="my-4 block max-h-[700px] aspect-video max-w-[700px] w-full m-auto rounded-3xl shadow transition-all"
+                    {...(props as React.VideoHTMLAttributes<HTMLVideoElement>)}
+                    src={videoSrc}
                   />
                 );
-              } else if (src.endsWith('.iframe')) {
+              } else if (src.endsWith(".iframe")) {
                 const videoSrc = src.slice(0, src.length - 7);
                 return (
-                  <iframe 
-                    className="my-4 block max-h-[700px] max-w-[700px] aspect-video w-full m-auto rounded-3xl shadow transition-all" 
-                    src={videoSrc} 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    {...(props as React.IframeHTMLAttributes<HTMLIFrameElement>)} 
+                  <iframe
+                    className="my-4 block max-h-[700px] max-w-[700px] aspect-video w-full m-auto rounded-3xl shadow transition-all"
+                    src={videoSrc}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    {...(props as React.IframeHTMLAttributes<HTMLIFrameElement>)}
                     allowFullScreen
                   />
                 );
-              } else if (src.endsWith('.logo')) {
+              } else if (src.endsWith(".logo")) {
                 const logoSrc = src.slice(0, src.length - 5);
                 return (
                   <img
@@ -212,20 +213,16 @@ export default function BlogView({
         ) : null}
       </div>
 
-      <div
-        lang="en"
-        dir="ltr"
-        className="max-w-[20rem] w-full max-lg:hidden h-screen sticky top-24 no-scrollbar"
-      >
+      <div className="max-w-[20rem] w-full max-lg:hidden h-screen sticky top-24 no-scrollbar">
         <OverView
           Instructor="Dragons Team"
-          Description="Understand career technical paths, with real-world scenarios and intensive 7 days of learning, practice, and mentorship."
+          Description="فهم المسارات الفنية المهنية مع سيناريوهات من الواقع الفعلي وتعلم مكثف لمدة 7 أيام من الممارسة والإرشاد."
           LessonNum={5}
           Topics={[
-            "Introduction",
-            "Why it's A lot?!",
-            "Positions Battle",
-            "The Golden RoadMap",
+            "مقدمة",
+            "لماذا هذا كثير؟!",
+            "معركة المناصب",
+            "خريطة الطريق الذهبية",
           ]}
         />
       </div>

@@ -35,7 +35,7 @@ export default function MovieCard(props: { movie: any; exploreUrl: string; expan
               <Link href={`${currentURL}/${exploreUrl}`} passHref>
                 <div className='lg:flex gap-4 hidden mt-4 justify-left'>
                   <div className='h-16 w-64'>
-                    <ButtonComponent CTAtext='Watch Now' className='!h-fit' />
+                    <ButtonComponent CTAtext='Take the challenge' className='!h-fit' />
                   </div>
                 </div>
               </Link>
@@ -49,7 +49,7 @@ export default function MovieCard(props: { movie: any; exploreUrl: string; expan
           <Link href={`${currentURL}/${exploreUrl}`} passHref>
             <div className='flex mt-4 justify-left'>
               <div className='h-16 w-64'>
-                <ButtonComponent CTAtext='Watch Now' className='!h-fit' />
+                <ButtonComponent CTAtext='Take the challenge' className='!h-fit' />
               </div>
             </div>
           </Link>

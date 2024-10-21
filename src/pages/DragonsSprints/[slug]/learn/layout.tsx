@@ -32,7 +32,11 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <div dir="rtl" lang="ar" className="grid font-sans px-[5%] mb-20 relative z-20 place-items-center">
+    <div
+      dir="rtl"
+      lang="ar"
+      className="grid font-sans px-[5%] mb-20 relative z-20 place-items-center"
+    >
       <div className="w-full relative grid pt-20 max-w-[1600px]">
         <div className="w-full flex relative">
           {/* Sidebar - fixed */}
@@ -63,14 +67,14 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
             </div>
 
             {/* Dynamic children content */}
-            <div className="min-h-full w-full box-border flex justify-center">
+            <div className="min-h-full w-full mt-8 box-border flex justify-center">
               {children}
             </div>
           </div>
 
           {/* Overview section - fixed */}
           <div className="max-w-[20rem] w-full max-lg:hidden h-screen sticky top-24 no-scrollbar">
-          <OverView
+            <OverView
               Instructor="Dragons Team"
               // tags={["React", "JavaScript", "CSS"]}
               Description="فهم المسارات الفنية المهنية مع سيناريوهات من الواقع الفعلي وتعلم مكثف لمدة 7 أيام من الممارسة والإرشاد."
@@ -82,7 +86,6 @@ const BlogLayout = ({ children }: { children: ReactNode }) => {
                 "خريطة الطريق الذهبية",
               ]}
             />
-
           </div>
         </div>
       </div>

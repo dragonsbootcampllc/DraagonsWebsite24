@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaQuestion } from "react-icons/fa";
+import { FaCompass } from "react-icons/fa";
 import Layout from "./layout";
 import { BASE_URL, useCategories, CategorySummary } from "./utils/blog";
 import Loading from "@/components/Loading";
@@ -8,7 +8,7 @@ import Loading from "@/components/Loading";
 export function BlogDiscovery() {
   const { categories, error, isLoading } = useCategories('careerSprint');
 
-  if (error) return <div>Failed to load</div>;
+  if (error) return <div>فشل في التحميل</div>;
   if (isLoading) return <Loading />;
 
   return (
@@ -17,24 +17,24 @@ export function BlogDiscovery() {
         <div className='text-3xl flex-col content-center max-w-4xl text-center md:text-5xl z-10 flex justify-center relative mb-3 text-gray-200 font-semibold'>
           <div className='w-full flex justify-center'>
             <div className='bg-purple-700 relative w-[80px] h-[80px] md:w-[100px] md:h-[100px] p-2 shadow-2xl shadow-blue-700/40 rounded-[2rem]'>
-              <FaQuestion className='w-full h-full p-2' />
+              <FaCompass className='w-full h-full p-2' />
             </div>
           </div>
           <h1 className='md:text-xl text-center text-lg font-medium pt-2 text-purple-800 uppercase'>
-            Help Center
+            صفحة الاستكشاف
           </h1>
           <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl content-center max-w-4xl text-center z-10 flex justify-center m-auto relative capitalize text-gray-200 font-semibold'>
-            Get Answers to Common Questions
+            استكشف المحتوى والتصنيفات
             <span className='bg-gradient-to-r from-purple-700 to-purple-900 text-transparent bg-clip-text'></span>
           </h1>
 
           <p className='text-white/50 font-normal text-base md:text-lg head container mx-auto flex flex-col gap-3 md:gap-7 justify-center text-center max-w-[800px] pt-5'>
-            Get answers to common questions on all things Dragons
+            اكتشف التصنيفات المختلفة والمحتوى المميز حول كل ما يتعلق بفريق التنين
           </p>
           <div className='w-full pt-5 relative'>
             {/* <input
               className='w-full text-base md:text-2xl box-border p-4 focus:outline-none bg-transparent backdrop-blur-sm focus:border-blue-1 shadow translate-all cursor-text h-12 md:h-16 rounded-xl border border-purple-500'
-              placeholder='Search help (e.g. use cases, step by step guides)'></input> */}
+              placeholder='ابحث عن المحتوى (مثل الموضوعات، الأدلة، وغيرها)'></input> */}
           </div>
         </div>
 
