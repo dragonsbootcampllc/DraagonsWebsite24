@@ -53,6 +53,9 @@ const HeadSEO = () => {
   return (
     <Head>
       <title>Dragons</title>
+// google search console
+<meta name="google-site-verification" content="bGsXpqETriEi058dpbOrQ_t9kAhTlimFkfjB4xcHvz0" />
+      
       <meta
         property='og:Dragons'
         content='Dragons is a community of talented developers, designers, and product managers who are passionate about building products that people love.'
